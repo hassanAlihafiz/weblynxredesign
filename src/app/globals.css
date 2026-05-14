@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary + shades */
+  --color-primary: #fb2c36;
+  --color-primary-hover: #ff4d56;
+  --color-primary-dim: #c41e27;
+  --color-primary-muted: rgba(251, 44, 54, 0.14);
+  --color-primary-soft: rgba(251, 44, 54, 0.06);
+  --color-primary-border: rgba(251, 44, 54, 0.32);
+  --color-primary-glow: rgba(251, 44, 54, 0.45);
+  --color-on-primary: #ffffff;
+
+  /* Neutrals / secondary (black family) */
+  --color-background-primary: #030303;
+  --color-background-secondary: #0a0a0a;
+  --color-surface-raised: #111111;
+  --color-surface-overlay: #171717;
+  --color-surface-muted: #0d0d0d;
+  --color-background-info: rgba(251, 44, 54, 0.1);
+
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-text-tertiary: #71717a;
+  --color-text-info: #fb2c36;
+
+  --color-border-tertiary: #27272a;
+  --color-border-secondary: #3f3f46;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* Header / glass */
+  --color-header-bg: rgba(3, 3, 3, 0.78);
+
+  /* Layout — shared content width for all pages */
+  --page-max-width: 1260px;
+
+  /* Elevation & glow (black + primary) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-header: 0 4px 24px rgba(0, 0, 0, 0.35), 0 1px 0 var(--color-border-subtle);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.38), 0 0 0 1px var(--color-border-subtle),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --shadow-card-hover: 0 10px 36px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(251, 44, 54, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-primary: 0 4px 16px rgba(251, 44, 54, 0.35);
+  --shadow-primary-hover: 0 8px 28px rgba(251, 44, 54, 0.42), 0 0 40px rgba(251, 44, 54, 0.12);
+  --shadow-primary-lg: 0 12px 40px rgba(251, 44, 54, 0.28), 0 0 64px rgba(251, 44, 54, 0.1);
+  --shadow-drawer: -12px 0 48px rgba(0, 0, 0, 0.65), -1px 0 0 var(--color-border-subtle);
+  --shadow-inset-soft: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --border-radius-md: 8px;
+  --border-radius-lg: 14px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  min-height: 100dvh;
+  background-color: var(--color-background-primary);
+  background-image: radial-gradient(
+      ellipse 100% 60% at 50% -20%,
+      rgba(251, 44, 54, 0.14),
+      transparent 52%
+    ),
+    radial-gradient(ellipse 70% 45% at 100% 0%, rgba(251, 44, 54, 0.05), transparent 42%),
+    radial-gradient(ellipse 55% 35% at 0% 100%, rgba(251, 44, 54, 0.04), transparent 50%);
+  background-attachment: fixed;
+  color: var(--color-text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  color-scheme: dark;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::selection {
+  background: var(--color-primary-muted);
+  color: var(--color-text-primary);
 }

@@ -1,0 +1,155 @@
+"use client";
+
+import Link from "next/link";
+import { useMemo, useState } from "react";
+import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import {
+  WORK_CASE_STUDIES,
+  WORK_FEATURED,
+  WORK_FILTERS,
+  caseStudyMatchesFilter,
+  featuredMatchesFilter,
+  type WorkFilterId,
+} from "./projects";
+
+const PAGE_SIZE = 6;
+
+export function WorkMain() {
+  const [filter, setFilter] = useState<WorkFilterId>("all");
+  const [visible, setVisible] = useState(PAGE_SIZE);
+
+  const filtered = useMemo(
+    () => WORK_CASE_STUDIES.filter((c) => caseStudyMatchesFilter(c, filter)),
+    [filter],
+  );
+
+  const showFeatured = featuredMatchesFilter(filter);
+  const visibleCards = filtered.slice(0, visible);
+  const canLoadMore = visible < filtered.length;
+
+  return (
+    <>
+      <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-3.5 shadow-[var(--shadow-inset-soft)] sm:py-4">
+        <SectionEyebrow className="mb-2.5 !text-[var(--color-text-tertiary)] sm:mb-3">SECTION 2 — FILTERS</SectionEyebrow>
+        <div className="flex flex-wrap gap-2">
+          {WORK_FILTERS.map(({ id, label }) => {
+            const active = filter === id;
+            return (
+              <button
+                key={id}
+                type="button"
+                onClick={() => {
+                  setFilter(id);
+                  setVisible(PAGE_SIZE);
+                }}
+                className={`rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors ${
+                  active
+                    ? "bg-[var(--color-text-primary)] text-[var(--color-background-primary)]"
+                    : "border border-[var(--color-border-secondary)] text-[var(--color-text-primary)] hover:border-[var(--color-primary-border)] hover:text-[var(--color-primary)]"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
+      {showFeatured ? (
+        <section className="border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11">
+          <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">
+            SECTION 3 — FEATURED PROJECT (HERO)
+          </SectionEyebrow>
+          <article
+            className={`overflow-hidden rounded-[var(--border-radius-lg)] shadow-[var(--shadow-card)] ${WORK_FEATURED.wrapBg}`}
+          >
+            <Link
+              href={`/work/${WORK_FEATURED.slug}`}
+              className={`flex min-h-[160px] items-center justify-center text-[13px] font-medium sm:min-h-[180px] md:min-h-[200px] ${WORK_FEATURED.heroBg} ${WORK_FEATURED.textMuted}`}
+            >
+              Large project hero screenshot
+            </Link>
+            <div className="p-4 sm:p-5 md:p-5">
+              <div className="mb-2.5 flex flex-wrap gap-1.5">
+                {WORK_FEATURED.tagLabels.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-[var(--border-radius-md)] bg-[#3C3489] px-2 py-0.5 text-[10px] font-medium text-[#EEEDFE]"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <h2 className={`mb-1.5 text-lg font-medium leading-snug sm:text-[18px] ${WORK_FEATURED.textStrong}`}>
+                <Link href={`/work/${WORK_FEATURED.slug}`} className="transition-opacity hover:opacity-80">
+                  {WORK_FEATURED.title}
+                </Link>
+              </h2>
+              <p className={`mb-3.5 text-xs leading-relaxed sm:mb-4 sm:text-[12px] sm:leading-[1.6] ${WORK_FEATURED.textMuted}`}>
+                {WORK_FEATURED.excerpt}
+              </p>
+              <div
+                className={`flex flex-wrap gap-x-4 gap-y-2 text-[11px] sm:gap-x-6 ${WORK_FEATURED.textMuted}`}
+              >
+                {WORK_FEATURED.stats.map(({ k, v }) => (
+                  <span key={v}>
+                    <strong className={`font-semibold ${WORK_FEATURED.textStrong}`}>{k}</strong> {v}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        </section>
+      ) : null}
+
+      <section className="border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11">
+        <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">SECTION 4 — PROJECT GRID</SectionEyebrow>
+        {visibleCards.length === 0 ? (
+          <p className="py-8 text-center text-sm text-[var(--color-text-secondary)]">No projects in this category yet.</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-3.5 md:gap-3.5">
+            {visibleCards.map(({ slug, title, outcome, tagLabels, thumbBg, thumbFg }) => (
+              <article key={slug} className="min-w-0">
+                <Link
+                  href={`/work/${slug}`}
+                  className={`flex h-[140px] items-center justify-center rounded-[var(--border-radius-md)] text-[11px] font-medium transition-opacity hover:opacity-95 ${thumbBg} ${thumbFg}`}
+                >
+                  Project screenshot
+                </Link>
+                <div className="mt-2.5 min-w-0">
+                  <div className="mb-1.5 flex flex-wrap gap-1.5">
+                    {tagLabels.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-[var(--border-radius-md)] bg-[var(--color-background-secondary)] px-2 py-0.5 text-[10px] text-[var(--color-text-secondary)]"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="mb-0.5 text-[13px] font-medium leading-snug">
+                    <Link href={`/work/${slug}`} className="transition-colors hover:text-[var(--color-primary)]">
+                      {title}
+                    </Link>
+                  </h3>
+                  <p className="text-[11px] leading-snug text-[var(--color-text-secondary)] sm:leading-[1.5]">{outcome}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+        {canLoadMore ? (
+          <div className="mt-5 text-center sm:mt-6">
+            <button
+              type="button"
+              onClick={() => setVisible((v) => v + PAGE_SIZE)}
+              className="inline-block rounded-[var(--border-radius-md)] border border-[var(--color-border-secondary)] px-[18px] py-2 text-xs font-medium text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-primary-border)] hover:text-[var(--color-primary)]"
+            >
+              Load more projects
+            </button>
+          </div>
+        ) : null}
+      </section>
+    </>
+  );
+}
