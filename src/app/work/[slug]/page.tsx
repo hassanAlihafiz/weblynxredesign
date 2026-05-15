@@ -1,3 +1,4 @@
+import { IconArrowLeft } from "@tabler/icons-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -45,9 +46,10 @@ export default async function WorkCaseStudyPage({ params }: Props) {
             </p>
             <Link
               href="/work"
-              className="mt-10 inline-flex text-sm font-medium text-[var(--color-text-info)] transition-opacity hover:opacity-90"
+              className="mt-10 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-text-info)] transition-opacity hover:opacity-90"
             >
-              ← Back to work
+              <IconArrowLeft className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
+              Back to work
             </Link>
           </article>
         </main>

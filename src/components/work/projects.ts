@@ -106,7 +106,7 @@ export const WORK_CASE_STUDIES: CaseStudyCard[] = [
   {
     slug: "stride-coach",
     title: "Stride Coach",
-    outcome: "4.8★ average session rating",
+    outcome: "4.8 / 5 average session rating",
     tagLabels: ["Mobile", "SaaS"],
     thumbBg: "bg-[#9FE1CB]",
     thumbFg: "text-[#085041]",

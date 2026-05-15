@@ -10,7 +10,7 @@ type PageContainerProps = {
  */
 export function PageContainer({ children, className = "" }: PageContainerProps) {
   return (
-    <div className={`mx-auto w-full max-w-[var(--page-max-width)] px-6 sm:px-8 lg:px-10 ${className}`}>
+    <div className={`mx-auto w-full max-w-[var(--page-max-width)]${className}`}>
       {children}
     </div>
   );

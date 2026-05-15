@@ -1,14 +1,19 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
-
 export function ServicesTestimonial() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
-      <SectionEyebrow className="mb-4 sm:mb-5">SECTION 6 — TESTIMONIAL</SectionEyebrow>
-      <div className="mx-auto max-w-[520px] text-center">
-        <blockquote className="mb-4 font-serif text-lg font-medium italic leading-relaxed text-[var(--color-text-primary)] sm:text-[18px] sm:leading-[1.6]">
-          &ldquo;Having design, dev, and marketing in one team meant we shipped 2× faster than with our last agency.&rdquo;
+    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+      <div className="mx-auto max-w-2xl text-center">
+        <div
+          className="mb-6 font-serif text-6xl italic leading-none text-[var(--red)]"
+          aria-hidden
+        >
+          &ldquo;
+        </div>
+
+        <blockquote className="mb-8 font-serif text-2xl italic leading-relaxed text-[var(--text)] md:text-3xl">
+          Having design, dev, and marketing in one team meant we shipped 2× faster than with our last agency.
         </blockquote>
-        <p className="text-xs text-[var(--color-text-secondary)] sm:text-[12px]">Sara Chen · Founder, Acme SaaS</p>
+
+        <p className="text-sm text-[var(--text-muted)]">Sara Chen · Founder, Acme SaaS</p>
       </div>
     </section>
   );

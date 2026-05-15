@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import {
+  AboutCapabilities,
+  AboutClientVoices,
   AboutFinalCta,
   AboutIntro,
-  AboutMission,
-  AboutRecognition,
+  AboutManifesto,
   AboutStats,
+  AboutStatusStrip,
   AboutStory,
-  AboutTeam,
   AboutValues,
 } from "@/components/about";
 import { Footer, Navbar } from "@/components/home";
@@ -15,7 +16,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 export const metadata: Metadata = {
   title: "About — Weblynx",
   description:
-    "A small studio building fast, thoughtful web products for founders. Our story, mission, principles, and team.",
+    "A small studio building fast, thoughtful web products for founders. Our story, manifesto, principles, and team.",
 };
 
 export default function AboutPage() {
@@ -25,12 +26,13 @@ export default function AboutPage() {
         <Navbar />
         <main className="flex-1 w-full">
           <AboutIntro />
+          <AboutManifesto />
           <AboutStory />
-          <AboutMission />
           <AboutValues />
-          <AboutTeam />
+          <AboutCapabilities />
           <AboutStats />
-          <AboutRecognition />
+          <AboutClientVoices />
+          <AboutStatusStrip />
           <AboutFinalCta />
         </main>
         <Footer />

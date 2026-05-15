@@ -1,48 +1,82 @@
-import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
-import { SectionEyebrow } from "./SectionEyebrow";
 
 const cases = [
   {
-    title: "FinTech Dashboard",
-    meta: "Web app · 3 months · +40% conversion",
-    placeholder: "Project screenshot",
-    bg: "bg-[#CECBF6] text-[#3C3489]",
+    href: "/work/finlytics",
+    tileGradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
+    mockClassName: "h-16 w-24 rounded-lg bg-[linear-gradient(135deg,var(--red),var(--red-dark))]",
+    mockLabel: "finlytics dashboard",
+    tags: ["SaaS", "Web app"] as const,
+    title: "Finlytics — Fintech Dashboard",
+    description: "Rebuilt on Next.js. Load time 6s → 0.8s. +40% conversion.",
   },
   {
-    title: "DTC Brand Site",
-    meta: "Shopify · 6 weeks · 2.5x revenue",
-    placeholder: "Project screenshot",
-    bg: "bg-[#9FE1CB] text-[#085041]",
+    href: "/work/trekr-fitness",
+    tileGradient: "linear-gradient(135deg, #0f3d2e, #082018)",
+    mockClassName: "h-28 w-20 rounded-2xl bg-[linear-gradient(135deg,#9FE1CB,#5fb892)]",
+    mockLabel: "trekr fitness app",
+    tags: ["Mobile", "React Native"] as const,
+    title: "Trekr — Fitness App",
+    description: "React Native build. 12k installs in launch month.",
   },
 ] as const;
 
+const liftClass =
+  "block transition-[transform,border-color] duration-200 motion-safe:hover:-translate-y-0.5";
+
+const chipClass =
+  "inline-flex items-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] px-3 py-1 text-xs font-medium text-[var(--text-muted)]";
+
 export function HomeCaseStudies() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-9">
-      <SectionEyebrow className="mb-3.5">SECTION 4 — FEATURED WORK</SectionEyebrow>
-      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-xl font-medium">Selected work</h2>
+    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+      <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+            Selected work
+          </p>
+          <h2 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+            Real projects.
+            <br />
+            Real results.
+          </h2>
+        </div>
         <Link
           href="/work"
-          className="inline-flex items-center gap-0.5 rounded-[var(--border-radius-md)] px-2 py-1 text-xs text-[var(--color-text-secondary)] shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:text-[var(--color-primary)] hover:shadow-[var(--shadow-sm)]"
+          className="text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
         >
-          View all
-          <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
+          View all work →
         </Link>
       </div>
-      <div className="grid gap-3 sm:grid-cols-2">
-        {cases.map(({ title, meta, placeholder, bg }) => (
-          <article key={title}>
-            <div
-              className={`flex h-[120px] items-center justify-center rounded-[var(--border-radius-lg)] text-[11px] shadow-[var(--shadow-card)] ring-1 ring-black/20 transition-shadow duration-200 hover:shadow-[var(--shadow-card-hover)] ${bg}`}
-            >
-              {placeholder}
-            </div>
-            <h3 className="mt-2 text-xs font-medium">{title}</h3>
-            <p className="text-[11px] text-[var(--color-text-secondary)]">{meta}</p>
-          </article>
-        ))}
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        {cases.map(
+          ({ href, tileGradient, mockClassName, mockLabel, tags, title, description }) => (
+            <Link key={href} href={href} className={`group/case ${liftClass} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]`}>
+              <div className="overflow-hidden rounded-xl" style={{ background: tileGradient }}>
+                <div className="flex aspect-[4/3] flex-col items-center justify-center">
+                  <div className="flex flex-col items-center gap-2 opacity-70">
+                    <div className={mockClassName} aria-hidden />
+                    <span className="font-mono text-xs text-white/60">{mockLabel}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="mb-3 flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span key={tag} className={chipClass}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h3 className="mb-1 font-sans text-xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)]">
+                  {title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
+              </div>
+            </Link>
+          ),
+        )}
       </div>
     </section>
   );

@@ -1,0 +1,10 @@
+export { AppDevHero } from "./AppDevHero";
+export { AppDevWhoFor } from "./AppDevWhoFor";
+export { AppDevPlatforms } from "./AppDevPlatforms";
+export { AppDevIncluded } from "./AppDevIncluded";
+export { AppDevTechChips } from "./AppDevTechChips";
+export { AppDevProcessSteps } from "./AppDevProcessSteps";
+export { AppDevEngagement } from "./AppDevEngagement";
+export { AppDevHowWeQuote } from "./AppDevHowWeQuote";
+export { AppDevFaq } from "./AppDevFaq";
+export { AppDevFinalCta } from "./AppDevFinalCta";

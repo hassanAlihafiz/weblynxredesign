@@ -1,19 +1,25 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
-
 export function AboutIntro() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-12 pb-8 shadow-[var(--shadow-inset-soft)] sm:py-14">
-      <SectionEyebrow className="mb-3">SECTION 1 — INTRO</SectionEyebrow>
-      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--color-text-secondary)]">
-        About Weblynx
-      </p>
-      <h1 className="mb-3.5 max-w-[520px] text-2xl font-medium leading-snug tracking-tight text-balance sm:text-3xl md:text-[30px]">
-        A small studio building the web for ambitious founders
-      </h1>
-      <p className="max-w-[480px] text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-[14px] sm:leading-[1.7]">
-        We&apos;re a tight team of developers, designers, and marketers who believe great products come from
-        clear thinking — not bigger teams or fancier tools.
-      </p>
+    <section className="relative overflow-hidden px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+      <div className="pointer-events-none absolute inset-0 grid-bg opacity-30" aria-hidden />
+
+      <div className="relative z-10">
+
+        <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--text-muted)]">
+          About Weblynx
+        </p>
+
+        <h1 className="mb-8 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-7xl">
+          A digital studio built around{" "}
+          <em className="font-serif font-normal italic text-[var(--red)]">craft</em>
+          {", speed, and clear thinking."}
+        </h1>
+
+        <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
+          Weblynx is an independent studio working with founders and small teams to build the web and apps they
+          actually need — fast, modern, and made to scale.
+        </p>
+      </div>
     </section>
   );
 }

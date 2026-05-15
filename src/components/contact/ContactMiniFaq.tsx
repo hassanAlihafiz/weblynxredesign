@@ -21,20 +21,20 @@ const faqs = [
 
 export function ContactMiniFaq() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-12">
-      <SectionEyebrow className="mb-3.5">SECTION 4 — MINI FAQ</SectionEyebrow>
-      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--color-text-secondary)]">
+    <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-12">
+      <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">SECTION 4 — MINI FAQ</SectionEyebrow>
+      <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
         Before you reach out
       </p>
-      <h2 className="mb-5 text-xl font-medium sm:mb-6 sm:text-[22px]">A few quick answers</h2>
+      <h2 className="mb-5 text-3xl font-medium sm:mb-6">A few quick answers</h2>
       <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-3">
         {faqs.map(({ q, a }) => (
           <article
             key={q}
-            className="rounded-[var(--border-radius-lg)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] p-3.5 shadow-[var(--shadow-sm)] sm:p-4"
+            className="rounded-[var(--border-radius-lg)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] p-4 shadow-[var(--shadow-card)]"
           >
-            <h3 className="mb-1.5 text-[13px] font-medium leading-snug">{q}</h3>
-            <p className="text-[11px] leading-relaxed text-[var(--color-text-secondary)]">{a}</p>
+            <h3 className="mb-1.5 text-xl font-medium leading-snug">{q}</h3>
+            <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">{a}</p>
           </article>
         ))}
       </div>
