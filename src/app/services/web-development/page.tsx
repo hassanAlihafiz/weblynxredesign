@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { WebDevHero, WebDevProcess, WebDevQuoteForm, WebDevServices, WebDevStack } from "@/components/web-development";
+import {
+  WebDevHero,
+  WebDevIncluded,
+  WebDevProcess,
+  WebDevEngagementScopes,
+  WebDevHowWeQuote,
+  WebDevRelatedWork,
+  WebDevFaq,
+  WebDevStack,
+  WebDevWhoFor,
+} from "@/components/web-development";
 
 export const metadata: Metadata = {
   title: "Web Development — Weblynx",
@@ -15,13 +25,15 @@ export default function WebDevelopmentPage() {
       <PageContainer className="flex min-h-screen flex-col">
         <Navbar />
         <main className="w-full flex-1">
-          <div className="mx-auto w-full max-w-[900px]">
-            <WebDevHero />
-            <WebDevServices />
-            <WebDevProcess />
-            <WebDevStack />
-            <WebDevQuoteForm />
-          </div>
+          <WebDevHero />
+          <WebDevWhoFor />
+          <WebDevIncluded />
+          <WebDevStack />
+          <WebDevProcess />
+          <WebDevEngagementScopes />
+          <WebDevHowWeQuote />
+          <WebDevRelatedWork />
+          <WebDevFaq />
         </main>
         <Footer />
       </PageContainer>

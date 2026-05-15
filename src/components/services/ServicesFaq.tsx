@@ -2,7 +2,6 @@
 
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
 
 const faqs = [
   {
@@ -28,49 +27,54 @@ export function ServicesFaq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
-      <SectionEyebrow className="mb-4 sm:mb-5">SECTION 7 — FAQ</SectionEyebrow>
-      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--color-text-secondary)]">
-        Common questions
-      </p>
-      <h2 className="mb-5 text-xl font-medium leading-snug tracking-tight sm:text-[22px]">Before you book a call</h2>
-      <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--color-border-tertiary)] bg-[var(--color-background-primary)] shadow-[var(--shadow-card)]">
-        {faqs.map(({ q, a }, i) => {
-          const isOpen = open === i;
-          const panelId = `${baseId}-panel-${i}`;
-          const buttonId = `${baseId}-btn-${i}`;
-          return (
-            <div key={q} className="border-b border-[var(--color-border-tertiary)] last:border-b-0">
-              <button
-                type="button"
-                id={buttonId}
-                className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left sm:px-4"
-                aria-expanded={isOpen}
-                aria-controls={panelId}
-                onClick={() => setOpen(isOpen ? null : i)}
-              >
-                <span className="text-[13px] font-medium leading-snug">{q}</span>
-                {isOpen ? (
-                  <IconMinus className="size-3.5 shrink-0 text-[var(--color-text-secondary)]" stroke={1.5} aria-hidden />
-                ) : (
-                  <IconPlus className="size-3.5 shrink-0 text-[var(--color-text-secondary)]" stroke={1.5} aria-hidden />
-                )}
-              </button>
-              <div
-                id={panelId}
-                role="region"
-                aria-labelledby={buttonId}
-                className={`grid transition-[grid-template-rows] duration-200 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
-              >
-                <div className="min-h-0 overflow-hidden">
-                  <p className="px-4 pb-3.5 text-xs leading-relaxed text-[var(--color-text-secondary)] sm:text-[12px] sm:leading-relaxed">
-                    {a}
-                  </p>
+    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+      <div className="mx-auto max-w-3xl">
+        <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+          Common questions
+        </p>
+
+        <h2 className="mb-10 font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-4xl">
+          Before you book a call
+        </h2>
+
+        <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
+          {faqs.map(({ q, a }, i) => {
+            const isOpen = open === i;
+            const panelId = `${baseId}-panel-${i}`;
+            const buttonId = `${baseId}-btn-${i}`;
+            return (
+              <div key={q} className="border-b border-[var(--border-subtle)] last:border-b-0">
+                <button
+                  type="button"
+                  id={buttonId}
+                  className="flex w-full items-center justify-between gap-4 p-5 text-left transition-colors hover:bg-[var(--bg-elev)]"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                >
+                  <span className="text-sm font-medium text-[var(--text)]">{q}</span>
+                  {isOpen ? (
+                    <IconMinus className="size-5 shrink-0 text-[var(--text-muted)]" stroke={1.5} aria-hidden />
+                  ) : (
+                    <IconPlus className="size-5 shrink-0 text-[var(--text-muted)]" stroke={1.5} aria-hidden />
+                  )}
+                </button>
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  className={`grid transition-[grid-template-rows] duration-200 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+                >
+                  <div className="min-h-0 overflow-hidden">
+                    <p className="border-t border-[var(--border-subtle)] px-5 pb-5 pt-4 text-sm leading-relaxed text-[var(--text-muted)]">
+                      {a}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

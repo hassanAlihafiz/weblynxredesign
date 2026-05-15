@@ -1,34 +1,27 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
-
 export function AboutStory() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-10 sm:py-12">
-      <SectionEyebrow className="mb-3.5">SECTION 2 — OUR STORY</SectionEyebrow>
-      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[1fr_1.5fr] lg:gap-8">
-        <div className="order-2 lg:order-1">
-          <div
-            className="flex h-[200px] items-center justify-center rounded-[var(--border-radius-lg)] bg-[#CECBF6] text-[11px] font-medium text-[#3C3489] shadow-[var(--shadow-card)] ring-1 ring-black/10 sm:h-[220px]"
-            role="img"
-            aria-label="Founder photo placeholder"
-          >
-            Founder photo
-          </div>
-        </div>
-        <div className="order-1 lg:order-2">
-          <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--color-text-secondary)]">
-            The story
-          </p>
-          <h2 className="mb-3 text-xl font-medium leading-snug sm:text-[20px]">
-            Started in a bedroom. Still feels that way.
+    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+
+      <div className="grid items-start gap-10 md:grid-cols-[200px_1fr]">
+        <p className="pt-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+          Our story
+        </p>
+
+        <div className="min-w-0 max-w-2xl">
+          <h2 className="mb-8 font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-4xl">
+            From a single project to a studio trusted by founders worldwide.
           </h2>
-          <p className="mb-2.5 text-[13px] leading-[1.7] text-[var(--color-text-secondary)]">
-            Weblynx began in 2024 when I shipped a Shopify store for a friend&apos;s clothing brand. It took two
-            weeks. The store doubled their sales in a month.
-          </p>
-          <p className="text-[13px] leading-[1.7] text-[var(--color-text-secondary)]">
-            Word spread. Today we work with founders across 4 countries — building the kind of fast, thoughtful
-            products that big agencies can&apos;t ship and freelancers can&apos;t deliver.
-          </p>
+          <div className="space-y-5 leading-relaxed text-[var(--text-muted)]">
+            <p>
+              Weblynx started with a simple idea: most agencies move too slow, most freelancers can&apos;t deliver at
+              scale, and founders are stuck choosing between them.
+            </p>
+            <p>
+              So we built something in between — a focused studio that ships fast without cutting corners, charges
+              fairly, and treats every project like it&apos;s our own.
+            </p>
+            <p>Today we work with brands and startups across four countries, building everything from MVPs to full-scale platforms.</p>
+          </div>
         </div>
       </div>
     </section>

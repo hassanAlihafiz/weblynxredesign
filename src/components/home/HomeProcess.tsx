@@ -1,28 +1,54 @@
-import { SectionEyebrow } from "./SectionEyebrow";
-
 const steps = [
-  { n: "01", title: "Discovery", text: "Audit + strategy call" },
-  { n: "02", title: "Design", text: "Wireframe to prototype" },
-  { n: "03", title: "Build", text: "Develop, test, refine" },
-  { n: "04", title: "Launch", text: "Ship + grow" },
+  {
+    week: "WEEK 1",
+    n: "01",
+    title: "Discover",
+    text: "Strategy call, audit, and scope. We learn your business inside out.",
+  },
+  {
+    week: "WEEK 2",
+    n: "02",
+    title: "Design",
+    text: "Wireframes, prototype, sign-off. Aligned before we build.",
+  },
+  {
+    week: "WEEKS 3–5",
+    n: "03",
+    title: "Build",
+    text: "Develop, test, weekly demos. You see progress every Friday.",
+  },
+  {
+    week: "WEEK 6",
+    n: "04",
+    title: "Launch",
+    text: "Deploy, QA, handover. We stick around for 30 days.",
+  },
 ] as const;
 
 export function HomeProcess() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-9 shadow-[var(--shadow-inset-soft)]">
-      <SectionEyebrow className="mb-3.5">SECTION 5 — PROCESS</SectionEyebrow>
-      <h2 className="mb-4 text-xl font-medium">How we work</h2>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {steps.map(({ n, title, text }) => (
-          <div
-            key={n}
-            className="rounded-[var(--border-radius-lg)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] p-4 shadow-[var(--shadow-card)] transition-all duration-200 hover:border-[var(--color-primary-border)] hover:shadow-[var(--shadow-card-hover)]"
-          >
-            <div className="text-lg font-semibold tabular-nums text-[var(--color-text-info)] drop-shadow-[0_0_12px_rgba(251,44,54,0.35)]">
+    <section className="border-t border-[var(--border-subtle)] px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+
+      <div className="mb-12">
+        <p className="mb-3 font-mono text-sm font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+          How we work
+        </p>
+        <h2 className="max-w-2xl text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+          The same rhythm,
+          <br />
+          every project.
+        </h2>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {steps.map(({ week, n, title, text }) => (
+          <div key={n} className="relative">
+            <div className="mb-3 font-mono text-xs text-[var(--text-dim)]">{week}</div>
+            <div className="mb-3 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">
               {n}
             </div>
-            <div className="mt-2 text-xs font-medium">{title}</div>
-            <p className="text-[11px] leading-snug text-[var(--color-text-secondary)]">{text}</p>
+            <h4 className="mb-2 font-medium text-[var(--text)]">{title}</h4>
+            <p className="text-sm leading-relaxed text-[var(--text-muted)]">{text}</p>
           </div>
         ))}
       </div>

@@ -1,44 +1,46 @@
 const steps = [
   {
+    week: "WEEK 1",
     num: "01",
-    title: "Discovery & Strategy",
-    body: "We dig deep into your goals, audience, and competitors. This phase produces a clear project roadmap, sitemap, and wireframe strategy before a single line of code is written.",
+    title: "Discovery",
+    body: "Strategy call, audit, scope & brief",
   },
   {
+    week: "WEEK 2",
     num: "02",
-    title: "Design & Prototyping",
-    body: "Our designers craft high-fidelity mockups in Figma, covering all key pages and user flows. You get to review, give feedback, and approve before we move forward.",
+    title: "Design",
+    body: "Wireframes, prototype, sign-off",
   },
   {
+    week: "WEEKS 3–5",
     num: "03",
-    title: "Development & QA",
-    body: "Approved designs become clean, maintainable code. Every feature is tested across browsers and devices, with performance benchmarks hit before handoff.",
+    title: "Build",
+    body: "Develop, test, weekly demos",
   },
   {
+    week: "WEEK 6",
     num: "04",
-    title: "Launch & Support",
-    body: "We handle deployment, domain config, and monitoring. Post-launch, we offer ongoing maintenance and feature development so your site never falls behind.",
+    title: "Launch",
+    body: "Deploy, QA, handover & support",
   },
 ] as const;
 
 export function WebDevProcess() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-12 shadow-[var(--shadow-inset-soft)] sm:py-14 md:py-[4.5rem]">
-      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)]">How We Work</p>
-      <h2 className="mb-0 text-2xl font-semibold leading-tight tracking-tight text-[var(--color-text-primary)] sm:text-[clamp(1.5rem,4vw,2.25rem)]">
-        Our Process
+    <section className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+        How it works
+      </p>
+      <h2 className="mb-10 max-w-3xl text-balance font-sans text-3xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-4xl">
+        From kickoff to launch in 4 steps
       </h2>
-      <div className="mt-10 flex flex-col sm:mt-12">
-        {steps.map(({ num, title, body }) => (
-          <div
-            key={num}
-            className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-4 border-b border-[var(--color-border-tertiary)] py-6 last:border-b-0 sm:grid-cols-[4rem_minmax(0,1fr)] sm:gap-6 sm:py-7"
-          >
-            <div className="pt-0.5 text-[13px] font-bold tabular-nums text-[var(--color-text-tertiary)]">{num}</div>
-            <div className="min-w-0">
-              <h3 className="mb-1.5 text-[17px] font-semibold leading-snug">{title}</h3>
-              <p className="text-[13px] leading-relaxed text-[var(--color-text-secondary)] sm:leading-[1.7]">{body}</p>
-            </div>
+      <div className="grid gap-6 md:grid-cols-4">
+        {steps.map(({ week, num, title, body }) => (
+          <div key={num} className="border-l-2 border-[var(--red)] pl-4">
+            <div className="mb-2 font-mono text-xs text-[var(--text-dim)]">{week}</div>
+            <div className="step-num mb-2">{num}</div>
+            <h3 className="mb-2 font-medium text-[var(--text)]">{title}</h3>
+            <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>
           </div>
         ))}
       </div>

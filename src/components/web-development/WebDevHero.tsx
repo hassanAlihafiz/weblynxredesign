@@ -1,56 +1,72 @@
 import Link from "next/link";
-import { IconArrowRight } from "@tabler/icons-react";
-
-const stats = [
-  { num: "120+", label: "Projects Delivered" },
-  { num: "98%", label: "Client Satisfaction" },
-  { num: "5yr", label: "Industry Experience" },
-] as const;
 
 export function WebDevHero() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] pb-12 pt-10 shadow-[var(--shadow-inset-soft)] sm:pb-16 sm:pt-14 md:pb-16 md:pt-20">
-      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-primary-border)] bg-[var(--color-primary-soft)] px-3 py-1.5 text-[12px] font-medium text-[var(--color-primary)] sm:mb-7">
-        <span className="size-1.5 shrink-0 animate-pulse rounded-full bg-[var(--color-primary)] motion-reduce:animate-none" aria-hidden />
-        Now accepting new projects
+    <>
+      <div className="px-6 pb-2 pt-8 sm:px-8 lg:px-10">
+        <div className="font-mono text-xs text-[var(--text-dim)]">
+          <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
+            Services
+          </Link>
+          <span className="mx-2">/</span>
+          <span className="text-[var(--text)]">Web development</span>
+        </div>
       </div>
-      <h1 className="mb-5 max-w-[min(100%,36rem)] text-[clamp(2rem,6vw,4.25rem)] font-semibold leading-[1.05] tracking-tight text-[var(--color-text-primary)] sm:mb-6">
-        We Build Websites
-        <br />
-        <span className="text-[var(--color-primary)]">That Actually Work.</span>
-      </h1>
-      <p className="mb-8 max-w-[540px] text-[15px] leading-relaxed text-[var(--color-text-secondary)] sm:mb-10 sm:text-base sm:leading-[1.75]">
-        From sleek landing pages to full-stack web applications — WebLynx delivers fast, scalable, and beautifully crafted
-        digital experiences for modern businesses.
-      </p>
-      <div className="mb-10 flex flex-wrap gap-3 sm:mb-14 sm:gap-3.5">
-        <Link
-          href="#quote"
-          className="inline-flex min-h-[44px] items-center justify-center gap-1 rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary-lg)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px sm:px-6 sm:py-3"
-        >
-          Request a Quote
-          <IconArrowRight className="size-4 shrink-0" stroke={1.5} aria-hidden />
-        </Link>
-        <Link
-          href="/"
-          className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-[var(--color-border-secondary)] px-5 py-2.5 text-sm font-medium text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-text-tertiary)] sm:px-6 sm:py-3"
-        >
-          View Our Work
-        </Link>
-      </div>
-      <div className="grid grid-cols-1 divide-y divide-[var(--color-border-tertiary)] border-t border-[var(--color-border-tertiary)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-        {stats.map(({ num, label }, i) => (
-          <div
-            key={label}
-            className={`py-5 sm:py-5 ${i === 0 ? "sm:pl-0" : ""} ${i === stats.length - 1 ? "sm:pr-0" : ""} sm:px-6`}
-          >
-            <div className="text-2xl font-semibold tracking-tight text-[var(--color-primary)] sm:text-[32px] sm:leading-none">
-              {num}
+
+      <section className="relative overflow-hidden px-6 pb-20 pt-10 sm:px-8 lg:px-10">
+        <div
+          className="pointer-events-none absolute right-0 top-0 size-[min(500px,100vw)] rounded-full red-glow"
+          aria-hidden
+        />
+
+        <div className="relative z-10">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
+            <div>
+              <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+                Web development
+              </p>
+              <h1 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+                Fast, modern <span className="text-[var(--red)]">websites</span> that actually convert.
+              </h1>
+              <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">
+                From landing pages to full-scale web apps — built on Next.js, designed to scale, shipped in weeks.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="#quote" className="btn-primary px-5 py-3 text-sm">
+                  Request a quote
+                </Link>
+                <Link href="#engagements" className="btn-secondary px-5 py-3 text-sm">
+                  See engagements ↓
+                </Link>
+              </div>
             </div>
-            <div className="mt-0.5 text-[12px] text-[var(--color-text-tertiary)]">{label}</div>
+
+            <div className="relative min-w-0 overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)]">
+              <div className="flex items-center gap-1.5 border-b border-[var(--border-subtle)] p-3">
+                <span className="size-2.5 shrink-0 rounded-full bg-[#E24B4A]" aria-hidden />
+                <span className="size-2.5 shrink-0 rounded-full bg-[#EF9F27]" aria-hidden />
+                <span className="size-2.5 shrink-0 rounded-full bg-[#97C459]" aria-hidden />
+                <div className="ml-3 min-w-0 flex-1 truncate font-mono text-[10px] text-[var(--text-dim)]">
+                  https://yoursite.com
+                </div>
+              </div>
+              <div className="space-y-3 p-6">
+                <div className="h-3 w-2/3 rounded bg-[var(--red)]" />
+                <div className="h-2 w-1/2 rounded bg-[var(--border)]" />
+                <div className="h-2 w-3/5 rounded bg-[var(--border)]" />
+                <div className="mt-5 grid grid-cols-2 gap-2">
+                  <div className="h-16 rounded bg-[var(--bg-elev)]" />
+                  <div className="h-16 rounded bg-[var(--bg-elev)]" />
+                </div>
+                <div className="mt-3 flex gap-2">
+                  <div className="h-6 w-20 rounded bg-[var(--red)]" />
+                  <div className="h-6 w-20 rounded border border-[var(--border-subtle)]" />
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

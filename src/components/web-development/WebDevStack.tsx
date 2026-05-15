@@ -1,46 +1,28 @@
-import type { TablerIcon } from "@tabler/icons-react";
-import {
-  IconBrandAws,
-  IconBrandFirebase,
-  IconBrandGithub,
-  IconBrandJavascript,
-  IconBrandNextjs,
-  IconBrandNodejs,
-  IconBrandReact,
-  IconBrandTailwind,
-  IconBrandTypescript,
-  IconDatabase,
-} from "@tabler/icons-react";
-
-const stack: { label: string; icon: TablerIcon }[] = [
-  { label: "React", icon: IconBrandReact },
-  { label: "Next.js", icon: IconBrandNextjs },
-  { label: "JavaScript", icon: IconBrandJavascript },
-  { label: "TypeScript", icon: IconBrandTypescript },
-  { label: "TailwindCSS", icon: IconBrandTailwind },
-  { label: "Node.js", icon: IconBrandNodejs },
-  { label: "PostgreSQL", icon: IconDatabase },
-  { label: "Firebase", icon: IconBrandFirebase },
-  { label: "AWS", icon: IconBrandAws },
-  { label: "GitHub", icon: IconBrandGithub },
-];
+const technologies = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Sanity CMS",
+  "Vercel",
+  "Framer Motion",
+  "Shopify",
+] as const;
 
 export function WebDevStack() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-12 shadow-[var(--shadow-inset-soft)] sm:py-14 md:py-[4.5rem]">
-      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)]">Tech Stack</p>
-      <h2 className="mb-8 text-2xl font-semibold leading-tight tracking-tight text-[var(--color-text-primary)] sm:mb-10 sm:text-[clamp(1.5rem,4vw,2.25rem)] md:mb-12">
-        Built With the Best Tools
+    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-8 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-9 md:py-10 lg:px-10">
+      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+        Our stack
+      </p>
+      <h2 className="mb-6 max-w-2xl font-sans text-2xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-3xl">
+        Modern tools we ship with
       </h2>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-5">
-        {stack.map(({ label, icon: Icon }) => (
-          <div
-            key={label}
-            className="flex flex-col items-center justify-center rounded-xl border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] px-3 py-4 text-center text-[12px] text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-primary-border)] hover:text-[var(--color-text-primary)] sm:py-[18px]"
-          >
-            <Icon className="mb-2 size-[22px] text-[var(--color-text-primary)]" stroke={1.25} aria-hidden />
-            <span className="leading-tight">{label}</span>
-          </div>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((name) => (
+          <span key={name} className="chip">
+            {name}
+          </span>
         ))}
       </div>
     </section>

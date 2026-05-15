@@ -1,18 +1,24 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
-
 export function ServicesHero() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] py-12 pb-10 shadow-[var(--shadow-inset-soft)] sm:py-14 md:pb-12 md:pt-14">
-      <SectionEyebrow className="mb-3">SECTION 1 — HERO</SectionEyebrow>
-      <p className="mb-2.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-[var(--color-text-secondary)]">
-        Services
-      </p>
-      <h1 className="mb-3.5 max-w-[520px] text-2xl font-medium leading-snug tracking-tight text-balance sm:text-3xl md:text-[32px] md:leading-[1.2]">
-        Everything you need to build, launch, and grow online.
-      </h1>
-      <p className="max-w-[460px] text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-[14px] sm:leading-[1.7]">
-        From your first landing page to a full product launch — four services that work together, or stand alone.
-      </p>
+    <section className="relative overflow-hidden px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+      <div className="pointer-events-none absolute inset-0 grid-bg opacity-30" aria-hidden />
+
+      <div className="relative z-10">
+
+        <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+          Services
+        </p>
+
+        <h1 className="mb-8 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-7xl">
+          Everything you need to
+          <br />
+          <span className="text-[var(--red)]">build,</span> launch, and grow.
+        </h1>
+
+        <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
+          From your first landing page to a full product launch — four services that work together, or stand alone.
+        </p>
+      </div>
     </section>
   );
 }

@@ -1,5 +1,9 @@
 export { WebDevHero } from "./WebDevHero";
-export { WebDevServices } from "./WebDevServices";
+export { WebDevWhoFor } from "./WebDevWhoFor";
+export { WebDevIncluded } from "./WebDevIncluded";
 export { WebDevProcess } from "./WebDevProcess";
+export { WebDevEngagementScopes } from "./WebDevEngagementScopes";
+export { WebDevHowWeQuote } from "./WebDevHowWeQuote";
+export { WebDevRelatedWork } from "./WebDevRelatedWork";
+export { WebDevFaq } from "./WebDevFaq";
 export { WebDevStack } from "./WebDevStack";
-export { WebDevQuoteForm } from "./WebDevQuoteForm";

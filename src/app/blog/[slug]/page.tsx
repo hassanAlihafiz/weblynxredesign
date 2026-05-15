@@ -1,3 +1,4 @@
+import { IconArrowLeft } from "@tabler/icons-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -49,9 +50,10 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <Link
               href="/blog"
-              className="mt-10 inline-flex text-sm font-medium text-[var(--color-text-info)] transition-opacity hover:opacity-90"
+              className="mt-10 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-text-info)] transition-opacity hover:opacity-90"
             >
-              ← Back to blog
+              <IconArrowLeft className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
+              Back to blog
             </Link>
           </article>
         </main>

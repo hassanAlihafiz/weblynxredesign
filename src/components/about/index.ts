@@ -1,8 +1,9 @@
+export { AboutCapabilities } from "./AboutCapabilities";
 export { AboutFinalCta } from "./AboutFinalCta";
 export { AboutIntro } from "./AboutIntro";
-export { AboutMission } from "./AboutMission";
-export { AboutRecognition } from "./AboutRecognition";
+export { AboutManifesto } from "./AboutManifesto";
+export { AboutClientVoices } from "./AboutClientVoices";
 export { AboutStats } from "./AboutStats";
+export { AboutStatusStrip } from "./AboutStatusStrip";
 export { AboutStory } from "./AboutStory";
-export { AboutTeam } from "./AboutTeam";
 export { AboutValues } from "./AboutValues";
