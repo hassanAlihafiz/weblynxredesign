@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 import {
   WORK_CASE_STUDIES,
   WORK_FEATURED,
@@ -29,8 +29,8 @@ export function WorkMain() {
 
   return (
     <>
-      <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
-        <SectionEyebrow className="mb-3 !text-[var(--color-text-tertiary)] sm:mb-4">SECTION 2 — FILTERS</SectionEyebrow>
+      <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
+      <ContentContainer>
         <div className="flex flex-wrap gap-2">
           {WORK_FILTERS.map(({ id, label }) => {
             const active = filter === id;
@@ -53,13 +53,12 @@ export function WorkMain() {
             );
           })}
         </div>
-      </section>
+      </ContentContainer>
+    </section>
 
       {showFeatured ? (
-        <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
-          <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">
-            SECTION 3 — FEATURED PROJECT (HERO)
-          </SectionEyebrow>
+        <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
+      <ContentContainer>
           <article className="overflow-hidden rounded-[var(--border-radius-lg)] shadow-[var(--shadow-card)]">
             <Link href={`/work/${WORK_FEATURED.slug}`} className="flex min-h-[160px] items-center justify-center text-base font-medium sm:min-h-[180px] md:min-h-[200px]">
               Large project hero screenshot
@@ -92,11 +91,12 @@ export function WorkMain() {
               </div>
             </div>
           </article>
-        </section>
+        </ContentContainer>
+    </section>
       ) : null}
 
-      <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
-        <SectionEyebrow className="mb-3 !text-[var(--color-text-tertiary)] sm:mb-4">SECTION 4 — PROJECT GRID</SectionEyebrow>
+      <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
+      <ContentContainer>
         {visibleCards.length === 0 ? (
           <p className="py-8 text-center text-base text-[var(--color-text-secondary)]">No projects in this category yet.</p>
         ) : (
@@ -142,7 +142,8 @@ export function WorkMain() {
             </button>
           </div>
         ) : null}
-      </section>
+      </ContentContainer>
+    </section>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const steps = [
   {
@@ -17,14 +17,14 @@ const steps = [
     eyebrow: "Within 3 days after",
     n: "03",
     title: "Proposal & quote",
-    body: "Detailed scope, timeline, and fixed price — no surprises.",
+    body: "Detailed scope, timeline, and fixed price no surprises.",
   },
 ] as const;
 
 export function ContactNextSteps() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] px-6 sm:px-8 lg:px-10 py-9 shadow-[var(--shadow-inset-soft)] sm:py-10 md:py-12">
-      <SectionEyebrow className="mb-3.5">SECTION 3 — WHAT HAPPENS NEXT</SectionEyebrow>
+    <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-9 shadow-[var(--shadow-inset-soft)] sm:py-10 md:py-12">
+      <ContentContainer>
       <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
         What happens next
       </p>
@@ -44,6 +44,7 @@ export function ContactNextSteps() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { FinalCtaSection } from "@/components/marketing";
+import { FinalCtaSection } from "@/components/CTA";
 
 export function AboutFinalCta() {
   return (

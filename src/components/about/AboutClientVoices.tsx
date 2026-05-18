@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const voices = [
   {
     quote:
@@ -15,7 +16,8 @@ const cardClassName =
 
 export function AboutClientVoices() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
       <p className="mb-6 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         What clients say
       </p>
@@ -30,6 +32,7 @@ export function AboutClientVoices() {
           </figure>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

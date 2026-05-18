@@ -1,6 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 export function ServicesTestimonial() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
       <div className="mx-auto max-w-2xl text-center">
         <div
           className="mb-6 font-serif text-6xl italic leading-none text-[var(--red)]"
@@ -15,6 +17,7 @@ export function ServicesTestimonial() {
 
         <p className="text-sm text-[var(--text-muted)]">Sara Chen · Founder, Acme SaaS</p>
       </div>
+    </ContentContainer>
     </section>
   );
 }

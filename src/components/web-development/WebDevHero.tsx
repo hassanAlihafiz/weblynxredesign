@@ -1,9 +1,11 @@
+import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 export function WebDevHero() {
   return (
     <>
-      <div className="px-6 pb-2 pt-8 sm:px-8 lg:px-10">
+      <ContentContainer className="pb-2 pt-8">
         <div className="font-mono text-xs text-[var(--text-dim)]">
           <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
             Services
@@ -11,15 +13,15 @@ export function WebDevHero() {
           <span className="mx-2">/</span>
           <span className="text-[var(--text)]">Web development</span>
         </div>
-      </div>
+      </ContentContainer>
 
-      <section className="relative overflow-hidden px-6 pb-20 pt-10 sm:px-8 lg:px-10">
+      <section className="relative w-full overflow-hidden pb-20 pt-10">
         <div
           className="pointer-events-none absolute right-0 top-0 size-[min(500px,100vw)] rounded-full red-glow"
           aria-hidden
         />
 
-        <div className="relative z-10">
+        <ContentContainer className="relative z-10">
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -29,14 +31,15 @@ export function WebDevHero() {
                 Fast, modern <span className="text-[var(--red)]">websites</span> that actually convert.
               </h1>
               <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">
-                From landing pages to full-scale web apps — built on Next.js, designed to scale, shipped in weeks.
+                From landing pages to full-scale web apps built on Next.js, designed to scale, shipped in weeks.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="#quote" className="btn-primary px-5 py-3 text-sm">
                   Request a quote
                 </Link>
                 <Link href="#engagements" className="btn-secondary px-5 py-3 text-sm">
-                  See engagements ↓
+                  See engagements
+                  <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
                 </Link>
               </div>
             </div>
@@ -65,7 +68,7 @@ export function WebDevHero() {
               </div>
             </div>
           </div>
-        </div>
+        </ContentContainer>
       </section>
     </>
   );

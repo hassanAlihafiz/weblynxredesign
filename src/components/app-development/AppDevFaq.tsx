@@ -2,10 +2,11 @@
 
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const faqs = [
   {
-    q: "React Native vs native — which should I choose?",
+    q: "React Native vs native which should I choose?",
     a: "React Native is ideal when you need both iOS and Android from one codebase, faster iteration, and lower cost. Fully native makes sense for heavy graphics, niche platform APIs, or when you already maintain separate teams. We recommend RN for most MVPs and scale-ups.",
   },
   {
@@ -14,7 +15,7 @@ const faqs = [
   },
   {
     q: "What if Apple or Google rejects my app?",
-    a: "We iterate on feedback, update metadata or binaries as needed, and resubmit until approval — included during the agreed launch window for standard scope.",
+    a: "We iterate on feedback, update metadata or binaries as needed, and resubmit until approval included during the agreed launch window for standard scope.",
   },
   {
     q: "Do you offer post-launch maintenance?",
@@ -31,8 +32,8 @@ export function AppDevFaq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
-      <div className="mx-auto max-w-3xl">
+    <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer className="max-w-3xl">
         <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
           Common questions
         </p>
@@ -78,7 +79,7 @@ export function AppDevFaq() {
             );
           })}
         </div>
-      </div>
+      </ContentContainer>
     </section>
   );
 }

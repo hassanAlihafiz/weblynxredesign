@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const steps = [
   {
     week: "WEEK 1",
@@ -27,7 +28,8 @@ const steps = [
 
 export function HomeProcess() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
 
       <div className="mb-12">
         <p className="mb-3 font-mono text-sm font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -52,6 +54,7 @@ export function HomeProcess() {
           </div>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

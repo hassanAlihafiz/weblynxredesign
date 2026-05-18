@@ -5,13 +5,7 @@ type PageContainerProps = {
   className?: string;
 };
 
-/**
- * Centers page content at a maximum width of 1260px (`--page-max-width`).
- */
+/** Full-width page shell; sections use `ContentContainer` for 1260px content width. */
 export function PageContainer({ children, className = "" }: PageContainerProps) {
-  return (
-    <div className={`mx-auto w-full max-w-[var(--page-max-width)]${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`w-full ${className}`.trim()}>{children}</div>;
 }

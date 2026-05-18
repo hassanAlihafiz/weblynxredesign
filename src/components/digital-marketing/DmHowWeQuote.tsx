@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const steps = [
   { num: "01", title: "Discovery call", body: "Free 30-min review of your goals." },
   { num: "02", title: "Custom plan", body: "Channels, scope, KPIs within 3 days." },
@@ -6,7 +7,8 @@ const steps = [
 
 export function DmHowWeQuote() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div>
           <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -18,7 +20,7 @@ export function DmHowWeQuote() {
         </div>
         <div>
           <p className="mb-8 max-w-xl leading-relaxed text-[var(--text-muted)]">
-            After a 30-minute discovery call, we send a detailed proposal within 3 business days — channels, monthly
+            After a 30-minute discovery call, we send a detailed proposal within 3 business days channels, monthly
             retainer scope, KPIs, and pricing.
           </p>
           <div className="grid gap-3 md:grid-cols-3">
@@ -35,6 +37,7 @@ export function DmHowWeQuote() {
           </div>
         </div>
       </div>
+    </ContentContainer>
     </section>
   );
 }

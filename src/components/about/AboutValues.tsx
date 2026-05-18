@@ -1,8 +1,9 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const principles = [
   {
     n: "01",
     title: "Speed without shortcuts",
-    body: "We ship in weeks, not quarters — but never at the cost of quality or maintainability.",
+    body: "We ship in weeks, not quarters but never at the cost of quality or maintainability.",
   },
   {
     n: "02",
@@ -26,7 +27,8 @@ const cardClassName =
 
 export function AboutValues() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
+      <ContentContainer>
 
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         How we work
@@ -51,6 +53,7 @@ export function AboutValues() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

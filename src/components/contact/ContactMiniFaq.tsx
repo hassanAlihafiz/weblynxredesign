@@ -1,9 +1,9 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const faqs = [
   {
     q: "What's your minimum project size?",
-    a: "Most projects start at $1,500 — but we'll talk if budget is flexible.",
+    a: "Most projects start at $1,500 but we'll talk if budget is flexible.",
   },
   {
     q: "Do you work with international clients?",
@@ -15,14 +15,14 @@ const faqs = [
   },
   {
     q: "Do you sign NDAs?",
-    a: "Yes — before any project details are shared. Just ask.",
+    a: "Yes before any project details are shared. Just ask.",
   },
 ] as const;
 
 export function ContactMiniFaq() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-12">
-      <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">SECTION 4 — MINI FAQ</SectionEyebrow>
+    <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-12">
+      <ContentContainer>
       <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
         Before you reach out
       </p>
@@ -38,6 +38,7 @@ export function ContactMiniFaq() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

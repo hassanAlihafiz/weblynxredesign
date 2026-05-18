@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const steps = [
   { week: "WEEK 1", n: "01", title: "Discover", detail: "Strategy call & scope" },
   { week: "WEEK 2", n: "02", title: "Design", detail: "Concepts & prototype" },
@@ -7,7 +8,8 @@ const steps = [
 
 export function ServicesProcess() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Our process
       </p>
@@ -28,6 +30,7 @@ export function ServicesProcess() {
           </div>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

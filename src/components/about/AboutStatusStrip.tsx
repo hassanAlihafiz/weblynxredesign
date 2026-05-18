@@ -1,6 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 export function AboutStatusStrip() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-14 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-14">
+      <ContentContainer>
       <div className="grid gap-10 md:grid-cols-2">
         <div>
           <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -23,6 +25,7 @@ export function AboutStatusStrip() {
           <p className="text-sm leading-relaxed text-[var(--text-muted)]">Booking projects starting July 2026.</p>
         </div>
       </div>
+    </ContentContainer>
     </section>
   );
 }

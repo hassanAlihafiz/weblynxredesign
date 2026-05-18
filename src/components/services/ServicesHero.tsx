@@ -1,6 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full relative overflow-hidden py-14 md:py-20">
+      <ContentContainer>
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-30" aria-hidden />
 
       <div className="relative z-10">
@@ -16,9 +18,10 @@ export function ServicesHero() {
         </h1>
 
         <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-          From your first landing page to a full product launch — four services that work together, or stand alone.
+          From your first landing page to a full product launch four services that work together, or stand alone.
         </p>
       </div>
+    </ContentContainer>
     </section>
   );
 }

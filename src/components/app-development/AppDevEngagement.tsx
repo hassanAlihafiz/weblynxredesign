@@ -1,4 +1,6 @@
+import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const tiers = [
   {
@@ -50,8 +52,9 @@ export function AppDevEngagement() {
   return (
     <section
       id="engagement"
-      className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10"
+      className="border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Project scopes
       </p>
@@ -88,13 +91,15 @@ export function AppDevEngagement() {
             </ul>
             <Link
               href="#quote"
-              className="mt-auto text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
+              className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
             >
-              Request a quote →
+              Request a quote
+              <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
             </Link>
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

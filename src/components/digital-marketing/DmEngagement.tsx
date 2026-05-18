@@ -1,4 +1,6 @@
+import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const tiers = [
   {
@@ -46,7 +48,8 @@ const tiers = [
 
 export function DmEngagement() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Engagement models
       </p>
@@ -54,7 +57,7 @@ export function DmEngagement() {
         How we work with you
       </h2>
       <p className="mb-10 max-w-md text-base leading-relaxed text-[var(--text-muted)]">
-        Marketing is ongoing. We work in monthly retainers — choose the level that matches your stage.
+        Marketing is ongoing. We work in monthly retainers choose the level that matches your stage.
       </p>
       <div className="grid gap-4 md:grid-cols-3">
         {tiers.map(({ featured, label, title, timeline, items }) => (
@@ -83,13 +86,15 @@ export function DmEngagement() {
             </ul>
             <Link
               href="#quote"
-              className="mt-auto text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
+              className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
             >
-              Request a quote →
+              Request a quote
+              <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
             </Link>
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

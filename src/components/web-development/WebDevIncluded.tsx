@@ -1,4 +1,5 @@
 import type { TablerIcon } from "@tabler/icons-react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 import {
   IconBolt,
   IconDeviceLaptop,
@@ -19,7 +20,8 @@ const items: { title: string; body: string; icon: TablerIcon }[] = [
 
 export function WebDevIncluded() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Deliverables
       </p>
@@ -41,6 +43,7 @@ export function WebDevIncluded() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

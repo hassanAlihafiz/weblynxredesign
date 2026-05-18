@@ -1,4 +1,5 @@
 import {
+  IconArrowRight,
   IconCode,
   IconDeviceMobile,
   IconPalette,
@@ -6,6 +7,7 @@ import {
   type TablerIcon,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const cards: {
   n: string;
@@ -37,7 +39,7 @@ const cards: {
   {
     n: "03",
     title: "Digital marketing",
-    body: "SEO, paid ads, content, and social — everything to get your brand found and chosen.",
+    body: "SEO, paid ads, content, and social everything to get your brand found and chosen.",
     stack: "SEO · Google Ads · Meta Ads · Content",
     delivery: "Monthly retainer",
     href: "/services/digital-marketing",
@@ -59,7 +61,8 @@ const cardClassName =
 
 export function ServicesGrid() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
 
       <div className="grid gap-5 md:grid-cols-2">
         {cards.map(({ n, title, body, stack, delivery, href, icon: Icon }) => (
@@ -79,12 +82,16 @@ export function ServicesGrid() {
             <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-4">
               <span className="text-sm text-[var(--text-muted)]">{delivery}</span>
               <span className="text-sm font-medium text-[var(--red)] transition-colors group-hover/card:text-[var(--red-bright)]">
-                Learn more →
+                <span className="inline-flex items-center gap-0.5">
+                  Learn more
+                  <IconArrowRight className="size-3 shrink-0" stroke={1.5} aria-hidden />
+                </span>
               </span>
             </div>
           </Link>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

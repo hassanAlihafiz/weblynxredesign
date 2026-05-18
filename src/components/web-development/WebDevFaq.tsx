@@ -2,11 +2,12 @@
 
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const faqs = [
   {
     q: "How long does a typical project take?",
-    a: "Marketing and landing sites often ship in 1–3 weeks. Custom web apps and MVPs usually land in 4–8 weeks depending on auth, integrations, and admin needs. Larger platforms are scoped in phases — you always get a week-by-week plan in the proposal.",
+    a: "Marketing and landing sites often ship in 1–3 weeks. Custom web apps and MVPs usually land in 4–8 weeks depending on auth, integrations, and admin needs. Larger platforms are scoped in phases you always get a week-by-week plan in the proposal.",
   },
   {
     q: "Do you provide hosting and ongoing maintenance?",
@@ -14,7 +15,7 @@ const faqs = [
   },
   {
     q: "Can you redesign my existing site?",
-    a: "Absolutely. We audit what you have, preserve URLs and SEO where it matters, and rebuild on a modern stack — usually Next.js — so you get speed, better UX, and a codebase you can grow with.",
+    a: "Absolutely. We audit what you have, preserve URLs and SEO where it matters, and rebuild on a modern stack usually Next.js so you get speed, better UX, and a codebase you can grow with.",
   },
   {
     q: "What's your payment structure?",
@@ -22,7 +23,7 @@ const faqs = [
   },
   {
     q: "Do you sign NDAs?",
-    a: "Yes. Share yours before the scoping call or ask for ours — we're used to reviewing product and roadmap details under NDA.",
+    a: "Yes. Share yours before the scoping call or ask for ours we're used to reviewing product and roadmap details under NDA.",
   },
 ] as const;
 
@@ -31,8 +32,8 @@ export function WebDevFaq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
-      <div className="mx-auto max-w-3xl">
+    <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer className="max-w-3xl">
         <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
           Common questions
         </p>
@@ -78,7 +79,7 @@ export function WebDevFaq() {
             );
           })}
         </div>
-      </div>
+      </ContentContainer>
     </section>
   );
 }

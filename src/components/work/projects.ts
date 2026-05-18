@@ -22,7 +22,7 @@ export type CaseStudyCard = {
 
 export const WORK_FEATURED = {
   slug: "finlytics",
-  title: "Finlytics — FinTech Dashboard",
+  title: "FinTech Dashboard",
   excerpt:
     "Rebuilt their analytics platform on Next.js, cut load time from 6s to under 1s, and helped close their Series A.",
   tagLabels: ["SaaS", "Web app"] as const,

@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const stats = [
   { value: "2025", label: "Founded" },
   { value: "12+", label: "Projects shipped" },
@@ -7,7 +8,8 @@ const stats = [
 
 export function AboutStats() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-14 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-14">
+      <ContentContainer>
       <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
         {stats.map(({ value, label }) => (
           <div key={label}>
@@ -18,6 +20,7 @@ export function AboutStats() {
           </div>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }
