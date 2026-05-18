@@ -6,4 +6,5 @@ export { HomeNav as Navbar } from "../Navbar/Navbar";
 export { HomeProcess } from "./HomeProcess";
 export { HomeServices } from "./HomeServices";
 export { HomeTestimonials } from "./HomeTestimonials";
+export { HomeTrustBar } from "./HomeTrustBar";
 export { SectionEyebrow } from "./SectionEyebrow";

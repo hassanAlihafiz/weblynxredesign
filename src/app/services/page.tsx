@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
+import { servicesMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
 import {
   ServicesFaq,
@@ -12,11 +12,7 @@ import {
   ServicesWhy,
 } from "@/components/services";
 
-export const metadata: Metadata = {
-  title: "Services — Weblynx",
-  description:
-    "Web development, app development, digital marketing, and design — one team from discovery to launch.",
-};
+export const metadata = servicesMetadata;
 
 export default function ServicesPage() {
   return (

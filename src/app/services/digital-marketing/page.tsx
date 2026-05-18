@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
+import { digitalMarketingMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
 import {
   DmChannels,
@@ -14,11 +14,7 @@ import {
   DmWhoFor,
 } from "@/components/digital-marketing";
 
-export const metadata: Metadata = {
-  title: "Digital Marketing — Weblynx",
-  description:
-    "SEO, paid ads, content, and social — growth strategy, retainers, and reporting built around your business goals.",
-};
+export const metadata = digitalMarketingMetadata;
 
 export default function DigitalMarketingPage() {
   return (

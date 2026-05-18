@@ -10,12 +10,9 @@ export function ServicesProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
       <ContentContainer>
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        Our process
-      </p>
 
-      <h2 className="mb-12 font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-        The same rhythm, every project
+      <h2 className="mb-12 max-w-2xl text-balance font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+        The same rhythm every project
       </h2>
 
       <div className="grid gap-6 md:grid-cols-4">

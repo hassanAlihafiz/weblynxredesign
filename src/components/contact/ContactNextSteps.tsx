@@ -23,24 +23,21 @@ const steps = [
 
 export function ContactNextSteps() {
   return (
-    <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-9 shadow-[var(--shadow-inset-soft)] sm:py-10 md:py-12">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-      <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
-        What happens next
-      </p>
-      <h2 className="mb-5 text-3xl font-medium sm:mb-6">After you hit send</h2>
+      <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">After you hit send <span className="text-[var(--red)]">What happens next</span></h2>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
         {steps.map(({ eyebrow, n, title, body }) => (
           <article
             key={n}
-            className="rounded-[var(--border-radius-lg)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] p-4 shadow-[var(--shadow-card)] sm:p-4"
+            className="rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
           >
-            <p className="mb-1 text-base text-[var(--color-text-tertiary)]">{eyebrow}</p>
-            <div className="mb-1.5 text-xl font-medium text-[var(--color-text-info)]">
+            <p className="mb-1 text-base font-medium text-[var(--text)]">{eyebrow}</p>
+            <div className="mb-1.5 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">
               {n}
             </div>
-            <h3 className="mb-1 text-xl font-medium">{title}</h3>
-            <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">{body}</p>
+            <h3 className="mb-1 text-xl font-medium text-[var(--text)]">{title}</h3>
+            <p className="text-base leading-relaxed text-[var(--text-muted)]">{body}</p>
           </article>
         ))}
       </div>

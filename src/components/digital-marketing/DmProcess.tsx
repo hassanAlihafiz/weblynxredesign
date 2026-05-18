@@ -10,24 +10,21 @@ export function DmProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        How it works
-      </p>
-      <h2 className="mb-3 max-w-2xl text-balance font-sans text-3xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-4xl">
-        A growth loop, not a campaign
+      <h2 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+        A growth loop, not a <span className="text-[var(--red)]">campaign</span>
       </h2>
-      <p className="mb-10 max-w-md text-base leading-relaxed text-[var(--text-muted)]">
+      <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
         Marketing isn&apos;t one-and-done. We work in monthly cycles that compound over time.
       </p>
       <div className="grid gap-4 md:grid-cols-4">
         {steps.map(({ num, title, body }) => (
           <article
             key={num}
-            className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
+            className="rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
           >
-            <div className="step-num mb-3">{num}</div>
+            <div className="mb-2 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">{num}</div>
             <h3 className="mb-2 font-medium text-[var(--text)]">{title}</h3>
-            <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>
+            <p className="text-base leading-relaxed text-[var(--text-muted)]">{body}</p>
           </article>
         ))}
       </div>

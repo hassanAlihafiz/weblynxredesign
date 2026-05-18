@@ -5,11 +5,8 @@ export function AppDevTechChips() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-8 shadow-[var(--shadow-inset-soft)] sm:py-9 md:py-10">
       <ContentContainer>
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        Our stack
-      </p>
-      <h2 className="mb-6 max-w-2xl font-sans text-2xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-3xl">
-        Modern tools we ship with
+      <h2 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+        Modern tools we <span className="text-[var(--red)]">ship with</span>
       </h2>
       <div className="flex flex-wrap gap-2">
         {TECH_STACKS.appDevelopment.map((label) => (

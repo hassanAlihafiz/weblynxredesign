@@ -30,11 +30,7 @@ export function ServicesFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
       <ContentContainer className="max-w-3xl">
-        <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-          Common questions
-        </p>
-
-        <h2 className="mb-10 font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-4xl">
+        <h2 className="mb-10 max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
           Before you book a call
         </h2>
 

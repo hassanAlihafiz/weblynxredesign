@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
+import { webDevelopmentMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
 import {
   WebDevHero,
@@ -13,11 +13,7 @@ import {
   WebDevWhoFor,
 } from "@/components/web-development";
 
-export const metadata: Metadata = {
-  title: "Web Development — Weblynx",
-  description:
-    "Custom websites, frontend and backend development, e-commerce, web apps, and SEO — from discovery to launch.",
-};
+export const metadata = webDevelopmentMetadata;
 
 export default function WebDevelopmentPage() {
   return (

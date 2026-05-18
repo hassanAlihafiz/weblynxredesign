@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { IconArrowRight } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import { HomeHeroChainGraphic } from "./HomeHeroChainGraphic";
 
 const avatars = [
@@ -13,7 +14,7 @@ const avatars = [
 export function HomeHero() {
   return (
     <section className="relative w-full overflow-hidden border-b border-[#1F1F1F] shadow-[var(--shadow-inset-soft)]">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(#1A1A1A_1px,transparent_1px),linear-gradient(90deg,#1A1A1A_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.22]" aria-hidden />
+      <HeroGridBackground />
 
       <ContentContainer className="relative z-[2]">
         <div className="grid grid-cols-1 items-center gap-10 py-12 sm:gap-12 sm:py-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-9 lg:py-[3.75rem] lg:pb-[4.375rem]">
@@ -24,7 +25,7 @@ export function HomeHero() {
             </div>
 
             <h1 className="mb-4 text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2.5rem,5vw,3.5rem)] lg:text-[3.5rem]">
-              We build the <span className="text-[#E63946]">web</span> for ambitious founders.
+              We build the <span className="text-[#E63946]">web</span> for ambitious founders
             </h1>
 
             <p className="mb-6 max-w-[400px] text-base leading-relaxed text-[#A0A0A0] max-lg:mx-auto lg:mx-0">

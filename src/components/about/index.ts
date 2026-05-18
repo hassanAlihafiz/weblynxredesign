@@ -2,8 +2,6 @@ export { AboutCapabilities } from "./AboutCapabilities";
 export { AboutFinalCta } from "./AboutFinalCta";
 export { AboutIntro } from "./AboutIntro";
 export { AboutManifesto } from "./AboutManifesto";
-export { AboutClientVoices } from "./AboutClientVoices";
 export { AboutStats } from "./AboutStats";
-export { AboutStatusStrip } from "./AboutStatusStrip";
 export { AboutStory } from "./AboutStory";
 export { AboutValues } from "./AboutValues";

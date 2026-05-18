@@ -33,15 +33,12 @@ export function AppDevFaq() {
 
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
-      <ContentContainer className="max-w-3xl">
-        <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-          Common questions
-        </p>
-        <h2 className="mb-10 text-balance font-sans text-3xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-4xl">
-          Things founders ask
+      <ContentContainer>
+        <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Things founders ask <span className="text-[var(--red)]">before starting</span>
         </h2>
 
-        <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
+        <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
           {faqs.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
@@ -51,16 +48,16 @@ export function AppDevFaq() {
                 <button
                   type="button"
                   id={buttonId}
-                  className="flex w-full items-center justify-between gap-4 p-5 text-left transition-colors hover:bg-[var(--bg-elev)]"
+                  className="flex w-full items-center text-left justify-between gap-4 p-5 transition-colors hover:bg-[var(--bg-elev)]"
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
-                  <span className="text-sm font-medium text-[var(--text)]">{q}</span>
+                  <span className="text-base font-medium text-[var(--text)]">{q}</span>
                   {isOpen ? (
-                    <IconMinus className="size-5 shrink-0 text-[var(--text-muted)]" stroke={1.5} aria-hidden />
+                    <IconMinus className="size-5 shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
                   ) : (
-                    <IconPlus className="size-5 shrink-0 text-[var(--text-muted)]" stroke={1.5} aria-hidden />
+                    <IconPlus className="size-5 shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
                   )}
                 </button>
                 <div
@@ -70,7 +67,7 @@ export function AppDevFaq() {
                   className={`grid transition-[grid-template-rows] duration-200 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                 >
                   <div className="min-h-0 overflow-hidden">
-                    <p className="border-t border-[var(--border-subtle)] px-5 pb-5 pt-4 text-sm leading-relaxed text-[var(--text-muted)]">
+                    <p className="border-t border-[var(--border-subtle)] px-5 pb-5 pt-4 text-base leading-relaxed text-[var(--text-muted)]">
                       {a}
                     </p>
                   </div>

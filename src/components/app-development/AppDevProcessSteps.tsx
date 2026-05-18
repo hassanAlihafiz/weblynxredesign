@@ -11,19 +11,16 @@ export function AppDevProcessSteps() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        How it works
-      </p>
-      <h2 className="mb-10 max-w-3xl text-balance font-sans text-3xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-4xl">
-        From idea to App Store in 5 steps
+      <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+        From idea to <span className="text-[var(--red)]">App Store</span> in 5 steps
       </h2>
       <div className="grid gap-4 md:grid-cols-5">
         {steps.map(({ week, num, title, detail }) => (
           <div key={num} className="border-l-2 border-[var(--red)] pl-3">
             <div className="mb-1 font-mono text-[10px] text-[var(--text-dim)]">{week}</div>
-            <div className="mb-2 text-2xl font-bold leading-none tracking-tight text-[var(--red)]">{num}</div>
+            <div className="mb-2 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">{num}</div>
             <h3 className="mb-1 text-sm font-medium text-[var(--text)]">{title}</h3>
-            <p className="text-xs leading-relaxed text-[var(--text-muted)]">{detail}</p>
+            <p className="text-base leading-relaxed text-[var(--text-muted)]">{detail}</p>
           </div>
         ))}
       </div>

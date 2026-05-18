@@ -1,19 +1,18 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 
 export function WorkPageHeader() {
   return (
-    <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
-      <ContentContainer>
-      <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
-        Selected work
-      </p>
-      <h1 className="mb-2.5 max-w-[480px] text-2xl font-medium leading-tight tracking-tight text-balance sm:text-3xl md:text-[30px] md:leading-[1.2]">
-        Real projects. Real results. Real businesses.
-      </h1>
-      <p className="max-w-[440px] text-base leading-relaxed text-[var(--color-text-secondary)]">
-        A look inside the projects we&apos;ve shipped the problems, the process, and the outcomes that mattered.
-      </p>
-    </ContentContainer>
+    <section className="relative w-full overflow-hidden border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <HeroGridBackground />
+      <ContentContainer className="relative z-10">
+        <h1 className="mb-2.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Real projects, <span className="text-[var(--red)]"> real results</span>, real businesses.
+        </h1>
+        <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
+          A look inside the projects we&apos;ve shipped the problems, the process, and the outcomes that mattered.
+        </p>
+      </ContentContainer>
     </section>
   );
 }

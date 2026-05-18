@@ -33,12 +33,8 @@ export function AboutCapabilities() {
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
       <ContentContainer>
 
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        What we do best
-      </p>
-
-      <h2 className="mb-3 max-w-3xl font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-        Our core capabilities
+      <h2 className="mb-3 max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+        Our <span className="text-[var(--red)]">core capabilities</span>
       </h2>
 
       <p className="mb-12 max-w-md text-[var(--text-muted)]">
@@ -47,13 +43,13 @@ export function AboutCapabilities() {
 
       <div className="grid border-t border-[var(--border-subtle)] md:grid-cols-2">
         {capabilities.map(({ title, stack, description, cellClass }) => (
-          <div key={title} className={cellClass}>
+          <article key={title} className={cellClass}>
             <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
               <h4 className="font-medium text-[var(--text)]">{title}</h4>
               <span className="shrink-0 text-right font-mono text-xs text-[var(--text-dim)]">{stack}</span>
             </div>
             <p className="text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
-          </div>
+          </article>
         ))}
       </div>
     </ContentContainer>

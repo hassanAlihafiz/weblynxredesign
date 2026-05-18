@@ -23,11 +23,8 @@ export function WebDevHowWeQuote() {
       <ContentContainer>
       <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div>
-          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-            How we quote
-          </p>
-          <h2 className="max-w-md text-balance font-sans text-3xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-4xl">
-            Every project is different. So is every quote.
+          <h2 className="max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+            Every project is different <span className="text-[var(--red)]">So is every quote</span>
           </h2>
         </div>
         <div>
@@ -39,11 +36,11 @@ export function WebDevHowWeQuote() {
             {steps.map(({ num, title, body }) => (
               <article
                 key={num}
-                className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-4 shadow-[var(--shadow-xs)]"
+                className="rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-4 shadow-[var(--shadow-xs)]"
               >
-                <div className="mb-2 text-2xl font-bold leading-none tracking-tight text-[var(--red)]">{num}</div>
-                <h3 className="mb-1 text-sm font-medium text-[var(--text)]">{title}</h3>
-                <p className="text-xs leading-relaxed text-[var(--text-muted)]">{body}</p>
+                <div className="mb-2 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">{num}</div>
+                <h3 className="mb-1 text-base font-medium text-[var(--text)]">{title}</h3>
+                <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>
               </article>
             ))}
           </div>

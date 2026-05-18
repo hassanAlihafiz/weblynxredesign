@@ -9,14 +9,9 @@ export function AboutManifesto() {
       />
 
       <div className="relative z-10">
-
-        <p className="mb-6 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text)]">
-          What we believe
-        </p>
-
-        <blockquote className="mx-auto max-w-3xl font-serif text-3xl italic leading-tight text-[var(--text)] md:text-5xl">
-          &ldquo;The best digital products aren&apos;t built by big teams or fancy stacks. They&apos;re built by
-          people who care deeply about the details and who ship.&rdquo;
+        <blockquote className="mx-auto max-w-4xl text-4xl leading-tight text-[var(--text)] md:text-5xl">
+          <span className="font-serif italic">&ldquo;</span> {" "}The best digital products aren&apos;t built by big teams or fancy stacks. They&apos;re built by
+          people who care deeply about the details and who ship.{" "}<span className="font-serif italic">&rdquo;</span>
         </blockquote>
       </div>
     </ContentContainer>

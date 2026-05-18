@@ -60,21 +60,18 @@ export function DmChannels() {
       className="scroll-mt-24 border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
       <ContentContainer>
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        Channels we run
-      </p>
-      <h2 className="mb-10 max-w-2xl text-balance font-sans text-3xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-4xl">
-        Six channels. One growth engine.
+      <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+        Six channels <span className="text-[var(--red)]">one growth engine</span>
       </h2>
       <div className="grid gap-4 md:grid-cols-3">
         {channels.map(({ title, body, icon: Icon, iconClass }) => (
           <article
             key={title}
-            className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
+            className="rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
           >
-            <Icon className={`mb-3 size-6 shrink-0 ${iconClass}`} stroke={1.75} aria-hidden />
+            <Icon className={`mb-3 size-6 shrink-0 ${iconClass}`} stroke={1.5} aria-hidden />
             <h3 className="mb-2 font-medium text-[var(--text)]">{title}</h3>
-            <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>
+            <p className="text-base leading-relaxed text-[var(--text-muted)]">{body}</p>
           </article>
         ))}
       </div>

@@ -1,6 +1,7 @@
 import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 
 const gradPrefix = "dm-hero";
 
@@ -18,6 +19,7 @@ export function DmHero() {
       </ContentContainer>
 
       <section className="relative w-full overflow-hidden pb-20 pt-10">
+        <HeroGridBackground fade />
         <div
           className="pointer-events-none absolute right-0 top-0 size-[min(500px,100vw)] rounded-full red-glow"
           aria-hidden
@@ -30,7 +32,7 @@ export function DmHero() {
                 Digital marketing
               </p>
               <h1 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                Get found. Get clicks. <span className="text-[var(--red)]">Get customers</span>.
+                Get found, get clicks, <span className="text-[var(--red)]">get customers</span>
               </h1>
               <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">
                 SEO, paid ads, content, and social built around your business goals, measured by what actually moves the

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import {
   ContactFormSection,
   ContactIntro,
@@ -7,12 +6,9 @@ import {
 } from "@/components/contact";
 import { Footer, Navbar } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
+import { contactMetadata } from "@/data/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact — Weblynx",
-  description:
-    "Tell us about your project. We reply within 24 hours. Book a call, email, or send a project inquiry.",
-};
+export const metadata = contactMetadata;
 
 export default function ContactPage() {
   return (

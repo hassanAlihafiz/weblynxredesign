@@ -1,17 +1,9 @@
 import { SiteLogo } from "@/components/brand";
-import { IconBark } from "@/components/icons/IconBark";
+import { FooterNewsletter } from "@/components/Footer/FooterNewsletter";
 import { ContentContainer } from "@/components/layout/ContentContainer";
-import { SITE, SOCIAL_LINKS, type SocialIconId } from "@/data/site";
-import {
-  IconAward,
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconSparkles,
-  IconStar,
-} from "@tabler/icons-react";
+import { SITE, SOCIAL_LINKS } from "@/data/site";
+import { IconSparkles } from "@tabler/icons-react";
 import Link from "next/link";
-import type { ComponentType } from "react";
 
 function getCopyrightYear(): number {
   return new Date().getFullYear();
@@ -23,25 +15,13 @@ const footerLinkClass =
 const footerColumnHeadingClass =
   "mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]";
 
-const socialLinkClass =
-  "flex items-center gap-2.5 text-sm text-[var(--text-muted)] transition-colors hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]";
-
-const SOCIAL_ICONS: Record<SocialIconId, ComponentType<{ className?: string }>> = {
-  linkedin: IconBrandLinkedin,
-  facebook: IconBrandFacebook,
-  instagram: IconBrandInstagram,
-  trustpilot: IconStar,
-  clutch: IconAward,
-  bark: IconBark,
-};
-
 export function HomeFooter() {
   const year = getCopyrightYear();
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[var(--bg-elev)] pb-8 pt-16">
+    <footer className="relative w-full overflow-hidden border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <div className="mb-14 grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
+        <div className="mb-14 grid gap-x-12 gap-y-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="-mb-5 -mt-6 -ml-4 inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]">
               <SiteLogo />
@@ -53,7 +33,7 @@ export function HomeFooter() {
 
           <div>
             <div className={footerColumnHeadingClass}>Services</div>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-base">
               <li>
                 <Link href="/services/web-development" className={footerLinkClass}>
                   Web development
@@ -70,7 +50,12 @@ export function HomeFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className={footerLinkClass}>
+                <Link href="/services/ai-development" className={footerLinkClass}>
+                  AI development
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/design" className={footerLinkClass}>
                   Design
                 </Link>
               </li>
@@ -79,7 +64,7 @@ export function HomeFooter() {
 
           <div>
             <div className={footerColumnHeadingClass}>Company</div>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-base">
               <li>
                 <Link href="/about" className={footerLinkClass}>
                   About
@@ -105,32 +90,31 @@ export function HomeFooter() {
 
           <div>
             <div className={footerColumnHeadingClass}>Connect</div>
-            <ul className="space-y-2">
-              {SOCIAL_LINKS.map(({ label, href, icon, hoverClass }) => {
-                const Icon = SOCIAL_ICONS[icon];
-                return (
+            <ul className="space-y-2 text-base">
+              {SOCIAL_LINKS.map(({ label, href, hoverClass }) => (
                 <li key={label}>
                   <a
                     href={href}
-                    className={`${socialLinkClass} ${hoverClass ?? ""}`}
+                    className={`${footerLinkClass} ${hoverClass ?? ""}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon className="size-4 shrink-0" aria-hidden />
-                    <span>{label}</span>
+                    {label}
                   </a>
                 </li>
-                );
-              })}
+              ))}
             </ul>
+          </div>
+          <div className="md:col-span-2 md:col-start-2">
+            <FooterNewsletter />
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border-subtle)] pt-6">
-          <div className="font-mono text-xs text-[var(--text-dim)]">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border-subtle)] pt-4">
+          <div className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-dim)]">
             © {year} {SITE.name} · {SITE.locations.footer}
           </div>
-          <div className="inline-flex items-center gap-1 font-mono text-xs text-[var(--text-dim)]">
+          <div className="inline-flex items-center gap-1 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-dim)]">
             Made with intent
             <IconSparkles className="size-3 shrink-0" stroke={1.5} aria-hidden />
           </div>

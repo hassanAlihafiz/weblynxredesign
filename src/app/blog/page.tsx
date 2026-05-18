@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
+import { blogMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { BlogFinalCta, BlogMain, BlogNewsletter } from "@/components/blog";
+import { BlogFinalCta, BlogMain } from "@/components/blog";
 
-export const metadata: Metadata = {
-  title: "Blog — Weblynx",
-  description:
-    "Journal: tutorials, case breakdowns, and guides on web development, apps, design, and marketing.",
-};
+export const metadata = blogMetadata;
 
 export default function BlogPage() {
   return (
@@ -16,7 +12,6 @@ export default function BlogPage() {
         <Navbar />
         <main className="w-full flex-1">
           <BlogMain />
-          <BlogNewsletter />
           <BlogFinalCta />
         </main>
         <Footer />

@@ -6,7 +6,6 @@ export function HomeFinalCta() {
       title={
         <>
           Ready to build
-          <br />
           something <span className="text-[var(--red)]">great</span>?
         </>
       }
