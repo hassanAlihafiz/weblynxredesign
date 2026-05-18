@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE } from "@/data/site";
 import {
   IconArrowRight,
   IconBrandLinkedin,
@@ -31,7 +32,7 @@ export function ContactAside() {
           Or reach us directly
         </p>
         <a
-          href="mailto:info@weblynx.us"
+          href={`mailto:${SITE.email}`}
           className="flex items-start gap-2.5 border-b border-[var(--color-border-tertiary)] py-2.5 transition-colors hover:text-[var(--color-primary)]"
           target="_blank"
           rel="noopener noreferrer"
@@ -39,11 +40,11 @@ export function ContactAside() {
           <IconMail className="mt-0.5 size-4 shrink-0 text-[var(--color-text-info)]" stroke={1.5} aria-hidden />
           <div className="min-w-0">
             <div className="text-base text-[var(--color-text-tertiary)]">Email</div>
-            <div className="truncate text-xs font-medium">info@weblynx.us</div>
+            <div className="truncate text-xs font-medium">{SITE.email}</div>
           </div>
         </a>
         <a
-          href="https://wa.me/12033127541"
+          href={SITE.whatsapp.href}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-start gap-2.5 border-b border-[var(--color-border-tertiary)] py-2.5 transition-opacity hover:opacity-90"
@@ -51,11 +52,11 @@ export function ContactAside() {
           <IconBrandWhatsapp className="mt-0.5 size-4 shrink-0 text-[#25D366]" stroke={1.5} aria-hidden />
           <div className="min-w-0">
             <div className="text-base text-[var(--color-text-tertiary)]">WhatsApp</div>
-            <div className="text-xs font-medium">+1 (203) 312-7541</div>
+            <div className="text-xs font-medium">{SITE.whatsapp.display}</div>
           </div>
         </a>
         <a
-          href="https://www.linkedin.com/company/weblynxus/"
+          href={SITE.linkedin.href}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-start gap-2.5 py-2.5 transition-opacity hover:opacity-90"
@@ -63,7 +64,7 @@ export function ContactAside() {
           <IconBrandLinkedin className="mt-0.5 size-4 shrink-0 text-[#0A66C2]" stroke={1.5} aria-hidden />
           <div className="min-w-0">
             <div className="text-base text-[var(--color-text-tertiary)]">LinkedIn</div>
-            <div className="text-xs font-medium">@weblynxus</div>
+            <div className="text-xs font-medium">{SITE.linkedin.handle}</div>
           </div>
         </a>
       </div>
@@ -74,11 +75,9 @@ export function ContactAside() {
         </p>
         <div className="mb-1 flex flex-wrap items-center gap-2">
           <IconMapPin className="size-3.5 shrink-0 text-[var(--color-text-info)]" stroke={1.5} aria-hidden />
-          <span className="text-xs font-medium">Houston, Texas</span>
+          <span className="text-xs font-medium">{SITE.locations.contact}</span>
         </div>
-        <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
-          Working remotely with clients across the USA · GMT-6
-        </p>
+        <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">{SITE.locations.contactNote}</p>
       </div>
     </aside>
   );

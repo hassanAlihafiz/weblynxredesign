@@ -7,7 +7,6 @@ import {
   HomeProcess,
   HomeServices,
   HomeTestimonials,
-  HomeTrustBar,
 } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
 
@@ -18,7 +17,6 @@ export default function Home() {
         <Navbar />
         <main className="w-full min-w-0 flex-1">
           <HomeHero />
-          <HomeTrustBar />
           <HomeServices />
           <HomeCaseStudies />
           <HomeProcess />

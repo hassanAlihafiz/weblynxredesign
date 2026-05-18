@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { WORK_CASE_STUDIES, WORK_FEATURED, getCaseStudyBySlug } from "@/components/work/projects";
+import { WORK_CASE_STUDIES, WORK_FEATURED, getCaseStudyBySlug } from "@/data/site";
 
 type Props = { params: Promise<{ slug: string }> };
 

@@ -11,7 +11,7 @@ import {
   BLOG_POSTS,
   type BlogCategoryId,
   type BlogPost,
-} from "./posts";
+} from "@/data/site";
 
 const PAGE_SIZE = 6;
 

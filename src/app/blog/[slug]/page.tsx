@@ -4,16 +4,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { BLOG_FEATURED, BLOG_POSTS } from "@/components/blog/posts";
+import { BLOG_FEATURED, BLOG_POSTS, getBlogPostBySlug } from "@/data/site";
 
 type Props = { params: Promise<{ slug: string }> };
-
-function getPost(slug: string) {
-  if (slug === BLOG_FEATURED.slug) return { ...BLOG_FEATURED, kind: "featured" as const };
-  const p = BLOG_POSTS.find((x) => x.slug === slug);
-  if (p) return { ...p, kind: "post" as const };
-  return null;
-}
 
 export function generateStaticParams() {
   return [{ slug: BLOG_FEATURED.slug }, ...BLOG_POSTS.map((p) => ({ slug: p.slug }))];
@@ -21,14 +14,14 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = getBlogPostBySlug(slug);
   if (!post) return { title: "Post — Weblynx" };
   return { title: `${post.title} — Weblynx` };
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = getBlogPostBySlug(slug);
   if (!post) notFound();
 
   const title = post.title;

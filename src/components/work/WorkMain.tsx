@@ -10,7 +10,7 @@ import {
   caseStudyMatchesFilter,
   featuredMatchesFilter,
   type WorkFilterId,
-} from "./projects";
+} from "@/data/site";
 
 const PAGE_SIZE = 6;
 

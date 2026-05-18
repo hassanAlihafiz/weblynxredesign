@@ -1,30 +1,7 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
-
-const projects = [
-  {
-    href: "/work/finlytics",
-    gradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
-    tileLabel: "finlytics saas",
-    title: "Finlytics SaaS",
-    meta: "Web · +40% conversion",
-  },
-  {
-    href: "/work/trekr-fitness",
-    gradient: "linear-gradient(135deg, #0f3d2e, #082018)",
-    tileLabel: "trekr app",
-    title: "Trekr App",
-    meta: "App · 12k installs",
-  },
-  {
-    href: "/work/lumen-beauty",
-    gradient: "linear-gradient(135deg, #4a3617, #2a1f0d)",
-    tileLabel: "lumen beauty",
-    title: "Lumen Beauty",
-    meta: "Marketing · +320% traffic",
-  },
-] as const;
+import { PROJECT_SHOWCASES } from "@/data/site";
 
 export function ServicesFeaturedWork() {
   return (
@@ -49,7 +26,7 @@ export function ServicesFeaturedWork() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
-        {projects.map(({ href, gradient, tileLabel, title, meta }) => (
+        {PROJECT_SHOWCASES.services.map(({ href, gradient, tileLabel, title, meta }) => (
           <Link key={href} href={href} className="block min-w-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]">
             <div className="overflow-hidden rounded-xl" style={{ background: gradient }}>
               <div className="flex aspect-[4/3] items-center justify-center">

@@ -1,5 +1,7 @@
 import { SiteLogo } from "@/components/brand";
+import { IconBark } from "@/components/icons/IconBark";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { SITE, SOCIAL_LINKS, type SocialIconId } from "@/data/site";
 import {
   IconAward,
   IconBrandFacebook,
@@ -24,45 +26,14 @@ const footerColumnHeadingClass =
 const socialLinkClass =
   "flex items-center gap-2.5 text-sm text-[var(--text-muted)] transition-colors hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]";
 
-type SocialLink = {
-  label: string;
-  href: string;
-  icon: ComponentType<{ className?: string }>;
-  hoverClass?: string;
+const SOCIAL_ICONS: Record<SocialIconId, ComponentType<{ className?: string }>> = {
+  linkedin: IconBrandLinkedin,
+  facebook: IconBrandFacebook,
+  instagram: IconBrandInstagram,
+  trustpilot: IconStar,
+  clutch: IconAward,
+  bark: IconBark,
 };
-
-const socialLinks: SocialLink[] = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/weblynxus/",
-    icon: IconBrandLinkedin,
-    hoverClass: "hover:text-[#0A66C2]",
-  },
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61582381187561",
-    icon: IconBrandFacebook,
-    hoverClass: "hover:text-[#1877F2]",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/weblynx.us/",
-    icon: IconBrandInstagram,
-    hoverClass: "hover:text-[#E4405F]",
-  },
-  {
-    label: "Trustpilot",
-    href: "https://www.trustpilot.com/review/weblynx.us",
-    icon: IconStar,
-    hoverClass: "hover:text-[#00B67A]",
-  },
-  {
-    label: "Clutch",
-    href: "https://clutch.co/profile/weblynx",
-    icon: IconAward,
-    hoverClass: "hover:text-[#FF3D2E]",
-  },
-];
 
 export function HomeFooter() {
   const year = getCopyrightYear();
@@ -76,7 +47,7 @@ export function HomeFooter() {
               <SiteLogo />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-[var(--text-muted)]">
-              A digital studio building the web for ambitious founders. Houston, Texas.
+              {SITE.tagline} {SITE.locations.studio}.
             </p>
           </div>
 
@@ -135,7 +106,9 @@ export function HomeFooter() {
           <div>
             <div className={footerColumnHeadingClass}>Connect</div>
             <ul className="space-y-2">
-              {socialLinks.map(({ label, href, icon: Icon, hoverClass }) => (
+              {SOCIAL_LINKS.map(({ label, href, icon, hoverClass }) => {
+                const Icon = SOCIAL_ICONS[icon];
+                return (
                 <li key={label}>
                   <a
                     href={href}
@@ -147,14 +120,15 @@ export function HomeFooter() {
                     <span>{label}</span>
                   </a>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           </div>
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border-subtle)] pt-6">
           <div className="font-mono text-xs text-[var(--text-dim)]">
-            © {year} WebLynx · Karachi, PK · GMT+5
+            © {year} {SITE.name} · {SITE.locations.footer}
           </div>
           <div className="inline-flex items-center gap-1 font-mono text-xs text-[var(--text-dim)]">
             Made with intent

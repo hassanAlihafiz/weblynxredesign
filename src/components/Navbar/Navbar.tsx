@@ -7,22 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
-
-const navItems = [
-  { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-] as const;
-
-/** Sub-links under Services (Design has no route yet). */
-const servicesSubmenu = [
-  { label: "Web Development", href: "/services/web-development" },
-  { label: "App Development", href: "/services/app-development" },
-  { label: "Digital Marketing", href: "/services/digital-marketing" },
-  { label: "Design", href: null },
-] as const;
+import { NAV_ITEMS, SERVICES_SUBMENU } from "@/data/site";
 
 function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -128,7 +113,7 @@ export function HomeNav() {
             className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto overscroll-y-contain px-2 py-2 pb-4 sm:px-3 sm:pb-5"
             aria-label="Primary mobile"
           >
-            {navItems.map(({ label, href }) => {
+            {NAV_ITEMS.map(({ label, href }) => {
               if (label === "Services") {
                 const active = isNavActive(pathname, href);
                 return (
@@ -136,13 +121,13 @@ export function HomeNav() {
                     <Link
                       href={href}
                       aria-current={active ? "page" : undefined}
-                      className={`rounded-[var(--border-radius-md)] px-3 py-2.5 text-sm leading-snug shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:shadow-[var(--shadow-sm)] active:bg-[var(--color-surface-overlay)] ${navLinkClass(active)}`}
+                      className={`rounded-[var(--border-radius-md)] px-3 py-3 text-base leading-snug shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:shadow-[var(--shadow-sm)] active:bg-[var(--color-surface-overlay)] ${navLinkClass(active)}`}
                       onClick={close}
                     >
                       {label}
                     </Link>
                     <div className="mb-0.5 ml-3 flex flex-col gap-0.5 border-l border-[var(--color-border-tertiary)] pl-3">
-                      {servicesSubmenu.map((item) => {
+                      {SERVICES_SUBMENU.map((item) => {
                         if (item.href) {
                           const subActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
                           return (
@@ -150,7 +135,7 @@ export function HomeNav() {
                               key={item.label}
                               href={item.href}
                               aria-current={subActive ? "page" : undefined}
-                              className={`rounded-[var(--border-radius-md)] px-2 py-2 text-sm leading-snug transition-colors hover:bg-[var(--color-surface-raised)] ${navLinkClass(subActive)}`}
+                              className={`rounded-[var(--border-radius-md)] px-2 py-2.5 text-base leading-snug transition-colors hover:bg-[var(--color-surface-raised)] ${navLinkClass(subActive)}`}
                               onClick={close}
                             >
                               {item.label}
@@ -160,7 +145,7 @@ export function HomeNav() {
                         return (
                           <span
                             key={item.label}
-                            className="rounded-[var(--border-radius-md)] px-2 py-2 text-sm text-[var(--color-text-tertiary)]"
+                            className="rounded-[var(--border-radius-md)] px-2 py-2.5 text-base text-[var(--color-text-tertiary)]"
                           >
                             {item.label}
                           </span>
@@ -176,7 +161,7 @@ export function HomeNav() {
                   key={label}
                   href={href}
                   aria-current={active ? "page" : undefined}
-                  className={`rounded-[var(--border-radius-md)] px-3 py-2.5 text-sm leading-snug shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:shadow-[var(--shadow-sm)] active:bg-[var(--color-surface-overlay)] ${navLinkClass(active)}`}
+                  className={`rounded-[var(--border-radius-md)] px-3 py-3 text-base leading-snug shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:shadow-[var(--shadow-sm)] active:bg-[var(--color-surface-overlay)] ${navLinkClass(active)}`}
                   onClick={close}
                 >
                   {label}
@@ -188,7 +173,7 @@ export function HomeNav() {
           <div className="shrink-0 border-t border-[var(--color-border-tertiary)] px-2.5 pb-[max(1.25rem,calc(env(safe-area-inset-bottom,0px)+14px))] pt-2.5 sm:px-3 sm:pb-[max(1.5rem,calc(env(safe-area-inset-bottom,0px)+18px))] sm:pt-3">
             <a
               href="https://calendly.com/weblynxagency/30min"
-              className="flex w-full min-h-[44px] items-center justify-center rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-4 py-2.5 text-xs font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px"
+              className="flex w-full min-h-[48px] items-center justify-center rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-5 py-3 text-sm font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px"
               onClick={close}
             >
               Book a call
@@ -224,18 +209,18 @@ export function HomeNav() {
           </div>
 
           {/* Desktop — equal outer columns so nav stays viewport-centered */}
-          <div className="hidden min-h-0 w-full grid-cols-[1fr_auto_1fr] items-center gap-2 py-1 md:grid lg:gap-4">
+          <div className="hidden min-h-0 w-full grid-cols-[1fr_auto_1fr] items-center gap-2 py-1.5 md:grid lg:gap-4 lg:py-2">
             <div className="flex min-w-0 items-center justify-self-start">
               <Brand />
             </div>
             <nav
-              className="flex min-w-0 shrink-0 items-center justify-center gap-0 text-sm leading-snug md:text-base md:leading-relaxed"
+              className="flex min-w-0 shrink-0 items-center justify-center gap-2 text-base leading-snug md:gap-4 md:text-lg md:leading-relaxed"
               aria-label="Primary"
             >
               <div className="group relative flex shrink-0 py-0.5">
                 <Link
                   href="/services"
-                  className={`block px-2 py-1 ${navLinkClass(isNavActive(pathname, "/services"))}`}
+                  className={`block px-3 py-1.5 ${navLinkClass(isNavActive(pathname, "/services"))}`}
                   aria-haspopup="true"
                 >
                   Services
@@ -246,7 +231,7 @@ export function HomeNav() {
                   className="invisible absolute left-1/2 top-full z-50 w-max min-w-[13.5rem] -translate-x-1/2 pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 motion-reduce:transition-none"
                 >
                   <ul className="rounded-[var(--border-radius-md)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] py-1 shadow-[var(--shadow-md)] ring-1 ring-[var(--color-border-subtle)]">
-                    {servicesSubmenu.map((item) => {
+                    {SERVICES_SUBMENU.map((item) => {
                       if (item.href) {
                         const subActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
                         return (
@@ -254,7 +239,7 @@ export function HomeNav() {
                             <Link
                               href={item.href}
                               role="menuitem"
-                              className={`block px-3 py-2 text-xs sm:text-sm ${submenuLinkClass(subActive)}`}
+                              className={`block px-3 py-2.5 text-sm sm:text-base ${submenuLinkClass(subActive)}`}
                             >
                               {item.label}
                             </Link>
@@ -263,7 +248,7 @@ export function HomeNav() {
                       }
                       return (
                         <li key={item.label}>
-                          <span className="block cursor-default px-3 py-2 text-xs text-[var(--color-text-tertiary)] sm:text-sm">
+                          <span className="block cursor-default px-3 py-2.5 text-sm text-[var(--color-text-tertiary)] sm:text-base">
                             {item.label}
                           </span>
                         </li>
@@ -272,7 +257,7 @@ export function HomeNav() {
                   </ul>
                 </div>
               </div>
-              {navItems
+              {NAV_ITEMS
                 .filter((item) => item.label !== "Services")
                 .map(({ label, href }) => {
                   const active = isNavActive(pathname, href);
@@ -281,7 +266,7 @@ export function HomeNav() {
                       key={label}
                       href={href}
                       aria-current={active ? "page" : undefined}
-                      className={`block px-2 py-1 ${navLinkClass(active)}`}
+                      className={`block px-3 py-1.5 ${navLinkClass(active)}`}
                     >
                       {label}
                     </Link>
@@ -291,7 +276,7 @@ export function HomeNav() {
             <div className="flex shrink-0 items-center justify-self-end">
               <a
                 href="https://calendly.com/weblynxagency/30min"
-                className="rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-3 py-1.5 text-xs font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px"
+                className="rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px"
                 target="_blank"
                 rel="noopener noreferrer"
               >

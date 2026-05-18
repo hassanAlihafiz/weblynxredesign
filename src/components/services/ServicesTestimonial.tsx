@@ -1,4 +1,6 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { SERVICES_PAGE_TESTIMONIAL } from "@/data/site";
+
 export function ServicesTestimonial() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
@@ -12,10 +14,12 @@ export function ServicesTestimonial() {
         </div>
 
         <blockquote className="mb-8 font-serif text-2xl italic leading-relaxed text-[var(--text)] md:text-3xl">
-          Having design, dev, and marketing in one team meant we shipped 2× faster than with our last agency.
+          {SERVICES_PAGE_TESTIMONIAL.quote}
         </blockquote>
 
-        <p className="text-sm text-[var(--text-muted)]">Sara Chen · Founder, Acme SaaS</p>
+        <p className="text-sm text-[var(--text-muted)]">
+          {SERVICES_PAGE_TESTIMONIAL.name} · {SERVICES_PAGE_TESTIMONIAL.role}
+        </p>
       </div>
     </ContentContainer>
     </section>

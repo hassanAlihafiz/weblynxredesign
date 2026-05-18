@@ -1,10 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
-const stats = [
-  { value: "+320%", label: "Organic traffic for Lumen Beauty (6 months)" },
-  { value: "4.2×", label: "Return on ad spend for NorthBrand" },
-  { value: "−47%", label: "Cost per lead for Acme SaaS" },
-  { value: "12k", label: "New email subscribers for Stackline (Q1)" },
-] as const;
+import { MARKETING_RESULTS_STATS } from "@/data/site";
 
 export function DmResults() {
   return (
@@ -20,7 +15,7 @@ export function DmResults() {
         What growth looks like
       </h2>
       <div className="grid gap-4 md:grid-cols-4">
-        {stats.map(({ value, label }) => (
+        {MARKETING_RESULTS_STATS.map(({ value, label }) => (
           <article
             key={label}
             className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-5 text-left shadow-[var(--shadow-xs)]"

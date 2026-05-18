@@ -1,27 +1,7 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
-
-const cases = [
-  {
-    href: "/work/finlytics",
-    tileGradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
-    mockClassName: "h-16 w-24 rounded-lg bg-[linear-gradient(135deg,var(--red),var(--red-dark))]",
-    mockLabel: "finlytics dashboard",
-    tags: ["SaaS", "Web app"] as const,
-    title: "FinTech Dashboard",
-    description: "Rebuilt on Next.js. Load time 6s → 0.8s. +40% conversion.",
-  },
-  {
-    href: "/work/trekr-fitness",
-    tileGradient: "linear-gradient(135deg, #0f3d2e, #082018)",
-    mockClassName: "h-28 w-20 rounded-2xl bg-[linear-gradient(135deg,#9FE1CB,#5fb892)]",
-    mockLabel: "trekr fitness app",
-    tags: ["Mobile", "React Native"] as const,
-    title: "Fitness App",
-    description: "React Native build. 12k installs in launch month.",
-  },
-] as const;
+import { PROJECT_SHOWCASES } from "@/data/site";
 
 const liftClass =
   "block transition-[transform,border-color] duration-200 motion-safe:hover:-translate-y-0.5";
@@ -54,7 +34,7 @@ export function HomeCaseStudies() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        {cases.map(
+        {PROJECT_SHOWCASES.home.map(
           ({ href, tileGradient, mockClassName, mockLabel, tags, title, description }) => (
             <Link key={href} href={href} className={`group/case ${liftClass} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]`}>
               <div className="overflow-hidden rounded-xl" style={{ background: tileGradient }}>

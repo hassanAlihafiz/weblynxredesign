@@ -1,23 +1,7 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
-
-const projects = [
-  {
-    href: "/work/finlytics",
-    gradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
-    tileLabel: "finlytics dashboard",
-    title: "Finlytics SaaS",
-    meta: "Web app · +40% conversion",
-  },
-  {
-    href: "/work/northbrand-dtc",
-    gradient: "linear-gradient(135deg, #0f3d2e, #082018)",
-    tileLabel: "northbrand store",
-    title: "NorthBrand Store",
-    meta: "Shopify · 2.5× revenue",
-  },
-] as const;
+import { PROJECT_SHOWCASES } from "@/data/site";
 
 export function WebDevRelatedWork() {
   return (
@@ -41,7 +25,7 @@ export function WebDevRelatedWork() {
         </Link>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        {projects.map(({ href, gradient, tileLabel, title, meta }) => (
+        {PROJECT_SHOWCASES.webDevelopment.map(({ href, gradient, tileLabel, title, meta }) => (
           <Link
             key={href}
             href={href}
