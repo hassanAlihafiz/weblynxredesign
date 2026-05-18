@@ -1,14 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
-const technologies = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "Sanity CMS",
-  "Vercel",
-  "Framer Motion",
-  "Shopify",
-] as const;
+import { TECH_STACKS } from "@/data/site";
 
 export function WebDevStack() {
   return (
@@ -21,7 +12,7 @@ export function WebDevStack() {
         Modern tools we ship with
       </h2>
       <div className="flex flex-wrap gap-2">
-        {technologies.map((name) => (
+        {TECH_STACKS.webDevelopment.map((name) => (
           <span key={name} className="chip">
             {name}
           </span>

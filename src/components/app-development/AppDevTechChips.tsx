@@ -1,14 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
-const chips = [
-  "React Native",
-  "Expo",
-  "TypeScript",
-  "Firebase",
-  "Supabase",
-  "Stripe / RevenueCat",
-  "EAS Build",
-  "Sentry",
-] as const;
+import { TECH_STACKS } from "@/data/site";
 
 export function AppDevTechChips() {
   return (
@@ -21,7 +12,7 @@ export function AppDevTechChips() {
         Modern tools we ship with
       </h2>
       <div className="flex flex-wrap gap-2">
-        {chips.map((label) => (
+        {TECH_STACKS.appDevelopment.map((label) => (
           <span key={label} className="chip">
             {label}
           </span>

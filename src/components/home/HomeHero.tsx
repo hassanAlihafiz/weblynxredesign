@@ -23,7 +23,7 @@ export function HomeHero() {
               Now accepting Q3 projects
             </div>
 
-            <h1 className="mb-4 text-balance text-3xl font-semibold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2rem,4.2vw,2.75rem)] lg:text-[2.625rem]">
+            <h1 className="mb-4 text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2.5rem,5vw,3.5rem)] lg:text-[3.5rem]">
               We build the <span className="text-[#E63946]">web</span> for ambitious founders.
             </h1>
 

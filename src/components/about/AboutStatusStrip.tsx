@@ -9,10 +9,10 @@ export function AboutStatusStrip() {
             Based in
           </p>
           <p className="mb-2 font-sans text-2xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)]">
-            Karachi, Pakistan
+            Houston, Texas
           </p>
           <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-            Working remotely with clients across 4 countries. GMT+5.
+            Working remotely with clients across the USA. GMT-6.
           </p>
         </div>
         <div>

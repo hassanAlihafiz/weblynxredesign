@@ -1,21 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
-const testimonials = [
-  {
-    quote:
-      "Weblynx delivered our MVP in six weeks exactly what we needed to close our seed round.",
-    initials: "SC",
-    avatarBg: "var(--red)" as const,
-    name: "Sara Chen",
-    role: "Founder, Acme SaaS",
-  },
-  {
-    quote: "Site speed went from 4 seconds to under one. Conversions doubled within a month.",
-    initials: "MK",
-    avatarBg: "var(--blue)" as const,
-    name: "Marcus King",
-    role: "CEO, NorthBrand",
-  },
-] as const;
+import { TESTIMONIALS } from "@/data/site";
 
 const cardClassName =
   "rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-6 sm:p-8";
@@ -26,15 +10,15 @@ export function HomeTestimonials() {
       <ContentContainer>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {testimonials.map(({ quote, initials, avatarBg, name, role }) => (
+        {TESTIMONIALS.map(({ quote, initials, avatarBg, name, role }) => (
           <figure key={name} className={cardClassName}>
             <div
-              className="mb-4 font-serif text-5xl italic leading-none text-[var(--red)]"
+              className="mb-4 text-5xl italic leading-none text-[var(--red)]"
               aria-hidden
             >
               &ldquo;
             </div>
-            <blockquote className="mb-6 font-serif text-xl leading-relaxed text-[var(--text)]">
+            <blockquote className="mb-6 text-xl leading-relaxed text-[var(--text)]">
               {quote}
             </blockquote>
             <figcaption className="flex items-center gap-3">
