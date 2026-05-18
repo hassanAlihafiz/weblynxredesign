@@ -9,11 +9,8 @@ export function WebDevRelatedWork() {
       <ContentContainer>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-            Recent work
-          </p>
-          <h2 className="max-w-xl font-sans text-2xl font-semibold leading-snug tracking-[-0.02em] text-[var(--text)] md:text-3xl">
-            Web projects we&apos;ve shipped
+          <h2 className="max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+            Web projects we&apos;ve <span className="text-[var(--red)]">shipped</span>
           </h2>
         </div>
         <Link
@@ -25,12 +22,8 @@ export function WebDevRelatedWork() {
         </Link>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        {PROJECT_SHOWCASES.webDevelopment.map(({ href, gradient, tileLabel, title, meta }) => (
-          <Link
-            key={href}
-            href={href}
-            className="block min-w-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
-          >
+        {PROJECT_SHOWCASES.webDevelopment.map(({ gradient, tileLabel, title, meta }) => (
+          <article className="block min-w-0">
             <div className="overflow-hidden rounded-xl" style={{ background: gradient }}>
               <div className="flex aspect-[4/3] items-center justify-center">
                 <span className="font-mono text-xs text-white/60">{tileLabel}</span>
@@ -40,7 +33,7 @@ export function WebDevRelatedWork() {
               <div className="text-sm font-medium text-[var(--text)]">{title}</div>
               <div className="text-xs text-[var(--text-muted)]">{meta}</div>
             </div>
-          </Link>
+          </article>
         ))}
       </div>
     </ContentContainer>

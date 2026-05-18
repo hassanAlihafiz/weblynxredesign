@@ -30,12 +30,8 @@ export function AboutValues() {
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
       <ContentContainer>
 
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        How we work
-      </p>
-
-      <h2 className="mb-3 max-w-3xl font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-        Four things we never compromise on
+      <h2 className="mb-3 max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+        Four <span className="text-[var(--red)]">things</span> we never compromise on
       </h2>
 
       <p className="mb-12 max-w-md text-[var(--text-muted)]">

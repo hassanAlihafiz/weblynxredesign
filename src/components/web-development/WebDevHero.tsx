@@ -1,6 +1,7 @@
 import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 
 export function WebDevHero() {
   return (
@@ -16,6 +17,7 @@ export function WebDevHero() {
       </ContentContainer>
 
       <section className="relative w-full overflow-hidden pb-20 pt-10">
+        <HeroGridBackground fade />
         <div
           className="pointer-events-none absolute right-0 top-0 size-[min(500px,100vw)] rounded-full red-glow"
           aria-hidden

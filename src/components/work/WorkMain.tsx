@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import {
@@ -60,25 +59,21 @@ export function WorkMain() {
         <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
       <ContentContainer>
           <article className="overflow-hidden rounded-[var(--border-radius-lg)] shadow-[var(--shadow-card)]">
-            <Link href={`/work/${WORK_FEATURED.slug}`} className="flex min-h-[160px] items-center justify-center text-base font-medium sm:min-h-[180px] md:min-h-[200px]">
+            <div className="flex min-h-[160px] items-center justify-center text-base font-medium sm:min-h-[180px] md:min-h-[200px]">
               Large project hero screenshot
-            </Link>
+            </div>
             <div className="p-4">
               <div className="mb-2.5 flex flex-wrap gap-1.5">
                 {WORK_FEATURED.tagLabels.map((t) => (
                   <span
                     key={t}
-                    className="rounded-[var(--border-radius-md)] bg-[#3C3489] px-2 py-0.5 text-base font-medium text-[#EEEDFE]"
+                    className="rounded-[var(--border-radius-md)] bg-[var(--red)] px-2 py-0.5 text-base font-medium text-[#EEEDFE]"
                   >
                     {t}
                   </span>
                 ))}
               </div>
-              <h2 className="mb-1.5 text-xl font-medium leading-snug">
-                <Link href={`/work/${WORK_FEATURED.slug}`} className="transition-opacity hover:opacity-80">
-                  {WORK_FEATURED.title}
-                </Link>
-              </h2>
+              <h2 className="mb-1.5 text-xl font-medium leading-snug">{WORK_FEATURED.title}</h2>
               <p className="mb-3.5 text-base leading-relaxed sm:mb-4">
                 {WORK_FEATURED.excerpt}
               </p>
@@ -98,17 +93,14 @@ export function WorkMain() {
       <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
       <ContentContainer>
         {visibleCards.length === 0 ? (
-          <p className="py-8 text-center text-base text-[var(--color-text-secondary)]">No projects in this category yet.</p>
+          <p className="py-8 text-center text-base text-[var(--text-muted)]">No projects in this category yet.</p>
         ) : (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3">
             {visibleCards.map(({ slug, title, outcome, tagLabels, thumbBg, thumbFg }) => (
               <article key={slug} className="min-w-0">
-                <Link
-                  href={`/work/${slug}`}
-                  className="flex h-[140px] items-center justify-center rounded-[var(--border-radius-md)] text-base font-medium transition-opacity hover:opacity-95"
-                >
+                <div className="flex h-[140px] items-center justify-center rounded-[var(--border-radius-md)] text-base font-medium">
                   Project screenshot
-                </Link>
+                </div>
                 <div className="mt-2.5 min-w-0">
                   <div className="mb-1.5 flex flex-wrap gap-1.5">
                     {tagLabels.map((t) => (
@@ -120,11 +112,7 @@ export function WorkMain() {
                       </span>
                     ))}
                   </div>
-                  <h3 className="mb-0.5 text-base font-medium leading-snug">
-                    <Link href={`/work/${slug}`} className="transition-colors hover:text-[var(--color-primary)]">
-                      {title}
-                    </Link>
-                  </h3>
+                  <h3 className="mb-0.5 text-base font-medium leading-snug">{title}</h3>
                   <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">{outcome}</p>
                 </div>
               </article>

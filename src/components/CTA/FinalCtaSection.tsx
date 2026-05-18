@@ -34,7 +34,7 @@ export function FinalCtaSection({
       />
 
       <ContentContainer className="relative z-10">
-        <h2 className="mx-auto mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-7xl">
+        <h2 className="mx-auto mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
           {title}
         </h2>
 

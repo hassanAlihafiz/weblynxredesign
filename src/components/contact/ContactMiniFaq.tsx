@@ -5,18 +5,15 @@ export function ContactMiniFaq() {
   return (
     <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-12">
       <ContentContainer>
-      <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
-        Before you reach out
-      </p>
-      <h2 className="mb-5 text-3xl font-medium sm:mb-6">A few quick answers</h2>
+      <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">A few quick answers <span className="text-[var(--red)]">Before you reach out</span></h2>
       <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-3">
         {CONTACT_FAQS.map(({ q, a }) => (
           <article
             key={q}
-            className="rounded-[var(--border-radius-lg)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] p-4 shadow-[var(--shadow-card)]"
+            className="rounded-[var(--border-radius-lg)] border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
           >
-            <h3 className="mb-1.5 text-xl font-medium leading-snug">{q}</h3>
-            <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">{a}</p>
+            <h3 className="mb-1.5 text-xl font-medium text-[var(--text)]">{q}</h3>
+            <p className="text-base leading-relaxed text-[var(--text-muted)]">{a}</p>
           </article>
         ))}
       </div>

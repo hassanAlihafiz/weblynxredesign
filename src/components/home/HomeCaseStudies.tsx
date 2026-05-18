@@ -15,13 +15,8 @@ export function HomeCaseStudies() {
       <ContentContainer>
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-            Selected work
-          </p>
           <h2 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-            Real projects.
-            <br />
-            Real results.
+            Projects
           </h2>
         </div>
         <Link
@@ -36,7 +31,7 @@ export function HomeCaseStudies() {
       <div className="grid gap-6 lg:grid-cols-2">
         {PROJECT_SHOWCASES.home.map(
           ({ href, tileGradient, mockClassName, mockLabel, tags, title, description }) => (
-            <Link key={href} href={href} className={`group/case ${liftClass} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]`}>
+            <article key={href} className={`group/case ${liftClass}`}>
               <div className="overflow-hidden rounded-xl" style={{ background: tileGradient }}>
                 <div className="flex aspect-[4/3] flex-col items-center justify-center">
                   <div className="flex flex-col items-center gap-2 opacity-70">
@@ -58,7 +53,7 @@ export function HomeCaseStudies() {
                 </h3>
                 <p className="text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
               </div>
-            </Link>
+            </article>
           ),
         )}
       </div>

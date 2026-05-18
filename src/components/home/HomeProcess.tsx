@@ -32,25 +32,20 @@ export function HomeProcess() {
       <ContentContainer>
 
       <div className="mb-12">
-        <p className="mb-3 font-mono text-sm font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-          How we work
-        </p>
-        <h2 className="max-w-2xl text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-          The same rhythm,
-          <br />
-          every project.
+        <h2 className="max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          The same rhythm <span className="text-[var(--red)]">every project</span>
         </h2>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {steps.map(({ week, n, title, text }) => (
           <div key={n} className="relative">
-            <div className="mb-3 font-mono text-xs text-[var(--text-dim)]">{week}</div>
+            <div className="mb-2 font-mono text-[10px] font-medium uppercase tracking-[0.15em] text-[var(--text-dim)]">{week}</div>
             <div className="mb-3 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">
               {n}
             </div>
             <h4 className="mb-2 font-medium text-[var(--text)]">{title}</h4>
-            <p className="text-sm leading-relaxed text-[var(--text-muted)]">{text}</p>
+            <p className="text-base leading-relaxed text-[var(--text-muted)]">{text}</p>
           </div>
         ))}
       </div>

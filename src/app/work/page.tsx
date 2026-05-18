@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
+import { workMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { WorkFinalCta, WorkMain, WorkPageHeader, WorkStats } from "@/components/work";
 
-export const metadata: Metadata = {
-  title: "Work — Weblynx",
-  description:
-    "Selected case studies: web apps, mobile, ecommerce, SaaS, and marketing — real projects and measurable outcomes.",
-};
+export const metadata = workMetadata;
 
 export default function WorkPage() {
   return (

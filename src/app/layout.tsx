@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Bricolage_Grotesque, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { rootMetadata } from "@/data/metadata";
 import { PageTransition } from "@/components/layout/PageTransition";
 import "./globals.css";
 
@@ -22,11 +22,7 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Weblynx — Fast, scalable web apps for SaaS",
-  description:
-    "Custom Next.js development that ships in weeks. Web & app development, digital marketing, and design for growing startups.",
-};
+export const metadata = rootMetadata;
 
 export default function RootLayout({
   children,

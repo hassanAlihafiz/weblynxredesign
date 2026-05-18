@@ -52,10 +52,12 @@ function Brand({
 export function HomeNav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [portalReady, setPortalReady] = useState(false);
   const panelId = useId();
   const close = useCallback(() => setMenuOpen(false), []);
   const open = useCallback(() => setMenuOpen(true), []);
+  const closeServicesMenu = useCallback(() => setServicesMenuOpen(false), []);
 
   useEffect(() => {
     setPortalReady(true);
@@ -74,6 +76,10 @@ export function HomeNav() {
       document.body.style.overflow = prevOverflow;
     };
   }, [menuOpen, close]);
+
+  useEffect(() => {
+    closeServicesMenu();
+  }, [pathname, closeServicesMenu]);
 
   const mobileDrawer =
     portalReady &&
@@ -144,10 +150,10 @@ export function HomeNav() {
                         }
                         return (
                           <span
-                            key={item.label}
+                            key={(item as { label: string }).label}
                             className="rounded-[var(--border-radius-md)] px-2 py-2.5 text-base text-[var(--color-text-tertiary)]"
                           >
-                            {item.label}
+                            {(item as { label: string }).label}
                           </span>
                         );
                       })}
@@ -217,18 +223,32 @@ export function HomeNav() {
               className="flex min-w-0 shrink-0 items-center justify-center gap-2 text-base leading-snug md:gap-4 md:text-lg md:leading-relaxed"
               aria-label="Primary"
             >
-              <div className="group relative flex shrink-0 py-0.5">
+              <div
+                className="relative flex shrink-0 py-0.5"
+                onMouseEnter={() => setServicesMenuOpen(true)}
+                onMouseLeave={closeServicesMenu}
+                onFocusCapture={() => setServicesMenuOpen(true)}
+                onBlurCapture={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+                    closeServicesMenu();
+                  }
+                }}
+              >
                 <Link
                   href="/services"
                   className={`block px-3 py-1.5 ${navLinkClass(isNavActive(pathname, "/services"))}`}
                   aria-haspopup="true"
+                  aria-expanded={servicesMenuOpen}
+                  onClick={closeServicesMenu}
                 >
                   Services
                 </Link>
                 <div
                   role="menu"
                   aria-label="Service offerings"
-                  className="invisible absolute left-1/2 top-full z-50 w-max min-w-[13.5rem] -translate-x-1/2 pt-2 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 motion-reduce:transition-none"
+                  className={`absolute left-1/2 top-full z-50 w-max min-w-[13.5rem] -translate-x-1/2 pt-2 transition-[opacity,visibility] duration-150 motion-reduce:transition-none ${
+                    servicesMenuOpen ? "visible opacity-100" : "invisible opacity-0"
+                  }`}
                 >
                   <ul className="rounded-[var(--border-radius-md)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] py-1 shadow-[var(--shadow-md)] ring-1 ring-[var(--color-border-subtle)]">
                     {SERVICES_SUBMENU.map((item) => {
@@ -240,6 +260,7 @@ export function HomeNav() {
                               href={item.href}
                               role="menuitem"
                               className={`block px-3 py-2.5 text-sm sm:text-base ${submenuLinkClass(subActive)}`}
+                              onClick={closeServicesMenu}
                             >
                               {item.label}
                             </Link>
@@ -247,9 +268,13 @@ export function HomeNav() {
                         );
                       }
                       return (
-                        <li key={item.label}>
-                          <span className="block cursor-default px-3 py-2.5 text-sm text-[var(--color-text-tertiary)] sm:text-base">
-                            {item.label}
+                        <li key={(item as { label: string }).label}>
+                          <span
+                            role="menuitem"
+                            className="block cursor-default px-3 py-2.5 text-sm text-[var(--color-text-tertiary)] sm:text-base"
+                            onClick={closeServicesMenu}
+                          >
+                            {(item as { label: string }).label}
                           </span>
                         </li>
                       );

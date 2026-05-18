@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components/home";
+import { appDevelopmentMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
 import {
   AppDevEngagement,
@@ -14,11 +14,7 @@ import {
   AppDevWhoFor,
 } from "@/components/app-development";
 
-export const metadata: Metadata = {
-  title: "App Development — Weblynx",
-  description:
-    "React Native and Expo apps for iOS and Android — discovery, design, build, store submission, and launch.",
-};
+export const metadata = appDevelopmentMetadata;
 
 export default function AppDevelopmentPage() {
   return (

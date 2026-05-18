@@ -1,3 +1,4 @@
+import { homeMetadata } from "@/data/metadata";
 import {
   HomeCaseStudies,
   HomeFinalCta,
@@ -6,9 +7,12 @@ import {
   Navbar,
   HomeProcess,
   HomeServices,
+  HomeTrustBar,
   HomeTestimonials,
 } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
+
+export const metadata = homeMetadata;
 
 export default function Home() {
   return (
@@ -17,6 +21,7 @@ export default function Home() {
         <Navbar />
         <main className="w-full min-w-0 flex-1">
           <HomeHero />
+          <HomeTrustBar />
           <HomeServices />
           <HomeCaseStudies />
           <HomeProcess />

@@ -48,20 +48,17 @@ export function WebDevEngagementScopes() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-      <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-        Project scopes
-      </p>
-      <h2 className="mb-3 max-w-3xl text-balance font-sans text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-[var(--text)] md:text-5xl">
-        Find the engagement that fits
+      <h2 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+        Find the engagement that <span className="text-[var(--red)]">fits</span>
       </h2>
-      <p className="mb-10 max-w-md text-base leading-relaxed text-[var(--text-muted)]">
+      <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
         Every project is quoted based on scope. Here are the three engagement models we typically work in.
       </p>
       <div className="grid gap-4 md:grid-cols-3">
         {tiers.map(({ featured, label, title, timeline, items }) => (
           <article
             key={label}
-            className={`relative flex flex-col rounded-xl bg-[var(--bg-elev-2)] p-5 shadow-[var(--shadow-xs)] ${
+            className={`relative flex flex-col rounded-[var(--border-radius-md)] bg-[var(--bg-elev-2)] p-5 shadow-[var(--shadow-xs)] ${
               featured
                 ? "border-2 border-[var(--red)] pt-6"
                 : "border border-[var(--border-subtle)]"
@@ -75,7 +72,7 @@ export function WebDevEngagementScopes() {
             <p className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
               {label}
             </p>
-            <h3 className="mb-2 text-xl font-semibold text-[var(--text)]">{title}</h3>
+            <h3 className="mb-2 text-xl font-medium text-[var(--text)]">{title}</h3>
             <p className="mb-5 text-xs text-[var(--text-muted)]">{timeline}</p>
             <ul className="mb-6 list-none space-y-2 border-t border-[var(--border-subtle)] pt-4 text-sm leading-relaxed text-[var(--text-muted)]">
               {items.map((line) => (
@@ -84,7 +81,7 @@ export function WebDevEngagementScopes() {
             </ul>
             <Link
               href="#quote"
-              className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
+              className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:opacity-90"
             >
               Request a quote
               <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />

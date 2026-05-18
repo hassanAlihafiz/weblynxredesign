@@ -1,0 +1,10 @@
+export { DesignHero } from "./DesignHero";
+export { DesignWhoFor } from "./DesignWhoFor";
+export { DesignDisciplines } from "./DesignDisciplines";
+export { DesignDeliverables } from "./DesignDeliverables";
+export { DesignStack } from "./DesignStack";
+export { DesignProcess } from "./DesignProcess";
+export { DesignEngagementScopes } from "./DesignEngagementScopes";
+export { DesignHowWeQuote } from "./DesignHowWeQuote";
+export { DesignFaq } from "./DesignFaq";
+export { DesignFinalCta } from "./DesignFinalCta";

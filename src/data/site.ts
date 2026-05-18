@@ -34,17 +34,15 @@ export const SERVICES_SUBMENU = [
   { label: "Web Development", href: "/services/web-development" },
   { label: "App Development", href: "/services/app-development" },
   { label: "Digital Marketing", href: "/services/digital-marketing" },
-  { label: "Design", href: null },
+  { label: "AI Development", href: "/services/ai-development" },
+  { label: "Design", href: "/services/design" },
 ] as const;
 
 // ─── Social links (icons resolved in Footer) ──────────────────────────────────
 
-export type SocialIconId = "linkedin" | "facebook" | "instagram" | "trustpilot" | "clutch" | "bark";
-
 export type SocialLink = {
   label: string;
   href: string;
-  icon: SocialIconId;
   hoverClass?: string;
 };
 
@@ -52,37 +50,31 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/weblynxus/",
-    icon: "linkedin",
     hoverClass: "hover:text-[#0A66C2]",
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/profile.php?id=61582381187561",
-    icon: "facebook",
     hoverClass: "hover:text-[#1877F2]",
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/weblynx.us/",
-    icon: "instagram",
     hoverClass: "hover:text-[#E4405F]",
   },
   {
     label: "Trustpilot",
     href: "https://www.trustpilot.com/review/weblynx.us",
-    icon: "trustpilot",
     hoverClass: "hover:text-[#00B67A]",
   },
   {
     label: "Clutch",
     href: "https://clutch.co/profile/weblynx",
-    icon: "clutch",
     hoverClass: "hover:text-[#FF3D2E]",
   },
   {
     label: "Bark",
     href: "https://www.bark.com/en/gb/company/weblynx/O7QZm/",
-    icon: "bark",
     hoverClass: "hover:text-[#00A86B]",
   },
 ];
@@ -133,6 +125,29 @@ export const TECH_STACKS = {
     "EAS Build",
     "Sentry",
   ],
+  aiDevelopment: [
+    "OpenAI GPT",
+    "Anthropic Claude",
+    "Gemini",
+    "LangChain",
+    "LlamaIndex",
+    "Vercel AI SDK",
+    "Pinecone",
+    "Supabase pgvector",
+    "Replicate",
+    "Hugging Face",
+    "LangSmith",
+  ],
+  design: [
+    "Figma",
+    "Framer",
+    "After Effects",
+    "Illustrator",
+    "Photoshop",
+    "Rive",
+    "Notion",
+    "Loom",
+  ],
 } as const;
 
 // ─── Testimonials & trust ─────────────────────────────────────────────────────
@@ -154,13 +169,6 @@ export const TESTIMONIALS = [
     role: "CEO, NorthBrand",
   },
 ] as const;
-
-export const SERVICES_PAGE_TESTIMONIAL = {
-  quote:
-    "Having design, dev, and marketing in one team meant we shipped 2× faster than with our last agency.",
-  name: "Sara Chen",
-  role: "Founder, Acme SaaS",
-} as const;
 
 export const CLIENT_LOGOS = [
   { label: "ACME", className: "font-sans text-xl font-bold tracking-wider text-[var(--text)]" },
@@ -217,20 +225,20 @@ export type CaseStudyCard = {
 
 export const WORK_FEATURED = {
   slug: "finlytics",
-  title: "FinTech Dashboard",
+  title: "E-Commerce",
   excerpt:
-    "Rebuilt their analytics platform on Next.js, cut load time from 6s to under 1s, and helped close their Series A.",
-  tagLabels: ["SaaS", "Web app"] as const,
-  heroBg: "bg-[#CECBF6]",
+    "Rebuilt their E-Commerce platform on Next.js, cut load time from 6s to under 1s, and helped close their Series A.",
+  tagLabels: ["E-Commerce", "Web app"] as const,
+  heroBg: "bg-[#FAC775]",
   wrapBg: "bg-[#EEEDFE]",
-  textStrong: "text-[#26215C]",
+  textStrong: "text-[#633806]",
   textMuted: "text-[#3C3489]",
   stats: [
     { k: "+40%", v: "conversion" },
     { k: "6×", v: "faster load" },
     { k: "$3M", v: "raised" },
   ] as const,
-  filters: ["saas", "web-apps"],
+  filters: ["ecommerce", "web-apps"],
 };
 
 export const WORK_CASE_STUDIES: CaseStudyCard[] = [
@@ -360,8 +368,8 @@ export const PROJECT_SHOWCASES = {
       tileGradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
       mockClassName: "h-16 w-24 rounded-lg bg-[linear-gradient(135deg,var(--red),var(--red-dark))]",
       mockLabel: "finlytics dashboard",
-      tags: ["SaaS", "Web app"] as const,
-      title: "FinTech Dashboard",
+      tags: ["SaaS", "Web app" , "E-commerce"] as const,
+      title: "E-Commerce",
       description: "Rebuilt on Next.js. Load time 6s → 0.8s. +40% conversion.",
     },
     {
@@ -369,31 +377,28 @@ export const PROJECT_SHOWCASES = {
       tileGradient: "linear-gradient(135deg, #0f3d2e, #082018)",
       mockClassName: "h-28 w-20 rounded-2xl bg-[linear-gradient(135deg,#9FE1CB,#5fb892)]",
       mockLabel: "trekr fitness app",
-      tags: ["Mobile", "React Native"] as const,
+      tags: ["Applications", "React Native", "Mobile App"] as const,
       title: "Fitness App",
       description: "React Native build. 12k installs in launch month.",
     },
   ],
   services: [
     {
-      href: "/work/finlytics",
       gradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
-      tileLabel: "finlytics saas",
-      title: "Finlytics SaaS",
+      tileLabel: "E-Commerce",
+      title: "E-Commerce",
       meta: "Web · +40% conversion",
     },
     {
-      href: "/work/trekr-fitness",
       gradient: "linear-gradient(135deg, #0f3d2e, #082018)",
-      tileLabel: "trekr app",
-      title: "Trekr App",
+      tileLabel: "mobile app",
+      title: "Mobile App",
       meta: "App · 12k installs",
     },
     {
-      href: "/work/lumen-beauty",
       gradient: "linear-gradient(135deg, #4a3617, #2a1f0d)",
-      tileLabel: "lumen beauty",
-      title: "Lumen Beauty",
+      tileLabel: "digital marketing",
+      title: "Digital Marketing",
       meta: "Marketing · +320% traffic",
     },
   ],

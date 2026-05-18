@@ -1,5 +1,6 @@
 import {
   IconArrowRight,
+  IconBrain,
   IconCode,
   IconDeviceMobile,
   IconPalette,
@@ -47,11 +48,20 @@ const cards: {
   },
   {
     n: "04",
+    title: "AI development",
+    body: "Chatbots, RAG, agents, and automation on the latest LLMs production AI, not demos.",
+    stack: "GPT · Claude · LangChain · Pinecone",
+    delivery: "2–8 week delivery",
+    href: "/services/ai-development",
+    icon: IconBrain,
+  },
+  {
+    n: "05",
     title: "Design",
     body: "Brand identity, UI/UX, and product design. Beautiful work that's still functional and on-brand.",
     stack: "Figma · Brand systems · UI/UX",
     delivery: "2–5 week delivery",
-    href: "/services",
+    href: "/services/design",
     icon: IconPalette,
   },
 ];
