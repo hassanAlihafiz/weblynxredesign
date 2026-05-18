@@ -3,7 +3,7 @@ export function HomeHeroChainGraphic() {
   return (
     <svg
       viewBox="0 0 300 300"
-      className="relative z-[2] h-full w-full max-w-[min(100%,320px)] sm:max-w-[360px] lg:max-w-none"
+      className="relative z-[2] h-auto w-full max-w-[min(100%,260px)] sm:max-w-[280px] lg:max-w-[300px]"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Decorative chain link motif"

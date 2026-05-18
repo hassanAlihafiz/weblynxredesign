@@ -1,6 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 export function AboutIntro() {
   return (
-    <section className="relative overflow-hidden px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full relative overflow-hidden py-14 md:py-20">
+      <ContentContainer>
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-30" aria-hidden />
 
       <div className="relative z-10">
@@ -17,9 +19,10 @@ export function AboutIntro() {
 
         <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
           Weblynx is an independent studio working with founders and small teams to build the web and apps they
-          actually need — fast, modern, and made to scale.
+          actually need fast, modern, and made to scale.
         </p>
       </div>
+    </ContentContainer>
     </section>
   );
 }

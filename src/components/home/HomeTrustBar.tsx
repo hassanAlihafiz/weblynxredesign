@@ -1,6 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 export function HomeTrustBar() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 sm:px-8 lg:px-10 py-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10">
+      <ContentContainer>
       <div className="text-center">
         <p className="mb-6 font-mono text-sm font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
           Clients
@@ -22,6 +24,7 @@ export function HomeTrustBar() {
           </span>
         </div>
       </div>
+    </ContentContainer>
     </section>
   );
 }

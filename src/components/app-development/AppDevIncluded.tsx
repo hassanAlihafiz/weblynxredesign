@@ -1,5 +1,6 @@
 import { IconBell, IconCloud, IconCloudOff, IconDeviceMobile, IconRocket, IconUser } from "@tabler/icons-react";
 import type { TablerIcon } from "@tabler/icons-react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const items: { title: string; body: string; icon: TablerIcon }[] = [
   { title: "Native-feel UX", body: "Smooth animations, gestures, platform conventions", icon: IconDeviceMobile },
@@ -12,7 +13,8 @@ const items: { title: string; body: string; icon: TablerIcon }[] = [
 
 export function AppDevIncluded() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Deliverables
       </p>
@@ -34,6 +36,7 @@ export function AppDevIncluded() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

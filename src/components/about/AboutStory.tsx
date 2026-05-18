@@ -1,6 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 export function AboutStory() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
 
       <div className="grid items-start gap-10 md:grid-cols-[200px_1fr]">
         <p className="pt-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -17,13 +19,14 @@ export function AboutStory() {
               scale, and founders are stuck choosing between them.
             </p>
             <p>
-              So we built something in between — a focused studio that ships fast without cutting corners, charges
+              So we built something in between a focused studio that ships fast without cutting corners, charges
               fairly, and treats every project like it&apos;s our own.
             </p>
             <p>Today we work with brands and startups across four countries, building everything from MVPs to full-scale platforms.</p>
           </div>
         </div>
       </div>
+    </ContentContainer>
     </section>
   );
 }

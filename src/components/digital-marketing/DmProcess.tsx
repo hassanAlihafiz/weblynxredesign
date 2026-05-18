@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const steps = [
   { num: "01", title: "Audit", body: "Channels, gaps, baseline metrics" },
   { num: "02", title: "Strategy", body: "90-day plan, channel priorities" },
@@ -7,7 +8,8 @@ const steps = [
 
 export function DmProcess() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         How it works
       </p>
@@ -29,6 +31,7 @@ export function DmProcess() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

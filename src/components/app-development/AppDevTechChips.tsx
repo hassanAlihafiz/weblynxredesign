@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const chips = [
   "React Native",
   "Expo",
@@ -11,7 +12,8 @@ const chips = [
 
 export function AppDevTechChips() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 py-8 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-9 md:py-10 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] py-8 shadow-[var(--shadow-inset-soft)] sm:py-9 md:py-10">
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Our stack
       </p>
@@ -25,6 +27,7 @@ export function AppDevTechChips() {
           </span>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

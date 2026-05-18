@@ -1,7 +1,8 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const testimonials = [
   {
     quote:
-      "Weblynx delivered our MVP in six weeks — exactly what we needed to close our seed round.",
+      "Weblynx delivered our MVP in six weeks exactly what we needed to close our seed round.",
     initials: "SC",
     avatarBg: "var(--red)" as const,
     name: "Sara Chen",
@@ -21,7 +22,8 @@ const cardClassName =
 
 export function HomeTestimonials() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
+      <ContentContainer>
 
       <div className="grid gap-6 md:grid-cols-2">
         {testimonials.map(({ quote, initials, avatarBg, name, role }) => (
@@ -51,6 +53,7 @@ export function HomeTestimonials() {
           </figure>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

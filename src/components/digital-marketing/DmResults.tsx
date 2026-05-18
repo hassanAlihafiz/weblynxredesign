@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/layout/ContentContainer";
 const stats = [
   { value: "+320%", label: "Organic traffic for Lumen Beauty (6 months)" },
   { value: "4.2×", label: "Return on ad spend for NorthBrand" },
@@ -9,8 +10,9 @@ export function DmResults() {
   return (
     <section
       id="results"
-      className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10"
+      className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Recent results
       </p>
@@ -28,6 +30,7 @@ export function DmResults() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

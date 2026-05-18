@@ -1,11 +1,13 @@
+import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const gradPrefix = "dm-hero";
 
 export function DmHero() {
   return (
     <>
-      <div className="px-6 pb-2 pt-8 sm:px-8 lg:px-10">
+      <ContentContainer className="pb-2 pt-8">
         <div className="font-mono text-xs text-[var(--text-dim)]">
           <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
             Services
@@ -13,16 +15,15 @@ export function DmHero() {
           <span className="mx-2">/</span>
           <span className="text-[var(--text)]">Digital marketing</span>
         </div>
-      </div>
+      </ContentContainer>
 
-      <section className="relative overflow-hidden px-6 pb-20 pt-10 sm:px-8 lg:px-10">
+      <section className="relative w-full overflow-hidden pb-20 pt-10">
         <div
           className="pointer-events-none absolute right-0 top-0 size-[min(500px,100vw)] rounded-full red-glow"
           aria-hidden
         />
 
-        <div className="relative z-10">
-
+        <ContentContainer className="relative z-10">
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -32,7 +33,7 @@ export function DmHero() {
                 Get found. Get clicks. <span className="text-[var(--red)]">Get customers</span>.
               </h1>
               <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">
-                SEO, paid ads, content, and social — built around your business goals, measured by what actually moves the
+                SEO, paid ads, content, and social built around your business goals, measured by what actually moves the
                 needle.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -40,7 +41,8 @@ export function DmHero() {
                   Request a quote
                 </Link>
                 <Link href="#results" className="btn-secondary px-5 py-3 text-sm">
-                  See results ↓
+                  See results
+                  <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
                 </Link>
               </div>
             </div>
@@ -96,7 +98,7 @@ export function DmHero() {
               </div>
             </div>
           </div>
-        </div>
+        </ContentContainer>
       </section>
     </>
   );

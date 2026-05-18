@@ -4,7 +4,7 @@ import Image from "next/image";
 export const SITE_LOGO_IMG_CLASS =
   "h-[5.25rem] w-auto max-w-[min(100%,500px)] object-contain sm:h-24 sm:max-w-[min(100%,580px)] md:h-[6.5rem] md:max-w-[min(100%,700px)] lg:h-28 lg:max-w-[min(100%,780px)] xl:h-32 xl:max-w-[min(100%,880px)]";
 
-type SiteLogoProps = {
+type SiteLogoProps = {  
   priority?: boolean;
   align?: "left" | "center";
   className?: string;

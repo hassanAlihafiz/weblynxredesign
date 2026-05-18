@@ -2,6 +2,7 @@
 
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const faqs = [
   {
@@ -27,8 +28,8 @@ export function ServicesFaq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
-      <div className="mx-auto max-w-3xl">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
+      <ContentContainer className="max-w-3xl">
         <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
           Common questions
         </p>
@@ -75,7 +76,7 @@ export function ServicesFaq() {
             );
           })}
         </div>
-      </div>
+      </ContentContainer>
     </section>
   );
 }

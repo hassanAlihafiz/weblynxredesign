@@ -1,4 +1,5 @@
 import { IconBolt, IconPuzzle, IconTarget, type TablerIcon } from "@tabler/icons-react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const items: { title: string; body: string; icon: TablerIcon }[] = [
   {
@@ -8,7 +9,7 @@ const items: { title: string; body: string; icon: TablerIcon }[] = [
   },
   {
     title: "All under one roof",
-    body: "Design, dev, and growth — no agency stitching.",
+    body: "Design, dev, and growth no agency stitching.",
     icon: IconPuzzle,
   },
   {
@@ -23,7 +24,8 @@ const cardClassName =
 
 export function ServicesWhy() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
+      <ContentContainer>
 
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Why Weblynx
@@ -42,6 +44,7 @@ export function ServicesWhy() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

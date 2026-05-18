@@ -1,4 +1,6 @@
+import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const projects = [
   {
@@ -26,7 +28,8 @@ const projects = [
 
 export function ServicesFeaturedWork() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-14 sm:px-8 md:py-20 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
+      <ContentContainer>
       <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -38,9 +41,10 @@ export function ServicesFeaturedWork() {
         </div>
         <Link
           href="/work"
-          className="shrink-0 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
+          className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
         >
-          View all →
+          View all
+          <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
         </Link>
       </div>
 
@@ -59,6 +63,7 @@ export function ServicesFeaturedWork() {
           </Link>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

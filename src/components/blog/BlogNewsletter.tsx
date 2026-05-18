@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 export function BlogNewsletter() {
   const [email, setEmail] = useState("");
@@ -11,10 +12,8 @@ export function BlogNewsletter() {
   }
 
   return (
-    <section className="border-b px-6 sm:px-8 lg:px-10 border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
-      <SectionEyebrow className="mb-3.5 text-center !text-[var(--color-text-tertiary)] sm:mb-4">
-        SECTION 5 — NEWSLETTER SIGNUP
-      </SectionEyebrow>
+    <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <div className="mx-auto max-w-[440px] px-0 text-center">
         <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
           Stay in the loop
@@ -45,6 +44,7 @@ export function BlogNewsletter() {
           </button>
         </form>
       </div>
+    </ContentContainer>
     </section>
   );
 }

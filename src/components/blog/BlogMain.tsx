@@ -4,6 +4,7 @@ import { IconArrowDown, IconArrowRight, IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 import {
   BLOG_CATEGORIES,
   BLOG_FEATURED,
@@ -54,10 +55,8 @@ export function BlogMain() {
   return (
     <>
       {/* 1. Header */}
-      <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-10 pb-8 shadow-[var(--shadow-inset-soft)] sm:py-12 sm:pb-10 md:py-12 md:pb-11">
-        <SectionEyebrow className="mb-3 !text-[var(--color-text-tertiary)] sm:mb-4">
-          SECTION 1 — BLOG HEADER
-        </SectionEyebrow>
+      <section className="w-full border-b border-[var(--color-border-tertiary)] py-10 pb-8 shadow-[var(--shadow-inset-soft)] sm:py-12 sm:pb-10 md:py-12 md:pb-11">
+      <ContentContainer>
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-end lg:gap-8">
           <div className="min-w-0">
             <p className="mb-2 text-base font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
@@ -86,13 +85,12 @@ export function BlogMain() {
             />
           </label>
         </div>
-      </section>
+      </ContentContainer>
+    </section>
 
       {/* 2. Categories */}
-      <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] px-6 sm:px-8 lg:px-10 py-3.5 shadow-[var(--shadow-inset-soft)] sm:py-4">
-        <SectionEyebrow className="mb-2.5 !text-[var(--color-text-tertiary)] sm:mb-3">
-          SECTION 2 — CATEGORIES
-        </SectionEyebrow>
+      <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-3.5 shadow-[var(--shadow-inset-soft)] sm:py-4">
+      <ContentContainer>
         <div className="flex flex-wrap gap-1.5 sm:gap-1.5">
           {BLOG_CATEGORIES.map(({ id, label }) => {
             const active = category === id;
@@ -115,14 +113,13 @@ export function BlogMain() {
             );
           })}
         </div>
-      </section>
+      </ContentContainer>
+    </section>
 
       {/* 3. Featured */}
       {showFeatured ? (
-        <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-11">
-          <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">
-            SECTION 3 — FEATURED POST
-          </SectionEyebrow>
+        <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11">
+      <ContentContainer>
           <article className="grid grid-cols-1 items-center gap-5 rounded-[var(--border-radius-lg)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] p-4 shadow-[var(--shadow-card)] sm:gap-5 sm:p-4 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:gap-5 md:p-[18px]">
             <Link
               href={`/blog/${BLOG_FEATURED.slug}`}
@@ -161,14 +158,13 @@ export function BlogMain() {
               </div>
             </div>
           </article>
-        </section>
+        </ContentContainer>
+    </section>
       ) : null}
 
       {/* 4. Grid */}
-      <section className="border-b border-[var(--color-border-tertiary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-11">
-        <SectionEyebrow className="mb-3.5 !text-[var(--color-text-tertiary)] sm:mb-4">
-          SECTION 4 — POST GRID
-        </SectionEyebrow>
+      <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11">
+      <ContentContainer>
         <div className="mb-4 flex flex-col gap-1 sm:mb-5 sm:flex-row sm:items-baseline sm:justify-between">
           <h2 className="text-xl font-medium">Latest posts</h2>
           <span className="inline-flex items-center gap-1 text-sm text-[var(--color-text-secondary)]">
@@ -221,7 +217,8 @@ export function BlogMain() {
             </button>
           </div>
         ) : null}
-      </section>
+      </ContentContainer>
+    </section>
     </>
   );
 }

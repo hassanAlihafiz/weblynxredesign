@@ -1,4 +1,5 @@
 import {
+  IconArrowRight,
   IconCode,
   IconDeviceMobile,
   IconPalette,
@@ -6,6 +7,7 @@ import {
   type TablerIcon,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const services: {
   href: string;
@@ -21,7 +23,7 @@ const services: {
     n: "01",
     title: "Web development",
     description:
-      "Marketing sites, web apps, SaaS platforms — built on Next.js.",
+      "Marketing sites, web apps, SaaS platforms built on Next.js.",
     stack: "Next.js · React · TypeScript",
     duration: "4–8 weeks",
     icon: IconCode,
@@ -39,7 +41,7 @@ const services: {
     href: "/services/digital-marketing",
     n: "03",
     title: "Digital marketing",
-    description: "SEO, paid ads, content, and social — full-funnel growth.",
+    description: "SEO, paid ads, content, and social full-funnel growth.",
     stack: "SEO · Ads · Content · Email",
     duration: "Monthly retainer",
     icon: IconTrendingUp,
@@ -60,7 +62,8 @@ const cardClassName =
 
 export function HomeServices() {
   return (
-    <section className="border-t border-[var(--border-subtle)] px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+    <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
+      <ContentContainer>
 
       <div className="mb-14 grid items-end gap-10 md:grid-cols-2">
         <div>
@@ -74,7 +77,7 @@ export function HomeServices() {
           </h2>
         </div>
         <p className="max-w-md leading-relaxed text-[var(--text-muted)]">
-          Each service stands alone — but together they form a connected system designed to help your
+          Each service stands alone but together they form a connected system designed to help your
           business launch, grow, and scale.
         </p>
       </div>
@@ -96,13 +99,15 @@ export function HomeServices() {
             <div className="mb-4 font-mono text-xs text-[var(--text-dim)]">{stack}</div>
             <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-3">
               <span className="text-xs text-[var(--text-muted)]">{duration}</span>
-              <span className="text-xs font-medium text-[var(--red)] transition-colors group-hover/card:text-[var(--red-bright)]">
-                Learn more →
+              <span className="inline-flex items-center gap-0.5 text-xs font-medium text-[var(--red)] transition-colors group-hover/card:text-[var(--red-bright)]">
+                Learn more
+                <IconArrowRight className="size-3 shrink-0" stroke={1.5} aria-hidden />
               </span>
             </div>
           </Link>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

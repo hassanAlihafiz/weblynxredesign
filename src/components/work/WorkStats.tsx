@@ -1,4 +1,4 @@
-import { SectionEyebrow } from "@/components/home/SectionEyebrow";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const stats = [
   { value: "12+", label: "Projects shipped" },
@@ -9,10 +9,8 @@ const stats = [
 
 export function WorkStats() {
   return (
-    <section className="border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] px-6 sm:px-8 lg:px-10 py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
-      <SectionEyebrow className="mb-3 !text-[var(--color-text-tertiary)] sm:mb-4">
-        SECTION 5 — IMPACT NUMBERS
-      </SectionEyebrow>
+    <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
+      <ContentContainer>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-3">
         {stats.map(({ value, label }) => (
           <div
@@ -24,6 +22,7 @@ export function WorkStats() {
           </div>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

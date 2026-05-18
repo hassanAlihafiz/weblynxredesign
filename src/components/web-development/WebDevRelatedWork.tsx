@@ -1,4 +1,6 @@
+import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const projects = [
   {
@@ -19,7 +21,8 @@ const projects = [
 
 export function WebDevRelatedWork() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+      <ContentContainer>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -31,9 +34,10 @@ export function WebDevRelatedWork() {
         </div>
         <Link
           href="/work"
-          className="shrink-0 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
+          className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
         >
-          View all →
+          View all
+          <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
         </Link>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
@@ -55,6 +59,7 @@ export function WebDevRelatedWork() {
           </Link>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }

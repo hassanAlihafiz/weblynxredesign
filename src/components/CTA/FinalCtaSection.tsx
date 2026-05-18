@@ -1,6 +1,7 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 export type FinalCtaSectionProps = {
   /** Dashed mono label above the headline (centered). */
@@ -24,7 +25,7 @@ export function FinalCtaSection({
   return (
     <section
       id={id}
-      className={`relative overflow-hidden border-t border-[var(--border-subtle)] px-6 sm:px-8 lg:px-10 py-14 text-center md:py-20 ${className}`}
+      className={`relative w-full overflow-hidden border-t border-[var(--border-subtle)] py-14 text-center md:py-20 ${className}`}
     >
       <div className="pointer-events-none absolute inset-0 dot-bg" aria-hidden />
       <div
@@ -32,8 +33,7 @@ export function FinalCtaSection({
         aria-hidden
       />
 
-      <div className="relative z-10">
-
+      <ContentContainer className="relative z-10">
         <h2 className="mx-auto mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-7xl">
           {title}
         </h2>
@@ -46,7 +46,7 @@ export function FinalCtaSection({
           {ctaLabel}
           <IconArrowRight className="size-5 shrink-0" stroke={1.5} aria-hidden />
         </Link>
-      </div>
+      </ContentContainer>
     </section>
   );
 }

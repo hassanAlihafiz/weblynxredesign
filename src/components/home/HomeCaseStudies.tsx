@@ -1,4 +1,6 @@
+import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const cases = [
   {
@@ -7,7 +9,7 @@ const cases = [
     mockClassName: "h-16 w-24 rounded-lg bg-[linear-gradient(135deg,var(--red),var(--red-dark))]",
     mockLabel: "finlytics dashboard",
     tags: ["SaaS", "Web app"] as const,
-    title: "Finlytics — Fintech Dashboard",
+    title: "FinTech Dashboard",
     description: "Rebuilt on Next.js. Load time 6s → 0.8s. +40% conversion.",
   },
   {
@@ -16,7 +18,7 @@ const cases = [
     mockClassName: "h-28 w-20 rounded-2xl bg-[linear-gradient(135deg,#9FE1CB,#5fb892)]",
     mockLabel: "trekr fitness app",
     tags: ["Mobile", "React Native"] as const,
-    title: "Trekr — Fitness App",
+    title: "Fitness App",
     description: "React Native build. 12k installs in launch month.",
   },
 ] as const;
@@ -29,7 +31,8 @@ const chipClass =
 
 export function HomeCaseStudies() {
   return (
-    <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
+      <ContentContainer>
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
@@ -43,9 +46,10 @@ export function HomeCaseStudies() {
         </div>
         <Link
           href="/work"
-          className="text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
+          className="inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
         >
-          View all work →
+          View all work
+          <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
         </Link>
       </div>
 
@@ -78,6 +82,7 @@ export function HomeCaseStudies() {
           ),
         )}
       </div>
+    </ContentContainer>
     </section>
   );
 }

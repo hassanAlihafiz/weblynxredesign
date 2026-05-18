@@ -1,5 +1,6 @@
 import { IconBrandAndroid, IconBrandApple, IconDeviceLaptop } from "@tabler/icons-react";
 import type { TablerIcon } from "@tabler/icons-react";
+import { ContentContainer } from "@/components/layout/ContentContainer";
 
 const platforms: { title: string; body: string; icon: TablerIcon; iconClass: string }[] = [
   {
@@ -26,8 +27,9 @@ export function AppDevPlatforms() {
   return (
     <section
       id="platforms"
-      className="border-t border-[var(--border-subtle)] px-6 py-10 shadow-[var(--shadow-inset-soft)] sm:px-8 sm:py-11 md:py-12 lg:px-10"
+      className="border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
+      <ContentContainer>
       <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
         Platforms we ship to
       </p>
@@ -46,6 +48,7 @@ export function AppDevPlatforms() {
           </article>
         ))}
       </div>
+    </ContentContainer>
     </section>
   );
 }
