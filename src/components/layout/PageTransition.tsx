@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 function prefersReducedMotion(): boolean {
   if (typeof window === "undefined") return false;
@@ -10,25 +10,23 @@ function prefersReducedMotion(): boolean {
 
 export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const lastHandledPath = useRef<string | null>(null);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  const [shouldEnter, setShouldEnter] = useState(false);
 
-  const shouldEnter =
-    lastHandledPath.current !== null && lastHandledPath.current !== pathname;
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setShouldEnter(true);
+  }
 
   useEffect(() => {
-    if (lastHandledPath.current === pathname) return;
-    if (lastHandledPath.current === null) {
-      lastHandledPath.current = pathname;
-      return;
-    }
+    if (!shouldEnter) return;
     const reduced = prefersReducedMotion();
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: reduced ? "auto" : "smooth",
     });
-    lastHandledPath.current = pathname;
-  }, [pathname]);
+  }, [pathname, shouldEnter]);
 
   return (
     <div key={pathname} className={shouldEnter ? "page-transition-enter" : undefined}>

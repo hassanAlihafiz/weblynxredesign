@@ -19,11 +19,11 @@ const faqs = [
   },
   {
     q: "Can you redesign my existing brand instead of starting fresh?",
-    a: "Absolutely. We audit what you have, keep what works, and evolve the rest. Many clients come to us for a refresh rather than a full rebrand — we scope accordingly so you do not lose equity you have already built.",
+    a: "Absolutely. We audit what you have, keep what works, and evolve the rest. Many clients come to us for a refresh rather than a full rebrand we scope accordingly so you do not lose equity you have already built.",
   },
   {
     q: "Will the design work across web, mobile, and print?",
-    a: "Yes. We design with application in mind — responsive web, native mobile patterns, and print-ready exports where needed. Brand system and Full studio engagements explicitly include cross-channel templates and specs.",
+    a: "Yes. We design with application in mind responsive web, native mobile patterns, and print-ready exports where needed. Brand system and Full studio engagements explicitly include cross-channel templates and specs.",
   },
 ] as const;
 

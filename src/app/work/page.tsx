@@ -1,7 +1,7 @@
 import { Footer, Navbar } from "@/components/home";
 import { workMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { WorkFinalCta, WorkMain, WorkPageHeader, WorkStats } from "@/components/work";
+import { WorkFinalCta, WorkMain, WorkPageHeader, WorkStats } from "@/components/inner-services/case-studies/work";
 
 export const metadata = workMetadata;
 

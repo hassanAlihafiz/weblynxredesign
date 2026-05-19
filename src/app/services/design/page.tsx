@@ -11,7 +11,7 @@ import {
   DesignProcess,
   DesignStack,
   DesignWhoFor,
-} from "@/components/design";
+} from "@/components/inner-services/designing/design";
 import { PageContainer } from "@/components/layout/PageContainer";
 
 export const metadata = designMetadata;

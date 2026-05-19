@@ -23,7 +23,7 @@ export function WebDevRelatedWork() {
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         {PROJECT_SHOWCASES.webDevelopment.map(({ gradient, tileLabel, title, meta }) => (
-          <article className="block min-w-0">
+          <article key={title} className="block min-w-0">
             <div className="overflow-hidden rounded-xl" style={{ background: gradient }}>
               <div className="flex aspect-[4/3] items-center justify-center">
                 <span className="font-mono text-xs text-white/60">{tileLabel}</span>

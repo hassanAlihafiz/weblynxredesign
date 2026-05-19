@@ -5,7 +5,7 @@ const bullets = [
   "You're launching a new brand and need a full identity",
   "Your existing brand feels outdated or off-target",
   "You need UI/UX for a web or mobile product",
-  "You want design that ships — not just sits in a PDF",
+  "You want design that ships not just sits in a PDF",
 ] as const;
 
 export function DesignWhoFor() {

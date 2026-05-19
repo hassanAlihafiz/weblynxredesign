@@ -1,13 +1,14 @@
 "use client";
 
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import { SiteLogo } from "@/components/brand";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { ServicesMegaMenuMobile, ServicesMegaMenuPanel } from "@/components/Navbar/ServicesMegaMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useId, useState } from "react";
+import { useCallback, useEffect, useId, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { NAV_ITEMS, SERVICES_SUBMENU } from "@/data/site";
+import { NAV_ITEMS } from "@/data/site";
 
 function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -21,12 +22,6 @@ function navLinkClass(active: boolean) {
   return active
     ? "font-bold text-[var(--color-primary)]"
     : "text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-primary)]";
-}
-
-function submenuLinkClass(active: boolean) {
-  return active
-    ? "bg-[var(--color-primary-soft)] font-medium text-[var(--color-primary)]"
-    : "text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface-overlay)] hover:text-[var(--color-primary)]";
 }
 
 function Brand({
@@ -53,15 +48,23 @@ export function HomeNav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-  const [portalReady, setPortalReady] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const portalReady = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   const panelId = useId();
-  const close = useCallback(() => setMenuOpen(false), []);
+  const close = useCallback(() => {
+    setMenuOpen(false);
+    setMobileServicesOpen(false);
+  }, []);
   const open = useCallback(() => setMenuOpen(true), []);
   const closeServicesMenu = useCallback(() => setServicesMenuOpen(false), []);
-
-  useEffect(() => {
-    setPortalReady(true);
-  }, []);
+  const handleServicesNavigate = useCallback(() => {
+    closeServicesMenu();
+    close();
+  }, [close, closeServicesMenu]);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -77,9 +80,12 @@ export function HomeNav() {
     };
   }, [menuOpen, close]);
 
-  useEffect(() => {
-    closeServicesMenu();
-  }, [pathname, closeServicesMenu]);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setServicesMenuOpen(false);
+    setMobileServicesOpen(false);
+  }
 
   const mobileDrawer =
     portalReady &&
@@ -124,40 +130,22 @@ export function HomeNav() {
                 const active = isNavActive(pathname, href);
                 return (
                   <div key={label} className="flex flex-col gap-1">
-                    <Link
-                      href={href}
-                      aria-current={active ? "page" : undefined}
-                      className={`rounded-[var(--border-radius-md)] px-3 py-3 text-base leading-snug shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:shadow-[var(--shadow-sm)] active:bg-[var(--color-surface-overlay)] ${navLinkClass(active)}`}
-                      onClick={close}
+                    <button
+                      type="button"
+                      aria-expanded={mobileServicesOpen}
+                      className={`flex w-full items-center justify-between gap-2 rounded-[var(--border-radius-md)] px-3 py-3 text-left text-base leading-snug shadow-[var(--shadow-xs)] transition-all hover:bg-[var(--color-surface-raised)] hover:shadow-[var(--shadow-sm)] active:bg-[var(--color-surface-overlay)] ${navLinkClass(active)}`}
+                      onClick={() => setMobileServicesOpen((open) => !open)}
                     >
                       {label}
-                    </Link>
-                    <div className="mb-0.5 ml-3 flex flex-col gap-0.5 border-l border-[var(--color-border-tertiary)] pl-3">
-                      {SERVICES_SUBMENU.map((item) => {
-                        if (item.href) {
-                          const subActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
-                          return (
-                            <Link
-                              key={item.label}
-                              href={item.href}
-                              aria-current={subActive ? "page" : undefined}
-                              className={`rounded-[var(--border-radius-md)] px-2 py-2.5 text-base leading-snug transition-colors hover:bg-[var(--color-surface-raised)] ${navLinkClass(subActive)}`}
-                              onClick={close}
-                            >
-                              {item.label}
-                            </Link>
-                          );
-                        }
-                        return (
-                          <span
-                            key={(item as { label: string }).label}
-                            className="rounded-[var(--border-radius-md)] px-2 py-2.5 text-base text-[var(--color-text-tertiary)]"
-                          >
-                            {(item as { label: string }).label}
-                          </span>
-                        );
-                      })}
-                    </div>
+                      <IconChevronDown
+                        className={`size-4 shrink-0 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                        stroke={1.5}
+                        aria-hidden
+                      />
+                    </button>
+                    {mobileServicesOpen ? (
+                      <ServicesMegaMenuMobile pathname={pathname} onNavigate={handleServicesNavigate} />
+                    ) : null}
                   </div>
                 );
               }
@@ -192,7 +180,14 @@ export function HomeNav() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-xl backdrop-saturate-150">
+      <header
+        className="relative sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-xl backdrop-saturate-150"
+        onMouseLeave={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+            closeServicesMenu();
+          }
+        }}
+      >
         <ContentContainer>
           {/* Mobile — equal side columns so logo is visually centered; tight vertical padding */}
           <div className="grid min-h-0 w-full grid-cols-[2.25rem_1fr_2.25rem] items-center gap-0.5 py-1 sm:grid-cols-[2.5rem_1fr_2.5rem] md:hidden">
@@ -226,7 +221,6 @@ export function HomeNav() {
               <div
                 className="relative flex shrink-0 py-0.5"
                 onMouseEnter={() => setServicesMenuOpen(true)}
-                onMouseLeave={closeServicesMenu}
                 onFocusCapture={() => setServicesMenuOpen(true)}
                 onBlurCapture={(e) => {
                   if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
@@ -243,60 +237,20 @@ export function HomeNav() {
                 >
                   Services
                 </Link>
-                <div
-                  role="menu"
-                  aria-label="Service offerings"
-                  className={`absolute left-1/2 top-full z-50 w-max min-w-[13.5rem] -translate-x-1/2 pt-2 transition-[opacity,visibility] duration-150 motion-reduce:transition-none ${
-                    servicesMenuOpen ? "visible opacity-100" : "invisible opacity-0"
-                  }`}
-                >
-                  <ul className="rounded-[var(--border-radius-md)] border border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] py-1 shadow-[var(--shadow-md)] ring-1 ring-[var(--color-border-subtle)]">
-                    {SERVICES_SUBMENU.map((item) => {
-                      if (item.href) {
-                        const subActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
-                        return (
-                          <li key={item.label}>
-                            <Link
-                              href={item.href}
-                              role="menuitem"
-                              className={`block px-3 py-2.5 text-sm sm:text-base ${submenuLinkClass(subActive)}`}
-                              onClick={closeServicesMenu}
-                            >
-                              {item.label}
-                            </Link>
-                          </li>
-                        );
-                      }
-                      return (
-                        <li key={(item as { label: string }).label}>
-                          <span
-                            role="menuitem"
-                            className="block cursor-default px-3 py-2.5 text-sm text-[var(--color-text-tertiary)] sm:text-base"
-                            onClick={closeServicesMenu}
-                          >
-                            {(item as { label: string }).label}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
               </div>
-              {NAV_ITEMS
-                .filter((item) => item.label !== "Services")
-                .map(({ label, href }) => {
-                  const active = isNavActive(pathname, href);
-                  return (
-                    <Link
-                      key={label}
-                      href={href}
-                      aria-current={active ? "page" : undefined}
-                      className={`block px-3 py-1.5 ${navLinkClass(active)}`}
-                    >
-                      {label}
-                    </Link>
-                  );
-                })}
+              {NAV_ITEMS.filter((item) => item.label !== "Services").map(({ label, href }) => {
+                const active = isNavActive(pathname, href);
+                return (
+                  <Link
+                    key={label}
+                    href={href}
+                    aria-current={active ? "page" : undefined}
+                    className={`block px-3 py-1.5 ${navLinkClass(active)}`}
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
             </nav>
             <div className="flex shrink-0 items-center justify-self-end">
               <a
@@ -310,6 +264,21 @@ export function HomeNav() {
             </div>
           </div>
         </ContentContainer>
+
+        <div
+          role="menu"
+          aria-label="Service offerings"
+          className={`absolute left-0 right-0 top-full z-40 hidden w-full pt-2 transition-[opacity,visibility] duration-150 motion-reduce:transition-none md:block ${
+            servicesMenuOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
+          }`}
+          onMouseEnter={() => setServicesMenuOpen(true)}
+        >
+          <div className="border-t border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] shadow-[var(--shadow-md)] ring-1 ring-inset ring-[var(--color-border-subtle)]">
+            <div className="mx-auto w-full max-w-[1260px] px-6 py-8 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+              <ServicesMegaMenuPanel pathname={pathname} onNavigate={closeServicesMenu} />
+            </div>
+          </div>
+        </div>
       </header>
       {mobileDrawer}
     </>

@@ -12,7 +12,7 @@ import {
   AiDevProcess,
   AiDevStack,
   AiDevWhoFor,
-} from "@/components/ai-development";
+} from "@/components/inner-services/artificial-intelligence/ai-development";
 
 export const metadata = aiDevelopmentMetadata;
 
