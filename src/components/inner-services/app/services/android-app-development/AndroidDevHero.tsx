@@ -13,7 +13,7 @@ export function AndroidDevHero() {
             Services
           </Link>
           <span className="mx-2">/</span>
-          <Link href="/services/app-development" className="transition-colors hover:text-[var(--text-muted)]">
+          <Link href="/app-development" className="transition-colors hover:text-[var(--text-muted)]">
             App Development
           </Link>
           <span className="mx-2">/</span>

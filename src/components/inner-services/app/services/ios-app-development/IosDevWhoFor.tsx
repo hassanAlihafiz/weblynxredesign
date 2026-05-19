@@ -23,7 +23,7 @@ export function IosDevWhoFor() {
               key={text}
               className="flex items-start gap-3 rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4"
             >
-              <IconCheck className="mt-px size-5 shrink-0 text-[var(--text)]" stroke={2} aria-hidden />
+              <IconCheck className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={2} aria-hidden />
               <span className="text-base font-medium text-[var(--text)]">{text}</span>
             </div>
           ))}

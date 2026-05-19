@@ -13,7 +13,7 @@ export function IosDevHero() {
             Services
           </Link>
           <span className="mx-1.5">/</span>
-          <Link href="/services/app-development" className="transition-colors hover:text-[var(--text-muted)]">
+          <Link href="/app-development" className="transition-colors hover:text-[var(--text-muted)]">
             App Development
           </Link>
           <span className="mx-1.5">/</span>

@@ -14,7 +14,7 @@ export function CrossPlatformDevWhoFor() {
     <section className="w-full border-t border-[var(--border)] bg-[#141414] py-9 sm:py-[2.25rem]">
       <ContentContainer>
         <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          You probably <span className="text-[var(--red)]">want cross-platform</span> if...
+          You probably want <span className="text-[var(--red)]">cross-platform</span> if...
         </h2>
 
         <div className="grid gap-2.5 sm:grid-cols-2">
@@ -23,8 +23,8 @@ export function CrossPlatformDevWhoFor() {
               key={text}
               className="flex items-start gap-3 rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4"
             >
-              <IconCheck className="mt-px size-5 shrink-0 text-[var(--text)]" stroke={2} aria-hidden />
-              <span className="text-[13px] leading-[1.6] text-[var(--text)]">{text}</span>
+              <IconCheck className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={2} aria-hidden />
+              <span className="text-base font-medium text-[var(--text)]">{text}</span>
             </div>
           ))}
         </div>

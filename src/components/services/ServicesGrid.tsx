@@ -25,7 +25,7 @@ const cards: {
     body: "Marketing sites, web apps, and SaaS platforms built on Next.js. Fast, SEO-ready, made to scale.",
     stack: "Next.js · React · TypeScript · Shopify",
     delivery: "4–8 week delivery",
-    href: "/services/web-development",
+    href: "/web-development",
     icon: IconCode,
   },
   {
@@ -34,7 +34,7 @@ const cards: {
     body: "Cross-platform iOS and Android apps with React Native. From MVP to App Store launch.",
     stack: "React Native · Expo · Firebase · TypeScript",
     delivery: "8–12 week delivery",
-    href: "/services/app-development",
+    href: "/app-development",
     icon: IconDeviceMobile,
   },
   {
@@ -43,7 +43,7 @@ const cards: {
     body: "SEO, paid ads, content, and social everything to get your brand found and chosen.",
     stack: "SEO · Google Ads · Meta Ads · Content",
     delivery: "Monthly retainer",
-    href: "/services/digital-marketing",
+    href: "/digital-marketing",
     icon: IconTrendingUp,
   },
   {
@@ -52,7 +52,7 @@ const cards: {
     body: "Chatbots, RAG, agents, and automation on the latest LLMs production AI, not demos.",
     stack: "GPT · Claude · LangChain · Pinecone",
     delivery: "2–8 week delivery",
-    href: "/services/ai-development",
+    href: "/artificial-intelligence",
     icon: IconBrain,
   },
   {
@@ -61,7 +61,7 @@ const cards: {
     body: "Brand identity, UI/UX, and product design. Beautiful work that's still functional and on-brand.",
     stack: "Figma · Brand systems · UI/UX",
     delivery: "2–5 week delivery",
-    href: "/services/design",
+    href: "/design",
     icon: IconPalette,
   },
 ];

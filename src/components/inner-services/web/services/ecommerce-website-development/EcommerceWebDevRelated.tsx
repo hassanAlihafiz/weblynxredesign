@@ -15,7 +15,7 @@ const links: {
   {
     title: "Digital Marketing",
     description: "Drive traffic to your new store with SEO + ads.",
-    href: "/services/digital-marketing",
+    href: "/digital-marketing",
     cta: "See Marketing →",
     icon: IconTrendingUp,
     iconClass: "text-[var(--red)]",
@@ -24,7 +24,7 @@ const links: {
   {
     title: "Brand & Design",
     description: "Build a brand identity that sells before the click.",
-    href: "/services/design",
+    href: "/design",
     cta: "See Design →",
     icon: IconPalette,
     iconClass: "text-[var(--red)]",

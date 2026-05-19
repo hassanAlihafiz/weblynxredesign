@@ -25,13 +25,13 @@ const channels: {
     title: "Google Ads",
     body: "Search, display, and shopping campaigns.",
     icon: IconTargetArrow,
-    iconClass: "text-[#FF6B35]",
+    iconClass: "text-[var(--red)]",
   },
   {
     title: "Meta Ads",
     body: "Facebook & Instagram for awareness and conversion.",
     icon: IconBrandMeta,
-    iconClass: "text-[var(--blue)]",
+    iconClass: "text-[var(--red)]",
   },
   {
     title: "Content",
@@ -49,7 +49,7 @@ const channels: {
     title: "Social",
     body: "LinkedIn, X, and Instagram content.",
     icon: IconBrandLinkedin,
-    iconClass: "text-[#0A66C2]",
+    iconClass: "text-[var(--red)]",
   },
 ];
 
@@ -61,7 +61,7 @@ export function DmChannels() {
     >
       <ContentContainer>
       <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-        Six channels <span className="text-[var(--red)]">one growth engine</span>
+        Six channels, <span className="text-[var(--red)]">one growth engine</span>
       </h2>
       <div className="grid gap-4 md:grid-cols-3">
         {channels.map(({ title, body, icon: Icon, iconClass }) => (

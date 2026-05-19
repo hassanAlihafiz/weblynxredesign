@@ -34,23 +34,58 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/web-development",
+        destination: "/web-development",
+        permanent: true,
+      },
+      {
+        source: "/services/app-development",
+        destination: "/app-development",
+        permanent: true,
+      },
+      {
+        source: "/services/digital-marketing",
+        destination: "/digital-marketing",
+        permanent: true,
+      },
+      {
+        source: "/services/design",
+        destination: "/design",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-development",
+        destination: "/artificial-intelligence",
+        permanent: true,
+      },
+      {
+        source: "/ai-development",
+        destination: "/artificial-intelligence",
+        permanent: true,
+      },
+      {
+        source: "/ai-development/:path*",
+        destination: "/artificial-intelligence/:path*",
+        permanent: true,
+      },
+      {
         source: "/services/web/web-development",
-        destination: "/services/web-development",
+        destination: "/web-development",
         permanent: true,
       },
       {
         source: "/services/app/app-development",
-        destination: "/services/app-development",
+        destination: "/app-development",
         permanent: true,
       },
       {
         source: "/services/designing/design",
-        destination: "/services/design",
+        destination: "/design",
         permanent: true,
       },
       {
         source: "/services/merkiting/digital-marketing",
-        destination: "/services/digital-marketing",
+        destination: "/digital-marketing",
         permanent: true,
       },
     ];

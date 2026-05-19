@@ -53,16 +53,15 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
   [
     {
       label: "Web Development",
-      href: "/services/web-development",
+      href: "/web-development",
       items: [
         { label: "E-commerce & web apps", href: "/ecommerce-website-development" },
-        { label: "Next.js & SaaS platforms", href: "/services/web-development" },
-        { label: "Landing & marketing sites", href: "/services/web-development" },
+        { label: "Web portals & dashboards", href: "/web-portal-development" },
       ],
     },
     {
       label: "App Development",
-      href: "/services/app-development",
+      href: "/app-development",
       items: [
         { label: "iOS Apps Development", href: "/ios-app-development" },
         { label: "Android Apps Development", href: "/android-app-development" },
@@ -73,40 +72,40 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
   [
     {
       label: "AI Development",
-      href: "/services/ai-development",
+      href: "/artificial-intelligence",
       items: [
-        { label: "Custom GPT & chatbots", href: "/services/ai-development" },
-        { label: "RAG & knowledge bases", href: "/services/ai-development#capabilities" },
-        { label: "AI agents & automation", href: "/services/ai-development" },
+        { label: "Custom GPT & chatbots", href: "/artificial-intelligence" },
+        { label: "RAG & knowledge bases", href: "/artificial-intelligence#capabilities" },
+        { label: "AI agents & automation", href: "/artificial-intelligence" },
       ],
     },
     {
       label: "Cloud Services",
-      href: "/contact",
+      href: "/cloud-services",
       items: [
-        { label: "Cloud application development", href: "/contact" },
-        { label: "Cloud migration", href: "/contact" },
-        { label: "Support & maintenance", href: "/contact" },
+        { label: "Cloud application development", href: "/cloud-services" },
+        { label: "Cloud migration", href: "/cloud-services" },
+        { label: "Support & maintenance", href: "/cloud-services" },
       ],
     },
   ],
   [
     {
       label: "Digital Marketing",
-      href: "/services/digital-marketing",
+      href: "/digital-marketing",
       items: [
-        { label: "SEO & content", href: "/services/digital-marketing" },
-        { label: "Google & Meta ads", href: "/services/digital-marketing" },
-        { label: "Social & email marketing", href: "/services/digital-marketing#channels" },
+        { label: "SEO & content", href: "/digital-marketing" },
+        { label: "Google & Meta ads", href: "/digital-marketing" },
+        { label: "Social & email marketing", href: "/digital-marketing" },
       ],
     },
     {
       label: "Design",
-      href: "/services/design",
+      href: "/design",
       items: [
-        { label: "Brand identity", href: "/services/design" },
-        { label: "UI / UX design", href: "/services/design" },
-        { label: "Marketing & illustration", href: "/services/design" },
+        { label: "Brand identity", href: "/design" },
+        { label: "UI / UX design", href: "/design" },
+        { label: "Marketing & illustration", href: "/design" },
       ],
     },
   ],

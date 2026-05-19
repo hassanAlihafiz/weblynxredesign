@@ -4,6 +4,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import {
   WebDevEngagementScopes,
   WebDevFaq,
+  WebDevFinalCta,
   WebDevHero,
   WebDevHowWeQuote,
   WebDevIncluded,
@@ -30,6 +31,7 @@ export default function WebDevelopmentPage() {
           <WebDevHowWeQuote />
           <WebDevRelatedWork />
           <WebDevFaq />
+          <WebDevFinalCta />
         </main>
         <Footer />
       </PageContainer>
