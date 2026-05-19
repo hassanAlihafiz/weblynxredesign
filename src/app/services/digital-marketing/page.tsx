@@ -12,7 +12,7 @@ import {
   DmProcess,
   DmResults,
   DmWhoFor,
-} from "@/components/digital-marketing";
+} from "@/components/inner-services/marketing/digital-marketing";
 
 export const metadata = digitalMarketingMetadata;
 

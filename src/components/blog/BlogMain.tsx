@@ -19,34 +19,16 @@ function matchesCategory(post: BlogPost, category: BlogCategoryId) {
   return post.categoryId === category;
 }
 
-function matchesQuery(post: BlogPost, q: string) {
-  if (!q.trim()) return true;
-  const s = q.trim().toLowerCase();
-  return (
-    post.title.toLowerCase().includes(s) ||
-    post.excerpt.toLowerCase().includes(s) ||
-    post.categoryLabel.toLowerCase().includes(s)
-  );
-}
-
 export function BlogMain() {
   const [category, setCategory] = useState<BlogCategoryId>("all");
-  const [query, setQuery] = useState("");
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   const filtered = useMemo(
-    () => BLOG_POSTS.filter((p) => matchesCategory(p, category) && matchesQuery(p, query)),
-    [category, query],
+    () => BLOG_POSTS.filter((p) => matchesCategory(p, category)),
+    [category],
   );
 
-  const qNorm = query.trim().toLowerCase();
-  const featuredMatchesSearch =
-    !qNorm ||
-    BLOG_FEATURED.title.toLowerCase().includes(qNorm) ||
-    BLOG_FEATURED.excerpt.toLowerCase().includes(qNorm) ||
-    BLOG_FEATURED.categoryLabel.toLowerCase().includes(qNorm);
-  const showFeatured =
-    (category === "all" || category === BLOG_FEATURED.categoryId) && featuredMatchesSearch;
+  const showFeatured = category === "all" || category === BLOG_FEATURED.categoryId;
 
   const visiblePosts = filtered.slice(0, visible);
   const canLoadMore = visible < filtered.length;

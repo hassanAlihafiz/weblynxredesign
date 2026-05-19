@@ -30,13 +30,96 @@ export const NAV_ITEMS = [
   { label: "Contact", href: "/contact" },
 ] as const;
 
-export const SERVICES_SUBMENU = [
-  { label: "Web Development", href: "/services/web-development" },
-  { label: "App Development", href: "/services/app-development" },
-  { label: "Digital Marketing", href: "/services/digital-marketing" },
-  { label: "AI Development", href: "/services/ai-development" },
-  { label: "Design", href: "/services/design" },
+export type ServiceMegaMenuLink = {
+  label: string;
+  href: string;
+};
+
+export type ServiceMegaMenuGroup = {
+  label: string;
+  href: string;
+  items: readonly ServiceMegaMenuLink[];
+};
+
+export const SERVICES_MEGA_MENU_INTRO = {
+  title: "Built to ship",
+  description:
+    "Future-ready web, mobile, AI, and brand work under one roof. Custom products for founders who need speed, clarity, and results that scale.",
+  href: "/services",
+} as const;
+
+/** Desktop mega-menu columns (3 service columns + intro rendered separately). */
+export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup[])[] = [
+  [
+    {
+      label: "Web Development",
+      href: "/services/web-development",
+      items: [
+        { label: "E-commerce & web apps", href: "/ecommerce-website-development" },
+        { label: "Next.js & SaaS platforms", href: "/services/web-development" },
+        { label: "Landing & marketing sites", href: "/services/web-development" },
+      ],
+    },
+    {
+      label: "App Development",
+      href: "/services/app-development",
+      items: [
+        { label: "iOS Apps Development", href: "/ios-app-development" },
+        { label: "Android Apps Development", href: "/android-app-development" },
+        { label: "Cross-Platform Development", href: "/cross-platform-app-development" },
+      ],
+    },
+  ],
+  [
+    {
+      label: "AI Development",
+      href: "/services/ai-development",
+      items: [
+        { label: "Custom GPT & chatbots", href: "/services/ai-development" },
+        { label: "RAG & knowledge bases", href: "/services/ai-development#capabilities" },
+        { label: "AI agents & automation", href: "/services/ai-development" },
+      ],
+    },
+    {
+      label: "Cloud Services",
+      href: "/contact",
+      items: [
+        { label: "Cloud application development", href: "/contact" },
+        { label: "Cloud migration", href: "/contact" },
+        { label: "Support & maintenance", href: "/contact" },
+      ],
+    },
+  ],
+  [
+    {
+      label: "Digital Marketing",
+      href: "/services/digital-marketing",
+      items: [
+        { label: "SEO & content", href: "/services/digital-marketing" },
+        { label: "Google & Meta ads", href: "/services/digital-marketing" },
+        { label: "Social & email marketing", href: "/services/digital-marketing#channels" },
+      ],
+    },
+    {
+      label: "Design",
+      href: "/services/design",
+      items: [
+        { label: "Brand identity", href: "/services/design" },
+        { label: "UI / UX design", href: "/services/design" },
+        { label: "Marketing & illustration", href: "/services/design" },
+      ],
+    },
+  ],
 ] as const;
+
+/** Flat list of main services (footer, legacy consumers). */
+export const SERVICES_MEGA_MENU_GROUPS: readonly ServiceMegaMenuGroup[] =
+  SERVICES_MEGA_MENU_COLUMNS.flat();
+
+export const SERVICES_SUBMENU = SERVICES_MEGA_MENU_GROUPS.map(({ label, href }) => ({
+  label,
+  href,
+}));
 
 // ─── Social links (icons resolved in Footer) ──────────────────────────────────
 

@@ -96,7 +96,7 @@ export function WorkMain() {
           <p className="py-8 text-center text-base text-[var(--text-muted)]">No projects in this category yet.</p>
         ) : (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3">
-            {visibleCards.map(({ slug, title, outcome, tagLabels, thumbBg, thumbFg }) => (
+            {visibleCards.map(({ slug, title, outcome, tagLabels }) => (
               <article key={slug} className="min-w-0">
                 <div className="flex h-[140px] items-center justify-center rounded-[var(--border-radius-md)] text-base font-medium">
                   Project screenshot

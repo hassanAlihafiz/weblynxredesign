@@ -68,3 +68,27 @@ export const designMetadata = {
   description:
     "Brand identity, UI/UX, and product design for startups and growing brands. We design systems that ship not just sit pretty in a PDF.",
 } satisfies Metadata;
+
+export const androidAppDevelopmentMetadata = {
+  title: "Android App Development Services | Kotlin & Jetpack – Weblynx",
+  description:
+    "Native Android apps built with Kotlin, Jetpack Compose, and Material 3. Phone, tablet, Wear OS, and Android TV from MVP to Play Store launch.",
+} satisfies Metadata;
+
+export const iosAppDevelopmentMetadata = {
+  title: "iOS App Development | Swift & SwiftUI – Weblynx",
+  description:
+    "Native iOS apps with Swift, SwiftUI, and Apple platform APIs. iPhone, iPad, and visionOS builds from MVP to App Store launch.",
+} satisfies Metadata;
+
+export const crossPlatformAppDevelopmentMetadata = {
+  title: "Cross-Platform App Development | React Native & Flutter – Weblynx",
+  description:
+    "Build iOS and Android apps from one codebase. React Native and Flutter development that ships 2× faster and costs half as much as native without the trade-offs.",
+} satisfies Metadata;
+
+export const ecommerceWebsiteDevelopmentMetadata = {
+  title: "Ecommerce Website Development | Shopify & Headless – Weblynx",
+  description:
+    "Custom Shopify stores and headless commerce builds that load fast and convert. From DTC launch stores to $10M+ headless platforms built to grow revenue, not just ship.",
+} satisfies Metadata;

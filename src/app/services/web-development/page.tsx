@@ -2,16 +2,16 @@ import { Footer, Navbar } from "@/components/home";
 import { webDevelopmentMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
 import {
+  WebDevEngagementScopes,
+  WebDevFaq,
   WebDevHero,
+  WebDevHowWeQuote,
   WebDevIncluded,
   WebDevProcess,
-  WebDevEngagementScopes,
-  WebDevHowWeQuote,
   WebDevRelatedWork,
-  WebDevFaq,
   WebDevStack,
   WebDevWhoFor,
-} from "@/components/web-development";
+} from "@/components/inner-services/web/web-development";
 
 export const metadata = webDevelopmentMetadata;
 

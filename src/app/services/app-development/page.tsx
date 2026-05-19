@@ -12,7 +12,7 @@ import {
   AppDevProcessSteps,
   AppDevTechChips,
   AppDevWhoFor,
-} from "@/components/app-development";
+} from "@/components/inner-services/app/app-development";
 
 export const metadata = appDevelopmentMetadata;
 

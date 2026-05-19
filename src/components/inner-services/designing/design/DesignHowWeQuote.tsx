@@ -30,7 +30,7 @@ export function DesignHowWeQuote() {
           </div>
           <div>
             <p className="mb-6 text-lg leading-relaxed text-[var(--text-muted)]">
-              After a 30-minute scoping call, we send a detailed proposal within 3 business days — including scope,
+              After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope,
               milestones, timeline, and a fixed all-in price. No hourly billing. No surprise add-ons.
             </p>
             <div className="grid gap-4 md:grid-cols-3">

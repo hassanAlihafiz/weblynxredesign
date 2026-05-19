@@ -1,0 +1,18 @@
+import { FinalCtaSection } from "@/components/CTA";
+
+export function AndroidDevFinalCta() {
+  return (
+    <FinalCtaSection
+      id="quote"
+      className="bg-[linear-gradient(180deg,var(--bg),#1B0709)]"
+      title={
+        <>
+          Ready to ship on the <span className="text-[var(--red)]">Play Store</span>?
+        </>
+      }
+      description="Book a free 30-minute call. We'll scope your Android app and send a proposal within 3 days."
+      ctaLabel="Request a quote"
+      ctaHref="/contact"
+    />
+  );
+}
