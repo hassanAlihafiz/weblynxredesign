@@ -24,7 +24,7 @@ export const SITE = {
 
 export const NAV_ITEMS = [
   { label: "Services", href: "/services" },
-  { label: "Work", href: "/work" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
@@ -164,7 +164,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 
-export const WORK_STATS = [
+export const CASE_STUDIES_STATS = [
   { value: "12+", label: "Projects shipped" },
   { value: "8", label: "Happy clients" },
   { value: "4", label: "Countries" },
@@ -283,11 +283,11 @@ export const CONTACT_FAQS = [
   },
 ] as const;
 
-// ─── Work / projects ──────────────────────────────────────────────────────────
+// ─── Case Studies / projects ──────────────────────────────────────────────────────────
 
-export type WorkFilterId = "all" | "web-apps" | "mobile-apps" | "ecommerce" | "saas" | "marketing";
+export type CaseStudiesFilterId = "all" | "web-apps" | "mobile-apps" | "ecommerce" | "saas" | "marketing";
 
-export const WORK_FILTERS: { id: WorkFilterId; label: string }[] = [
+export const CASE_STUDIES_FILTERS: { id: CaseStudiesFilterId; label: string }[] = [
   { id: "all", label: "All (12)" },
   { id: "web-apps", label: "Web apps" },
   { id: "mobile-apps", label: "Mobile apps" },
@@ -303,10 +303,10 @@ export type CaseStudyCard = {
   tagLabels: string[];
   thumbBg: string;
   thumbFg: string;
-  filters: Exclude<WorkFilterId, "all">[];
+  filters: Exclude<CaseStudiesFilterId, "all">[];
 };
 
-export const WORK_FEATURED = {
+export const CASE_STUDIES_FEATURED = {
   slug: "finlytics",
   title: "E-Commerce",
   excerpt:
@@ -324,7 +324,7 @@ export const WORK_FEATURED = {
   filters: ["ecommerce", "web-apps"],
 };
 
-export const WORK_CASE_STUDIES: CaseStudyCard[] = [
+export const CASE_STUDIES_CASE_STUDIES: CaseStudyCard[] = [
   {
     slug: "northbrand-dtc",
     title: "NorthBrand DTC Store",
@@ -426,19 +426,19 @@ export const WORK_CASE_STUDIES: CaseStudyCard[] = [
   },
 ];
 
-export function caseStudyMatchesFilter(cs: CaseStudyCard, filter: WorkFilterId): boolean {
+export function caseStudyMatchesFilter(cs: CaseStudyCard, filter: CaseStudiesFilterId): boolean {
   if (filter === "all") return true;
   return cs.filters.includes(filter);
 }
 
-export function featuredMatchesFilter(filter: WorkFilterId): boolean {
+export function featuredMatchesFilter(filter: CaseStudiesFilterId): boolean {
   if (filter === "all") return true;
-  return (WORK_FEATURED.filters as readonly string[]).includes(filter);
+  return (CASE_STUDIES_FEATURED.filters as readonly string[]).includes(filter);
 }
 
 export function getCaseStudyBySlug(slug: string) {
-  if (slug === WORK_FEATURED.slug) return { kind: "featured" as const, ...WORK_FEATURED };
-  const card = WORK_CASE_STUDIES.find((c) => c.slug === slug);
+  if (slug === CASE_STUDIES_FEATURED.slug) return { kind: "featured" as const, ...CASE_STUDIES_FEATURED };
+  const card = CASE_STUDIES_CASE_STUDIES.find((c) => c.slug === slug);
   if (card) return { kind: "card" as const, ...card };
   return null;
 }
@@ -447,7 +447,7 @@ export function getCaseStudyBySlug(slug: string) {
 export const PROJECT_SHOWCASES = {
   home: [
     {
-      href: "/work/finlytics",
+      href: "/case-studies/finlytics",
       tileGradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
       mockClassName: "h-16 w-24 rounded-lg bg-[linear-gradient(135deg,var(--red),var(--red-dark))]",
       mockLabel: "finlytics dashboard",
@@ -456,7 +456,7 @@ export const PROJECT_SHOWCASES = {
       description: "Rebuilt on Next.js. Load time 6s → 0.8s. +40% conversion.",
     },
     {
-      href: "/work/trekr-fitness",
+      href: "/case-studies/trekr-fitness",
       tileGradient: "linear-gradient(135deg, #0f3d2e, #082018)",
       mockClassName: "h-28 w-20 rounded-2xl bg-[linear-gradient(135deg,#9FE1CB,#5fb892)]",
       mockLabel: "trekr fitness app",
@@ -487,14 +487,14 @@ export const PROJECT_SHOWCASES = {
   ],
   webDevelopment: [
     {
-      href: "/work/finlytics",
+      href: "/case-studies/finlytics",
       gradient: "linear-gradient(135deg, #2a1b3d, #1a0e2e)",
       tileLabel: "finlytics dashboard",
       title: "Finlytics SaaS",
       meta: "Web app · +40% conversion",
     },
     {
-      href: "/work/northbrand-dtc",
+      href: "/case-studies/northbrand-dtc",
       gradient: "linear-gradient(135deg, #0f3d2e, #082018)",
       tileLabel: "northbrand store",
       title: "NorthBrand Store",

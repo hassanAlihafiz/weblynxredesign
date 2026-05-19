@@ -1,11 +1,16 @@
 import { Footer, Navbar } from "@/components/home";
-import { workMetadata } from "@/data/metadata";
+import { caseStudiesMetadata } from "@/data/metadata";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { WorkFinalCta, WorkMain, WorkPageHeader, WorkStats } from "@/components/inner-services/case-studies/work";
+import {
+  CaseStudiesFinalCta,
+  CaseStudiesMain,
+  CaseStudiesPageHeader,
+  CaseStudiesStats,
+} from "@/components/inner-services/case-studies/Case-Studies";
 
-export const metadata = workMetadata;
+export const metadata = caseStudiesMetadata;
 
-export default function WorkPage() {
+export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen w-full bg-[var(--color-background-primary)] text-[var(--color-text-primary)]">
       <PageContainer className="flex min-h-screen flex-col">
@@ -14,10 +19,10 @@ export default function WorkPage() {
           <h2 className="sr-only">
             Case studies: page header, filters, featured project, project grid, impact stats, and call to action
           </h2>
-          <WorkPageHeader />
-          <WorkMain />
-          <WorkStats />
-          <WorkFinalCta />
+          <CaseStudiesPageHeader />
+          <CaseStudiesMain />
+          <CaseStudiesStats />
+          <CaseStudiesFinalCta />
         </main>
         <Footer />
       </PageContainer>

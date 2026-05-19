@@ -14,13 +14,23 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/work",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      {
+        source: "/work/:path*",
+        destination: "/case-studies/:path*",
+        permanent: true,
+      },
+      {
         source: "/services/case-studies/work",
-        destination: "/work",
+        destination: "/case-studies",
         permanent: true,
       },
       {
         source: "/services/work",
-        destination: "/work",
+        destination: "/case-studies",
         permanent: true,
       },
       {

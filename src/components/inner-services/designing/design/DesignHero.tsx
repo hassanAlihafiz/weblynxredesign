@@ -36,7 +36,7 @@ export function DesignHero() {
                   Request a quote
                   <IconArrowRight className="size-4 shrink-0" stroke={1.5} aria-hidden />
                 </Link>
-                <Link href="/work" className="btn-secondary px-8 py-4 text-base">
+                <Link href="/case-studies" className="btn-secondary px-8 py-4 text-base">
                   See our work
                 </Link>
               </div>

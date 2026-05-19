@@ -1,7 +1,7 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 
-export function WorkPageHeader() {
+export function CaseStudiesPageHeader() {
   return (
     <section className="relative w-full overflow-hidden border-t border-[var(--border-subtle)] py-14 md:py-20">
       <HeroGridBackground />
