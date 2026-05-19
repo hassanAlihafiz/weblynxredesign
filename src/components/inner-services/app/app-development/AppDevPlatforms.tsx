@@ -7,13 +7,13 @@ const platforms: { title: string; body: string; icon: TablerIcon; iconClass: str
     title: "iOS",
     body: "iPhone & iPad. App Store submission & review included.",
     icon: IconBrandApple,
-    iconClass: "text-[var(--text)]",
+    iconClass: "text-[var(--red)]",
   },
   {
     title: "Android",
     body: "Phones & tablets. Play Store submission & review included.",
     icon: IconBrandAndroid,
-    iconClass: "text-[#3DDC84]",
+    iconClass: "text-[var(--red)]",
   },
   {
     title: "Web companion",

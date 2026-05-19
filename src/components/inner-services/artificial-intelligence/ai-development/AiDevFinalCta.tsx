@@ -4,7 +4,7 @@ export function AiDevFinalCta() {
   return (
     <FinalCtaSection
       id="quote"
-      className="bg-[linear-gradient(180deg,var(--bg),#1B0709)]"
+      className="bg-[linear-gradient(180deg,var(--bg),rgba(27,7,9,0.98))]"
       title={
         <>
           Got an AI idea? Let&apos;s build it <span className="text-[var(--red)]">right</span>.

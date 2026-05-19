@@ -27,7 +27,7 @@ const services: {
   icon: TablerIcon;
 }[] = [
   {
-    href: "/services/web-development",
+    href: "/web-development",
     n: "01",
     title: "Web development",
     description: "Marketing sites, web apps, SaaS platforms built on Next.js.",
@@ -36,7 +36,7 @@ const services: {
     icon: IconCode,
   },
   {
-    href: "/services/app-development",
+    href: "/app-development",
     n: "02",
     title: "App development",
     description: "iOS and Android apps with React Native. One codebase, two stores.",
@@ -45,7 +45,7 @@ const services: {
     icon: IconDeviceMobile,
   },
   {
-    href: "/services/digital-marketing",
+    href: "/digital-marketing",
     n: "03",
     title: "Digital marketing",
     description: "SEO, paid ads, content, and social full-funnel growth.",
@@ -54,7 +54,7 @@ const services: {
     icon: IconTrendingUp,
   },
   {
-    href: "/services/ai-development",
+    href: "/artificial-intelligence",
     n: "04",
     title: "AI development",
     description: "Chatbots, RAG, agents, and workflow automation on modern LLMs.",
@@ -63,7 +63,7 @@ const services: {
     icon: IconBrain,
   },
   {
-    href: "/services/design",
+    href: "/design",
     n: "05",
     title: "Design",
     description: "Brand identity, UI/UX, and product design that actually ships.",

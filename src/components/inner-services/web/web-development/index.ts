@@ -6,4 +6,5 @@ export { WebDevEngagementScopes } from "./WebDevEngagementScopes";
 export { WebDevHowWeQuote } from "./WebDevHowWeQuote";
 export { WebDevRelatedWork } from "./WebDevRelatedWork";
 export { WebDevFaq } from "./WebDevFaq";
+export { WebDevFinalCta } from "./WebDevFinalCta";
 export { WebDevStack } from "./WebDevStack";

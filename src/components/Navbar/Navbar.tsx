@@ -10,9 +10,29 @@ import { useCallback, useEffect, useId, useState, useSyncExternalStore } from "r
 import { createPortal } from "react-dom";
 import { NAV_ITEMS } from "@/data/site";
 
+const SERVICE_PAGE_PREFIXES = [
+  "/web-development",
+  "/app-development",
+  "/digital-marketing",
+  "/design",
+  "/artificial-intelligence",
+  "/ios-app-development",
+  "/android-app-development",
+  "/cross-platform-app-development",
+  "/ecommerce-website-development",
+  "/web-portal-development",
+] as const;
+
+function isServicePage(pathname: string) {
+  return SERVICE_PAGE_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
+
 function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
-  if (href === "/services") return pathname === "/services" || pathname.startsWith("/services/");
+  if (href === "/services")
+    return pathname === "/services" || pathname.startsWith("/services/") || isServicePage(pathname);
   if (href === "/blog") return pathname === "/blog" || pathname.startsWith("/blog/");
   if (href === "/case-studies")
     return pathname === "/case-studies" || pathname.startsWith("/case-studies/");

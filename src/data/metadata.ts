@@ -16,9 +16,9 @@ export const servicesMetadata = {
 } satisfies Metadata;
 
 export const caseStudiesMetadata = {
-  title: "Case Studies: Web, Mobile, AI & Brand Projects – Weblynx",
+  title: "Web, Mobile, AI & Brand Projects – Weblynx",
   description:
-    "A look at recent projects we've shipped ecommerce stores, mobile apps, and brand systems with real business outcomes.",
+    "A look at recent projects we've shipped fintech dashboards, ecommerce stores, mobile apps, and brand systems with real business outcomes.",
 } satisfies Metadata;
 
 export const aboutMetadata = {
@@ -36,7 +36,7 @@ export const blogMetadata = {
 export const contactMetadata = {
   title: "Contact – Start a Project with Weblynx",
   description:
-    "Tell us about your project, we reply within 24 hours with thoughts and next steps. Free 30-minute scoping calls available worldwide",
+    "Tell us about your project, we reply within 24 hours with thoughts and next steps. Free 30-minute scoping calls available worldwide.",
 } satisfies Metadata;
 
 export const webDevelopmentMetadata = {
@@ -76,9 +76,9 @@ export const androidAppDevelopmentMetadata = {
 } satisfies Metadata;
 
 export const iosAppDevelopmentMetadata = {
-  title: "iOS App Development | Swift & SwiftUI – Weblynx",
+  title: "IOS App Development Services | Swift & SwiftUI – Weblynx",
   description:
-    "Native iOS apps with Swift, SwiftUI, and Apple platform APIs. iPhone, iPad, and visionOS builds from MVP to App Store launch.",
+    "Native iOS apps built with Swift, SwiftUI, ARKit, and the full Apple ecosystem. iPhone, iPad, Apple Watch, Vision Pro from MVP to App Store launch.",
 } satisfies Metadata;
 
 export const crossPlatformAppDevelopmentMetadata = {
@@ -91,4 +91,10 @@ export const ecommerceWebsiteDevelopmentMetadata = {
   title: "Ecommerce Website Development | Shopify & Headless – Weblynx",
   description:
     "Custom Shopify stores and headless commerce builds that load fast and convert. From DTC launch stores to $10M+ headless platforms built to grow revenue, not just ship.",
+} satisfies Metadata;
+
+export const webPortalDevelopmentMetadata = {
+  title: "Custom Web Portal Development Agency in USA - Weblynx",
+  description:
+    "Webynx offers tailored web portal development services Build secure, scalable portals with advanced user management, data integration, custom workflows",
 } satisfies Metadata;

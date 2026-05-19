@@ -35,27 +35,27 @@ export function HomeFooter() {
             <div className={footerColumnHeadingClass}>Services</div>
             <ul className="space-y-2 text-base">
               <li>
-                <Link href="/services/web-development" className={footerLinkClass}>
+                <Link href="/web-development" className={footerLinkClass}>
                   Web development
                 </Link>
               </li>
               <li>
-                <Link href="/services/app-development" className={footerLinkClass}>
+                <Link href="/app-development" className={footerLinkClass}>
                   App development
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className={footerLinkClass}>
+                <Link href="/digital-marketing" className={footerLinkClass}>
                   Digital marketing
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-development" className={footerLinkClass}>
+                <Link href="/artificial-intelligence" className={footerLinkClass}>
                   AI development
                 </Link>
               </li>
               <li>
-                <Link href="/services/design" className={footerLinkClass}>
+                <Link href="/design" className={footerLinkClass}>
                   Design
                 </Link>
               </li>
@@ -65,6 +65,11 @@ export function HomeFooter() {
           <div>
             <div className={footerColumnHeadingClass}>Company</div>
             <ul className="space-y-2 text-base">
+              <li>
+                <Link href="/" className={footerLinkClass}>
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className={footerLinkClass}>
                   About
