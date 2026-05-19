@@ -3,22 +3,22 @@
 import { useMemo, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import {
-  WORK_CASE_STUDIES,
-  WORK_FEATURED,
-  WORK_FILTERS,
+  CASE_STUDIES_CASE_STUDIES,
+  CASE_STUDIES_FEATURED,
+  CASE_STUDIES_FILTERS,
   caseStudyMatchesFilter,
   featuredMatchesFilter,
-  type WorkFilterId,
+  type CaseStudiesFilterId,
 } from "@/data/site";
 
 const PAGE_SIZE = 6;
 
-export function WorkMain() {
-  const [filter, setFilter] = useState<WorkFilterId>("all");
+export function CaseStudiesMain() {
+  const [filter, setFilter] = useState<CaseStudiesFilterId>("all");
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   const filtered = useMemo(
-    () => WORK_CASE_STUDIES.filter((c) => caseStudyMatchesFilter(c, filter)),
+    () => CASE_STUDIES_CASE_STUDIES.filter((c) => caseStudyMatchesFilter(c, filter)),
     [filter],
   );
 
@@ -31,7 +31,7 @@ export function WorkMain() {
       <section className="w-full border-b border-[var(--color-border-tertiary)] bg-[var(--color-background-secondary)] py-9 sm:py-10 md:py-11 shadow-[var(--shadow-inset-soft)]">
       <ContentContainer>
         <div className="flex flex-wrap gap-2">
-          {WORK_FILTERS.map(({ id, label }) => {
+          {CASE_STUDIES_FILTERS.map(({ id, label }) => {
             const active = filter === id;
             return (
               <button
@@ -64,7 +64,7 @@ export function WorkMain() {
             </div>
             <div className="p-4">
               <div className="mb-2.5 flex flex-wrap gap-1.5">
-                {WORK_FEATURED.tagLabels.map((t) => (
+                {CASE_STUDIES_FEATURED.tagLabels.map((t) => (
                   <span
                     key={t}
                     className="rounded-[var(--border-radius-md)] bg-[var(--red)] px-2 py-0.5 text-base font-medium text-[#EEEDFE]"
@@ -73,12 +73,12 @@ export function WorkMain() {
                   </span>
                 ))}
               </div>
-              <h2 className="mb-1.5 text-xl font-medium leading-snug">{WORK_FEATURED.title}</h2>
+              <h2 className="mb-1.5 text-xl font-medium leading-snug">{CASE_STUDIES_FEATURED.title}</h2>
               <p className="mb-3.5 text-base leading-relaxed sm:mb-4">
-                {WORK_FEATURED.excerpt}
+                {CASE_STUDIES_FEATURED.excerpt}
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-2">
-                {WORK_FEATURED.stats.map(({ k, v }) => (
+                {CASE_STUDIES_FEATURED.stats.map(({ k, v }) => (
                   <span key={v}>
                     <strong className="font-medium">{k}</strong> {v}
                   </span>

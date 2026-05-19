@@ -20,7 +20,7 @@ export function HomeCaseStudies() {
           </h2>
         </div>
         <Link
-          href="/work"
+          href="/case-studies"
           className="inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
         >
           View all work

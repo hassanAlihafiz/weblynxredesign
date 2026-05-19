@@ -71,8 +71,8 @@ export function HomeFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/work" className={footerLinkClass}>
-                  Work
+                <Link href="/case-studies" className={footerLinkClass}>
+                  Case Studies
                 </Link>
               </li>
               <li>

@@ -15,10 +15,10 @@ export const servicesMetadata = {
     "Full-stack digital services under one roof, web and app development, AI integration, brand design, and growth marketing. Quoted by scope, not by hour.",
 } satisfies Metadata;
 
-export const workMetadata = {
-  title: "Web, Mobile, AI & Brand Projects – Weblynx",
+export const caseStudiesMetadata = {
+  title: "Case Studies: Web, Mobile, AI & Brand Projects – Weblynx",
   description:
-    "A look at recent projects we've shipped fintech dashboards, ecommerce stores, mobile apps, and brand systems with real business outcomes.",
+    "A look at recent projects we've shipped ecommerce stores, mobile apps, and brand systems with real business outcomes.",
 } satisfies Metadata;
 
 export const aboutMetadata = {

@@ -1,6 +1,6 @@
 import { FinalCtaSection } from "@/components/CTA";
 
-export function WorkFinalCta() {
+export function CaseStudiesFinalCta() {
   return (
     <FinalCtaSection
       title={

@@ -14,7 +14,7 @@ export function EcommerceWebDevCaseStudy() {
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
         <Link
-          href="/work"
+          href="/case-studies"
           className="block overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-elev)] transition-opacity hover:opacity-95"
         >
           <article className="grid md:grid-cols-[1fr_1.2fr]">

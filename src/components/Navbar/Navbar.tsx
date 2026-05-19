@@ -14,7 +14,8 @@ function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   if (href === "/services") return pathname === "/services" || pathname.startsWith("/services/");
   if (href === "/blog") return pathname === "/blog" || pathname.startsWith("/blog/");
-  if (href === "/work") return pathname === "/work" || pathname.startsWith("/work/");
+  if (href === "/case-studies")
+    return pathname === "/case-studies" || pathname.startsWith("/case-studies/");
   return pathname === href;
 }
 
