@@ -14,28 +14,28 @@ const roles: {
     body: "Full system control, billing, settings",
     icon: IconCrown,
     iconClass: "text-[var(--red)]",
-    iconBg: "bg-[var(--color-background-primary)]",
+    iconBg: "bg-transparent",
   },
   {
     title: "Team manager",
     body: "Manage their team, content, reports",
     icon: IconUserCog,
     iconClass: "text-[var(--red)]",
-    iconBg: "bg-[var(--color-background-primary)]",
+    iconBg: "bg-transparent",
   },
   {
     title: "Standard user",
     body: "Day-to-day workflows & tasks",
     icon: IconUser,
     iconClass: "text-[var(--red)]",
-    iconBg: "bg-[var(--color-background-primary)]",
+    iconBg: "bg-transparent",
   },
   {
     title: "Client / guest",
     body: "Self-service, limited read access",
     icon: IconEye,
     iconClass: "text-[var(--red)]",
-    iconBg: "bg-[var(--color-background-primary)]",
+    iconBg: "bg-transparent",
   },
 ];
 
@@ -57,7 +57,7 @@ export function WebPortalDevUserRoles() {
               className="rounded-xl border border-[var(--border)] bg-[var(--bg-elev)] p-4 text-center"
             >
               <div
-                className={`mx-auto mb-2.5 flex size-10 items-center justify-center rounded-full ${iconBg}`}
+                className={`mx-auto mb-2.5 flex size-10 items-center justify-center rounded-full border border-[var(--border)] ${iconBg}`}
                 aria-hidden
               >
                 <Icon className={`size-5 ${iconClass}`} stroke={1.5} />

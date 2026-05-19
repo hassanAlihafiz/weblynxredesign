@@ -1,6 +1,7 @@
 import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import { AiDevHeroGraphic } from "./AiDevHeroGraphic";
 
@@ -31,13 +32,13 @@ export function AiDevHero() {
                 solves real problems, not demos.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="#quote" className="btn-primary px-8 py-4 text-base">
+                <Button href="#quote" size="lg">
                   Request a quote
-                </Link>
-                <Link href="#capabilities" className="btn-secondary px-8 py-4 text-base">
+                </Button>
+                <Button href="#capabilities" variant="secondary" size="lg">
                   See use cases
                   <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
-                </Link>
+                </Button>
               </div>
             </div>
 

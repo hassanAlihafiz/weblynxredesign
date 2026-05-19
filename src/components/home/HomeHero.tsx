@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { IconArrowRight } from "@tabler/icons-react";
+import { Button } from "@/components/ui";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import { HomeHeroChainGraphic } from "./HomeHeroChainGraphic";
@@ -33,19 +33,13 @@ export function HomeHero() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-2.5 max-lg:justify-center lg:justify-start">
-              <Link
-                href="/contact"
-                className="inline-flex min-h-[44px] items-center justify-center gap-1 rounded-md bg-[#E63946] px-5 py-2.5 text-base font-medium text-[#FAFAFA] transition-colors hover:bg-[#c92d3d] active:translate-y-px sm:px-[22px] sm:py-[11px]"
-              >
+              <Button href="/contact">
                 Start a project
                 <IconArrowRight className="size-4 shrink-0" stroke={1.5} aria-hidden />
-              </Link>
-              <Link
-                href="/case-studies"
-                className="inline-flex min-h-[44px] items-center justify-center rounded-md border border-[#2A2A2A] bg-transparent px-5 py-2.5 text-base font-medium text-[#FAFAFA] transition-colors hover:border-[#3f3f3f] hover:bg-white/[0.03] sm:px-[22px] sm:py-[11px]"
-              >
+              </Button>
+              <Button href="/case-studies" variant="secondary">
                 See our work
-              </Link>
+              </Button>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5 max-lg:justify-center sm:mt-9 lg:mt-[30px] lg:justify-start">

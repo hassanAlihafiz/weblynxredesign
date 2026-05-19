@@ -55,7 +55,7 @@ export function DesignDeliverables() {
               key={title}
               className="rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-5 shadow-[var(--shadow-xs)]"
             >
-              <Icon className="mb-3 size-6 shrink-0 text-[var(--text)]" stroke={1.5} aria-hidden />
+              <Icon className="mb-3 size-6 shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
               <h3 className="mb-2 text-base font-medium text-[var(--text)]">{title}</h3>
               <p className="text-base leading-relaxed text-[var(--text-muted)]">{body}</p>
             </article>

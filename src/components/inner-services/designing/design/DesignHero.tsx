@@ -1,6 +1,7 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import { DesignHeroGraphic } from "./DesignHeroGraphic";
 
@@ -32,13 +33,13 @@ export function DesignHero() {
                 built to work not just to win awards.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-primary px-8 py-4 text-base">
+                <Button href="/contact" size="lg">
                   Request a quote
                   <IconArrowRight className="size-4 shrink-0" stroke={1.5} aria-hidden />
-                </Link>
-                <Link href="/case-studies" className="btn-secondary px-8 py-4 text-base">
+                </Button>
+                <Button href="/case-studies" variant="secondary" size="lg">
                   See our work
-                </Link>
+                </Button>
               </div>
             </div>
 

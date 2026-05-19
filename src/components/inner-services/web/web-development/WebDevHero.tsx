@@ -1,6 +1,7 @@
 import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 
 export function WebDevHero() {
@@ -36,13 +37,13 @@ export function WebDevHero() {
                 From landing pages to full-scale web apps built on Next.js, designed to scale, shipped in weeks.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="#quote" className="btn-primary px-5 py-3 text-sm">
+                <Button href="#quote" size="md">
                   Request a quote
-                </Link>
-                <Link href="#engagements" className="btn-secondary px-5 py-3 text-sm">
+                </Button>
+                <Button href="#engagements" variant="secondary" size="md">
                   See engagements
                   <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
-                </Link>
+                </Button>
               </div>
             </div>
 

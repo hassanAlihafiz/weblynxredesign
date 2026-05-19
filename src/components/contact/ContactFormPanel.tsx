@@ -2,6 +2,7 @@
 
 import { IconArrowRight } from "@tabler/icons-react";
 import { useId, useState } from "react";
+import { Button } from "@/components/ui";
 
 const NEEDS = ["Web dev", "App dev", "Marketing", "Design", "Not sure yet"] as const;
 const BUDGETS = ["Under $2k", "$2k–$5k", "$5k–$15k", "$15k+", "Flexible"] as const;
@@ -138,13 +139,10 @@ export function ContactFormPanel() {
 
         <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <p className="text-base text-[var(--color-text-tertiary)]">We reply within 24 hours</p>
-          <button
-            type="submit"
-            className="inline-flex w-full shrink-0 items-center justify-center gap-1 rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-4 py-2.5 text-sm font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px sm:w-auto sm:px-5"
-          >
+          <Button type="submit" className="w-full shrink-0 sm:w-auto">
             Send message
             <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
-          </button>
+          </Button>
         </div>
       </form>
     </div>

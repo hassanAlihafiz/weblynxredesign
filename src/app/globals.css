@@ -157,51 +157,56 @@ body {
   background: radial-gradient(circle, var(--red-glow) 0%, transparent 70%);
 }
 
+/* Legacy aliases — prefer <Button> from @/components/ui */
 .btn-primary {
-  border-radius: 8px;
-  background: var(--red);
-  color: var(--text);
+  border-radius: var(--border-radius-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
   text-decoration: none;
-  transition: background 0.2s ease;
+  box-shadow: var(--shadow-primary);
+  outline: 1px solid var(--color-primary-border);
+  outline-offset: -1px;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: var(--red-bright);
+  background: var(--color-primary-hover);
+  box-shadow: var(--shadow-primary-hover);
 }
 
 .btn-primary:focus-visible {
-  outline: 2px solid var(--red-bright);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
 .btn-secondary {
-  border-radius: 8px;
-  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-secondary);
   background: transparent;
-  color: var(--text);
+  color: var(--color-text-primary);
   font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
   text-decoration: none;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
-  border-color: var(--text-muted);
-  background: var(--bg-elev);
+  border-color: var(--color-primary-border);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:focus-visible {
-  outline: 2px solid var(--text-muted);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

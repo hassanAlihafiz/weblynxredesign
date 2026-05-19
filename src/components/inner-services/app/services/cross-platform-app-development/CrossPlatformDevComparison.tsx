@@ -62,7 +62,7 @@ const rows: {
 ];
 
 function cellClass(tone: CellTone) {
-  if (tone === "warn") return "text-[#F5C518]";
+  if (tone === "warn") return "text-[var(--red)]";
   if (tone === "muted") return "text-[var(--text-muted)]";
   return "text-[var(--text)]";
 }

@@ -21,7 +21,7 @@ export function AndroidDevWhoFor() {
           {reasons.map((text) => (
             <div
               key={text}
-              className="flex items-start gap-3 rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4"
+              className="flex items-start gap-3"
             >
               <IconCheck
                 className="mt-px size-5 shrink-0 text-[var(--red)]"
@@ -33,8 +33,8 @@ export function AndroidDevWhoFor() {
           ))}
         </div>
 
-        <div className="mt-5 flex items-start gap-3 rounded-[10px] border border-[rgba(59,130,246,0.3)] bg-[rgba(59,130,246,0.08)] px-[18px] py-4">
-          <IconInfoCircle className="mt-px size-[18px] shrink-0 text-[var(--blue)]" stroke={1.5} aria-hidden />
+        <div className="mt-5 flex items-start gap-3 rounded-[10px] border border-[var(--border)] bg-[var(--bg-elev)] px-[18px] py-4">
+          <IconInfoCircle className="mt-px size-[18px] shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
           <div>
             <p className="mb-1 text-base font-medium text-[var(--text)]">
               Not sure if you need native Android?
@@ -44,7 +44,7 @@ export function AndroidDevWhoFor() {
               experience is nearly identical.{" "}
               <Link
                 href="/cross-platform-app-development"
-                className="text-[var(--blue)] underline underline-offset-2 transition-opacity hover:opacity-90"
+                className="text-[var(--red)] underline underline-offset-2 transition-opacity hover:opacity-90"
               >
                 See cross-platform development →
               </Link>

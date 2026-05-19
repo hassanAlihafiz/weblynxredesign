@@ -13,7 +13,7 @@ export function AboutIntro() {
         <h1 className="mb-8 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-7xl">
           A digital studio built around{" "}
           <span className="text-[var(--red)]">craft</span>
-          {", speed, and clear thinking."}
+          {", speed, and clear thinking"}
         </h1>
 
         <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">

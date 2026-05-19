@@ -1,7 +1,7 @@
 import { IconArrowRight } from "@tabler/icons-react";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { Button } from "@/components/ui";
 
 export type FinalCtaSectionProps = {
   /** Dashed mono label above the headline (centered). */
@@ -42,10 +42,10 @@ export function FinalCtaSection({
           {description}
         </p>
 
-        <Link href={ctaHref} className="btn-primary px-8 py-4 text-base">
+        <Button href={ctaHref} size="lg">
           {ctaLabel}
           <IconArrowRight className="size-5 shrink-0" stroke={1.5} aria-hidden />
-        </Link>
+        </Button>
       </ContentContainer>
     </section>
   );

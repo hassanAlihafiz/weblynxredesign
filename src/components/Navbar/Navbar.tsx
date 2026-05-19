@@ -5,6 +5,7 @@ import { SiteLogo } from "@/components/brand";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ServicesMegaMenuMobile, ServicesMegaMenuPanel } from "@/components/Navbar/ServicesMegaMenu";
 import Link from "next/link";
+import { Button } from "@/components/ui";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
@@ -186,13 +187,15 @@ export function HomeNav() {
           </nav>
 
           <div className="shrink-0 border-t border-[var(--color-border-tertiary)] px-2.5 pb-[max(1.25rem,calc(env(safe-area-inset-bottom,0px)+14px))] pt-2.5 sm:px-3 sm:pb-[max(1.5rem,calc(env(safe-area-inset-bottom,0px)+18px))] sm:pt-3">
-            <a
+            <Button
               href="https://calendly.com/weblynxagency/30min"
-              className="flex w-full min-h-[48px] items-center justify-center rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-5 py-3 text-sm font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px"
+              external
+              size="md"
+              fullWidth
               onClick={close}
             >
               Book a call
-            </a>
+            </Button>
           </div>
         </aside>
       </div>,
@@ -204,7 +207,8 @@ export function HomeNav() {
       <header
         className="relative sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-xl backdrop-saturate-150"
         onMouseLeave={(e) => {
-          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+          const related = e.relatedTarget;
+          if (!(related instanceof Node) || !e.currentTarget.contains(related)) {
             closeServicesMenu();
           }
         }}
@@ -274,14 +278,9 @@ export function HomeNav() {
               })}
             </nav>
             <div className="flex shrink-0 items-center justify-self-end">
-              <a
-                href="https://calendly.com/weblynxagency/30min"
-                className="rounded-[var(--border-radius-md)] bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-[var(--color-on-primary)] shadow-[var(--shadow-primary)] ring-1 ring-[var(--color-primary-border)] transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-[var(--shadow-primary-hover)] active:translate-y-px"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Button href="https://calendly.com/weblynxagency/30min" external>
                 Book a call
-              </a>
+              </Button>
             </div>
           </div>
         </ContentContainer>

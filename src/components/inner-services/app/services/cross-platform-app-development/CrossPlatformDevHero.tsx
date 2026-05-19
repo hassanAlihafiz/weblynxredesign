@@ -1,6 +1,7 @@
 import { IconArrowDown, IconDevices } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import { CrossPlatformDevHeroGraphic } from "./CrossPlatformDevHeroGraphic";
 
@@ -44,13 +45,13 @@ export function CrossPlatformDevHero() {
               </p>
 
               <div className="flex flex-wrap gap-2">
-                <Link href="#quote" className="btn-primary px-5 py-3 text-sm">
+                <Button href="#quote" size="md">
                   Request a quote
-                </Link>
-                <Link href="#comparison" className="btn-secondary px-5 py-3 text-sm">
+                </Button>
+                <Button href="#comparison" variant="secondary" size="md">
                   See the comparison
                   <IconArrowDown className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
-                </Link>
+                </Button>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-6 sm:gap-8">

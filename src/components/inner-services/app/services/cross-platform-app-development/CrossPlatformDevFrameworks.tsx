@@ -5,8 +5,7 @@ const frameworks = [
   {
     name: "React Native",
     icon: IconBrandReact,
-    iconClass: "text-[#61DAFB]",
-    iconBg: "bg-[rgba(97,218,251,0.12)]",
+    iconBg: "bg-transparent",
     description:
       "Built by Meta. Massive ecosystem. Best when you have a web/React team or want JS/TS across web and mobile.",
     bestFor: "SaaS apps · Content apps · Ecommerce · MVPs · Teams already using React",
@@ -14,8 +13,7 @@ const frameworks = [
   {
     name: "Flutter",
     icon: IconBrandFlutter,
-    iconClass: "text-[#02B4F7]",
-    iconBg: "bg-[rgba(2,180,247,0.12)]",
+    iconBg: "bg-transparent",
     description:
       "Built by Google. Single rendering engine, perfectly identical UI across devices. Best when pixel-perfect UI control matters most.",
     bestFor: "Design-heavy apps · Animation-rich apps · Apps requiring identical UI · Custom UI/branding",
@@ -34,7 +32,7 @@ export function CrossPlatformDevFrameworks() {
         </p>
 
         <div className="grid gap-3.5 sm:grid-cols-2">
-          {frameworks.map(({ name, icon: Icon, iconClass, iconBg, description, bestFor }) => (
+          {frameworks.map(({ name, icon: Icon, iconBg, description, bestFor }) => (
             <article
               key={name}
               className="rounded-xl border border-[var(--border)] bg-[var(--bg-elev)] p-6"
@@ -44,7 +42,7 @@ export function CrossPlatformDevFrameworks() {
                   className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${iconBg}`}
                   aria-hidden
                 >
-                  <Icon className={`size-6 ${iconClass}`} stroke={1.5} />
+                  <Icon className={`size-6 text-[var(--red)]`} stroke={1.5} />
                 </div>
                 <h3 className="text-lg font-medium text-[var(--text)]">{name}</h3>
               </div>
