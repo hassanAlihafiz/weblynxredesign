@@ -1,18 +1,23 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { ANDROID_APP_DEV_PAGE } from "@/data/site";
+
+const { finalCta } = ANDROID_APP_DEV_PAGE;
 
 export function AndroidDevFinalCta() {
   return (
     <FinalCtaSection
-      id="quote"
-      className="bg-[linear-gradient(180deg,var(--bg),#1B0709)]"
+      id={finalCta.sectionId}
+      className={finalCta.className}
       title={
         <>
-          Ready to ship on the <span className="text-[var(--red)]">Play Store</span>?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute call. We'll scope your Android app and send a proposal within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

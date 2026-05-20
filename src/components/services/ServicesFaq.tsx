@@ -3,25 +3,9 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { SERVICES_PAGE } from "@/data/site";
 
-const faqs = [
-  {
-    q: "Can I hire you for just one service?",
-    a: "Yes. Many clients start with web development or design only. We scope each engagement independently and can expand later.",
-  },
-  {
-    q: "Do you offer bundles across services?",
-    a: "We often package design + build, or build + growth, with one timeline and one point of contact. Ask on your intro call and we will tailor a bundle.",
-  },
-  {
-    q: "What's your typical timeline?",
-    a: "Most marketing sites ship in 4–6 weeks. Apps and larger SaaS builds vary; we will give a week-by-week plan after discovery.",
-  },
-  {
-    q: "Do you work with clients outside Pakistan?",
-    a: "Yes. We work with teams in the US, UK, EU, and MENA. Calls are async-friendly and we bill in USD.",
-  },
-] as const;
+const { faq } = SERVICES_PAGE;
 
 export function ServicesFaq() {
   const baseId = useId();
@@ -31,11 +15,11 @@ export function ServicesFaq() {
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
       <ContentContainer className="max-w-3xl">
         <h2 className="mb-10 max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-          Before you book a call
+          {faq.heading}
         </h2>
 
-        <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
-          {faqs.map(({ q, a }, i) => {
+        <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--color-background-primary)] p-0">
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;
@@ -51,9 +35,9 @@ export function ServicesFaq() {
                 >
                   <span className="text-sm font-medium text-[var(--text)]">{q}</span>
                   {isOpen ? (
-                    <IconMinus className="size-5 shrink-0 text-[var(--text-muted)]" stroke={1.5} aria-hidden />
+                    <IconMinus className="size-5 shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
                   ) : (
-                    <IconPlus className="size-5 shrink-0 text-[var(--text-muted)]" stroke={1.5} aria-hidden />
+                    <IconPlus className="size-5 shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
                   )}
                 </button>
                 <div

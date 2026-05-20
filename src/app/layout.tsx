@@ -33,8 +33,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${bricolageGrotesque.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col font-sans">
+      <body
+        className="flex min-h-full flex-col font-sans"
+        suppressHydrationWarning
+      >
         <PageTransition>{children}</PageTransition>
       </body>
     </html>

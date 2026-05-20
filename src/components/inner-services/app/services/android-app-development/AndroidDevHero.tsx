@@ -3,22 +3,28 @@ import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
+import { ANDROID_APP_DEV_PAGE } from "@/data/site";
 import { AndroidDevHeroGraphic } from "./AndroidDevHeroGraphic";
+
+const { hero } = ANDROID_APP_DEV_PAGE;
 
 export function AndroidDevHero() {
   return (
     <>
       <ContentContainer className="pb-2 pt-8">
         <nav className="font-mono text-xs text-[var(--text-dim)]" aria-label="Breadcrumb">
-          <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
-            Services
-          </Link>
-          <span className="mx-2">/</span>
-          <Link href="/app-development" className="transition-colors hover:text-[var(--text-muted)]">
-            App Development
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--text)]">Android</span>
+          {hero.breadcrumb.map((item, i) => (
+            <span key={item.label}>
+              {i > 0 ? <span className="mx-2">/</span> : null}
+              {"href" in item && item.href ? (
+                <Link href={item.href} className="transition-colors hover:text-[var(--text-muted)]">
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="text-[var(--text)]">{item.label}</span>
+              )}
+            </span>
+          ))}
         </nav>
       </ContentContainer>
 
@@ -29,18 +35,17 @@ export function AndroidDevHero() {
           <div className="grid items-center gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-8">
             <div className="min-w-0">
               <h1 className="mb-3.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                Native <span className="text-[var(--red)]">Android apps </span>built for scale
+                {hero.heading.before}
+                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
+                {hero.heading.after}
               </h1>
-              <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-                From Kotlin and Jetpack Compose to Material Design 3 we build Android apps that feel native, perform
-                fast, and ship straight to the Play Store.
-              </p>
+              <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>
               <div className="flex flex-wrap gap-2">
-                <Button href="#quote" size="md">
-                  Request a quote
+                <Button href={hero.primaryCta.href} size="md">
+                  {hero.primaryCta.label}
                 </Button>
-                <Button href="#platforms" variant="secondary" size="md">
-                  See our apps
+                <Button href={hero.secondaryCta.href} variant="secondary" size="md">
+                  {hero.secondaryCta.label}
                   <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
                 </Button>
               </div>

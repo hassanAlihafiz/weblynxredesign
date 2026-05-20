@@ -3,29 +3,10 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { IOS_APP_DEV_PAGE } from "@/data/site";
+import { IosDevSectionHeading } from "./IosDevSectionHeading";
 
-const faqs = [
-  {
-    q: "Should I go native iOS or use cross-platform?",
-    a: "Choose native iOS when you need Apple-only frameworks, premium polish, or Vision Pro / Watch targets. Cross-platform (React Native) saves 40–50% when you need iOS and Android together and on modern stacks the iOS experience is very close to native. We'll recommend the right path on your scoping call.",
-  },
-  {
-    q: "Who owns the Apple Developer account?",
-    a: "You do. We publish under your Apple Developer Program account and hand over certificates, provisioning profiles, and App Store Connect access. We can walk you through enrollment if you don't have an account yet.",
-  },
-  {
-    q: "What if Apple rejects my app during review?",
-    a: "We iterate on Apple's feedback, update metadata or binaries as needed, and resubmit until approval included during the agreed launch window for standard scope.",
-  },
-  {
-    q: "Which iOS version should we target as minimum?",
-    a: "We typically target iOS 16 or 17+ for most consumer apps, covering the vast majority of active devices. We'll align minimum deployment with your analytics and feature requirements.",
-  },
-  {
-    q: "SwiftUI or UIKit which should you use?",
-    a: "SwiftUI for new apps and most greenfield MVPs faster iteration and Apple's direction. UIKit when you need deep legacy integrations, complex custom UI, or are extending an existing codebase. We pick per project, not dogma.",
-  },
-] as const;
+const { faq } = IOS_APP_DEV_PAGE;
 
 export function IosDevFaq() {
   const baseId = useId();
@@ -34,16 +15,14 @@ export function IosDevFaq() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          Things iOS clients ask <span className="text-[var(--red)]">before starting</span>
-        </h2>
+        <IosDevSectionHeading heading={faq.heading} className="mb-5" />
 
         <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--bg-elev)]">
-          {faqs.map(({ q, a }, i) => {
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;
-            const isLast = i === faqs.length - 1;
+            const isLast = i === faq.items.length - 1;
 
             return (
               <div key={q} className={isLast ? "" : "border-b border-[var(--border)]"}>

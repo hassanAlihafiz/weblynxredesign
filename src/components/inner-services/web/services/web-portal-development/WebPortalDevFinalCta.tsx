@@ -1,13 +1,22 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
+
+const { finalCta } = WEB_PORTAL_DEV_PAGE;
 
 export function WebPortalDevFinalCta() {
   return (
     <FinalCtaSection
-      className="bg-[linear-gradient(180deg,rgba(10,10,10,0.98),rgba(27,7,9,0.98))]"
-      title="Got a workflow that needs a portal?"
-      description="Book a free 30-minute call. We'll map your roles, data, and integrations, and send a proposal within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      className={finalCta.className}
+      title={
+        <>
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
+        </>
+      }
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

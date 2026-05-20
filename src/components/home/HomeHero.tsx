@@ -2,14 +2,10 @@ import { IconArrowRight } from "@tabler/icons-react";
 import { Button } from "@/components/ui";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
+import { HOME_PAGE } from "@/data/site";
 import { HomeHeroChainGraphic } from "./HomeHeroChainGraphic";
 
-const avatars = [
-  { initials: "SC", className: "bg-[#E63946] text-[#FAFAFA]", textClass: "text-[10px]" },
-  { initials: "MK", className: "bg-[#3B82F6] text-[#FAFAFA]", textClass: "text-[10px]" },
-  { initials: "AK", className: "bg-[#F5C518] text-[#0A0A0A]", textClass: "text-[10px]" },
-  { initials: "+8", className: "bg-[#1F1F1F] text-[#A0A0A0]", textClass: "text-[9px]" },
-] as const;
+const { hero } = HOME_PAGE;
 
 export function HomeHero() {
   return (
@@ -21,30 +17,32 @@ export function HomeHero() {
           <div className="min-w-0 max-lg:mx-auto max-lg:max-w-xl max-lg:text-center lg:text-left">
             <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[rgba(230,57,70,0.3)] bg-[rgba(230,57,70,0.1)] px-3 py-1 text-sm font-medium text-[#E63946] max-lg:mx-auto sm:px-3 sm:py-1.5 sm:text-[11px]">
               <span className="size-2 shrink-0 rounded-full bg-[#E63946]" aria-hidden />
-              Now accepting Q3 projects
+              {hero.badge}
             </div>
 
             <h1 className="mb-4 text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2.5rem,5vw,3.5rem)] lg:text-[3.5rem]">
-              We build the <span className="text-[#E63946]">web</span> for ambitious founders
+              {hero.heading.before}
+              <span className="text-[#E63946]">{hero.heading.emphasis}</span>
+              {hero.heading.after}
             </h1>
 
             <p className="mb-6 max-w-[400px] text-base leading-relaxed text-[#A0A0A0] max-lg:mx-auto lg:mx-0">
-              From custom web apps and mobile builds to design and growth one team that links it all together.
+              {hero.description}
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-2.5 max-lg:justify-center lg:justify-start">
-              <Button href="/contact">
-                Start a project
+              <Button href={hero.primaryCta.href}>
+                {hero.primaryCta.label}
                 <IconArrowRight className="size-4 shrink-0" stroke={1.5} aria-hidden />
               </Button>
-              <Button href="/case-studies" variant="secondary">
-                See our work
+              <Button href={hero.secondaryCta.href} variant="secondary">
+                {hero.secondaryCta.label}
               </Button>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5 max-lg:justify-center sm:mt-9 lg:mt-[30px] lg:justify-start">
               <div className="flex shrink-0" aria-hidden>
-                {avatars.map(({ initials, className, textClass }, i) => (
+                {hero.avatars.map(({ initials, className, textClass }, i) => (
                   <div
                     key={initials}
                     className={`flex size-7 items-center justify-center rounded-full border-2 border-[#0A0A0A] font-medium sm:size-[28px] ${textClass} ${i > 0 ? "-ml-2" : ""} ${className}`}
@@ -54,9 +52,9 @@ export function HomeHero() {
                 ))}
               </div>
               <p className="text-center text-base leading-relaxed text-[#A0A0A0] lg:text-left">
-                Trusted by founders
+                {hero.trustCaption.line1}
                 <br />
-                across 4 countries
+                {hero.trustCaption.line2}
               </p>
             </div>
           </div>

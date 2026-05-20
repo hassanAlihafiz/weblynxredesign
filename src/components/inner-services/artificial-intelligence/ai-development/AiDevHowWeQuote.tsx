@@ -1,22 +1,8 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { AI_DEVELOPMENT_PAGE } from "@/data/site";
+import { AiDevSectionHeading } from "./AiDevSectionHeading";
 
-const steps = [
-  {
-    num: "01",
-    title: "Scoping call",
-    body: "Free 30-min define the use case and viability.",
-  },
-  {
-    num: "02",
-    title: "Custom proposal",
-    body: "Scope, timeline, fixed price within 3 days.",
-  },
-  {
-    num: "03",
-    title: "Kickoff",
-    body: "Discovery sprint starts within 1–2 weeks.",
-  },
-] as const;
+const { howWeQuote } = AI_DEVELOPMENT_PAGE;
 
 export function AiDevHowWeQuote() {
   return (
@@ -24,18 +10,12 @@ export function AiDevHowWeQuote() {
       <ContentContainer>
         <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-10">
           <div>
-            <h2 className="max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-              Every AI project is different <span className="text-[var(--red)]">So is every quote</span>
-            </h2>
+            <AiDevSectionHeading heading={howWeQuote.heading} className="" />
           </div>
           <div>
-            <p className="mb-6 text-lg leading-relaxed text-[var(--text-muted)]">
-              After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope,
-              milestones, success metrics, and a fixed all-in price. API costs are estimated separately so you have full
-              transparency.
-            </p>
+            <p className="mb-6 text-lg leading-relaxed text-[var(--text-muted)]">{howWeQuote.intro}</p>
             <div className="grid gap-3 sm:grid-cols-3">
-              {steps.map(({ num, title, body }) => (
+              {howWeQuote.steps.map(({ num, title, body }) => (
                 <article
                   key={num}
                   className="rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg)] p-4 shadow-[var(--shadow-xs)]"

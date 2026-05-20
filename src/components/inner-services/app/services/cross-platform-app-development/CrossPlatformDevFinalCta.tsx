@@ -1,17 +1,22 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { CROSS_PLATFORM_APP_DEV_PAGE } from "@/data/site";
+
+const { finalCta } = CROSS_PLATFORM_APP_DEV_PAGE;
 
 export function CrossPlatformDevFinalCta() {
   return (
     <FinalCtaSection
-      className="bg-[linear-gradient(180deg,var(--bg),#1B0709)]"
+      className={finalCta.className}
       title={
         <>
-          Ready to ship on <span className="text-[var(--red)]">both stores</span>?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute call. We'll scope your cross-platform app and send a proposal within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

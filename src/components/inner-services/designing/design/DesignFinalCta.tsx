@@ -1,18 +1,23 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { DESIGN_PAGE } from "@/data/site";
+
+const { finalCta } = DESIGN_PAGE;
 
 export function DesignFinalCta() {
   return (
     <FinalCtaSection
-      id="quote"
-      className="bg-[linear-gradient(180deg,var(--bg),rgba(27,7,9,0.98))]"
+      id={finalCta.id}
+      className={finalCta.className}
       title={
         <>
-          Ready to design something <span className="text-[var(--red)]">memorable</span>?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute discovery call. We'll review your brand and send a tailored proposal."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

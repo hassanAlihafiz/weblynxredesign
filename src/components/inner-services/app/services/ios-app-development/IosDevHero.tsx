@@ -3,22 +3,28 @@ import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
+import { IOS_APP_DEV_PAGE } from "@/data/site";
 import { IosDevHeroGraphic } from "./IosDevHeroGraphic";
+
+const { hero } = IOS_APP_DEV_PAGE;
 
 export function IosDevHero() {
   return (
     <>
       <ContentContainer className="pb-0 pt-3.5">
         <nav className="text-[11px] text-[#6F6F6F]" aria-label="Breadcrumb">
-          <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
-            Services
-          </Link>
-          <span className="mx-1.5">/</span>
-          <Link href="/app-development" className="transition-colors hover:text-[var(--text-muted)]">
-            App Development
-          </Link>
-          <span className="mx-1.5">/</span>
-          <span className="text-[var(--text)]">iOS</span>
+          {hero.breadcrumb.map((item, i) => (
+            <span key={item.label}>
+              {i > 0 ? <span className="mx-1.5">/</span> : null}
+              {"href" in item && item.href ? (
+                <Link href={item.href} className="transition-colors hover:text-[var(--text-muted)]">
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="text-[var(--text)]">{item.label}</span>
+              )}
+            </span>
+          ))}
         </nav>
       </ContentContainer>
 
@@ -29,18 +35,17 @@ export function IosDevHero() {
           <div className="grid items-center gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-8">
             <div className="min-w-0">
               <h1 className="mb-3.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                Native <span className="text-[var(--red)]">iOS apps</span> built for premium experiences
+                {hero.heading.before}
+                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
+                {hero.heading.after}
               </h1>
-              <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-                From Swift and SwiftUI to ARKit and Vision Pro we build iOS apps that feel native, run fast, and ship
-                straight to the App Store.
-              </p>
+              <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>
               <div className="flex flex-wrap gap-2">
-                <Button href="#quote" size="md">
-                  Request a quote
+                <Button href={hero.primaryCta.href} size="md">
+                  {hero.primaryCta.label}
                 </Button>
-                <Button href="#platforms" variant="secondary" size="md">
-                  See our apps
+                <Button href={hero.secondaryCta.href} variant="secondary" size="md">
+                  {hero.secondaryCta.label}
                   <IconArrowDown className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
                 </Button>
               </div>

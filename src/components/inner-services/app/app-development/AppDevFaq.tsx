@@ -3,29 +3,10 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { APP_DEVELOPMENT_PAGE } from "@/data/site";
+import { AppDevSectionHeading } from "./AppDevSectionHeading";
 
-const faqs = [
-  {
-    q: "React Native vs native which should I choose?",
-    a: "React Native is ideal when you need both iOS and Android from one codebase, faster iteration, and lower cost. Fully native makes sense for heavy graphics, niche platform APIs, or when you already maintain separate teams. We recommend RN for most MVPs and scale-ups.",
-  },
-  {
-    q: "Who owns the App Store / Play Store accounts?",
-    a: "You own the accounts. We publish under your org and hand over full credentials, certificates, and signing keys. If you prefer, we can walk you through creating accounts first.",
-  },
-  {
-    q: "What if Apple or Google rejects my app?",
-    a: "We iterate on feedback, update metadata or binaries as needed, and resubmit until approval included during the agreed launch window for standard scope.",
-  },
-  {
-    q: "Do you offer post-launch maintenance?",
-    a: "Yes. Most teams pick a monthly retainer for bug fixes, OS updates, store compliance, and small features. We can quote retainers after launch.",
-  },
-  {
-    q: "Can you redesign or rebuild my existing app?",
-    a: "Yes. We audit the current codebase or design, propose a migration or rebuild plan, and ship in phases so you are not stuck without a release channel.",
-  },
-] as const;
+const { faq } = APP_DEVELOPMENT_PAGE;
 
 export function AppDevFaq() {
   const baseId = useId();
@@ -34,12 +15,10 @@ export function AppDevFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          Things founders ask <span className="text-[var(--red)]">before starting</span>
-        </h2>
+        <AppDevSectionHeading heading={faq.heading} />
 
         <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
-          {faqs.map(({ q, a }, i) => {
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;
@@ -48,7 +27,7 @@ export function AppDevFaq() {
                 <button
                   type="button"
                   id={buttonId}
-                  className="flex w-full items-center text-left justify-between gap-4 p-5 transition-colors hover:bg-[var(--bg-elev)]"
+                  className="flex w-full items-center justify-between gap-4 p-5 text-left transition-colors hover:bg-[var(--bg-elev)]"
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setOpen(isOpen ? null : i)}

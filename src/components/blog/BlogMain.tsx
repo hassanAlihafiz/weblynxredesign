@@ -7,12 +7,13 @@ import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import {
   BLOG_CATEGORIES,
   BLOG_FEATURED,
+  BLOG_PAGE,
   BLOG_POSTS,
   type BlogCategoryId,
   type BlogPost,
 } from "@/data/site";
 
-const PAGE_SIZE = 6;
+const pageSize = BLOG_PAGE.main.pageSize as number;
 
 function matchesCategory(post: BlogPost, category: BlogCategoryId) {
   if (category === "all") return true;
@@ -21,7 +22,7 @@ function matchesCategory(post: BlogPost, category: BlogCategoryId) {
 
 export function BlogMain() {
   const [category, setCategory] = useState<BlogCategoryId>("all");
-  const [visible, setVisible] = useState(PAGE_SIZE);
+  const [visible, setVisible] = useState(pageSize);
 
   const filtered = useMemo(
     () => BLOG_POSTS.filter((p) => matchesCategory(p, category)),
@@ -42,11 +43,11 @@ export function BlogMain() {
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-end lg:gap-8">
           <div className="min-w-0">
             <h1 className="mb-2.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-              Notes on <span className="text-[var(--red)]">building modern products</span> on the web.
+              {BLOG_PAGE.hero.heading.before}
+              <span className="text-[var(--red)]">{BLOG_PAGE.hero.heading.emphasis}</span>
+              {BLOG_PAGE.hero.heading.after}
             </h1>
-            <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-              Tutorials, behind-the-scenes case breakdowns, and tactical guides for founders and developers.
-            </p>
+            <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{BLOG_PAGE.hero.description}</p>
           </div>
         </div>
       </ContentContainer>
@@ -64,7 +65,7 @@ export function BlogMain() {
                 type="button"
                 onClick={() => {
                   setCategory(id);
-                  setVisible(PAGE_SIZE);
+                  setVisible(pageSize);
                 }}
                 className={`rounded-[var(--border-radius-md)] px-3 py-1.5 text-base font-medium transition-colors ${
                   active
@@ -88,12 +89,12 @@ export function BlogMain() {
             <div
               className={`flex min-h-[160px] items-center justify-center rounded-[var(--border-radius-md)] text-sm font-medium sm:min-h-[180px] md:min-h-[200px] ${BLOG_FEATURED.coverClass} ${BLOG_FEATURED.coverFg}`}
             >
-              Featured post cover image
+              {BLOG_PAGE.main.featuredCoverPlaceholder}
             </div>
             <div className="min-w-0">
               <div className="mb-2.5 flex flex-wrap gap-1.5">
                 <span className="rounded-[var(--border-radius-md)] bg-[#3C3489] px-2 py-0.5 text-base font-medium text-[#EEEDFE]">
-                  FEATURED
+                  {BLOG_PAGE.main.featuredBadgeLabel}
                 </span>
                 <span className="rounded-[var(--border-radius-md)] bg-[var(--color-background-primary)] px-2 py-0.5 text-base text-[var(--color-text-secondary)]">
                   {BLOG_FEATURED.categoryLabel}
@@ -116,15 +117,15 @@ export function BlogMain() {
       <section className="w-full border-b border-[var(--color-border-tertiary)] py-9 sm:py-10 md:py-11">
       <ContentContainer>
         <div className="mb-4 flex flex-col gap-1 sm:mb-5 sm:flex-row sm:items-baseline sm:justify-between">
-          <h2 className="text-xl font-medium">Latest posts</h2>
+          <h2 className="text-xl font-medium">{BLOG_PAGE.main.gridHeading}</h2>
           <span className="inline-flex items-center gap-1 text-sm text-[var(--color-text-secondary)]">
-            Newest first
+            {BLOG_PAGE.main.sortHint}
             <IconArrowDown className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
           </span>
         </div>
 
         {visiblePosts.length === 0 ? (
-          <p className="py-8 text-center text-sm text-[var(--color-text-secondary)]">No posts match your filters.</p>
+          <p className="py-8 text-center text-sm text-[var(--color-text-secondary)]">{BLOG_PAGE.main.emptyMessage}</p>
         ) : (
           <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-3.5 lg:grid-cols-3">
             {visiblePosts.map((post) => (
@@ -132,7 +133,7 @@ export function BlogMain() {
                 <div
                   className={`flex h-[130px] items-center justify-center rounded-[var(--border-radius-md)] text-sm font-medium ${post.coverClass} ${post.coverFg}`}
                 >
-                  Cover image
+                  {BLOG_PAGE.main.cardCoverPlaceholder}
                 </div>
                 <div className="mt-2.5 min-w-0">
                   <p className="mb-1 text-base font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)]">
@@ -155,10 +156,10 @@ export function BlogMain() {
           <div className="mt-6 text-center sm:mt-8">
             <button
               type="button"
-              onClick={() => setVisible((v) => v + PAGE_SIZE)}
+              onClick={() => setVisible((v) => v + pageSize)}
               className="inline-block rounded-[var(--border-radius-md)] border border-[var(--color-border-secondary)] px-5 py-2 text-sm font-medium text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-primary-border)] hover:text-[var(--color-primary)]"
             >
-              Load more posts
+              {BLOG_PAGE.main.loadMoreLabel}
             </button>
           </div>
         ) : null}

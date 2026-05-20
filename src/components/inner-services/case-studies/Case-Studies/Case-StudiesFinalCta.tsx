@@ -1,16 +1,21 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { CASE_STUDIES_PAGE } from "@/data/site";
+
+const { finalCta } = CASE_STUDIES_PAGE;
 
 export function CaseStudiesFinalCta() {
   return (
     <FinalCtaSection
       title={
         <>
-          Your project could be <span className="text-[var(--red)]">next</span>
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Tell us about your idea we'll get back within 24 hours"
-      ctaLabel="Start a project"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

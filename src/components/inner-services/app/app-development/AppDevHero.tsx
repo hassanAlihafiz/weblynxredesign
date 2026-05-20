@@ -3,17 +3,20 @@ import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
+import { APP_DEVELOPMENT_PAGE } from "@/data/site";
+
+const { hero } = APP_DEVELOPMENT_PAGE;
 
 export function AppDevHero() {
   return (
     <>
       <ContentContainer className="pb-2 pt-8">
         <div className="font-mono text-xs text-[var(--text-dim)]">
-          <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
-            Services
+          <Link href={hero.breadcrumb.parentHref} className="transition-colors hover:text-[var(--text-muted)]">
+            {hero.breadcrumb.parentLabel}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-[var(--text)]">App development</span>
+          <span className="text-[var(--text)]">{hero.breadcrumb.currentLabel}</span>
         </div>
       </ContentContainer>
 
@@ -28,21 +31,20 @@ export function AppDevHero() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-                App development
+                {hero.eyebrow}
               </p>
               <h1 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                Mobile apps that ship fast and <span className="text-[var(--red)]">feel native</span>.
+                {hero.heading.before}
+                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
+                {hero.heading.after}
               </h1>
-              <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">
-                Cross-platform iOS and Android apps built with React Native one codebase, two stores, full native
-                performance.
-              </p>
+              <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>
               <div className="flex flex-wrap gap-3">
-                <Button href="#quote" size="md">
-                  Request a quote
+                <Button href={hero.primaryCta.href} size="md">
+                  {hero.primaryCta.label}
                 </Button>
-                <Button href="#platforms" variant="secondary" size="md">
-                  See our apps
+                <Button href={hero.secondaryCta.href} variant="secondary" size="md">
+                  {hero.secondaryCta.label}
                   <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
                 </Button>
               </div>

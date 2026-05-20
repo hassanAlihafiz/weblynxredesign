@@ -1,18 +1,23 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { IOS_APP_DEV_PAGE } from "@/data/site";
+
+const { finalCta } = IOS_APP_DEV_PAGE;
 
 export function IosDevFinalCta() {
   return (
     <FinalCtaSection
-      id="quote"
-      className="bg-[linear-gradient(180deg,var(--bg),rgba(27,7,9,0.98))]"
+      id={finalCta.sectionId}
+      className={finalCta.className}
       title={
         <>
-          Ready to ship on the <span className="text-[var(--red)]">App Store</span>?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute call. We'll scope your iOS app and send a proposal within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

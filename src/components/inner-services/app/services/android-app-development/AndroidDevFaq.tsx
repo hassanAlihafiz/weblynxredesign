@@ -3,29 +3,10 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { ANDROID_APP_DEV_PAGE } from "@/data/site";
+import { AndroidDevSectionHeading } from "./AndroidDevSectionHeading";
 
-const faqs = [
-  {
-    q: "Should I go native Android or use cross-platform?",
-    a: "Choose native Android when you need deep hardware access, Wear OS or TV targets, or Android-first markets. Cross-platform (React Native) saves 40–50% when you need iOS and Android together. We'll recommend the right path on your scoping call.",
-  },
-  {
-    q: "Do I need to test on every Android device?",
-    a: "No. We test on a curated matrix of popular devices and OS versions that match your audience typically 8–12 devices covering Samsung, Pixel, and one budget OEM. Firebase Test Lab extends coverage for critical releases.",
-  },
-  {
-    q: "Which Android version should we target as minimum?",
-    a: "We usually target API 26 (Android 8.0) or API 28+ for most consumer apps covering 95%+ of active devices. Enterprise or niche apps may go higher; we'll align minimum SDK with your user data and feature needs.",
-  },
-  {
-    q: "Who owns the Play Console account and signing keys?",
-    a: "You do. We publish under your Google Play Console org and hand over signing keys, upload certificates, and full account access. We can guide you through account setup if you don't have one yet.",
-  },
-  {
-    q: "What's the Play Store review process like?",
-    a: "First review typically takes 3–7 days; updates are often faster. We prepare store listing, screenshots, privacy policy, and content rating. If Google flags an issue, we fix and resubmit as part of the launch window.",
-  },
-] as const;
+const { faq } = ANDROID_APP_DEV_PAGE;
 
 export function AndroidDevFaq() {
   const baseId = useId();
@@ -34,16 +15,14 @@ export function AndroidDevFaq() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          Things Android clients ask <span className="text-[var(--red)]">before starting</span>
-        </h2>
+        <AndroidDevSectionHeading heading={faq.heading} className="mb-5" />
 
         <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--bg-elev)]">
-          {faqs.map(({ q, a }, i) => {
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;
-            const isLast = i === faqs.length - 1;
+            const isLast = i === faq.items.length - 1;
 
             return (
               <div key={q} className={isLast ? "" : "border-b border-[var(--border)]"}>

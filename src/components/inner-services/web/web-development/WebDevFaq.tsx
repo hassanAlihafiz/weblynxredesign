@@ -3,29 +3,10 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { WEB_DEVELOPMENT_PAGE } from "@/data/site";
+import { WebDevSectionHeading } from "./WebDevSectionHeading";
 
-const faqs = [
-  {
-    q: "How long does a typical project take?",
-    a: "Marketing and landing sites often ship in 1–3 weeks. Custom web apps and MVPs usually land in 4–8 weeks depending on auth, integrations, and admin needs. Larger platforms are scoped in phases you always get a week-by-week plan in the proposal.",
-  },
-  {
-    q: "Do you provide hosting and ongoing maintenance?",
-    a: "Yes. We deploy to Vercel or your stack of choice, wire up DNS and SSL, and can stay on for monitoring, updates, and new features. Post-launch care is optional but most teams keep us on a light retainer or milestone basis.",
-  },
-  {
-    q: "Can you redesign my existing site?",
-    a: "Absolutely. We audit what you have, preserve URLs and SEO where it matters, and rebuild on a modern stack usually Next.js so you get speed, better UX, and a codebase you can grow with.",
-  },
-  {
-    q: "What's your payment structure?",
-    a: "We work on fixed-price milestones: a deposit to start, a midpoint payment tied to an agreed demo or deliverable, and a final payment before launch. No open-ended hourly billing unless you explicitly want a time-and-materials phase.",
-  },
-  {
-    q: "Do you sign NDAs?",
-    a: "Yes. Share yours before the scoping call or ask for ours we're used to reviewing product and roadmap details under NDA.",
-  },
-] as const;
+const { faq } = WEB_DEVELOPMENT_PAGE;
 
 export function WebDevFaq() {
   const baseId = useId();
@@ -34,12 +15,10 @@ export function WebDevFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          Things people ask <span className="text-[var(--red)]">before starting</span>
-        </h2>
+        <WebDevSectionHeading heading={faq.heading} />
 
         <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
-          {faqs.map(({ q, a }, i) => {
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;

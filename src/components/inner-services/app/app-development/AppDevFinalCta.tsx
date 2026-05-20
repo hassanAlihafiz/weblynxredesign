@@ -1,19 +1,24 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { APP_DEVELOPMENT_PAGE } from "@/data/site";
+
+const { finalCta } = APP_DEVELOPMENT_PAGE;
 
 export function AppDevFinalCta() {
   return (
     <FinalCtaSection
-      id="quote"
+      id={finalCta.id}
       title={
         <>
-          Got an app idea?
+          {finalCta.titleLine1}
           <br />
-          Let&apos;s <span className="text-[var(--red)]">scope</span> it.
+          {finalCta.titleLine2Before}
+          <span className="text-[var(--red)]">{finalCta.titleLine2Emphasis}</span>
+          {finalCta.titleLine2After}
         </>
       }
-      description="Book a free 30-minute call. We'll map your MVP and send a proposal within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

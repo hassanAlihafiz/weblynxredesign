@@ -1,18 +1,23 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { AI_DEVELOPMENT_PAGE } from "@/data/site";
+
+const { finalCta } = AI_DEVELOPMENT_PAGE;
 
 export function AiDevFinalCta() {
   return (
     <FinalCtaSection
-      id="quote"
-      className="bg-[linear-gradient(180deg,var(--bg),rgba(27,7,9,0.98))]"
+      id={finalCta.id}
+      className={finalCta.className}
       title={
         <>
-          Got an AI idea? Let&apos;s build it <span className="text-[var(--red)]">right</span>.
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute call. We'll evaluate feasibility and send a proposal within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

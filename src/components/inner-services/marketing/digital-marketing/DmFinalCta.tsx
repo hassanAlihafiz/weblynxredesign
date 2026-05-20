@@ -1,17 +1,22 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { DIGITAL_MARKETING_PAGE } from "@/data/site";
+
+const { finalCta } = DIGITAL_MARKETING_PAGE;
 
 export function DmFinalCta() {
   return (
     <FinalCtaSection
-      id="quote"
+      id={finalCta.id}
       title={
         <>
-          Ready to actually <span className="text-[var(--red)]">grow</span>?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute strategy call. We'll review your current marketing and send a custom growth plan within 3 days."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }
