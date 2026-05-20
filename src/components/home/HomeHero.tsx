@@ -1,9 +1,21 @@
+import dynamic from "next/dynamic";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon";
 import { Button } from "@/components/ui";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
 import { HOME_PAGE } from "@/data/site";
-import { HomeHeroChainGraphic } from "./HomeHeroChainGraphic";
+
+const HomeHeroChainGraphic = dynamic(
+  () => import("./HomeHeroChainGraphic").then((m) => ({ default: m.HomeHeroChainGraphic })),
+  {
+    loading: () => (
+      <div
+        className="relative z-[2] min-h-[260px] w-full max-w-[min(100%,260px)] sm:min-h-[250px] sm:max-w-[280px] lg:min-h-[300px] lg:max-w-[300px]"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 const { hero } = HOME_PAGE;
 

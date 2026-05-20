@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
+    /** Inlines CSS in HTML to remove render-blocking stylesheet request (production builds). */
+    inlineCss: true,
     optimizePackageImports: ["@tabler/icons-react"],
   },
   // Windows (and some Docker/WSL setups) often miss native FS events on certain drives
