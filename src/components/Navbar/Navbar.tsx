@@ -20,6 +20,8 @@ const SERVICE_PAGE_PREFIXES = [
   "/search-engine-optimization",
   "/design",
   "/artificial-intelligence",
+  "/generative-ai",
+  "/natural-language-processing",
   "/ios-app-development",
   "/android-app-development",
   "/cross-platform-app-development",

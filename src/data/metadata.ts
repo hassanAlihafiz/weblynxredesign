@@ -81,6 +81,18 @@ export const aiDevelopmentMetadata = {
     "Production-grade AI features for your product chatbots, RAG systems, agents, and automation. Built on OpenAI, Claude, and open-source models.",
 } satisfies Metadata;
 
+export const generativeAiMetadata = {
+  title: "Generative AI Development Services | Custom AI Tools — Weblynx",
+  description:
+    "Build custom GenAI tools for text, image, video, and audio creation. Production-grade tools tuned to your brand, integrated with your workflows, ready to scale.",
+} satisfies Metadata;
+
+export const naturalLanguageProcessingMetadata = {
+  title: "Natural Language Processing Services | Custom NLP Solutions — Weblynx",
+  description:
+    "Build custom NLP pipelines for text classification, entity extraction, sentiment analysis, and language understanding. Production-grade models trained on your data, integrated with your systems, ready to scale.",
+} satisfies Metadata;
+
 export const designMetadata = {
   title: "Brand & UI Design Studio | Identity Systems – Weblynx",
   description:

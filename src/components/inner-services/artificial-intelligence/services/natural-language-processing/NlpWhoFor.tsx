@@ -1,0 +1,46 @@
+import { IconCheck, IconInfoCircle } from "@tabler/icons-react";
+import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
+import { NATURAL_LANGUAGE_PROCESSING_PAGE } from "@/data/site";
+
+const { whoFor } = NATURAL_LANGUAGE_PROCESSING_PAGE;
+
+export function NlpWhoFor() {
+  return (
+    <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-9 shadow-[var(--shadow-inset-soft)] sm:py-11">
+      <ContentContainer>
+        <h2 className="mb-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
+          {whoFor.heading.before}
+          <span className="text-[var(--red)]">{whoFor.heading.emphasis}</span>
+          {whoFor.heading.after}
+        </h2>
+
+        <div className="grid gap-2.5 sm:grid-cols-2">
+          {whoFor.bullets.map((text) => (
+            <div
+              key={text}
+              className="flex items-start gap-2.5 rounded-xl border border-[var(--border)] bg-[var(--bg-elev)] px-4 py-3.5"
+            >
+              <IconCheck className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={2} aria-hidden />
+              <span className="text-base leading-tight text-[var(--text)]">{text}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-5 flex items-start gap-3 rounded-xl border border-[var(--red)] bg-[var(--bg-elev)] px-4 py-3.5">
+          <IconInfoCircle className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={1.75} aria-hidden />
+          <div>
+            <p className="mb-1 text-base font-semibold text-[var(--text)]">{whoFor.callout.title}</p>
+            <p className="text-base leading-tight text-[var(--text-muted)]">
+              {whoFor.callout.bodyBeforeRag}
+              <Link href={whoFor.callout.rag.href} className="text-[var(--red)] underline underline-offset-2 hover:opacity-90">
+                {whoFor.callout.rag.label}
+              </Link>
+              {whoFor.callout.bodyAfter}
+            </p>
+          </div>
+        </div>
+      </ContentContainer>
+    </section>
+  );
+}
