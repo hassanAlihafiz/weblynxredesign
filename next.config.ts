@@ -49,6 +49,21 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/social-media-marketing",
+        destination: "/social-media-marketing",
+        permanent: true,
+      },
+      {
+        source: "/services/search-engine-marketing",
+        destination: "/search-engine-marketing",
+        permanent: true,
+      },
+      {
+        source: "/services/search-engine-optimization",
+        destination: "/search-engine-optimization",
+        permanent: true,
+      },
+      {
         source: "/services/design",
         destination: "/design",
         permanent: true,

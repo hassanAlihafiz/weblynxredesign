@@ -25,7 +25,6 @@ export const WEB_DEVELOPMENT_PAGE = {
       parentHref: "/services",
       currentLabel: "Web development",
     },
-    eyebrow: "Web development",
     heading: {
       before: "Fast, modern ",
       emphasis: "websites",

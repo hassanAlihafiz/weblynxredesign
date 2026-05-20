@@ -185,8 +185,11 @@ export const IOS_APP_DEV_PAGE = {
 
   engagement: {
     sectionId: "engagement",
-    /** Plain title (no red split) — matches original layout */
-    title: "Find the engagement that fits",
+    heading: {
+      before: "Find the ",
+      emphasis: "engagement",
+      after: " that fits",
+    } satisfies IosAppDevHeading,
     description: "Every iOS project is quoted based on scope. Three engagement models cover most cases.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote →",

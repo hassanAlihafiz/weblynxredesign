@@ -57,6 +57,24 @@ export const digitalMarketingMetadata = {
     "SEO, paid ads, content, and email marketing built around your real business goals. Monthly retainers with full transparency and zero lock-in.",
 } satisfies Metadata;
 
+export const socialMediaMarketingMetadata = {
+  title: "Social Media Marketing Services | Strategy & Content - Weblynx",
+  description:
+    "Social media management for Instagram, TikTok, LinkedIn, and beyond. Strategy, content, video, and community management built around real business outcomes.",
+} satisfies Metadata;
+
+export const searchEngineMarketingMetadata = {
+  title: "Search Engine Marketing (SEM) | Google Ads Agency - Weblynx",
+  description:
+    "Google Ads, Microsoft Ads, and shopping campaigns engineered for ROAS. Transparent ad spend, weekly optimization, and 4.2× average return built for growth.",
+} satisfies Metadata;
+
+export const searchEngineOptimizationMetadata = {
+  title: "SEO Services | Technical, Content & Outreach for Link Building - Weblynx",
+  description:
+    "Compounding organic traffic for SaaS, ecommerce, and service businesses. Technical SEO, content strategy, and white-hat link building built to last.",
+} satisfies Metadata;
+
 export const aiDevelopmentMetadata = {
   title: "AI Development Services | Custom GPT, RAG & Agents – Weblynx",
   description:

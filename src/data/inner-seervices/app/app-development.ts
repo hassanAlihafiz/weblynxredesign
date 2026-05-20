@@ -16,7 +16,6 @@ export const APP_DEVELOPMENT_PAGE = {
       parentHref: "/services",
       currentLabel: "App development",
     },
-    eyebrow: "App development",
     heading: {
       before: "Mobile apps that ship fast and ",
       emphasis: "feel native",

@@ -88,8 +88,8 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
         icon: "brand-wordpress" as const,
       },
       {
-        name: "Headless (Next.js)",
-        description: "Custom storefronts on Shopify Hydrogen or Medusa.js. For brands scaling fast.",
+        name: "Headless (Next.js, React.js)",
+        description: "Instant page speeds and infinite design freedom for high-growth brands.",
         icon: "brand-react" as const,
       },
       {

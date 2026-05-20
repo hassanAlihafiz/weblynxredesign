@@ -1,0 +1,48 @@
+import { IconCheck, IconInfoCircle } from "@tabler/icons-react";
+import Link from "next/link";
+import { ContentContainer } from "@/components/layout/ContentContainer";
+import { SEARCH_ENGINE_OPTIMIZATION_PAGE } from "@/data/site";
+
+const { whoFor } = SEARCH_ENGINE_OPTIMIZATION_PAGE;
+
+export function SeoWhoFor() {
+  return (
+    <section className="w-full bg-[var(--bg-elev)] py-10 sm:py-11">
+      <ContentContainer>
+        <h2 className="mb-5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
+          {whoFor.heading.before}
+          <span className="text-[var(--red)]">{whoFor.heading.emphasis}</span>
+          {whoFor.heading.after}
+        </h2>
+
+        <div className="grid gap-2.5 sm:grid-cols-2">
+          {whoFor.bullets.map((text) => (
+            <div
+              key={text}
+              className="flex items-start gap-3"
+            >
+              <IconCheck className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={2} aria-hidden />
+              <span className="text-base font-medium text-text">{text}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-5 flex items-start gap-3 rounded-md border border-[var(--red-glow)] bg-[var(--red-glow-bg)] px-4 py-3.5">
+          <IconInfoCircle className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={1.75} aria-hidden />
+          <div>
+            <p className="mb-1 text-base font-semibold text-text">{whoFor.callout.title}</p>
+            <p className="text-sm leading-relaxed text-text-muted">
+              {whoFor.callout.bodyBeforeLink}
+              <Link
+                href={whoFor.callout.paidSearch.href}
+                className="text-[var(--red)] underline underline-offset-2 hover:text-[var(--red)]/90"
+              >
+                {whoFor.callout.paidSearch.label}</Link>
+              {whoFor.callout.bodyAfterLink}
+            </p>
+          </div>
+        </div>
+      </ContentContainer>
+    </section>
+  )
+}
