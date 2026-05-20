@@ -34,7 +34,7 @@ export function HomeHero() {
 
             <h1 className="hero-lcp mb-4 text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2.5rem,5vw,3.5rem)] lg:text-[3.5rem]">
               {hero.heading.before}
-              <span className="text-[var(--red-bright)]">{hero.heading.emphasis}</span>
+              <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
               {hero.heading.after}
             </h1>
 
