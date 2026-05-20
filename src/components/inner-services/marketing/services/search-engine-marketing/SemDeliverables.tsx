@@ -46,7 +46,7 @@ export function SemDeliverables() {
                 key={title}
                 className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-5"
               >
-                <Icon className="size-5 shrink-0 text-[var(--red)]" stroke={1.5} aria-hidden />
+                <Icon className="size-5 shrink-0 text-[var(--red-bright)]" stroke={1.5} aria-hidden />
                 <h3 className="mb-1 mt-2 text-base font-semibold text-text">{title}</h3>
                 <p className="text-sm leading-relaxed text-text-muted">{body}</p>
               </article>

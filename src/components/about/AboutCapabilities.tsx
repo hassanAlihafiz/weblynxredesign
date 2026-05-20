@@ -16,7 +16,7 @@ export function AboutCapabilities() {
           {capabilities.items.map(({ title, stack, description, cellClass }) => (
             <article key={title} className={cellClass}>
               <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
-                <h4 className="font-medium text-[var(--text)]">{title}</h4>
+                <h3 className="text-base font-medium text-[var(--text)]">{title}</h3>
                 <span className="shrink-0 text-right font-mono text-xs text-[var(--text-dim)]">{stack}</span>
               </div>
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>

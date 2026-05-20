@@ -12,7 +12,7 @@ export function WebDevProcess() {
         <div className="grid gap-6 md:grid-cols-4">
           {process.steps.map(({ week, num, title, body }) => (
             <div key={num} className="border-l-2 border-[var(--red)] pl-4">
-              <div className="mb-2 font-mono text-xs text-[var(--text-dim)]">{week}</div>
+              <div className="text-meta mb-2">{week}</div>
               <div className="step-num mb-2">{num}</div>
               <h3 className="mb-2 font-medium text-[var(--text)]">{title}</h3>
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>

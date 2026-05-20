@@ -88,7 +88,7 @@ export function DmHero() {
                 {hero.mockChart.statColumns.map(({ value, label }) => (
                   <div key={label}>
                     <div className="text-lg font-semibold text-[var(--red)]">{value}</div>
-                    <div className="font-mono text-[10px] text-[var(--text-dim)]">{label}</div>
+                    <div className="font-mono text-xs text-[var(--text-dim)]">{label}</div>
                   </div>
                 ))}
               </div>

@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizePackageImports: ["@tabler/icons-react"],
+  },
   // Windows (and some Docker/WSL setups) often miss native FS events on certain drives
   // or synced folders; polling makes dev HMR reliably pick up edits.
   ...(process.platform === "win32"

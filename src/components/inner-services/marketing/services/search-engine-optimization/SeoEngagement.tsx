@@ -26,7 +26,7 @@ export function SeoEngagement() {
               }
             >
               {tier.highlighted && "badge" in tier && tier.badge ? (
-                <div className="absolute -top-[11px] left-5 rounded-full bg-[var(--red)] px-2.5 py-0.5 text-[10px] font-semibold text-text">
+                <div className="absolute -top-[11px] left-5 rounded-full bg-[var(--surface-red)] px-2.5 py-0.5 text-xs font-semibold text-text">
                   {tier.badge}
                 </div>
               ) : null}
@@ -42,7 +42,7 @@ export function SeoEngagement() {
               </div>
               <Link
                 href={engagementModels.ctaHref}
-                className="inline-block text-[11px] font-semibold text-[#E63946] transition-opacity hover:opacity-90"
+                className="text-accent inline-block text-xs font-semibold transition-opacity hover:opacity-90"
               >
                 {engagementModels.ctaLabel}
               </Link>

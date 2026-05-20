@@ -1,16 +1,27 @@
+import dynamic from "next/dynamic";
 import { homeMetadata } from "@/data/metadata";
-import {
-  HomeCaseStudies,
-  HomeFinalCta,
-  Footer,
-  HomeHero,
-  Navbar,
-  HomeProcess,
-  HomeServices,
-  HomeTrustBar,
-  HomeTestimonials,
-} from "@/components/home";
+import { Footer, HomeHero, Navbar, HomeTrustBar } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
+
+const HomeServices = dynamic(
+  () => import("@/components/home/HomeServices").then((m) => ({ default: m.HomeServices })),
+);
+
+const HomeTestimonials = dynamic(
+  () => import("@/components/home/HomeTestimonials").then((m) => ({ default: m.HomeTestimonials })),
+);
+
+const HomeCaseStudies = dynamic(
+  () => import("@/components/home/HomeCaseStudies").then((m) => ({ default: m.HomeCaseStudies })),
+);
+
+const HomeProcess = dynamic(
+  () => import("@/components/home/HomeProcess").then((m) => ({ default: m.HomeProcess })),
+);
+
+const HomeFinalCta = dynamic(
+  () => import("@/components/home/HomeFinalCta").then((m) => ({ default: m.HomeFinalCta })),
+);
 
 export const metadata = homeMetadata;
 

@@ -27,7 +27,7 @@ export function SmmRelated() {
                 <Icon className="size-[22px] shrink-0" style={{ color: iconColor }} stroke={1.5} aria-hidden />
                 <h3 className="mb-1 mt-2 text-sm font-semibold text-[#FAFAFA]">{title}</h3>
                 <p className="mb-2.5 text-xs leading-[1.6] text-[#B5B5B5]">{description}</p>
-                <span className="text-[11px] font-semibold text-[#E63946] group-hover:opacity-90">{cta}</span>
+                <span className="text-accent text-xs font-semibold group-hover:opacity-90">{cta}</span>
               </Link>
             );
           })}

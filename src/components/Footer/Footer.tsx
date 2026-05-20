@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
 import { SiteLogo } from "@/components/brand";
-import { FooterNewsletter } from "@/components/Footer/FooterNewsletter";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+
+const FooterNewsletter = dynamic(
+  () => import("@/components/Footer/FooterNewsletter").then((m) => ({ default: m.FooterNewsletter })),
+);
 import { SITE, SOCIAL_LINKS } from "@/data/site";
 import { IconSparkles } from "@tabler/icons-react";
 import Link from "next/link";
@@ -12,8 +16,7 @@ function getCopyrightYear(): number {
 const footerLinkClass =
   "text-[var(--text-muted)] transition-colors hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]";
 
-const footerColumnHeadingClass =
-  "mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]";
+const footerColumnHeadingClass = "text-meta mb-4 text-[var(--text-muted)]";
 
 export function HomeFooter() {
   const year = getCopyrightYear();
@@ -116,10 +119,10 @@ export function HomeFooter() {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border-subtle)] pt-4">
-          <div className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-dim)]">
+          <div className="text-meta">
             © {year} {SITE.name} · {SITE.locations.footer}
           </div>
-          <div className="inline-flex items-center gap-1 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-dim)]">
+          <div className="text-meta inline-flex items-center gap-1">
             Made with intent
             <IconSparkles className="size-3 shrink-0" stroke={1.5} aria-hidden />
           </div>

@@ -12,7 +12,7 @@ export function EcommerceWebDevHero() {
   return (
     <>
       <ContentContainer className="pb-0 pt-3.5">
-        <nav className="text-[11px] text-[#6F6F6F]" aria-label="Breadcrumb">
+        <nav className="text-xs text-[#6F6F6F]" aria-label="Breadcrumb">
           {hero.breadcrumb.map((item, i) => (
             <span key={item.label}>
               {i > 0 ? <span className="mx-1.5">/</span> : null}

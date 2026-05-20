@@ -24,10 +24,10 @@ export const HOME_PAGE = {
     primaryCta: { label: "Start a project", href: "/contact" },
     secondaryCta: { label: "See our work", href: "/case-studies" },
     avatars: [
-      { initials: "SC", className: "bg-[#E63946] text-[#FAFAFA]", textClass: "text-[10px]" },
-      { initials: "MK", className: "bg-[#3B82F6] text-[#FAFAFA]", textClass: "text-[10px]" },
-      { initials: "AK", className: "bg-[#F5C518] text-[#0A0A0A]", textClass: "text-[10px]" },
-      { initials: "+8", className: "bg-[#1F1F1F] text-[#A0A0A0]", textClass: "text-[9px]" },
+      { initials: "SC", className: "bg-[var(--surface-red)] text-[var(--color-on-primary)]", textClass: "text-xs" },
+      { initials: "MK", className: "bg-[var(--surface-blue)] text-[var(--color-on-primary)]", textClass: "text-xs" },
+      { initials: "AK", className: "bg-[#F5C518] text-[#0A0A0A]", textClass: "text-xs" },
+      { initials: "+8", className: "bg-[#1F1F1F] text-[#C4C4C4]", textClass: "text-xs" },
     ] as const,
     trustCaption: {
       line1: "Trusted by founders",

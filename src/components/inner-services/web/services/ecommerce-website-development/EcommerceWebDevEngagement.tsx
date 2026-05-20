@@ -23,7 +23,7 @@ export function EcommerceWebDevEngagement() {
               }`}
             >
               {featured ? (
-                <span className="absolute -top-3 left-5 rounded-full bg-[var(--red)] px-2.5 py-0.5 text-sm font-medium text-[var(--text)]">
+                <span className="absolute -top-3 left-5 rounded-full bg-[var(--surface-red)] px-2.5 py-0.5 text-sm font-medium text-[var(--text)]">
                   {engagement.featuredTierBadge}
                 </span>
               ) : null}

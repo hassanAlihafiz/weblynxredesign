@@ -21,7 +21,7 @@ export function AboutValues() {
               <div className="mb-4 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">
                 {n}
               </div>
-              <h4 className="mb-2 text-lg font-medium text-[var(--text)]">{title}</h4>
+              <h3 className="mb-2 text-lg font-medium text-[var(--text)]">{title}</h3>
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>
             </article>
           ))}

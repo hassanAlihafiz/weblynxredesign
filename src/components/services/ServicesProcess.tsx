@@ -14,11 +14,11 @@ export function ServicesProcess() {
         <div className="grid gap-6 md:grid-cols-4">
           {process.steps.map(({ week, n, title, detail }) => (
             <div key={n}>
-              <div className="mb-2 font-mono text-xs text-[var(--text-dim)]">{week}</div>
+              <div className="text-meta mb-2">{week}</div>
               <div className="mb-3 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">
                 {n}
               </div>
-              <h4 className="mb-2 font-medium text-[var(--text)]">{title}</h4>
+              <h3 className="mb-2 text-base font-medium text-[var(--text)]">{title}</h3>
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">{detail}</p>
             </div>
           ))}

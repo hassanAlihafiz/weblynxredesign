@@ -43,17 +43,17 @@ export function ServicesGrid() {
                 className="mb-5 flex size-12 shrink-0 items-center justify-center rounded-lg bg-[rgba(230,57,70,0.1)]"
                 aria-hidden
               >
-                <Icon className="size-8 text-[var(--red)]" stroke={1.35} />
+                <Icon className="size-8 text-[var(--red-bright)]" stroke={1.35} />
               </div>
               <div className="mb-3 flex items-baseline justify-between gap-2">
                 <h3 className="text-xl font-medium leading-snug text-[var(--text)]">{title}</h3>
-                <span className="shrink-0 font-mono text-xs text-[var(--text-dim)]">{n}</span>
+                <span className="text-meta shrink-0">{n}</span>
               </div>
               <p className="mb-5 leading-relaxed text-[var(--text-muted)]">{body}</p>
-              <div className="mb-5 font-mono text-xs text-[var(--text-dim)]">{stack}</div>
+              <div className="mb-5 font-mono text-sm text-[var(--text-dim)]">{stack}</div>
               <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-4">
                 <span className="text-sm text-[var(--text-muted)]">{delivery}</span>
-                <span className="text-sm font-medium text-[var(--red)] transition-colors group-hover/card:text-[var(--red-bright)]">
+                <span className="text-accent text-sm font-semibold transition-colors group-hover/card:text-[var(--text)]">
                   <span className="inline-flex items-center gap-0.5">
                     {grid.learnMoreLabel}
                     <IconArrowRight className="size-3 shrink-0" stroke={1.5} aria-hidden />

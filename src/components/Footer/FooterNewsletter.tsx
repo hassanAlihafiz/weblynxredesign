@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui";
 
-const headingClass =
-  "mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]";
+const headingClass = "text-meta mb-4 text-[var(--text-muted)]";
 
 export function FooterNewsletter() {
   const [email, setEmail] = useState("");

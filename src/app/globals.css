@@ -2,9 +2,10 @@
 
 :root {
   /* Primary + shades */
-  --color-primary: #fb2c36;
-  --color-primary-hover: #ff4d56;
-  --color-primary-dim: #c41e27;
+  /* Primary: ≥7:1 contrast with white text (Book a call, Start a project, etc.) */
+  --color-primary: #9b1520;
+  --color-primary-hover: #b01c28;
+  --color-primary-dim: #801419;
   --color-primary-muted: rgba(251, 44, 54, 0.14);
   --color-primary-soft: rgba(251, 44, 54, 0.06);
   --color-primary-border: rgba(251, 44, 54, 0.32);
@@ -22,7 +23,7 @@
   --color-text-primary: #f4f4f5;
   --color-text-secondary: #a1a1aa;
   --color-text-tertiary: #71717a;
-  --color-text-info: #fb2c36;
+  --color-text-info: #ff9aaa;
 
   --color-border-tertiary: #27272a;
   --color-border-secondary: #3f3f46;
@@ -45,9 +46,9 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   --shadow-card-hover: 0 10px 36px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(251, 44, 54, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  --shadow-primary: 0 4px 16px rgba(251, 44, 54, 0.35);
-  --shadow-primary-hover: 0 8px 28px rgba(251, 44, 54, 0.42), 0 0 40px rgba(251, 44, 54, 0.12);
-  --shadow-primary-lg: 0 12px 40px rgba(251, 44, 54, 0.28), 0 0 64px rgba(251, 44, 54, 0.1);
+  --shadow-primary: 0 4px 16px rgba(155, 21, 32, 0.35);
+  --shadow-primary-hover: 0 8px 28px rgba(155, 21, 32, 0.42), 0 0 40px rgba(155, 21, 32, 0.12);
+  --shadow-primary-lg: 0 12px 40px rgba(155, 21, 32, 0.28), 0 0 64px rgba(155, 21, 32, 0.1);
   --shadow-drawer: -12px 0 48px rgba(0, 0, 0, 0.65), -1px 0 0 var(--color-border-subtle);
   --shadow-inset-soft: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
@@ -62,13 +63,48 @@
   --border-subtle: #1a1a1a;
   --text: #fafafa;
   --text-muted: #a0a0a0;
-  --text-dim: #5a5a5a;
+  /* Muted meta copy: ≥4.5:1 on --bg-elev / --bg (service card numbers, week labels) */
+  --text-dim: #a3a3a3;
+  /* Large display emphasis only (headlines); use --red-bright for small UI text */
   --red: #e63946;
-  --red-bright: #ff4d5c;
+  /* Accent text & icons on dark backgrounds (Learn more, View all work, icons) */
+  --red-bright: #ffb3bc;
   --red-dark: #a8243a;
   --red-glow: rgba(230, 57, 70, 0.2);
   --yellow: #f5c518;
-  --blue: #3b82f6;
+  --blue: #1d4ed8;
+  /* Solid fills for avatars / badges (WCAG AA with white text) */
+  --surface-red: #9b1520;
+  --surface-blue: #1d4ed8;
+}
+
+/* Accessible accent utilities (prefer over raw --red on dark UI) */
+.text-accent {
+  color: var(--red-bright);
+}
+
+.bg-accent-solid {
+  background-color: var(--surface-red);
+  color: var(--color-on-primary);
+}
+
+/* Minimum 48×48px touch targets (WCAG 2.5.5 — desktop & mobile) */
+.touch-target {
+  display: inline-flex;
+  min-height: 3rem;
+  min-width: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-meta {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
 }
 
 @theme inline {
@@ -84,27 +120,6 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-}
-
-@keyframes page-transition-enter {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.page-transition-enter {
-  animation: page-transition-enter 0.38s ease-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .page-transition-enter {
-    animation: none;
   }
 }
 

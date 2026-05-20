@@ -32,8 +32,8 @@ export function ServicesWhy() {
         <div className="grid gap-5 md:grid-cols-3">
           {itemsWithIcons.map(({ title, body, icon: Icon }) => (
             <article key={title} className={cardClassName}>
-              <Icon className="mb-4 size-9 text-[var(--red)]" stroke={1.35} aria-hidden />
-              <h4 className="mb-2 font-medium text-[var(--text)]">{title}</h4>
+              <Icon className="mb-4 size-9 text-[var(--red-bright)]" stroke={1.35} aria-hidden />
+              <h3 className="mb-2 text-base font-medium text-[var(--text)]">{title}</h3>
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">{body}</p>
             </article>
           ))}

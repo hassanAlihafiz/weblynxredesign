@@ -12,7 +12,7 @@ export function AppDevProcessSteps() {
         <div className="grid gap-4 md:grid-cols-5">
           {process.steps.map(({ week, num, title, detail }) => (
             <div key={num} className="border-l-2 border-[var(--red)] pl-3">
-              <div className="mb-1 font-mono text-[10px] text-[var(--text-dim)]">{week}</div>
+              <div className="text-meta mb-1">{week}</div>
               <div className="mb-2 font-sans text-[2rem] font-bold leading-none text-[var(--red)] sm:text-[2.125rem]">
                 {num}
               </div>
