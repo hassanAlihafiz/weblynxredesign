@@ -24,11 +24,11 @@ export function WebDevEngagementScopes() {
               }`}
             >
               {featured ? (
-                <span className="absolute -top-3 left-5 rounded-md bg-[var(--red)] px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-wider text-[var(--text)]">
+                <span className="absolute -top-3 left-5 rounded-md bg-[var(--surface-red)] px-3 py-1 font-mono text-xs font-medium uppercase tracking-wider text-[var(--text)]">
                   {engagements.featuredTierBadge}
                 </span>
               ) : null}
-              <p className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+              <p className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
                 {label}
               </p>
               <h3 className="mb-2 text-xl font-medium text-[var(--text)]">{title}</h3>

@@ -26,11 +26,11 @@ export function DesignEngagementScopes() {
               }`}
             >
               {featured ? (
-                <span className="absolute -top-3 left-5 rounded-full bg-[var(--red)] px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-[var(--text)]">
+                <span className="absolute -top-3 left-5 rounded-full bg-[var(--surface-red)] px-3 py-1 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--text)]">
                   {engagements.featuredTierBadge}
                 </span>
               ) : null}
-              <p className="mb-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
+              <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--text-dim)]">
                 {label}
               </p>
               <h3 className="mb-1 text-xl font-medium text-[var(--text)]">{title}</h3>

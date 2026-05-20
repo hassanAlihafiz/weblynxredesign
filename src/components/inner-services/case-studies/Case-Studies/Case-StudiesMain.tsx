@@ -69,7 +69,7 @@ export function CaseStudiesMain() {
                   {CASE_STUDIES_FEATURED.tagLabels.map((t) => (
                     <span
                       key={t}
-                      className="rounded-[var(--border-radius-md)] bg-[var(--red)] px-2 py-0.5 text-base font-medium text-[#EEEDFE]"
+                      className="rounded-[var(--border-radius-md)] bg-[var(--surface-red)] px-2 py-0.5 text-base font-medium text-[#EEEDFE]"
                     >
                       {t}
                     </span>

@@ -51,7 +51,7 @@ export function AppDevHero() {
               <div className="flex h-64 w-32 flex-col gap-2 rounded-[28px] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-2">
                 <div className="mx-auto h-1.5 w-12 rounded-full bg-[var(--text)] opacity-30" aria-hidden />
                 <div className="flex flex-1 flex-col gap-2 rounded-2xl bg-[var(--bg-elev)] p-3">
-                  <div className="h-2 w-1/2 rounded bg-[var(--red)]" />
+                  <div className="h-2 w-1/2 rounded bg-[var(--surface-red)]" />
                   <div className="h-1.5 w-3/4 rounded bg-[var(--border)]" />
                   <div
                     className="mt-2 h-16 rounded-lg"

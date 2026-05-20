@@ -8,7 +8,7 @@ export function AboutStory() {
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
       <ContentContainer>
         <div className="grid items-start gap-10 md:grid-cols-[200px_1fr]">
-          <p className="pt-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+          <p className="pt-2 font-mono text-xs font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
             {story.label}
           </p>
 

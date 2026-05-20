@@ -1,4 +1,4 @@
-import { IconArrowRight } from "@tabler/icons-react";
+import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HOME_PAGE, PROJECT_SHOWCASES } from "@/data/site";
@@ -23,10 +23,10 @@ export function HomeCaseStudies() {
           </div>
           <Link
             href={caseStudies.viewAllHref}
-            className="inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
+            className="text-accent inline-flex items-center gap-1 text-sm font-semibold transition-colors hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red-bright)]"
           >
             {caseStudies.viewAllLabel}
-            <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
+            <ArrowRightIcon className="size-3.5 shrink-0" />
           </Link>
         </div>
 

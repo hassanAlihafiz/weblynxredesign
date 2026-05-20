@@ -99,11 +99,16 @@ export function HomeNav() {
     document.addEventListener("keydown", onKeyDown);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    const panel = document.getElementById(panelId);
+    const firstFocusable = panel?.querySelector<HTMLElement>(
+      'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    );
+    firstFocusable?.focus();
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = prevOverflow;
     };
-  }, [menuOpen, close]);
+  }, [menuOpen, close, panelId]);
 
   const [prevPathname, setPrevPathname] = useState(pathname);
   if (pathname !== prevPathname) {
@@ -113,26 +118,21 @@ export function HomeNav() {
   }
 
   const mobileDrawer =
+    menuOpen &&
     portalReady &&
     createPortal(
-      <div
-        className={`fixed inset-0 z-[100] md:hidden ${menuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
-        aria-hidden={!menuOpen}
-      >
+      <div className="fixed inset-0 z-[100] md:hidden">
         <div
-          className={`absolute inset-0 bg-black/65 backdrop-blur-sm transition-opacity duration-200 ease-out motion-reduce:transition-none ${
-            menuOpen ? "opacity-100" : "opacity-0"
-          }`}
+          className="absolute inset-0 bg-black/65 backdrop-blur-sm"
+          aria-hidden
           onClick={close}
         />
-        <aside
+        <div
           id={panelId}
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
-          className={`absolute left-0 top-0 flex h-[100dvh] max-h-[100dvh] w-[min(100%,24rem)] min-w-0 flex-col bg-[var(--color-background-primary)] shadow-[var(--shadow-drawer)] transition-transform duration-200 ease-out motion-reduce:transition-none sm:max-w-md ${
-            menuOpen ? "translate-x-0 border-r border-[var(--color-border-tertiary)]" : "-translate-x-full border-r-0"
-          }`}
+          className="absolute left-0 top-0 flex h-[100dvh] max-h-[100dvh] w-[min(100%,24rem)] min-w-0 flex-col border-r border-[var(--color-border-tertiary)] bg-[var(--color-background-primary)] shadow-[var(--shadow-drawer)] sm:max-w-md"
         >
           <div className="flex shrink-0 items-center justify-between gap-2 border-b border-[var(--color-border-tertiary)] px-3 py-1.5 pt-[max(0.5rem,env(safe-area-inset-top))]">
             <Brand onNavigate={close} />
@@ -200,7 +200,7 @@ export function HomeNav() {
               Book a call
             </Button>
           </div>
-        </aside>
+        </div>
       </div>,
       document.body,
     );
@@ -288,20 +288,20 @@ export function HomeNav() {
           </div>
         </ContentContainer>
 
-        <div
-          role="menu"
-          aria-label="Service offerings"
-          className={`absolute left-0 right-0 top-full z-40 hidden w-full pt-2 transition-[opacity,visibility] duration-150 motion-reduce:transition-none md:block ${
-            servicesMenuOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
-          }`}
-          onMouseEnter={() => setServicesMenuOpen(true)}
-        >
-          <div className="border-t border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] shadow-[var(--shadow-md)] ring-1 ring-inset ring-[var(--color-border-subtle)]">
-            <div className="mx-auto w-full max-w-[1260px] px-6 py-8 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
-              <ServicesMegaMenuPanel pathname={pathname} onNavigate={closeServicesMenu} />
+        {servicesMenuOpen ? (
+          <div
+            role="menu"
+            aria-label="Service offerings"
+            className="absolute left-0 right-0 top-full z-40 hidden w-full pt-2 md:block"
+            onMouseEnter={() => setServicesMenuOpen(true)}
+          >
+            <div className="border-t border-[var(--color-border-tertiary)] bg-[var(--color-surface-raised)] shadow-[var(--shadow-md)] ring-1 ring-inset ring-[var(--color-border-subtle)]">
+              <div className="mx-auto w-full max-w-[1260px] px-6 py-8 sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+                <ServicesMegaMenuPanel pathname={pathname} onNavigate={closeServicesMenu} />
+              </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </header>
       {mobileDrawer}
     </>

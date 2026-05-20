@@ -25,7 +25,7 @@ export function WebPortalDevEngagement() {
               }`}
             >
               {featured ? (
-                <span className="absolute -top-[11px] left-5 rounded-full bg-[var(--red)] px-2.5 py-0.5 text-[10px] font-semibold text-[#FAFAFA]">
+                <span className="absolute -top-[11px] left-5 rounded-full bg-[var(--surface-red)] px-2.5 py-0.5 text-xs font-semibold text-[#FAFAFA]">
                   {engagement.featuredTierBadge}
                 </span>
               ) : null}

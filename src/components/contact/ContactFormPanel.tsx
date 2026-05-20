@@ -24,7 +24,7 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full px-2.5 py-1.5 text-[11px] font-medium transition-all sm:px-3 ${
+      className={`rounded-full px-2.5 py-1.5 text-xs font-medium transition-all sm:px-3 ${
         selected
           ? "bg-[var(--color-primary)] text-[var(--color-on-primary)] shadow-[var(--shadow-xs)] ring-1 ring-[var(--color-primary-border)]"
           : "border border-[var(--color-border-secondary)] bg-[var(--color-background-primary)] text-[var(--color-text-secondary)] hover:border-[var(--color-primary-border)] hover:text-[var(--color-text-primary)]"

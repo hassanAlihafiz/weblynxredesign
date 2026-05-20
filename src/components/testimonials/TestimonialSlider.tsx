@@ -57,18 +57,12 @@ export function TestimonialSlider({ sectionClassName }: TestimonialSliderProps =
               </div>
 
               <div className="relative min-h-[7.5rem] sm:min-h-[8.5rem] md:min-h-[9rem]">
-                {TESTIMONIALS.map(({ quote }, index) => (
-                  <blockquote
-                    key={index}
-                    id={`testimonial-slide-${index}`}
-                    aria-hidden={index !== activeIndex}
-                    className={`absolute inset-x-0 top-0 text-xl leading-relaxed text-[var(--text)] transition-opacity duration-500 motion-reduce:transition-none sm:text-2xl md:text-3xl ${
-                      index === activeIndex ? "opacity-100" : "pointer-events-none opacity-0"
-                    }`}
-                  >
-                    {quote}
-                  </blockquote>
-                ))}
+                <blockquote
+                  id={`testimonial-slide-${activeIndex}`}
+                  className="text-xl leading-relaxed text-[var(--text)] sm:text-2xl md:text-3xl"
+                >
+                  {current.quote}
+                </blockquote>
               </div>
 
               <figure className="mt-10 flex flex-col items-center gap-3">
@@ -98,7 +92,7 @@ export function TestimonialSlider({ sectionClassName }: TestimonialSliderProps =
           </div>
 
           <div
-            className="mt-8 flex justify-center gap-2"
+            className="mt-8 flex justify-center gap-3"
             role="tablist"
             aria-label="Testimonial slides"
           >
@@ -109,13 +103,18 @@ export function TestimonialSlider({ sectionClassName }: TestimonialSliderProps =
                 role="tab"
                 aria-selected={index === activeIndex}
                 aria-label={`Go to testimonial ${index + 1}`}
-                className={`size-2 rounded-full transition-colors ${
-                  index === activeIndex
-                    ? "bg-[var(--red)]"
-                    : "bg-[var(--border-subtle)] hover:bg-[var(--border)]"
-                }`}
+                className="touch-target rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red-bright)]"
                 onClick={() => goTo(index)}
-              />
+              >
+                <span
+                  className={`block size-2.5 rounded-full transition-colors ${
+                    index === activeIndex
+                      ? "bg-[var(--red-bright)]"
+                      : "bg-[var(--border)]"
+                  }`}
+                  aria-hidden
+                />
+              </button>
             ))}
           </div>
         </div>

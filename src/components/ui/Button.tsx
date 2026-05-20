@@ -15,9 +15,9 @@ const variantClass: Record<ButtonVariant, string> = {
 };
 
 const sizeClass: Record<ButtonSize, string> = {
-  sm: "px-5 py-2.5 text-sm",
-  md: "px-5 py-3 text-sm",
-  lg: "px-8 py-4 text-base",
+  sm: "min-h-11 px-5 py-2.5 text-sm",
+  md: "min-h-11 px-5 py-3 text-sm",
+  lg: "min-h-12 px-8 py-4 text-base",
 };
 
 function combineClass(...classes: (string | false | undefined)[]) {

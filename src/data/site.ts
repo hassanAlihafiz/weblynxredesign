@@ -225,14 +225,14 @@ export const TESTIMONIALS = [
     quote:
       "Weblynx delivered our MVP in six weeks exactly what we needed to close our seed round.",
     initials: "SC",
-    avatarBg: "var(--red)" as const,
+    avatarBg: "var(--surface-red)" as const,
     name: "Sara Chen",
     role: "Founder, Acme SaaS",
   },
   {
     quote: "Site speed went from 4 seconds to under one. Conversions doubled within a month.",
     initials: "MK",
-    avatarBg: "var(--blue)" as const,
+    avatarBg: "var(--surface-blue)" as const,
     name: "Marcus King",
     role: "CEO, NorthBrand",
   },

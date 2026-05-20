@@ -52,17 +52,17 @@ function ServiceCard({
         className="mb-5 flex size-11 items-center justify-center rounded-lg bg-[rgba(230,57,70,0.1)]"
         aria-hidden
       >
-        <Icon className="size-6 text-[var(--red)]" stroke={1.5} />
+        <Icon className="size-6 text-[var(--red-bright)]" stroke={1.5} />
       </div>
       <div className="mb-1 flex items-baseline justify-between gap-2">
         <span className="font-medium text-[var(--text)]">{title}</span>
-        <span className="font-mono text-[10px] text-[var(--text-dim)]">{n}</span>
+        <span className="text-meta">{n}</span>
       </div>
       <p className="mb-4 text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
-      <div className="mb-4 font-mono text-xs text-[var(--text-dim)]">{stack}</div>
+      <div className="mb-4 font-mono text-sm text-[var(--text-dim)]">{stack}</div>
       <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-3">
-        <span className="text-xs text-[var(--text-muted)]">{duration}</span>
-        <span className="inline-flex items-center gap-0.5 text-xs font-medium text-[var(--red)] transition-colors group-hover/card:text-[var(--red-bright)]">
+        <span className="text-sm text-[var(--text-muted)]">{duration}</span>
+        <span className="text-accent inline-flex items-center gap-0.5 text-sm font-semibold transition-colors group-hover/card:text-[var(--text)]">
           {learnMoreLabel}
           <IconArrowRight className="size-3 shrink-0" stroke={1.5} aria-hidden />
         </span>
@@ -161,7 +161,7 @@ export function HomeServices() {
             {Array.from({ length: maxOffset + 1 }, (_, i) => (
               <span
                 key={i}
-                className={`size-1.5 rounded-full transition-colors ${i === offset ? "bg-[var(--red)]" : "bg-[var(--border)]"}`}
+                className={`size-1.5 rounded-full transition-colors ${i === offset ? "bg-[var(--surface-red)]" : "bg-[var(--border)]"}`}
               />
             ))}
           </div>

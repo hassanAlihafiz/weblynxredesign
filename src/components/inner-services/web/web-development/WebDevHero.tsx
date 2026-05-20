@@ -52,12 +52,12 @@ export function WebDevHero() {
                 <span className="size-2.5 shrink-0 rounded-full bg-[#E24B4A]" aria-hidden />
                 <span className="size-2.5 shrink-0 rounded-full bg-[#EF9F27]" aria-hidden />
                 <span className="size-2.5 shrink-0 rounded-full bg-[#97C459]" aria-hidden />
-                <div className="ml-3 min-w-0 flex-1 truncate font-mono text-[10px] text-[var(--text-dim)]">
+                <div className="ml-3 min-w-0 flex-1 truncate font-mono text-xs text-[var(--text-dim)]">
                   {hero.mockBrowserUrl}
                 </div>
               </div>
               <div className="space-y-3 p-6">
-                <div className="h-3 w-2/3 rounded bg-[var(--red)]" />
+                <div className="h-3 w-2/3 rounded bg-[var(--surface-red)]" />
                 <div className="h-2 w-1/2 rounded bg-[var(--border)]" />
                 <div className="h-2 w-3/5 rounded bg-[var(--border)]" />
                 <div className="mt-5 grid grid-cols-2 gap-2">
@@ -65,7 +65,7 @@ export function WebDevHero() {
                   <div className="h-16 rounded bg-[var(--bg-elev)]" />
                 </div>
                 <div className="mt-3 flex gap-2">
-                  <div className="h-6 w-20 rounded bg-[var(--red)]" />
+                  <div className="h-6 w-20 rounded bg-[var(--surface-red)]" />
                   <div className="h-6 w-20 rounded border border-[var(--border-subtle)]" />
                 </div>
               </div>
