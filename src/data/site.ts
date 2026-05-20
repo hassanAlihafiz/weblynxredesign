@@ -74,9 +74,9 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
       label: "AI Development",
       href: "/artificial-intelligence",
       items: [
-        { label: "Custom GPT & chatbots", href: "/artificial-intelligence" },
-        { label: "RAG & knowledge bases", href: "/artificial-intelligence#capabilities" },
-        { label: "AI agents & automation", href: "/artificial-intelligence" },
+        { label: "Generative AI", href: "/generative-ai" },
+        { label: "Natural language processing", href: "/natural-language-processing" },
+        { label: "AI agents & automation", href: "/artificial-intelligence#capabilities" },
       ],
     },
     {
@@ -336,6 +336,22 @@ export {
   type CrossPlatformRelatedIconId,
 } from "./inner-seervices/app/services/cross-platform-app-development";
 export { AI_DEVELOPMENT_PAGE, type AiDevCapabilitiesIconId, type AiDevHeading, type AiDevIncludedIconId, } from "./inner-seervices/artificial-intelligence/ai-development";
+export {
+  GENERATIVE_AI_PAGE,
+  type GenAiDeliverableIconId,
+  type GenAiHeading,
+  type GenAiModalityIconId,
+  type GenAiRelatedIconId,
+  type GenAiUseCaseIconId,
+} from "./inner-seervices/artificial-intelligence/services/generative-ai";
+export {
+  NATURAL_LANGUAGE_PROCESSING_PAGE,
+  type NlpCapabilityIconId,
+  type NlpDeliverableIconId,
+  type NlpHeading,
+  type NlpIndustryIconId,
+  type NlpRelatedIconId,
+} from "./inner-seervices/artificial-intelligence/services/natural-language-processing";
 export { DIGITAL_MARKETING_PAGE, type DmChannelIconId, type DmHeading, type DmIncludedIconId, } from "./inner-seervices/digital-markiting/digital-marketing";
 export { 
   SOCIAL_MEDIA_MARKETING_PAGE, 

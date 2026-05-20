@@ -1,0 +1,13 @@
+export { NlpCapabilities } from "./NlpCapabilities";
+export { NlpDeliverables } from "./NlpDeliverables";
+export { NlpEngagement } from "./NlpEngagement";
+export { NlpFaq } from "./NlpFaq";
+export { NlpFinalCta } from "./NlpFinalCta";
+export { NlpHero } from "./NlpHero";
+export { NlpHowWeQuote } from "./NlpHowWeQuote";
+export { NlpIndustries } from "./NlpIndustries";
+export { NlpLanguages } from "./NlpLanguages";
+export { NlpProcess } from "./NlpProcess";
+export { NlpRelated } from "./NlpRelated";
+export { NlpStack } from "./NlpStack";
+export { NlpWhoFor } from "./NlpWhoFor";
