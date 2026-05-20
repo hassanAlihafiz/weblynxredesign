@@ -97,9 +97,6 @@ export function HomeServices() {
       <ContentContainer>
         <div className="mb-14 grid items-end gap-10 md:grid-cols-2">
           <div>
-            <p className="mb-3 font-mono text-sm font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-              {copy.eyebrow}
-            </p>
             <h2 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
               {copy.heading.line1}
               <br />

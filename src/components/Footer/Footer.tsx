@@ -81,7 +81,7 @@ export function HomeFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className={footerLinkClass}>
+                <Link href="/blogs" className={footerLinkClass}>
                   Blog
                 </Link>
               </li>

@@ -15,8 +15,6 @@ export function SmmRelated() {
   return (
     <section className="w-full border-t border-[#252525] py-10 sm:py-11">
       <ContentContainer>
-        <p className="mb-3.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#E63946]">{related.eyebrow}</p>
-
         <div className="grid gap-3 md:grid-cols-3">
           {related.items.map(({ title, description, href, cta, icon, iconColor }) => {
             const Icon = relatedIcons[icon];

@@ -1,5 +1,5 @@
 /**
- * Copy and structured content for the main `/services` marketing page.
+ * Copy and structured content for the main `/service` marketing page.
  * Service grid icons are resolved in `ServicesGrid` via string ids.
  * Featured tiles use `PROJECT_SHOWCASES.services` from `@/data/site` (see `case-studies-page.ts`).
  */

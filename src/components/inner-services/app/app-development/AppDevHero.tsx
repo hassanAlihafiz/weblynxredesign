@@ -30,9 +30,6 @@ export function AppDevHero() {
         <ContentContainer className="relative z-10">
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
-              <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-                {hero.eyebrow}
-              </p>
               <h1 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
                 {hero.heading.before}
                 <span className="text-[var(--red)]">{hero.heading.emphasis}</span>

@@ -29,7 +29,7 @@ export const AI_DEVELOPMENT_PAGE = {
   hero: {
     breadcrumb: {
       parentLabel: "Services",
-      parentHref: "/services",
+      parentHref: "/service",
       currentLabel: "AI Development",
     },
     heading: {

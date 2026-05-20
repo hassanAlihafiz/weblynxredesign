@@ -31,7 +31,7 @@ export type EcommerceWebRelatedIconId = "trending-up" | "palette" | "devices";
 export const ECOMMERCE_WEB_DEV_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "Web Development", href: "/web-development" },
       { label: "Ecommerce" },
     ] as const,

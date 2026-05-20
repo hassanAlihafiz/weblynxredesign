@@ -13,7 +13,7 @@ export const APP_DEVELOPMENT_PAGE = {
   hero: {
     breadcrumb: {
       parentLabel: "Services",
-      parentHref: "/services",
+      parentHref: "/service",
       currentLabel: "App development",
     },
     heading: {

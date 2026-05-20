@@ -23,7 +23,7 @@ export const DESIGN_PAGE = {
   hero: {
     breadcrumb: {
       parentLabel: "Services",
-      parentHref: "/services",
+      parentHref: "/service",
       currentLabel: "Design",
     },
     heading: {

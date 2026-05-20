@@ -1,5 +1,5 @@
 /**
- * Blog index data: categories, featured + posts, helpers, and page copy (`/blog`).
+ * Blog index data: categories, featured + posts, helpers, and page copy (`/blogs`).
  */
 
 export type BlogHeading = {

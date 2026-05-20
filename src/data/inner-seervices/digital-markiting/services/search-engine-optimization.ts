@@ -34,7 +34,7 @@ export type SeoRelatedIconId = "target-arrow" | "pencil" | "code";
 export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "Digital Marketing", href: "/digital-marketing" },
       { label: "Search Engine Optimization" },
     ] as const,
