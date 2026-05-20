@@ -98,7 +98,7 @@
 }
 
 .text-meta {
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 500;
@@ -108,9 +108,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-bricolage-grotesque);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-bricolage-grotesque), system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  --font-serif: Georgia, "Times New Roman", serif;
 }
 
 html {

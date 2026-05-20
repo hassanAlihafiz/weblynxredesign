@@ -1,7 +1,17 @@
 import dynamic from "next/dynamic";
 import { homeMetadata } from "@/data/metadata";
-import { Footer, HomeHero, Navbar, HomeTrustBar } from "@/components/home";
+import { HomeHero, HomeTrustBar } from "@/components/home";
+import { HomeHeaderShell } from "@/components/Navbar/HomeHeaderShell";
 import { PageContainer } from "@/components/layout/PageContainer";
+
+const Navbar = dynamic(
+  () => import("@/components/Navbar/Navbar").then((m) => ({ default: m.HomeNav })),
+  { loading: () => <HomeHeaderShell /> },
+);
+
+const Footer = dynamic(
+  () => import("@/components/Footer/Footer").then((m) => ({ default: m.HomeFooter })),
+);
 
 const HomeServices = dynamic(
   () => import("@/components/home/HomeServices").then((m) => ({ default: m.HomeServices })),
