@@ -1,16 +1,21 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { ABOUT_PAGE } from "@/data/site";
+
+const { finalCta } = ABOUT_PAGE;
 
 export function AboutFinalCta() {
   return (
     <FinalCtaSection
       title={
         <>
-          Like the way we <span className="text-[var(--red)]">think</span>?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Let's build something together."
-      ctaLabel="Start a project"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

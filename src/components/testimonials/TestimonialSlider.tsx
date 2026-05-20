@@ -5,10 +5,15 @@ import { TESTIMONIALS } from "@/data/site";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { useCallback, useState } from "react";
 
-const navButtonClass =
-  "flex size-10 shrink-0 items-center justify-center self-center rounded-full border border-[var(--)] bg-[var(--bg-elev-2)] text-[var(--text-muted)] transition-colors hover:border-[var(--border)] hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)] sm:size-11";
+type TestimonialSliderProps = {
+  /** Merged after base layout; defaults to `bg-[var(--bg-elev)]`. */
+  sectionClassName?: string;
+};
 
-export function TestimonialSlider() {
+const navButtonClass =
+  "flex size-10 shrink-0 items-center justify-center self-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] text-[var(--text-muted)] transition-colors hover:border-[var(--border)] hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)] sm:size-11";
+
+export function TestimonialSlider({ sectionClassName }: TestimonialSliderProps = {}) {
   const count = TESTIMONIALS.length;
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -26,7 +31,7 @@ export function TestimonialSlider() {
 
   return (
     <section
-      className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20"
+      className={`w-full border-t border-[var(--border-subtle)] py-14 md:py-20 ${sectionClassName ?? "bg-[var(--bg-elev)]"}`}
       aria-roledescription="carousel"
       aria-label="Client testimonials"
     >

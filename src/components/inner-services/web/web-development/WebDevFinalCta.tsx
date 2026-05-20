@@ -1,18 +1,25 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { WEB_DEVELOPMENT_PAGE } from "@/data/site";
+
+const { finalCta } = WEB_DEVELOPMENT_PAGE;
 
 export function WebDevFinalCta() {
   return (
     <FinalCtaSection
-      className="bg-[linear-gradient(180deg,rgba(10,10,10,0.98),rgba(27,7,9,0.98))]"
+      id={finalCta.id}
+      className={finalCta.className}
       title={
         <>
-          Ready to build
-          something <span className="text-[var(--red)]">great</span>?
+          {finalCta.titleLine1}
+          <br />
+          {finalCta.titleLine2Before}
+          <span className="text-[var(--red)]">{finalCta.titleLine2Emphasis}</span>
+          {finalCta.titleLine2After}
         </>
       }
-      description="Book a free 30-minute strategy call. We'll review your goals and scope your project."
-      ctaLabel="Request a quote"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

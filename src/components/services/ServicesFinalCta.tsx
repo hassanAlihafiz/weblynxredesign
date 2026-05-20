@@ -1,16 +1,21 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { SERVICES_PAGE } from "@/data/site";
+
+const { finalCta } = SERVICES_PAGE;
 
 export function ServicesFinalCta() {
   return (
     <FinalCtaSection
       title={
         <>
-          Not sure which <span className="text-[var(--red)]">service</span> you need?
+          {finalCta.titleBefore}
+          <span className="text-[var(--red)]">{finalCta.titleEmphasis}</span>
+          {finalCta.titleAfter}
         </>
       }
-      description="Book a free 30-minute call. We'll help you figure it out."
-      ctaLabel="Book a call"
-      ctaHref="/contact"
+      description={finalCta.description}
+      ctaLabel={finalCta.ctaLabel}
+      ctaHref={finalCta.ctaHref}
     />
   );
 }

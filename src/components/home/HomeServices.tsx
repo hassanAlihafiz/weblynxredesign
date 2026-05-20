@@ -12,66 +12,23 @@ import {
   type TablerIcon,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { HOME_PAGE } from "@/data/site";
 
 const VISIBLE_DESKTOP = 3;
 
-const services: {
-  href: string;
-  n: string;
-  title: string;
-  description: string;
-  stack: string;
-  duration: string;
-  icon: TablerIcon;
-}[] = [
-  {
-    href: "/web-development",
-    n: "01",
-    title: "Web development",
-    description: "Marketing sites, web apps, SaaS platforms built on Next.js.",
-    stack: "Next.js · React · TypeScript",
-    duration: "4–8 weeks",
-    icon: IconCode,
-  },
-  {
-    href: "/app-development",
-    n: "02",
-    title: "App development",
-    description: "iOS and Android apps with React Native. One codebase, two stores.",
-    stack: "React Native · Expo · Firebase",
-    duration: "8–12 weeks",
-    icon: IconDeviceMobile,
-  },
-  {
-    href: "/digital-marketing",
-    n: "03",
-    title: "Digital marketing",
-    description: "SEO, paid ads, content, and social full-funnel growth.",
-    stack: "SEO · Ads · Content · Email",
-    duration: "Monthly retainer",
-    icon: IconTrendingUp,
-  },
-  {
-    href: "/artificial-intelligence",
-    n: "04",
-    title: "AI development",
-    description: "Chatbots, RAG, agents, and workflow automation on modern LLMs.",
-    stack: "GPT · Claude · LangChain",
-    duration: "2–8 weeks",
-    icon: IconBrain,
-  },
-  {
-    href: "/design",
-    n: "05",
-    title: "Design",
-    description: "Brand identity, UI/UX, and product design that actually ships.",
-    stack: "Brand · UI/UX · Identity",
-    duration: "2–5 weeks",
-    icon: IconPalette,
-  },
-];
+const serviceIcons = {
+  code: IconCode,
+  "device-mobile": IconDeviceMobile,
+  "trending-up": IconTrendingUp,
+  brain: IconBrain,
+  palette: IconPalette,
+} as const satisfies Record<(typeof HOME_PAGE.services.items)[number]["icon"], TablerIcon>;
+
+type ServiceCardData = (typeof HOME_PAGE.services.items)[number];
+
+type ServiceItem = Omit<ServiceCardData, "icon"> & { icon: TablerIcon };
 
 const cardClassName =
   "group/card block h-full rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-6 transition-[transform,border-color] duration-200 motion-safe:hover:-translate-y-0.5 hover:border-[var(--border)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]";
@@ -87,7 +44,8 @@ function ServiceCard({
   stack,
   duration,
   icon: Icon,
-}: (typeof services)[number]) {
+  learnMoreLabel,
+}: ServiceItem & { learnMoreLabel: string }) {
   return (
     <Link href={href} className={`${cardClassName} min-w-0`}>
       <div
@@ -105,7 +63,7 @@ function ServiceCard({
       <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-3">
         <span className="text-xs text-[var(--text-muted)]">{duration}</span>
         <span className="inline-flex items-center gap-0.5 text-xs font-medium text-[var(--red)] transition-colors group-hover/card:text-[var(--red-bright)]">
-          Learn more
+          {learnMoreLabel}
           <IconArrowRight className="size-3 shrink-0" stroke={1.5} aria-hidden />
         </span>
       </div>
@@ -114,7 +72,18 @@ function ServiceCard({
 }
 
 export function HomeServices() {
-  const maxOffset = Math.max(0, services.length - VISIBLE_DESKTOP);
+  const { services: copy } = HOME_PAGE;
+
+  const servicesWithIcons: ServiceItem[] = useMemo(
+    () =>
+      copy.items.map((item) => ({
+        ...item,
+        icon: serviceIcons[item.icon],
+      })),
+    [copy.items],
+  );
+
+  const maxOffset = Math.max(0, servicesWithIcons.length - VISIBLE_DESKTOP);
   const [offset, setOffset] = useState(0);
 
   const goPrev = useCallback(() => setOffset((o) => Math.max(0, o - 1)), []);
@@ -123,46 +92,39 @@ export function HomeServices() {
   return (
     <section
       className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20"
-      aria-label="Services"
+      aria-label={copy.sectionAriaLabel}
     >
       <ContentContainer>
         <div className="mb-14 grid items-end gap-10 md:grid-cols-2">
           <div>
             <p className="mb-3 font-mono text-sm font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-              What we do
+              {copy.eyebrow}
             </p>
             <h2 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-              Five services
+              {copy.heading.line1}
               <br />
-              One <span className="text-[var(--red)]">growth engine</span>
+              {copy.heading.line2Before}
+              <span className="text-[var(--red)]">{copy.heading.line2Emphasis}</span>
+              {copy.heading.line2After}
             </h2>
           </div>
-          <p className="max-w-md leading-relaxed text-[var(--text-muted)]">
-            Each service stands alone but together they form a connected system designed to help your
-            business launch, grow, and scale.
-          </p>
+          <p className="max-w-md leading-relaxed text-[var(--text-muted)]">{copy.description}</p>
         </div>
 
-        {/* Mobile & tablet: show all cards in a responsive grid */}
         <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
-          {services.map((service) => (
-            <ServiceCard key={service.n} {...service} />
+          {servicesWithIcons.map((service) => (
+            <ServiceCard key={service.n} {...service} learnMoreLabel={copy.learnMoreLabel} />
           ))}
         </div>
 
-        {/* Desktop: 3 cards visible, slide to reveal the rest */}
-        <div
-          className="hidden lg:block"
-          aria-roledescription="carousel"
-          aria-label="Service offerings"
-        >
+        <div className="hidden lg:block" aria-roledescription="carousel" aria-label={copy.carouselAriaLabel}>
           <div className="flex items-stretch gap-4">
             <button
               type="button"
               className={`${navButtonClass} self-center`}
               onClick={goPrev}
               disabled={offset === 0}
-              aria-label="Previous services"
+              aria-label={copy.prevAriaLabel}
             >
               <IconChevronLeft className="size-5" stroke={1.5} aria-hidden />
             </button>
@@ -171,17 +133,17 @@ export function HomeServices() {
               <div
                 className="flex transition-transform duration-300 ease-out motion-reduce:transition-none"
                 style={{
-                  width: `${(services.length / VISIBLE_DESKTOP) * 100}%`,
-                  transform: `translateX(-${(offset / services.length) * 100}%)`,
+                  width: `${(servicesWithIcons.length / VISIBLE_DESKTOP) * 100}%`,
+                  transform: `translateX(-${(offset / servicesWithIcons.length) * 100}%)`,
                 }}
               >
-                {services.map((service) => (
+                {servicesWithIcons.map((service) => (
                   <div
                     key={service.n}
                     className="box-border shrink-0 px-2"
-                    style={{ width: `${100 / services.length}%` }}
+                    style={{ width: `${100 / servicesWithIcons.length}%` }}
                   >
-                    <ServiceCard {...service} />
+                    <ServiceCard {...service} learnMoreLabel={copy.learnMoreLabel} />
                   </div>
                 ))}
               </div>
@@ -192,7 +154,7 @@ export function HomeServices() {
               className={`${navButtonClass} self-center`}
               onClick={goNext}
               disabled={offset >= maxOffset}
-              aria-label="Next services"
+              aria-label={copy.nextAriaLabel}
             >
               <IconChevronRight className="size-5" stroke={1.5} aria-hidden />
             </button>

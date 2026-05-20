@@ -3,29 +3,10 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { DIGITAL_MARKETING_PAGE } from "@/data/site";
+import { DmSectionHeading } from "./DmSectionHeading";
 
-const faqs = [
-  {
-    q: "How long until I see results from SEO?",
-    a: "Most teams see meaningful traction in 3–6 months depending on competition and site health. We set milestones at 30 / 60 / 90 days so progress is visible early.",
-  },
-  {
-    q: "Do I need to commit to a long contract?",
-    a: "Each tier has a minimum term (3, 6, or 12 months) so we can invest properly in compounding work. After that, plans renew month-to-month unless you prefer another term.",
-  },
-  {
-    q: "Is ad spend included in the retainer?",
-    a: "Retainers cover strategy, management, and reporting. Media spend is billed directly to your ad accounts so you keep ownership and full transparency.",
-  },
-  {
-    q: "Who owns the ad accounts and tracking data?",
-    a: "You do. We build and optimize in accounts you own, with shared access. All tracking and dashboards stay in your properties.",
-  },
-  {
-    q: "Can I just hire you for SEO, or just for ads?",
-    a: "Yes. Starter is built for a single-channel focus. We can expand scope anytime as priorities change.",
-  },
-] as const;
+const { faq } = DIGITAL_MARKETING_PAGE;
 
 export function DmFaq() {
   const baseId = useId();
@@ -34,12 +15,10 @@ export function DmFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <h2 className="mb-10 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          Before you reach out <span className="text-[var(--red)]">Common questions</span>
-        </h2>
+        <DmSectionHeading heading={faq.heading} />
 
         <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
-          {faqs.map(({ q, a }, i) => {
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;

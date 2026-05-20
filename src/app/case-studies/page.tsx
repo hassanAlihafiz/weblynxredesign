@@ -1,5 +1,6 @@
 import { Footer, Navbar } from "@/components/home";
 import { caseStudiesMetadata } from "@/data/metadata";
+import { CASE_STUDIES_PAGE } from "@/data/site";
 import { PageContainer } from "@/components/layout/PageContainer";
 import {
   CaseStudiesFinalCta,
@@ -16,9 +17,7 @@ export default function CaseStudiesPage() {
       <PageContainer className="flex min-h-screen flex-col">
         <Navbar />
         <main className="w-full flex-1">
-          <h2 className="sr-only">
-            Case studies: page header, filters, featured project, project grid, impact stats, and call to action
-          </h2>
+          <h2 className="sr-only">{CASE_STUDIES_PAGE.accessibility.pageSummary}</h2>
           <CaseStudiesPageHeader />
           <CaseStudiesMain />
           <CaseStudiesStats />

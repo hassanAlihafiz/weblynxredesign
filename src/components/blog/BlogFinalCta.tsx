@@ -1,16 +1,21 @@
 import { FinalCtaSection } from "@/components/CTA";
+import { BLOG_PAGE } from "@/data/site";
 
 export function BlogFinalCta() {
+  const { titleBefore, titleEmphasis, titleAfter, description, ctaLabel, ctaHref } = BLOG_PAGE.finalCta;
+
   return (
     <FinalCtaSection
       title={
         <>
-          Want us to build it for <span className="text-[var(--red)]">you</span> instead?
+          {titleBefore}
+          <span className="text-[var(--red)]">{titleEmphasis}</span>
+          {titleAfter}
         </>
       }
-      description="Skip the DIY. Hire the team that wrote the guide."
-      ctaLabel="Start a project"
-      ctaHref="/contact"
+      description={description}
+      ctaLabel={ctaLabel}
+      ctaHref={ctaHref}
     />
   );
 }

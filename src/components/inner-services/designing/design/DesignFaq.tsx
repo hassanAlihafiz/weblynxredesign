@@ -3,29 +3,10 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { DESIGN_PAGE } from "@/data/site";
+import { DesignSectionHeading } from "./DesignSectionHeading";
 
-const faqs = [
-  {
-    q: "How many design concepts will I see?",
-    a: "Typically 2–3 distinct directions in the Explore phase. We present mood boards and initial concepts, then refine the direction you choose. Essentials includes 2 rounds; Brand system and Full studio include 3.",
-  },
-  {
-    q: "How many rounds of revisions are included?",
-    a: "It depends on the engagement: Essentials includes 2 revision rounds, Brand system includes 3, and Full studio scopes revisions per milestone. We define what counts as a round in your proposal so there are no surprises.",
-  },
-  {
-    q: "Do I get the source files (Figma, Illustrator)?",
-    a: "Yes. Every project includes editable Figma files and exported assets in the formats you need. Brand guidelines document how to use everything. You own the work we create for you once final payment is complete.",
-  },
-  {
-    q: "Can you redesign my existing brand instead of starting fresh?",
-    a: "Absolutely. We audit what you have, keep what works, and evolve the rest. Many clients come to us for a refresh rather than a full rebrand we scope accordingly so you do not lose equity you have already built.",
-  },
-  {
-    q: "Will the design work across web, mobile, and print?",
-    a: "Yes. We design with application in mind responsive web, native mobile patterns, and print-ready exports where needed. Brand system and Full studio engagements explicitly include cross-channel templates and specs.",
-  },
-] as const;
+const { faq } = DESIGN_PAGE;
 
 export function DesignFaq() {
   const baseId = useId();
@@ -34,12 +15,10 @@ export function DesignFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <h2 className="mb-8 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          Things people ask <span className="text-[var(--red)]">before starting</span>
-        </h2>
+        <DesignSectionHeading heading={faq.heading} />
 
         <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev)]">
-          {faqs.map(({ q, a }, i) => {
+          {faq.items.map(({ q, a }, i) => {
             const isOpen = open === i;
             const panelId = `${baseId}-panel-${i}`;
             const buttonId = `${baseId}-btn-${i}`;

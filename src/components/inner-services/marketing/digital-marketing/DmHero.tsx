@@ -3,19 +3,22 @@ import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { Button } from "@/components/ui";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";
+import { DIGITAL_MARKETING_PAGE } from "@/data/site";
 
 const gradPrefix = "dm-hero";
+
+const { hero } = DIGITAL_MARKETING_PAGE;
 
 export function DmHero() {
   return (
     <>
       <ContentContainer className="pb-2 pt-8">
         <div className="font-mono text-xs text-[var(--text-dim)]">
-          <Link href="/services" className="transition-colors hover:text-[var(--text-muted)]">
-            Services
+          <Link href={hero.breadcrumb.parentHref} className="transition-colors hover:text-[var(--text-muted)]">
+            {hero.breadcrumb.parentLabel}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-[var(--text)]">Digital marketing</span>
+          <span className="text-[var(--text)]">{hero.breadcrumb.currentLabel}</span>
         </div>
       </ContentContainer>
 
@@ -30,21 +33,20 @@ export function DmHero() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-                Digital marketing
+                {hero.eyebrow}
               </p>
               <h1 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                Get found, get clicks, <span className="text-[var(--red)]">get customers</span>
+                {hero.heading.before}
+                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
+                {hero.heading.after}
               </h1>
-              <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">
-                SEO, paid ads, content, and social built around your business goals, measured by what actually moves the
-                needle.
-              </p>
+              <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>
               <div className="flex flex-wrap gap-3">
-                <Button href="#quote" size="md">
-                  Request a quote
+                <Button href={hero.primaryCta.href} size="md">
+                  {hero.primaryCta.label}
                 </Button>
-                <Button href="#results" variant="secondary" size="md">
-                  See results
+                <Button href={hero.secondaryCta.href} variant="secondary" size="md">
+                  {hero.secondaryCta.label}
                   <IconArrowDown className="size-4 shrink-0" stroke={1.5} aria-hidden />
                 </Button>
               </div>
@@ -52,8 +54,8 @@ export function DmHero() {
 
             <div className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-6">
               <div className="mb-5 flex items-center justify-between">
-                <div className="font-mono text-xs text-[var(--text-dim)]">ORGANIC GROWTH</div>
-                <div className="font-mono text-xs text-[var(--red)]">+320%</div>
+                <div className="font-mono text-xs text-[var(--text-dim)]">{hero.mockChart.topLeft}</div>
+                <div className="font-mono text-xs text-[var(--red)]">{hero.mockChart.topRight}</div>
               </div>
               <svg viewBox="0 0 280 140" className="w-full" aria-hidden>
                 <defs>
@@ -86,18 +88,12 @@ export function DmHero() {
                 <circle cx="280" cy="15" r="4" fill="var(--red)" />
               </svg>
               <div className="mt-5 grid grid-cols-3 gap-3 border-t border-[var(--border-subtle)] pt-5">
-                <div>
-                  <div className="text-lg font-semibold text-[var(--red)]">4.2×</div>
-                  <div className="font-mono text-[10px] text-[var(--text-dim)]">ROAS</div>
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-[var(--red)]">−47%</div>
-                  <div className="font-mono text-[10px] text-[var(--text-dim)]">CPL</div>
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-[var(--red)]">12k</div>
-                  <div className="font-mono text-[10px] text-[var(--text-dim)]">SIGNUPS</div>
-                </div>
+                {hero.mockChart.statColumns.map(({ value, label }) => (
+                  <div key={label}>
+                    <div className="text-lg font-semibold text-[var(--red)]">{value}</div>
+                    <div className="font-mono text-[10px] text-[var(--text-dim)]">{label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

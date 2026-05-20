@@ -1,97 +1,51 @@
 import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
+import { DIGITAL_MARKETING_PAGE } from "@/data/site";
+import { DmSectionHeading } from "./DmSectionHeading";
 
-const tiers = [
-  {
-    featured: false,
-    label: "Engagement 01",
-    title: "Starter",
-    timeline: "Monthly · 3-month minimum",
-    items: [
-      "1 channel focus",
-      "SEO or single ads platform",
-      "Monthly content (2 posts)",
-      "Monthly reporting",
-      "Bi-weekly calls",
-    ],
-  },
-  {
-    featured: true,
-    label: "Engagement 02",
-    title: "Growth",
-    timeline: "Monthly · 6-month minimum",
-    items: [
-      "Multi-channel (SEO + ads)",
-      "Weekly content",
-      "Email automation",
-      "A/B testing",
-      "Live dashboard",
-      "Weekly calls + Slack",
-    ],
-  },
-  {
-    featured: false,
-    label: "Engagement 03",
-    title: "Scale",
-    timeline: "Monthly · 12-month partnership",
-    items: [
-      "Full-channel strategy",
-      "Daily content output",
-      "Paid media management",
-      "CRO + funnel optimization",
-      "Dedicated growth lead",
-      "Embedded team feel",
-    ],
-  },
-] as const;
+const { engagement } = DIGITAL_MARKETING_PAGE;
 
 export function DmEngagement() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-      <h2 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-        How we work with you <span className="text-[var(--red)]">Engagement models</span>
-      </h2>
-      <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-        Marketing is ongoing. We work in monthly retainers choose the level that matches your stage.
-      </p>
-      <div className="grid gap-4 md:grid-cols-3">
-        {tiers.map(({ featured, label, title, timeline, items }) => (
-          <article
-            key={label}
-            className={`relative flex flex-col rounded-[var(--border-radius-md)] bg-[var(--bg-elev-2)] p-5 shadow-[var(--shadow-xs)] ${
-              featured
-                ? "border-2 border-[var(--red)] pt-6"
-                : "border border-[var(--border-subtle)]"
-            }`}
-          >
-            {featured ? (
-              <span className="absolute -top-3 left-5 rounded-md bg-[var(--red)] px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-wider text-[var(--text)]">
-                Most common
-              </span>
-            ) : null}
-            <p className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
-              {label}
-            </p>
-            <h3 className="mb-2 text-xl font-medium text-[var(--text)]">{title}</h3>
-            <p className="mb-5 text-xs text-[var(--text-muted)]">{timeline}</p>
-            <ul className="mb-6 list-none space-y-2 border-t border-[var(--border-subtle)] pt-4 text-sm leading-relaxed text-[var(--text-muted)]">
-              {items.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-            <Link
-              href="#quote"
-              className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
+        <DmSectionHeading heading={engagement.heading} className="mb-3" />
+        <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{engagement.description}</p>
+        <div className="grid gap-4 md:grid-cols-3">
+          {engagement.tiers.map(({ featured, label, title, timeline, items }) => (
+            <article
+              key={label}
+              className={`relative flex flex-col rounded-[var(--border-radius-md)] bg-[var(--bg-elev-2)] p-5 shadow-[var(--shadow-xs)] ${
+                featured ? "border-2 border-[var(--red)] pt-6" : "border border-[var(--border-subtle)]"
+              }`}
             >
-              Request a quote
-              <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
-            </Link>
-          </article>
-        ))}
-      </div>
-    </ContentContainer>
+              {featured ? (
+                <span className="absolute -top-3 left-5 rounded-md bg-[var(--red)] px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-wider text-[var(--text)]">
+                  {engagement.featuredTierBadge}
+                </span>
+              ) : null}
+              <p className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+                {label}
+              </p>
+              <h3 className="mb-2 text-xl font-medium text-[var(--text)]">{title}</h3>
+              <p className="mb-5 text-xs text-[var(--text-muted)]">{timeline}</p>
+              <ul className="mb-6 list-none space-y-2 border-t border-[var(--border-subtle)] pt-4 text-sm leading-relaxed text-[var(--text-muted)]">
+                {items.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+              <Link
+                href={engagement.ctaHref}
+                className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-[var(--red)] transition-colors hover:text-[var(--red-bright)]"
+              >
+                {engagement.ctaLabel}
+                <IconArrowRight className="size-3.5 shrink-0" stroke={1.5} aria-hidden />
+              </Link>
+            </article>
+          ))}
+        </div>
+      </ContentContainer>
     </section>
   );
 }
