@@ -94,9 +94,9 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
       label: "Digital Marketing",
       href: "/digital-marketing",
       items: [
-        { label: "SEO & content", href: "/digital-marketing" },
-        { label: "Google & Meta ads", href: "/digital-marketing" },
-        { label: "Social media marketing", href: "/digital-marketing" },
+        { label: "Social media marketing", href: "/social-media-marketing" },
+        { label: "Search engine marketing", href: "/search-engine-marketing" },
+        { label: "Search engine optimization", href: "/search-engine-optimization" },
       ],
     },
     {
@@ -337,4 +337,28 @@ export {
 } from "./inner-seervices/app/services/cross-platform-app-development";
 export { AI_DEVELOPMENT_PAGE, type AiDevCapabilitiesIconId, type AiDevHeading, type AiDevIncludedIconId, } from "./inner-seervices/artificial-intelligence/ai-development";
 export { DIGITAL_MARKETING_PAGE, type DmChannelIconId, type DmHeading, type DmIncludedIconId, } from "./inner-seervices/digital-markiting/digital-marketing";
+export { 
+  SOCIAL_MEDIA_MARKETING_PAGE, 
+  type SmmContentTypeIconId, 
+  type SmmDeliverableIconId, 
+  type SmmHeading, 
+  type SmmPlatformIconId, 
+  type SmmRelatedIconId, 
+} from "./inner-seervices/digital-markiting/services/social-media-marketing";
+export {
+  SEARCH_ENGINE_MARKETING_PAGE,
+  type SemCampaignTypeIconId,
+  type SemDeliverableIconId,
+  type SemHeading,
+  type SemNetworkIconId,
+  type SemRelatedIconId,
+} from "./inner-seervices/digital-markiting/services/search-engine-marketing";
+export {
+  SEARCH_ENGINE_OPTIMIZATION_PAGE,
+  type SeoDeliverableIconId,
+  type SeoHeading,
+  type SeoPillarIconId,
+  type SeoRelatedIconId,
+  type SeoSpecializationIconId,
+} from "./inner-seervices/digital-markiting/services/search-engine-optimization";
 export { DESIGN_PAGE, type DesignDeliverableIconId, type DesignDisciplineIconId, type DesignHeading } from "./inner-seervices/designing/design";

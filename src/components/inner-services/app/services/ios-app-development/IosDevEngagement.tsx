@@ -9,7 +9,9 @@ export function IosDevEngagement() {
     <section id={engagement.sectionId} className="w-full border-t border-[var(--border)] py-11 sm:py-[2.75rem]">
       <ContentContainer>
         <h2 className="mb-1.5 text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-          {engagement.title}
+          {engagement.heading.before}
+          <span className="text-[var(--red)]">{engagement.heading.emphasis}</span>
+          {engagement.heading.after}
         </h2>
         <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{engagement.description}</p>
 

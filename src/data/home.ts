@@ -72,7 +72,6 @@ export const HOME_PAGE = {
   services: {
     sectionAriaLabel: "Services",
     carouselAriaLabel: "Service offerings",
-    eyebrow: "What we do",
     heading: {
       line1: "Five services",
       line2Before: "One ",

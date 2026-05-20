@@ -33,7 +33,6 @@ export const DIGITAL_MARKETING_PAGE = {
       parentHref: "/services",
       currentLabel: "Digital marketing",
     },
-    eyebrow: "Digital marketing",
     heading: {
       before: "Get found, get clicks, ",
       emphasis: "get customers",
@@ -218,7 +217,6 @@ export const DIGITAL_MARKETING_PAGE = {
 
   results: {
     sectionId: "results",
-    eyebrow: "Recent results",
     heading: "What growth looks like",
   },
 
