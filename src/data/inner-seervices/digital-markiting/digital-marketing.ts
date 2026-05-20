@@ -30,7 +30,7 @@ export const DIGITAL_MARKETING_PAGE = {
   hero: {
     breadcrumb: {
       parentLabel: "Services",
-      parentHref: "/services",
+      parentHref: "/service",
       currentLabel: "Digital marketing",
     },
     heading: {

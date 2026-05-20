@@ -29,7 +29,7 @@ export type CrossPlatformRelatedIconId = "brand-apple" | "brand-android";
 export const CROSS_PLATFORM_APP_DEV_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "App Development", href: "/app-development" },
       { label: "Cross-Platform" },
     ] as const,

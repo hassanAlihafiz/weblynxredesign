@@ -40,7 +40,7 @@ export type SmmRelatedIconId = "target-arrow" | "search" | "palette";
 export const SOCIAL_MEDIA_MARKETING_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "Digital Marketing", href: "/digital-marketing" },
       { label: "Social Media Marketing" },
     ] as const,

@@ -1,4 +1,4 @@
-import { IconArrowDown, IconSearch } from "@tabler/icons-react";
+import { IconArrowDown } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HeroGridBackground } from "@/components/layout/HeroGridBackground";

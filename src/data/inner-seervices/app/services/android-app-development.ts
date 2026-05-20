@@ -24,7 +24,7 @@ export type AndroidAppExploreIconId = "brand-apple" | "devices";
 export const ANDROID_APP_DEV_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "App Development", href: "/app-development" },
       { label: "Android" },
     ] as const,

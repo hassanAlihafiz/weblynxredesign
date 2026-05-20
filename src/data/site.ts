@@ -23,10 +23,10 @@ export const SITE = {
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 export const NAV_ITEMS = [
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/service" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -45,7 +45,7 @@ export const SERVICES_MEGA_MENU_INTRO = {
   title: "Built to ship",
   description:
     "Future-ready web, mobile, AI, and brand work under one roof. Custom products for founders who need speed, clarity, and results that scale.",
-  href: "/services",
+  href: "/service",
 } as const;
 
 /** Desktop mega-menu columns (3 service columns + intro rendered separately). */

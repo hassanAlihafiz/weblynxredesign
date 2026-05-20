@@ -34,7 +34,7 @@ export type SemRelatedIconId = "search" | "message-2-share" | "layout";
 export const SEARCH_ENGINE_MARKETING_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "Digital Marketing", href: "/digital-marketing" },
       { label: "Search Engine Marketing" },
     ] as const,

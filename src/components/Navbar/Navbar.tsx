@@ -35,9 +35,9 @@ function isServicePage(pathname: string) {
 
 function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
-  if (href === "/services")
-    return pathname === "/services" || pathname.startsWith("/services/") || isServicePage(pathname);
-  if (href === "/blog") return pathname === "/blog" || pathname.startsWith("/blog/");
+  if (href === "/service")
+    return pathname === "/service" || pathname.startsWith("/service/") || isServicePage(pathname);
+  if (href === "/blogs") return pathname === "/blogs" || pathname.startsWith("/blogs/");
   if (href === "/case-studies")
     return pathname === "/case-studies" || pathname.startsWith("/case-studies/");
   return pathname === href;
@@ -257,8 +257,8 @@ export function HomeNav() {
                 }}
               >
                 <Link
-                  href="/services"
-                  className={`block px-3 py-1.5 ${navLinkClass(isNavActive(pathname, "/services"))}`}
+                  href="/service"
+                  className={`block px-3 py-1.5 ${navLinkClass(isNavActive(pathname, "/service"))}`}
                   aria-haspopup="true"
                   aria-expanded={servicesMenuOpen}
                   onClick={closeServicesMenu}

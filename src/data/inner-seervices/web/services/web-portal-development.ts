@@ -35,7 +35,7 @@ export type WebPortalRelatedIconId = "cloud" | "shopping-bag" | "devices";
 export const WEB_PORTAL_DEV_PAGE = {
   hero: {
     breadcrumb: [
-      { label: "Services", href: "/services" },
+      { label: "Services", href: "/service" },
       { label: "Web Development", href: "/web-development" },
       { label: "Web Portal Development" },
     ] as const,
