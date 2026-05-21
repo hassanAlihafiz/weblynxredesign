@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
-import { WebPortalDevSectionHeading } from "./WebPortalDevSectionHeading";
 
 const { process } = WEB_PORTAL_DEV_PAGE;
 
@@ -8,7 +7,9 @@ export function WebPortalDevProcess() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <WebPortalDevSectionHeading heading={process.heading} className="mb-1.5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          From kickoff to launch in <span className="text-[var(--red)]">6 phases</span>
+        </h1>
         <p className="mb-5 max-w-2xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {process.description}
         </p>

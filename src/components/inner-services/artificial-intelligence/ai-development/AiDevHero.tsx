@@ -28,9 +28,7 @@ export function AiDevHero() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-8">
             <div className="min-w-0">
               <h1 className="mb-4 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                {hero.heading.before}
-                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
-                {hero.heading.after}
+                Build with <span className="text-[var(--red)]">AI</span> without the hype
               </h1>
               <p className="mb-6 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>
               <div className="flex flex-wrap gap-3">

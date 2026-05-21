@@ -16,11 +16,6 @@ export const APP_DEVELOPMENT_PAGE = {
       parentHref: "/service",
       currentLabel: "App development",
     },
-    heading: {
-      before: "Mobile apps that ship fast and ",
-      emphasis: "feel native",
-      after: ".",
-    } satisfies AppDevHeading,
     description:
       "Cross-platform iOS and Android apps built with React Native one codebase, two stores, full native performance.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -28,11 +23,6 @@ export const APP_DEVELOPMENT_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies AppDevHeading,
     bullets: [
       "You have a startup idea that needs a mobile-first MVP",
       "Your web product needs a companion iOS & Android app",
@@ -43,11 +33,6 @@ export const APP_DEVELOPMENT_PAGE = {
 
   platforms: {
     sectionId: "platforms",
-    heading: {
-      before: "One build ",
-      emphasis: "Three stores",
-      after: "",
-    } satisfies AppDevHeading,
     items: [
       {
         title: "iOS",
@@ -71,11 +56,6 @@ export const APP_DEVELOPMENT_PAGE = {
   },
 
   included: {
-    heading: {
-      before: "Every app project includes ",
-      emphasis: "everything",
-      after: "",
-    } satisfies AppDevHeading,
     description: "Everything you need to launch on both stores.",
     items: [
       {
@@ -112,19 +92,9 @@ export const APP_DEVELOPMENT_PAGE = {
   },
 
   tech: {
-    heading: {
-      before: "Modern tools we ",
-      emphasis: "ship with",
-      after: "",
-    } satisfies AppDevHeading,
   },
 
   process: {
-    heading: {
-      before: "From idea to ",
-      emphasis: "App Store",
-      after: " in 5 steps",
-    } satisfies AppDevHeading,
     steps: [
       { week: "WEEK 1", num: "01", title: "Discovery", detail: "Scope, features, user flow" },
       { week: "WEEKS 2–3", num: "02", title: "Design", detail: "UI/UX, prototype, sign-off" },
@@ -136,11 +106,6 @@ export const APP_DEVELOPMENT_PAGE = {
 
   engagement: {
     sectionId: "engagement",
-    heading: {
-      before: "Find the engagement that ",
-      emphasis: "fits",
-      after: "",
-    } satisfies AppDevHeading,
     description: "All packages include both iOS and Android. Custom quotes available for larger scopes.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote",
@@ -193,11 +158,6 @@ export const APP_DEVELOPMENT_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every app is different ",
-      emphasis: "So is every quote",
-      after: "",
-    } satisfies AppDevHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days scope, milestones, timeline, and a fixed all-in price.",
     steps: [
@@ -208,11 +168,6 @@ export const APP_DEVELOPMENT_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things founders ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies AppDevHeading,
     items: [
       {
         q: "React Native vs native which should I choose?",

@@ -6,27 +6,22 @@ const FooterNewsletter = dynamic(
   () => import("@/components/Footer/FooterNewsletter").then((m) => ({ default: m.FooterNewsletter })),
 );
 import { SITE, SOCIAL_LINKS } from "@/data/site";
-import { IconSparkles } from "@tabler/icons-react";
 import Link from "next/link";
 
-function getCopyrightYear(): number {
-  return new Date().getFullYear();
-}
+const COPYRIGHT_YEAR = 2024;
 
 const footerLinkClass =
   "text-[var(--text-muted)] transition-colors hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]";
 
-const footerColumnHeadingClass = "text-meta mb-4 text-[var(--text-muted)]";
+const footerColumnHeadingClass = "text-meta mb-2.5 text-[var(--text-muted)]";
 
 export function HomeFooter() {
-  const year = getCopyrightYear();
-
   return (
-    <footer className="relative w-full overflow-hidden border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
+    <footer className="relative w-full overflow-hidden border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-6 shadow-[var(--shadow-inset-soft)] sm:py-7">
       <ContentContainer>
-        <div className="mb-14 grid gap-x-12 gap-y-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
+        <div className="mb-6 grid gap-x-10 gap-y-6 md:grid-cols-[2fr_1fr_1fr_1fr]">
           <div>
-            <Link href="/" className="-mb-5 -mt-6 -ml-4 inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]">
+            <Link href="/" className="-mb-3 -mt-4 -ml-4 inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]">
               <SiteLogo />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-[var(--text-muted)]">
@@ -36,7 +31,7 @@ export function HomeFooter() {
 
           <div>
             <div className={footerColumnHeadingClass}>Services</div>
-            <ul className="space-y-2 text-base">
+            <ul className="space-y-1.5 text-sm">
               <li>
                 <Link href="/web-development" className={footerLinkClass}>
                   Web development
@@ -67,7 +62,7 @@ export function HomeFooter() {
 
           <div>
             <div className={footerColumnHeadingClass}>Company</div>
-            <ul className="space-y-2 text-base">
+            <ul className="space-y-1.5 text-sm">
               <li>
                 <Link href="/" className={footerLinkClass}>
                   Home
@@ -98,7 +93,7 @@ export function HomeFooter() {
 
           <div>
             <div className={footerColumnHeadingClass}>Connect</div>
-            <ul className="space-y-2 text-base">
+            <ul className="space-y-1.5 text-sm">
               {SOCIAL_LINKS.map(({ label, href, hoverClass }) => (
                 <li key={label}>
                   <a
@@ -118,13 +113,9 @@ export function HomeFooter() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border-subtle)] pt-4">
+        <div className="border-t border-[var(--border-subtle)] pt-3">
           <div className="text-meta">
-            © {year} {SITE.name} · {SITE.locations.footer}
-          </div>
-          <div className="text-meta inline-flex items-center gap-1">
-            Made with intent
-            <IconSparkles className="size-3 shrink-0" stroke={1.5} aria-hidden />
+            © {COPYRIGHT_YEAR} {SITE.name}
           </div>
         </div>
       </ContentContainer>

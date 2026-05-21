@@ -10,9 +10,7 @@ export function SemWhoFor() {
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-9 sm:py-10">
       <ContentContainer>
         <h2 className="mb-5 max-w-3xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {whoFor.heading.before}
-          <span className="text-[var(--red)]">{whoFor.heading.emphasis}</span>
-          {whoFor.heading.after}
+          You probably need <span className="text-[var(--red)]">SEM</span> if...
         </h2>
 
         <div className="grid gap-2.5 sm:grid-cols-2">

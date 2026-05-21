@@ -2,7 +2,6 @@ import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DIGITAL_MARKETING_PAGE } from "@/data/site";
-import { DmSectionHeading } from "./DmSectionHeading";
 
 const { engagement } = DIGITAL_MARKETING_PAGE;
 
@@ -10,7 +9,9 @@ export function DmEngagement() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <DmSectionHeading heading={engagement.heading} className="mb-3" />
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          How we work with you <span className="text-[var(--red)]">Engagement models</span>
+        </h2>
         <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{engagement.description}</p>
         <div className="grid gap-4 md:grid-cols-3">
           {engagement.tiers.map(({ featured, label, title, timeline, items }) => (

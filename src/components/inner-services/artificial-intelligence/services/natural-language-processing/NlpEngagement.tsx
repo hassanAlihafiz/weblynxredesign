@@ -8,10 +8,8 @@ export function NlpEngagement() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-11 shadow-[var(--shadow-inset-soft)] sm:py-12">
       <ContentContainer>
-        <h2 className="mb-1.5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {engagementModels.heading.before}
-          <span className="text-[var(--red)]">{engagementModels.heading.emphasis}</span>
-          {engagementModels.heading.after}
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Find the <span className="text-[var(--red)]">engagement</span> that fits
         </h2>
         <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{engagementModels.description}</p>
 

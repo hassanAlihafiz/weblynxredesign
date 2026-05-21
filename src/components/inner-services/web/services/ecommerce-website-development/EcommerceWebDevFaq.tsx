@@ -4,7 +4,6 @@ import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ECOMMERCE_WEB_DEV_PAGE } from "@/data/site";
-import { EcommerceWebDevSectionHeading } from "./EcommerceWebDevSectionHeading";
 
 const { faq } = ECOMMERCE_WEB_DEV_PAGE;
 
@@ -17,7 +16,9 @@ export function EcommerceWebDevFaq() {
   return (
     <section className="w-full border-t border-[var(--border)] bg-[var(--bg-elev)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <EcommerceWebDevSectionHeading heading={faq.heading} />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Things ecom founders ask <span className="text-[var(--red)]">before starting</span>
+        </h1>
 
         <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--color-background-primary)]">
           {items.map(({ q, a }, i) => {

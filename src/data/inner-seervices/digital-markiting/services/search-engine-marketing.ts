@@ -38,11 +38,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
       { label: "Digital Marketing", href: "/digital-marketing" },
       { label: "Search Engine Marketing" },
     ] as const,
-    heading: {
-      before: "Buy clicks ",
-      emphasis: "get customers",
-      after: " measure everything",
-    } satisfies SemHeading,
     description:
       "Google Ads, Bing Ads, and shopping campaigns engineered for one thing return on ad spend. Every keyword, every dollar, fully accountable.",
     primaryCta: { label: "Request a quote", href: "/contact" },
@@ -55,11 +50,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably need ",
-      emphasis: "SEM",
-      after: " if...",
-    },
     bullets: [
       "You need leads or sales now not 6 months from now",
       "You're spending on ads but the ROI is unclear or negative",
@@ -76,11 +66,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   networks: {
-    heading: {
-      before: "Three networks ",
-      emphasis: "hundreds of campaign types",
-      after: "",
-    },
     description:
       "We focus on the networks where your buyers actually search and skip the ones that don't move the needle.",
     items: [
@@ -109,11 +94,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   campaignTypes: {
-    heading: {
-      before: "The right ",
-      emphasis: "campaign",
-      after: " for the right moment",
-    },
     description:
       "We pick campaign types based on where your buyer is in the journey not what's trendy.",
     items: [
@@ -151,11 +131,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every ",
-      emphasis: "SEM",
-      after: " engagement includes",
-    },
     description:
       'A full operation strategy, build, optimization, and reporting. Not just "set it and forget it."',
     items: [
@@ -172,11 +147,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   toolkit: {
-    heading: {
-      before: "Tools we work with ",
-      emphasis: "tools",
-      after: " we use",
-    },
     tools: [
       "Google Ads",
       "Microsoft Ads",
@@ -193,11 +163,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   howItWorks: {
-    heading: {
-      before: "From ",
-      emphasis: "kickoff",
-      after: " to first click in 14 days",
-    },
     description: "We move fast most SEM accounts launch within 2 weeks, then optimize continuously.",
     steps: [
       { phaseLabel: "Days 1–3", num: "01", title: "Audit", body: "Account review & goal setting" },
@@ -209,11 +174,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   engagementModels: {
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement",
-      after: " that fits",
-    },
     description: "SEM is a monthly retainer. Pick the level based on your spend, networks, and ambition.",
     ctaLabel: "Request a quote →",
     ctaHref: "/contact",
@@ -265,11 +225,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every ",
-      emphasis: "business",
-      after: " is different so is every quote",
-    },
     introBefore:
       "After a 30-minute discovery call, we send a detailed proposal within 3 business days including scope, networks, KPIs, and management fee. ",
     introEmphasis: "Ad spend is paid by you directly to Google / Microsoft",
@@ -294,11 +249,6 @@ export const SEARCH_ENGINE_MARKETING_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things ",
-      emphasis: "SEM clients",
-      after: " ask before starting",
-    },
     items: [
       {
         q: "What's the difference between SEM and SEO?",

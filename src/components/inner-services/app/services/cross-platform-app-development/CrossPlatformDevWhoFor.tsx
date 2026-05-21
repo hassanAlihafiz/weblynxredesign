@@ -2,7 +2,6 @@ import { IconAlertTriangle, IconArrowRight, IconCheck } from "@tabler/icons-reac
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { CROSS_PLATFORM_APP_DEV_PAGE } from "@/data/site";
-import { CrossPlatformDevSectionHeading } from "./CrossPlatformDevSectionHeading";
 
 const { whoFor } = CROSS_PLATFORM_APP_DEV_PAGE;
 
@@ -10,7 +9,9 @@ export function CrossPlatformDevWhoFor() {
   return (
     <section className="w-full border-t border-[var(--border)] bg-[#141414] py-9 sm:py-[2.25rem]">
       <ContentContainer>
-        <CrossPlatformDevSectionHeading heading={whoFor.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          You probably want <span className="text-[var(--red)]">cross-platform</span> if...
+        </h1>
 
         <div className="grid gap-2.5 sm:grid-cols-2">
           {whoFor.reasons.map((text) => (

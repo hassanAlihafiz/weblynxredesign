@@ -7,11 +7,9 @@ export function GenAiProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11">
       <ContentContainer>
-        <h2 className="mb-1.5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {howItWorks.heading.before}
-          <span className="text-[var(--red)]">{howItWorks.heading.emphasis}</span>
-          {howItWorks.heading.after}
-        </h2>
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          From idea to live tool in <span className="text-[var(--red)]">5 phases</span>
+        </h2> 
         <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{howItWorks.description}</p>
 
         <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">

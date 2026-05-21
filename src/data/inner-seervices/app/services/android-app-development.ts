@@ -28,11 +28,6 @@ export const ANDROID_APP_DEV_PAGE = {
       { label: "App Development", href: "/app-development" },
       { label: "Android" },
     ] as const,
-    heading: {
-      before: "Native ",
-      emphasis: "Android apps ",
-      after: "built for scale",
-    } satisfies AndroidAppDevHeading,
     description:
       "From Kotlin and Jetpack Compose to Material Design 3 we build Android apps that feel native, perform fast, and ship straight to the Play Store.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -40,11 +35,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably need ",
-      emphasis: "native Android",
-      after: " if...",
-    } satisfies AndroidAppDevHeading,
     reasons: [
       "Your audience is primarily on Android (emerging markets, Asia, EU)",
       "You need deep hardware access Bluetooth, NFC, fingerprint, sensors",
@@ -61,11 +51,6 @@ export const ANDROID_APP_DEV_PAGE = {
 
   platforms: {
     sectionId: "platforms",
-    heading: {
-      before: "One Android codebase ",
-      emphasis: "Every screen",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     description: "Modern Android lets you target every device from one Kotlin codebase.",
     iconDefaults: {
       iconClass: "text-[var(--red)]",
@@ -95,11 +80,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every Android project includes ",
-      emphasis: "everything",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     description: "Production-ready Android apps, not just APK files.",
     items: [
       {
@@ -136,11 +116,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Modern ",
-      emphasis: "Android tools",
-      after: " we ship with",
-    } satisfies AndroidAppDevHeading,
     labels: [
       "Kotlin",
       "Jetpack Compose",
@@ -156,11 +131,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "From kickoff to Play Store in ",
-      emphasis: "5 steps",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     description: "A clear rhythm with internal testing checkpoints built in.",
     steps: [
       { week: "Week 1", num: "01", title: "Discovery", detail: "Scope, features, target devices" },
@@ -173,11 +143,6 @@ export const ANDROID_APP_DEV_PAGE = {
 
   engagement: {
     sectionId: "engagement",
-    heading: {
-      before: "Find the engagement that ",
-      emphasis: "fits",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     description: "Every Android project is quoted based on scope. Three engagement models cover most cases.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote →",
@@ -230,11 +195,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every Android project is different ",
-      emphasis: "So is every quote",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope, milestones, target devices, and a fixed all-in price. Google Play developer fee ($25 one-time) is separate.",
     steps: [
@@ -245,11 +205,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   alsoExplore: {
-    heading: {
-      before: "Also explore ",
-      emphasis: "other services",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     linkDefaults: {
       iconClass: "text-[var(--red)]",
       linkClass: "text-[var(--red)]",
@@ -273,11 +228,6 @@ export const ANDROID_APP_DEV_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things Android clients ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies AndroidAppDevHeading,
     items: [
       {
         q: "Should I go native Android or use cross-platform?",

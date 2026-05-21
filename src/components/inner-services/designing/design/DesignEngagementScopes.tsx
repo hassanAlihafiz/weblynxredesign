@@ -2,7 +2,6 @@ import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DESIGN_PAGE } from "@/data/site";
-import { DesignSectionHeading } from "./DesignSectionHeading";
 
 const { engagements } = DESIGN_PAGE;
 
@@ -13,7 +12,9 @@ export function DesignEngagementScopes() {
       className="scroll-mt-24 w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
       <ContentContainer>
-        <DesignSectionHeading heading={engagements.heading} className="mb-3" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Find the <span className="text-[var(--red)]">engagement</span> that fits
+        </h1>
         <p className="mb-8 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{engagements.description}</p>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {engagements.tiers.map(({ featured, label, title, timeline, items }) => (

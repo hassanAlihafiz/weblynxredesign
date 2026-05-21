@@ -15,9 +15,7 @@ export function SmmFaq() {
     <section className="w-full bg-[var(--bg-elev)] py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {faq.heading.before}
-          <span className="text-[var(--red)]">{faq.heading.emphasis}</span>
-          {faq.heading.after}
+          Things founders <span className="text-[var(--red)]">ask before</span> starting
         </h2>
 
         <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--color-background-primary)]">

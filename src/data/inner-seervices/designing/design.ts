@@ -26,11 +26,6 @@ export const DESIGN_PAGE = {
       parentHref: "/service",
       currentLabel: "Design",
     },
-    heading: {
-      before: "Brand, product, and identity ",
-      emphasis: "designed to stand out",
-      after: "",
-    } satisfies DesignHeading,
     description:
       "From a single logo to a full identity system, we craft design that's beautiful, on-brand, and built to work not just to win awards.",
     primaryCta: { label: "Request a quote", href: "/contact" },
@@ -38,11 +33,6 @@ export const DESIGN_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies DesignHeading,
     bullets: [
       "You're launching a new brand and need a full identity",
       "Your existing brand feels outdated or off-target",
@@ -52,11 +42,6 @@ export const DESIGN_PAGE = {
   },
 
   disciplines: {
-    heading: {
-      before: "What we design ",
-      emphasis: "One studio",
-      after: "",
-    } satisfies DesignHeading,
     items: [
       {
         title: "Brand identity",
@@ -82,11 +67,6 @@ export const DESIGN_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every project includes ",
-      emphasis: "everything",
-      after: "",
-    } satisfies DesignHeading,
     items: [
       {
         title: "Discovery & research",
@@ -121,20 +101,7 @@ export const DESIGN_PAGE = {
     ] as const,
   },
 
-  stack: {
-    heading: {
-      before: "Modern ",
-      emphasis: "tools",
-      after: " we ship with",
-    } satisfies DesignHeading,
-  },
-
   process: {
-    heading: {
-      before: "From blank page to ",
-      emphasis: "brand book",
-      after: " in 5 steps",
-    } satisfies DesignHeading,
     steps: [
       { week: "Week 1", num: "01", title: "Discover", body: "Research, audit, mood boards." },
       { week: "Week 2", num: "02", title: "Explore", body: "2–3 directions, present concepts." },
@@ -146,11 +113,6 @@ export const DESIGN_PAGE = {
 
   engagements: {
     sectionId: "engagements",
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement",
-      after: " that fits",
-    } satisfies DesignHeading,
     description: "Every brand is different. Here are the three engagement models we typically work in.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote",
@@ -200,11 +162,6 @@ export const DESIGN_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every project is different ",
-      emphasis: "So is every quote",
-      after: "",
-    } satisfies DesignHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope, milestones, timeline, and a fixed all-in price. No hourly billing. No surprise add-ons.",
     steps: [
@@ -215,11 +172,6 @@ export const DESIGN_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things people ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies DesignHeading,
     items: [
       {
         q: "How many design concepts will I see?",

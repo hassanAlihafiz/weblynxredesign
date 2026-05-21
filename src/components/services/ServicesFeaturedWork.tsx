@@ -11,8 +11,8 @@ export function ServicesFeaturedWork() {
       <ContentContainer>
         <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-              {featuredWork.heading}
+            <h2 className="max-w-2xl font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+              Work across all <span className="text-[var(--red)]">four services</span>
             </h2>
           </div>
           <Link

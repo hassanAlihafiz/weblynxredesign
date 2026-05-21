@@ -97,12 +97,8 @@ export function HomeServices() {
       <ContentContainer>
         <div className="mb-14 grid items-end gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-              {copy.heading.line1}
-              <br />
-              {copy.heading.line2Before}
-              <span className="text-[var(--red)]">{copy.heading.line2Emphasis}</span>
-              {copy.heading.line2After}
+            <h2 className="text-balance font-sans text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+              Five services one <span className="text-[var(--red)]">growth engine</span>
             </h2>
           </div>
           <p className="max-w-md leading-relaxed text-[var(--text-muted)]">{copy.description}</p>

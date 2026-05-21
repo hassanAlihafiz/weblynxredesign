@@ -9,7 +9,6 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { AI_DEVELOPMENT_PAGE } from "@/data/site";
-import { AiDevSectionHeading } from "./AiDevSectionHeading";
 
 const capabilityIcons = {
   messages: IconMessages,
@@ -37,7 +36,9 @@ export function AiDevCapabilities() {
       className="scroll-mt-24 w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
       <ContentContainer>
-        <AiDevSectionHeading heading={capabilities.heading} className="mb-3" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Six AI capabilities <span className="text-[var(--red)]">One integrated stack</span>
+        </h1>
         <p className="mb-8 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{capabilities.description}</p>
         <div className="grid gap-x-12 gap-y-4 md:grid-cols-3">
           {itemsWithIcons.map(({ title, body, icon: Icon }) => (

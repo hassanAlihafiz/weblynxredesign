@@ -32,11 +32,6 @@ export const AI_DEVELOPMENT_PAGE = {
       parentHref: "/service",
       currentLabel: "AI Development",
     },
-    heading: {
-      before: "Build with ",
-      emphasis: "AI",
-      after: " without the hype",
-    } satisfies AiDevHeading,
     description:
       "Custom AI features, chatbots, RAG systems, and automation built on the latest LLMs. We ship AI that solves real problems, not demos.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -44,11 +39,6 @@ export const AI_DEVELOPMENT_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies AiDevHeading,
     bullets: [
       "You want to add AI features (chat, search, automation) to your product",
       "You need a custom chatbot trained on your company's data",
@@ -59,11 +49,6 @@ export const AI_DEVELOPMENT_PAGE = {
 
   capabilities: {
     sectionId: "capabilities",
-    heading: {
-      before: "Six AI capabilities ",
-      emphasis: "One integrated stack",
-      after: "",
-    } satisfies AiDevHeading,
     description: "Each capability stands alone or combines with the rest to power a full AI product.",
     items: [
       {
@@ -100,11 +85,6 @@ export const AI_DEVELOPMENT_PAGE = {
   },
 
   included: {
-    heading: {
-      before: "Every AI project ",
-      emphasis: "includes",
-      after: "",
-    } satisfies AiDevHeading,
     description: "Production-grade AI, not just an OpenAI wrapper.",
     items: [
       {
@@ -140,20 +120,7 @@ export const AI_DEVELOPMENT_PAGE = {
     ] as const,
   },
 
-  stack: {
-    heading: {
-      before: "Models & tools ",
-      emphasis: "we build with",
-      after: "",
-    } satisfies AiDevHeading,
-  },
-
   process: {
-    heading: {
-      before: "From idea to ",
-      emphasis: "production AI",
-      after: " in 5 steps",
-    } satisfies AiDevHeading,
     description: "AI projects need extra rigor we plan, prototype, and prove before we build.",
     steps: [
       { week: "Week 1", num: "01", title: "Discovery", body: "Map the use case, define success" },
@@ -166,11 +133,6 @@ export const AI_DEVELOPMENT_PAGE = {
 
   engagements: {
     sectionId: "engagements",
-    heading: {
-      before: "Find the engagement ",
-      emphasis: "that fits",
-      after: "",
-    } satisfies AiDevHeading,
     description: "Every AI project is quoted based on scope. Three engagement models cover most needs.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote",
@@ -221,11 +183,6 @@ export const AI_DEVELOPMENT_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every AI project is different ",
-      emphasis: "So is every quote",
-      after: "",
-    } satisfies AiDevHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope, milestones, success metrics, and a fixed all-in price. API costs are estimated separately so you have full transparency.",
     steps: [
@@ -248,11 +205,6 @@ export const AI_DEVELOPMENT_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things founders ask",
-      emphasis: " before starting",
-      after: "",
-    } satisfies AiDevHeading,
     items: [
       {
         q: "Which AI model should I use GPT, Claude, or Gemini?",

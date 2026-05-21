@@ -93,10 +93,22 @@ export const naturalLanguageProcessingMetadata = {
     "Build custom NLP pipelines for text classification, entity extraction, sentiment analysis, and language understanding. Production-grade models trained on your data, integrated with your systems, ready to scale.",
 } satisfies Metadata;
 
+export const aiAgentDevelopmentMetadata = {
+  title: "AI Agent Development Services | Autonomous Workflows - Weblynx",
+  description:
+    "Custom AI agents that plan, decide, and execute multi-step work across your tools. Production-grade autonomy with guardrails, audit trails, and human-in-the-loop.",
+} satisfies Metadata;
+
 export const designMetadata = {
   title: "Brand & UI Design Studio | Identity Systems – Weblynx",
   description:
     "Brand identity, UI/UX, and product design for startups and growing brands. We design systems that ship not just sit pretty in a PDF.",
+} satisfies Metadata;
+
+export const brandIdentityDesignMetadata = {
+  title: "Brand Identity Design Studio | Logo & Guidelines - Weblynx",
+  description:
+    "Complete brand identity systems with logo, color, typography, voice, and guidelines. Built for ambitious founders who want their brand to look like they mean it.",
 } satisfies Metadata;
 
 export const androidAppDevelopmentMetadata = {

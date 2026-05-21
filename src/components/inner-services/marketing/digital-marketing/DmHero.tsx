@@ -33,9 +33,7 @@ export function DmHero() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <h1 className="mb-6 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                {hero.heading.before}
-                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
-                {hero.heading.after}
+                Get found, get clicks, <span className="text-[var(--red)]">get customers</span>
               </h1>
               <p className="mb-8 max-w-md text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>
               <div className="flex flex-wrap gap-3">

@@ -8,9 +8,7 @@ export function SeoToolkit() {
     <section className="w-full border-t border-[#252525] py-9 sm:py-10">
       <ContentContainer>
         <h2 className="mb-5 max-w-3xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {toolkit.heading.before}
-          <span className="text-[var(--red)]">{toolkit.heading.emphasis}</span>
-          {toolkit.heading.after}
+          Tools we <span className="text-[var(--red)]">work with</span>
         </h2>
         <div className="flex flex-wrap gap-[7px]">
           {toolkit.tools.map((name) => (

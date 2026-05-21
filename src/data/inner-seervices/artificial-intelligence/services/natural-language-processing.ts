@@ -48,13 +48,8 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
       { label: "AI Development", href: "/artificial-intelligence" },
       { label: "Natural Language Processing" },
     ] as const,
-    heading: {
-      before: "Teach machines to ",
-      emphasis: "understand language",
-      after: " at scale",
-    } satisfies NlpHeading,
     description:
-      "Custom NLP systems that read, classify, extract, translate, and analyze text — turning unstructured language into structured business value.",
+      "Custom NLP systems that read, classify, extract, translate, and analyze text turning unstructured language into structured business value.",
     primaryCta: { label: "Request a quote", href: "/contact" },
     secondaryCta: { label: "See capabilities", href: "#capabilities" },
     stats: [
@@ -65,14 +60,9 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably need NLP if...",
-      emphasis: "NLP",
-      after: "",
-    } satisfies NlpHeading,
     bullets: [
       "You have thousands or millions of documents, tickets, or messages to analyze",
-      "You need to extract structured data from unstructured text — at scale",
+      "You need to extract structured data from unstructured text at scale",
       "You want to automate text-heavy operations (support, legal, research)",
       "You need consistent text analysis across multiple languages",
     ] as const,
@@ -88,12 +78,7 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
 
   capabilities: {
     sectionId: "capabilities",
-    heading: {
-      before: "Eight ",
-      emphasis: "NLP capabilities",
-      after: " in one pipeline",
-    } satisfies NlpHeading,
-    description: "Each capability stands alone — or combines with the rest into a complete text intelligence system.",
+    description: "Each capability stands alone or combines with the rest into a complete text intelligence system.",
     items: [
       {
         title: "Sentiment analysis",
@@ -134,19 +119,14 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
       },
       {
         title: "Intent detection",
-        body: "Understand what users want — request, complaint, lead, churn risk.",
+        body: "Understand what users want request, complaint, lead, churn risk.",
         icon: "target" as const,
       },
     ] as const,
   },
 
   industries: {
-    heading: {
-      before: "Real-world ",
-      emphasis: "NLP",
-      after: ", by industry",
-    } satisfies NlpHeading,
-    description: "NLP isn't theoretical — these are the production systems we ship for real businesses.",
+    description: "NLP isn't theoretical these are the production systems we ship for real businesses.",
     items: [
       {
         title: "Support & CX",
@@ -192,12 +172,7 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every ",
-      emphasis: "NLP",
-      after: " build includes",
-    } satisfies NlpHeading,
-    description: "Production-grade NLP infrastructure — not a Jupyter notebook prototype.",
+    description: "Production-grade NLP infrastructure not a Jupyter notebook prototype.",
     items: [
       { title: "Use-case mapping", body: "Define what to extract, classify, or analyze", icon: "target" as const },
       { title: "Data prep & cleaning", body: "Tokenization, normalization, deduplication", icon: "database" as const },
@@ -212,13 +187,8 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   languages: {
-    heading: {
-      before: "",
-      emphasis: "100+ languages",
-      after: ", production-grade quality",
-    } satisfies NlpHeading,
     description:
-      "Modern NLP models handle most major languages well — we benchmark accuracy per language during scoping.",
+      "Modern NLP models handle most major languages well we benchmark accuracy per language during scoping.",
     tiers: [
       {
         label: "Tier 1 · Near-perfect",
@@ -236,11 +206,6 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Tools we build with ",
-      emphasis: "NLP",
-      after: "",
-    } satisfies NlpHeading,
     tools: [
       "OpenAI GPT",
       "Anthropic Claude",
@@ -258,12 +223,7 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   howItWorks: {
-    heading: {
-      before: "From data to production in ",
-      emphasis: "5 phases",
-      after: "",
-    } satisfies NlpHeading,
-    description: "NLP needs rigor on data quality and accuracy testing — we get it right before scaling.",
+    description: "NLP needs rigor on data quality and accuracy testing we get it right before scaling.",
     steps: [
       { phaseLabel: "Week 1", num: "01", title: "Discovery", body: "Use case, data audit, target metrics" },
       { phaseLabel: "Week 2", num: "02", title: "Prototype", body: "Pipeline on sample, baseline accuracy" },
@@ -274,11 +234,6 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   engagementModels: {
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement",
-      after: " that fits",
-    } satisfies NlpHeading,
     description: "Every NLP project is quoted by scope, data size, and accuracy requirements.",
     ctaLabel: "Request a quote →",
     ctaHref: "/contact",
@@ -329,15 +284,10 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every ",
-      emphasis: "NLP project",
-      after: " is different. So is every quote",
-    } satisfies NlpHeading,
     introBefore:
-      "After a 30-minute scoping call, we send a detailed proposal within 3 business days — including pipeline architecture, accuracy targets, and a fixed all-in price. ",
+      "After a 30-minute scoping call, we send a detailed proposal within 3 business days including pipeline architecture, accuracy targets, and a fixed all-in price. ",
     introEmphasis: "Model API costs (OpenAI, Anthropic, etc.) are estimated and paid separately",
-    introAfter: " — typically $50–$2,000/month depending on volume.",
+    introAfter: " typically $50–$2,000/month depending on volume.",
     steps: [
       { num: "01", title: "Scoping call", body: "Free 30-min on data, goals, accuracy." },
       { num: "02", title: "Custom proposal", body: "Scope, accuracy targets within 3 days." },
@@ -346,15 +296,10 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things teams ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies NlpHeading,
     items: [
       {
         q: "What's the difference between NLP and an LLM API?",
-        a: "An LLM API is a general-purpose model you prompt per request — great for one-off tasks. NLP is a production pipeline tuned for your data: consistent labels, batch throughput, accuracy benchmarks, and cost controls at scale. We use LLMs inside NLP when they fit; we add specialized models, fine-tuning, and orchestration when you need repeatable results on millions of documents.",
+        a: "An LLM API is a general-purpose model you prompt per request great for one-off tasks. NLP is a production pipeline tuned for your data: consistent labels, batch throughput, accuracy benchmarks, and cost controls at scale. We use LLMs inside NLP when they fit; we add specialized models, fine-tuning, and orchestration when you need repeatable results on millions of documents.",
       },
       {
         q: "How accurate will the system be?",
@@ -370,7 +315,7 @@ export const NATURAL_LANGUAGE_PROCESSING_PAGE = {
       },
       {
         q: "Can the pipeline run on our own infrastructure?",
-        a: "Yes — common for regulated industries. We deploy to your cloud (AWS, GCP, Azure) or on-prem with Docker/Kubernetes, optional GPU nodes, and private model endpoints. The same REST API contract works whether we host or you do.",
+        a: "Yes common for regulated industries. We deploy to your cloud (AWS, GCP, Azure) or on-prem with Docker/Kubernetes, optional GPU nodes, and private model endpoints. The same REST API contract works whether we host or you do.",
       },
       {
         q: "What if my domain language is highly specialized?",

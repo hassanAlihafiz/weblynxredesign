@@ -35,11 +35,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
       { label: "Web Development", href: "/web-development" },
       { label: "Ecommerce" },
     ] as const,
-    heading: {
-      before: "Online stores that load fast and ",
-      emphasis: "actually convert",
-      after: "",
-    } satisfies EcommerceWebHeading,
     description:
       "From Shopify storefronts to fully custom Next.js commerce we build stores that win on speed, design, and revenue per visitor.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -52,11 +47,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies EcommerceWebHeading,
     reasons: [
       "You're launching a DTC brand and need a high-converting storefront",
       "Your current store is slow, dated, or losing visitors at checkout",
@@ -66,11 +56,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   platforms: {
-    heading: {
-      before: "We pick the ",
-      emphasis: "right tool",
-      after: " for your stage",
-    } satisfies EcommerceWebHeading,
     description:
       "From quick-launch Shopify themes to fully custom headless stacks we'll recommend what fits your business.",
     iconDefaults: {
@@ -101,11 +86,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   conversionFeatures: {
-    heading: {
-      before: "Built ",
-      emphasis: "to sell",
-      after: ", not just to show ",
-    } satisfies EcommerceWebHeading,
     description: "Every store ships with the conversion patterns that actually move the needle.",
     items: [
       { title: "Sub-1s page loads", body: "Every 100ms of speed = ~1% more sales", icon: "bolt" as const },
@@ -129,11 +109,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Tools we ",
-      emphasis: "ship with",
-      after: "",
-    } satisfies EcommerceWebHeading,
     labels: [
       "Shopify Liquid",
       "Shopify Hydrogen",
@@ -150,11 +125,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "From kickoff to live store in ",
-      emphasis: "6 weeks",
-      after: "",
-    } satisfies EcommerceWebHeading,
     description: "Built around launching profitably not just launching.",
     steps: [
       { week: "Week 1", num: "01", title: "Audit + strategy", detail: "Goals, customers, conversion plan" },
@@ -166,11 +136,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   engagement: {
-    heading: {
-      before: "Find the build that ",
-      emphasis: "fits",
-      after: "",
-    } satisfies EcommerceWebHeading,
     description: "Every store is quoted based on scope. Three engagement models cover most brands.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote →",
@@ -224,11 +189,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
 
   howWeQuote: {
     sectionId: "quote",
-    heading: {
-      before: "Every brand is different ",
-      emphasis: "So is every store",
-      after: "",
-    } satisfies EcommerceWebHeading,
     intro:
       "After a 30-minute discovery call, we send a detailed proposal within 3 business days including platform recommendation, scope, milestones, and a fixed all-in price. Shopify subscription, apps, and shipping costs are separate.",
     steps: [
@@ -254,11 +214,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   related: {
-    heading: {
-      before: "Also explore ",
-      emphasis: "other services",
-      after: "",
-    } satisfies EcommerceWebHeading,
     linkDefaults: {
       iconClass: "text-[var(--red)]",
       ctaClass: "text-[var(--red)]",
@@ -289,11 +244,6 @@ export const ECOMMERCE_WEB_DEV_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things ecom founders ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies EcommerceWebHeading,
     items: [
       {
         q: "Shopify or custom which should I pick?",

@@ -4,7 +4,6 @@ import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { IOS_APP_DEV_PAGE } from "@/data/site";
-import { IosDevSectionHeading } from "./IosDevSectionHeading";
 
 const { faq } = IOS_APP_DEV_PAGE;
 
@@ -15,7 +14,9 @@ export function IosDevFaq() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <IosDevSectionHeading heading={faq.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Things iOS clients ask before <span className="text-[var(--red)]">starting</span>
+        </h1>
 
         <div className="overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--bg-elev)]">
           {faq.items.map(({ q, a }, i) => {

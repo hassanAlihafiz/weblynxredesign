@@ -7,7 +7,6 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DESIGN_PAGE } from "@/data/site";
-import { DesignSectionHeading } from "./DesignSectionHeading";
 
 const disciplineIcons = {
   asterisk: IconAsterisk,
@@ -30,7 +29,9 @@ export function DesignDisciplines() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <DesignSectionHeading heading={disciplines.heading} />
+        <h1 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          What we design <span className="text-[var(--red)]">One studio</span>
+        </h1>
         <div className="grid gap-4 md:grid-cols-3">
           {rowsWithIcons.map(({ title, body, icon: Icon }) => (
             <article

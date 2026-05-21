@@ -44,11 +44,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
       { label: "Digital Marketing", href: "/digital-marketing" },
       { label: "Social Media Marketing" },
     ] as const,
-    heading: {
-      before: "Social that builds a brand, ",
-      emphasis: "not just followers",
-      after: ".",
-    } satisfies SmmHeading,
     description:
       "Strategy, content, community, and reporting across Instagram, TikTok, LinkedIn, and X engineered to drive real business outcomes, not vanity metrics.",
     primaryCta: { label: "Request a quote", href: "/contact" },
@@ -61,11 +56,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably need ",
-      emphasis: "social if",
-      after: "...",
-    },
     bullets: [
       "Your brand has no consistent social presence or one that's gone stale",
       "You're posting but getting no real engagement or sales",
@@ -83,11 +73,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
 
   platforms: {
     sectionId: "platforms",
-    heading: {
-      before: "Six platforms ",
-      emphasis: "we focus where",
-      after: " your audience lives",
-    },
     description:
       'No "post everywhere" spray. We pick 2–3 platforms that match your business model and audience.',
     items: [
@@ -137,11 +122,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every ",
-      emphasis: "social engagement",
-      after: " includes",
-    },
     description: 'A complete operation not just "we\'ll post stuff for you."',
     items: [
       { title: "Social strategy", body: "90-day roadmap, pillars, voice, KPIs", icon: "route" as const },
@@ -157,11 +137,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   contentTypes: {
-    heading: {
-      before: "A content mix",
-      emphasis: "not just one ",
-      after: "format",
-    },
     description:
       "Algorithms reward variety. We mix formats based on what's working for your audience.",
     items: [
@@ -175,11 +150,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   toolkit: {
-    heading: {
-      before: "Tools we work with ",
-      emphasis: "tools",
-      after: " we use",
-    },
     tools: [
       "Figma",
       "CapCut",
@@ -195,11 +165,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   howItWorks: {
-    heading: {
-      before: "A ",
-      emphasis: "monthly content",
-      after: " rhythm",
-    },
     description: "Social is ongoing we work in repeating monthly cycles, not one-off campaigns.",
     steps: [
       {
@@ -230,11 +195,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   engagementModels: {
-    heading: {
-      before: "Find the engagement that ",
-      emphasis: "fits",
-      after: "",
-    },
     description: "Social is monthly retainer work. Pick the level that matches your stage and ambition.",
     ctaLabel: "Request a quote →",
     ctaHref: "/contact",
@@ -286,11 +246,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every brand is different So is every quote ",
-      emphasis: "every quote",
-      after: "",
-    },
     intro:
       "After a 30-minute discovery call, we send a detailed proposal within 3 business days including platforms, content volume, KPIs, and pricing. Boosted post budgets and influencer fees (if any) are separate and paid by you directly.",
     steps: [
@@ -313,11 +268,6 @@ export const SOCIAL_MEDIA_MARKETING_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things founders ",
-      emphasis: "ask before",
-      after: " starting",
-    },
     items: [
       {
         q: "How fast will I see results?",

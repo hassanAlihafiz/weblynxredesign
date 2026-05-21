@@ -25,10 +25,8 @@ export function GenAiUseCases() {
   return (
     <section className="w-full border-t border-[#252525] bg-[#141414] py-10 sm:py-11">
       <ContentContainer>
-        <h2 className="mb-1.5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {useCases.heading.before}
-          <span className="text-[var(--red)]">{useCases.heading.emphasis}</span>
-          {useCases.heading.after}
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          What founders actually build with <span className="text-[var(--red)]">GenAI</span>
         </h2>
         <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{useCases.description}</p>
 

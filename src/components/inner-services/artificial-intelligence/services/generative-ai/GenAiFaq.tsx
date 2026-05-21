@@ -14,10 +14,8 @@ export function GenAiFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11">
       <ContentContainer>
-        <h2 className="mb-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {faq.heading.before}
-          <span className="text-[var(--red)]">{faq.heading.emphasis}</span>
-          {faq.heading.after}
+        <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Things founders ask <span className="text-[var(--red)]">before starting</span>
         </h2>
 
         <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-elev)]">

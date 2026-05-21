@@ -17,11 +17,6 @@ export const ABOUT_STATS = [
 
 export const ABOUT_PAGE = {
   intro: {
-    heading: {
-      before: "A digital studio built around ",
-      emphasis: "craft",
-      after: ", speed, and clear thinking",
-    } satisfies AboutHeading,
     description:
       "Weblynx is an independent studio working with founders and small teams to build the web and apps they actually need fast, modern, and made to scale.",
   },
@@ -33,7 +28,6 @@ export const ABOUT_PAGE = {
 
   story: {
     label: "Our story",
-    title: "From a single project to a studio trusted by founders worldwide.",
     paragraphs: [
       "Weblynx started with a simple idea: most agencies move too slow, most freelancers can't deliver at scale, and founders are stuck choosing between them.",
       "So we built something in between a focused studio that ships fast without cutting corners, charges fairly, and treats every project like it's our own.",
@@ -42,11 +36,6 @@ export const ABOUT_PAGE = {
   },
 
   values: {
-    heading: {
-      before: "Four ",
-      emphasis: "things",
-      after: " we never compromise on",
-    } satisfies AboutHeading,
     subtext: "These aren't marketing words. They're how every Weblynx project actually runs.",
     principles: [
       {
@@ -73,11 +62,6 @@ export const ABOUT_PAGE = {
   },
 
   capabilities: {
-    heading: {
-      before: "Our ",
-      emphasis: "core capabilities",
-      after: "",
-    } satisfies AboutHeading,
     subtext: "A focused range of services we've shipped enough times to do well.",
     items: [
       {

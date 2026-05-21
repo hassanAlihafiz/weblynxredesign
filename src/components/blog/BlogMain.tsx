@@ -43,9 +43,7 @@ export function BlogMain() {
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-end lg:gap-8">
           <div className="min-w-0">
             <h1 className="mb-2.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-              {BLOG_PAGE.hero.heading.before}
-              <span className="text-[var(--red)]">{BLOG_PAGE.hero.heading.emphasis}</span>
-              {BLOG_PAGE.hero.heading.after}
+              Notes on <span className="text-[var(--red)]">building modern products</span> on the web
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{BLOG_PAGE.hero.description}</p>
           </div>

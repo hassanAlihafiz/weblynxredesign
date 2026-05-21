@@ -9,10 +9,8 @@ export function NlpWhoFor() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-9 shadow-[var(--shadow-inset-soft)] sm:py-11">
       <ContentContainer>
-        <h2 className="mb-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {whoFor.heading.before}
-          <span className="text-[var(--red)]">{whoFor.heading.emphasis}</span>
-          {whoFor.heading.after}
+        <h2 className="mb-5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          You probably <span className="text-[var(--red)]">need NLP</span> if...
         </h2>
 
         <div className="grid gap-2.5 sm:grid-cols-2">

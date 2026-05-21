@@ -181,11 +181,6 @@ export const CASE_STUDIES_PAGE = {
   },
 
   header: {
-    heading: {
-      before: "Real projects, ",
-      emphasis: " real results",
-      after: ", real businesses",
-    } satisfies CaseStudiesIndexHeading,
     description:
       "A look inside the projects we've shipped the problems, the process, and the outcomes that mattered.",
   },

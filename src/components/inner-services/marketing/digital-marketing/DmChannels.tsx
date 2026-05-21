@@ -9,7 +9,6 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DIGITAL_MARKETING_PAGE } from "@/data/site";
-import { DmSectionHeading } from "./DmSectionHeading";
 
 const channelIcons = {
   search: IconSearch,
@@ -34,11 +33,12 @@ const rowsWithIcons: ChannelWithIcon[] = channels.items.map((item) => ({
 export function DmChannels() {
   return (
     <section
-      id={channels.sectionId}
       className="scroll-mt-24 border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
       <ContentContainer>
-        <DmSectionHeading heading={channels.heading} />
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Six Channels, <span className="text-[var(--red)]">one growth engine</span>
+        </h2>
         <div className="grid gap-4 md:grid-cols-3">
           {rowsWithIcons.map(({ title, body, icon: Icon, iconClass }) => (
             <article

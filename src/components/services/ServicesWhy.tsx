@@ -25,8 +25,8 @@ export function ServicesWhy() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
       <ContentContainer>
-        <h2 className="mb-12 max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-          {why.heading}
+        <h2 className="mb-12 max-w-2xl font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+          Four services <span className="text-[var(--red)]">one team</span> zero handoffs
         </h2>
 
         <div className="grid gap-5 md:grid-cols-3">

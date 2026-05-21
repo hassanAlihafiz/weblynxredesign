@@ -76,7 +76,7 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
       items: [
         { label: "Generative AI", href: "/generative-ai" },
         { label: "Natural language processing", href: "/natural-language-processing" },
-        { label: "AI agents & automation", href: "/artificial-intelligence#capabilities" },
+        { label: "AI agents development", href: "/ai-agent-development" },
       ],
     },
     {
@@ -103,9 +103,8 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
       label: "Design",
       href: "/design",
       items: [
-        { label: "Brand identity", href: "/design" },
+        { label: "Brand identity", href: "/brand-identity-design" },
         { label: "UI / UX design", href: "/design" },
-        { label: "Marketing & illustration", href: "/design" },
       ],
     },
   ],
@@ -352,6 +351,14 @@ export {
   type NlpIndustryIconId,
   type NlpRelatedIconId,
 } from "./inner-seervices/artificial-intelligence/services/natural-language-processing";
+export {
+  AI_AGENT_DEVELOPMENT_PAGE,
+  type AiAgentDeliverableIconId,
+  type AiAgentHeading,
+  type AiAgentRelatedIconId,
+  type AiAgentSafetyIconId,
+  type AiAgentTypeIconId,
+} from "./inner-seervices/artificial-intelligence/services/ai-agent-development";
 export { DIGITAL_MARKETING_PAGE, type DmChannelIconId, type DmHeading, type DmIncludedIconId, } from "./inner-seervices/digital-markiting/digital-marketing";
 export { 
   SOCIAL_MEDIA_MARKETING_PAGE, 
@@ -378,3 +385,10 @@ export {
   type SeoSpecializationIconId,
 } from "./inner-seervices/digital-markiting/services/search-engine-optimization";
 export { DESIGN_PAGE, type DesignDeliverableIconId, type DesignDisciplineIconId, type DesignHeading } from "./inner-seervices/designing/design";
+export {
+  BRAND_IDENTITY_DESIGN_PAGE,
+  type BrandIdentityDeliverableIconId,
+  type BrandIdentityHeading,
+  type BrandIdentityLayerIconId,
+  type BrandIdentityRelatedIconId,
+} from "./inner-seervices/designing/services/brand-identity-design";

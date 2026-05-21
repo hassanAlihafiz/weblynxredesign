@@ -1,14 +1,15 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { CROSS_PLATFORM_APP_DEV_PAGE } from "@/data/site";
-import { CrossPlatformDevSectionHeading } from "./CrossPlatformDevSectionHeading";
 
 const { process } = CROSS_PLATFORM_APP_DEV_PAGE;
 
 export function CrossPlatformDevProcess() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
-      <ContentContainer>
-        <CrossPlatformDevSectionHeading heading={process.heading} className="mb-1.5" />
+        <ContentContainer>
+          <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+            From kickoff to both stores in <span className="text-[var(--red)]">5 steps</span>
+          </h1>
         <p className="mb-6 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {process.description}
         </p>

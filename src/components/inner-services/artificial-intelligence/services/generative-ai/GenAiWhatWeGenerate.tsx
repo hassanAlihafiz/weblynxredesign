@@ -28,10 +28,8 @@ export function GenAiWhatWeGenerate() {
       className="scroll-mt-24 w-full border-t border-[#252525] py-10 sm:py-11"
     >
       <ContentContainer>
-        <h2 className="mb-1.5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {whatWeGenerate.heading.before}
-          <span className="text-[var(--red)]">{whatWeGenerate.heading.emphasis}</span>
-          {whatWeGenerate.heading.after}
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Six modalities <span className="text-[var(--red)]">One pipeline</span>
         </h2>
         <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{whatWeGenerate.description}</p>
 

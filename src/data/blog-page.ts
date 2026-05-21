@@ -164,11 +164,6 @@ export function getBlogPostBySlug(slug: string) {
 
 export const BLOG_PAGE = {
   hero: {
-    heading: {
-      before: "Notes on ",
-      emphasis: "building modern products",
-      after: " on the web.",
-    } satisfies BlogHeading,
     description:
       "Tutorials, behind-the-scenes case breakdowns, and tactical guides for founders and developers.",
   },

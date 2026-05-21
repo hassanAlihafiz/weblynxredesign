@@ -9,9 +9,7 @@ export function SeoWhatWeAudit() {
     <section className="w-full bg-[var(--bg-elev)] py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-3xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {whatWeAudit.heading.before}
-          <span className="text-[var(--red)]">{whatWeAudit.heading.emphasis}</span>
-          {whatWeAudit.heading.after}
+          A <span className="text-[var(--red)]">60-point baseline</span> before we touch anything
         </h2>
         <p className="mb-5 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">{whatWeAudit.description}</p>
 

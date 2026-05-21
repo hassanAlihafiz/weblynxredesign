@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ABOUT_PAGE } from "@/data/site";
-import { AboutSectionHeading } from "./AboutSectionHeading";
 
 const { capabilities } = ABOUT_PAGE;
 
@@ -8,7 +7,9 @@ export function AboutCapabilities() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
       <ContentContainer>
-        <AboutSectionHeading heading={capabilities.heading} />
+        <h1 className="mb-8 max-w-2xl font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+          Our <span className="text-[var(--red)]">core capabilities</span>
+        </h1>
 
         <p className="mb-12 max-w-md text-[var(--text-muted)]">{capabilities.subtext}</p>
 

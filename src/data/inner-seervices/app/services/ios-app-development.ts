@@ -33,11 +33,6 @@ export const IOS_APP_DEV_PAGE = {
       { label: "App Development", href: "/app-development" },
       { label: "iOS" },
     ] as const,
-    heading: {
-      before: "Native ",
-      emphasis: "iOS apps",
-      after: " built for premium experiences",
-    } satisfies IosAppDevHeading,
     description:
       "From Swift and SwiftUI to ARKit and Vision Pro we build iOS apps that feel native, run fast, and ship straight to the App Store.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -45,11 +40,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably need ",
-      emphasis: "native iOS",
-      after: " if...",
-    } satisfies IosAppDevHeading,
     reasons: [
       "Your audience is high-income, US/UK-based, and primarily on iPhone",
       "You're building for Apple Watch, Vision Pro, or deep iPad workflows",
@@ -66,11 +56,6 @@ export const IOS_APP_DEV_PAGE = {
 
   platforms: {
     sectionId: "platforms",
-    heading: {
-      before: "Apple platforms we ",
-      emphasis: "ship to",
-      after: "",
-    } satisfies IosAppDevHeading,
     description: "Modern Apple frameworks let you target every device with shared code.",
     iconDefaults: {
       iconClass: "text-[var(--red)]",
@@ -105,11 +90,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every iOS project includes ",
-      emphasis: "everything",
-      after: "",
-    } satisfies IosAppDevHeading,
     description: "Production-ready iOS apps designed to pass Apple review on the first try.",
     items: [
       {
@@ -146,11 +126,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Modern iOS tools we ",
-      emphasis: "ship with",
-      after: "",
-    } satisfies IosAppDevHeading,
     labels: [
       "Swift",
       "SwiftUI",
@@ -168,11 +143,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "From kickoff to App Store in ",
-      emphasis: "5 steps",
-      after: "",
-    } satisfies IosAppDevHeading,
     description: "A clear rhythm with TestFlight beta checkpoints built in.",
     steps: [
       { week: "Week 1", num: "01", title: "Discovery", detail: "Scope, features, target devices" },
@@ -185,11 +155,6 @@ export const IOS_APP_DEV_PAGE = {
 
   engagement: {
     sectionId: "engagement",
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement",
-      after: " that fits",
-    } satisfies IosAppDevHeading,
     description: "Every iOS project is quoted based on scope. Three engagement models cover most cases.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote →",
@@ -242,11 +207,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every iOS project is different ",
-      emphasis: "So is every quote",
-      after: "",
-    } satisfies IosAppDevHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope, milestones, target devices, and a fixed all-in price. Apple Developer Program fee ($99/year) is separate.",
     steps: [
@@ -257,11 +217,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   alsoExplore: {
-    heading: {
-      before: "Also explore ",
-      emphasis: "other services",
-      after: "",
-    } satisfies IosAppDevHeading,
     linkDefaults: {
       iconClass: "text-[var(--red)]",
       linkClass: "text-[var(--red)]",
@@ -285,11 +240,6 @@ export const IOS_APP_DEV_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things iOS clients ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies IosAppDevHeading,
     items: [
       {
         q: "Should I go native iOS or use cross-platform?",

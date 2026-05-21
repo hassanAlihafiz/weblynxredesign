@@ -36,9 +36,7 @@ export function SmmHero() {
           <div className="grid items-center gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-8">
             <div className="min-w-0">
               <h1 className="mb-3.5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-                {hero.heading.before}
-                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
-                {hero.heading.after}
+                Social that builds a brand, <span className="text-[var(--red)]">not just followers</span>
               </h1>
 
               <p className="mb-5 max-w-md text-lg leading-relaxed text-text-muted">{hero.description}</p>

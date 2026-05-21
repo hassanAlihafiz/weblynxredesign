@@ -9,7 +9,6 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_DEVELOPMENT_PAGE } from "@/data/site";
-import { WebDevSectionHeading } from "./WebDevSectionHeading";
 
 const includedIcons = {
   "device-laptop": IconDeviceLaptop,
@@ -34,7 +33,9 @@ export function WebDevIncluded() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <WebDevSectionHeading heading={included.heading} className="mb-3" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Every project <span className="text-[var(--red)]">includes</span>
+        </h1>
         <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{included.description}</p>
         <div className="grid gap-4 md:grid-cols-3">
           {itemsWithIcons.map(({ title, body, icon: Icon }) => (

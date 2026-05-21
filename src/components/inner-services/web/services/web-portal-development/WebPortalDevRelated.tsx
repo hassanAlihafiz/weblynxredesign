@@ -2,7 +2,6 @@ import { IconCloud, IconDevices, IconShoppingBag, type TablerIcon } from "@table
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
-import { WebPortalDevSectionHeading } from "./WebPortalDevSectionHeading";
 
 const relatedIcons = {
   cloud: IconCloud,
@@ -18,7 +17,9 @@ export function WebPortalDevRelated() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <WebPortalDevSectionHeading heading={related.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Also explore <span className="text-[var(--red)]">other services</span>
+        </h1>
 
         <ul className="grid list-none gap-3 md:grid-cols-3">
           {related.items.map(({ title, description, href, cta, icon }) => {

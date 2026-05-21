@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { AI_DEVELOPMENT_PAGE } from "@/data/site";
-import { AiDevSectionHeading } from "./AiDevSectionHeading";
 
 const { process } = AI_DEVELOPMENT_PAGE;
 
@@ -8,7 +7,9 @@ export function AiDevProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <AiDevSectionHeading heading={process.heading} className="mb-3" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          From idea to <span className="text-[var(--red)]">production AI</span> in 5 steps
+        </h1>
         <p className="mb-8 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{process.description}</p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {process.steps.map(({ week, num, title, body }) => (

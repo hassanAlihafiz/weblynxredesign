@@ -16,6 +16,9 @@ export function CrossPlatformDevRelated() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Also explore <span className="text-[var(--red)]">other services</span>
+        </h1>
         <div className="grid gap-3 sm:grid-cols-2">
           {related.items.map(({ title, description, href, cta, icon }) => {
             const Icon = relatedIcons[icon];

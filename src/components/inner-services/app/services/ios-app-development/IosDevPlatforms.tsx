@@ -8,12 +8,11 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { IOS_APP_DEV_PAGE } from "@/data/site";
-import { IosDevSectionHeading } from "./IosDevSectionHeading";
 
 const platformIcons = {
   "device-mobile": IconDeviceMobile,
   "device-tablet": IconDeviceTablet,
-  "device-watch": IconDeviceWatch,
+  "device-watch": IconDeviceWatch,  
   "badge-vr": IconBadgeVr,
   "device-laptop": IconDeviceLaptop,
 } as const satisfies Record<(typeof IOS_APP_DEV_PAGE.platforms.items)[number]["icon"], TablerIcon>;
@@ -26,7 +25,9 @@ export function IosDevPlatforms() {
   return (
     <section id={platforms.sectionId} className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <IosDevSectionHeading heading={platforms.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Apple platforms we <span className="text-[var(--red)]">ship to</span>
+        </h1>
         <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{platforms.description}</p>
 
         <div className="grid gap-2.5 sm:grid-cols-5">

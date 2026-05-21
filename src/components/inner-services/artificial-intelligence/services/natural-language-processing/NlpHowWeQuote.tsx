@@ -9,10 +9,8 @@ export function NlpHowWeQuote() {
       <ContentContainer>
         <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-6">
           <div>
-            <h2 className="max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-              {howWeQuote.heading.before}
-              <span className="text-[var(--red)]">{howWeQuote.heading.emphasis}</span>
-              {howWeQuote.heading.after}
+            <h2 className="max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+              Every <span className="text-[var(--red)]">NLP project</span> is different so is every quote
             </h2>
           </div>
           <div>

@@ -9,7 +9,6 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
-import { WebPortalDevSectionHeading } from "./WebPortalDevSectionHeading";
 
 const portalTypeIcons = {
   users: IconUsers,
@@ -28,7 +27,9 @@ export function WebPortalDevPortalTypes() {
   return (
     <section id={portalTypes.sectionId} className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <WebPortalDevSectionHeading heading={portalTypes.heading} className="mb-1.5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Six portal types <span className="text-[var(--red)]">One technical foundation</span>
+        </h1>
         <p className="mb-5 max-w-[420px] text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {portalTypes.description}
         </p>

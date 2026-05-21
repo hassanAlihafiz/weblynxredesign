@@ -32,10 +32,8 @@ export function NlpCapabilities() {
       className="scroll-mt-24 w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11"
     >
       <ContentContainer>
-        <h2 className="mb-1.5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {capabilities.heading.before}
-          <span className="text-[var(--red)]">{capabilities.heading.emphasis}</span>
-          {capabilities.heading.after}
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Eight <span className="text-[var(--red)]">NLP capabilities</span> in one pipeline        
         </h2>
         <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{capabilities.description}</p>
 

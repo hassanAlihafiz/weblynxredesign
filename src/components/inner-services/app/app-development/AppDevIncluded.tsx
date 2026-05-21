@@ -2,7 +2,6 @@ import { IconBell, IconCloud, IconCloudOff, IconDeviceMobile, IconRocket, IconUs
 import type { TablerIcon } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { APP_DEVELOPMENT_PAGE } from "@/data/site";
-import { AppDevSectionHeading } from "./AppDevSectionHeading";
 
 const includedIcons = {
   "device-mobile": IconDeviceMobile,
@@ -19,7 +18,9 @@ export function AppDevIncluded() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <AppDevSectionHeading heading={included.heading} className="mb-3" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+         Every app project includes <span className="text-[var(--red)]">everything</span>
+        </h1>
         <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{included.description}</p>
         <div className="grid gap-4 md:grid-cols-3">
           {included.items.map(({ title, body, icon }) => {

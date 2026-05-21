@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui";
 
-const headingClass = "text-meta mb-4 text-[var(--text-muted)]";
+const headingClass = "text-meta mb-2.5 text-[var(--text-muted)]";
 
 export function FooterNewsletter() {
   const [email, setEmail] = useState("");
@@ -25,11 +25,11 @@ export function FooterNewsletter() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
-          className="min-h-[44px] w-full min-w-0 flex-1 rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[var(--text-dim)] focus:outline-none focus:ring-2 focus:ring-[var(--red)] focus:ring-offset-2 focus:ring-offset-[var(--bg-elev)]"
+          className="min-h-[40px] w-full min-w-0 flex-1 rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[var(--text-dim)] focus:outline-none focus:ring-2 focus:ring-[var(--red)] focus:ring-offset-2 focus:ring-offset-[var(--bg-elev)]"
           autoComplete="email"
           aria-label="Email for newsletter"
         />
-        <Button type="submit" className="min-h-[44px] shrink-0">
+        <Button type="submit" className="min-h-[40px] shrink-0">
           Subscribe
         </Button>
       </form>
