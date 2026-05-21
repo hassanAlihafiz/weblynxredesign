@@ -2,7 +2,6 @@ import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { APP_DEVELOPMENT_PAGE } from "@/data/site";
-import { AppDevSectionHeading } from "./AppDevSectionHeading";
 
 const { engagement } = APP_DEVELOPMENT_PAGE;
 
@@ -13,7 +12,9 @@ export function AppDevEngagement() {
       className="border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
       <ContentContainer>
-        <AppDevSectionHeading heading={engagement.heading} className="mb-3" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Find the <span className="text-[var(--red)]">engagement</span> that fits
+        </h1>
         <p className="mb-10 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{engagement.description}</p>
         <div className="grid gap-4 md:grid-cols-3">
           {engagement.tiers.map(({ featured, label, title, timeline, items }) => (

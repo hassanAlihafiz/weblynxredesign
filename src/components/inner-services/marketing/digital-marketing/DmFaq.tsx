@@ -4,7 +4,6 @@ import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { useId, useState } from "react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DIGITAL_MARKETING_PAGE } from "@/data/site";
-import { DmSectionHeading } from "./DmSectionHeading";
 
 const { faq } = DIGITAL_MARKETING_PAGE;
 
@@ -15,7 +14,9 @@ export function DmFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <DmSectionHeading heading={faq.heading} />
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Before you reach out <span className="text-[var(--red)]">common questions</span>
+        </h2>
 
         <div className="overflow-hidden rounded-[var(--border-radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] p-0">
           {faq.items.map(({ q, a }, i) => {

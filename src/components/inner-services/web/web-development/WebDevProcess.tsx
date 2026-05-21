@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_DEVELOPMENT_PAGE } from "@/data/site";
-import { WebDevSectionHeading } from "./WebDevSectionHeading";
 
 const { process } = WEB_DEVELOPMENT_PAGE;
 
@@ -8,7 +7,9 @@ export function WebDevProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <WebDevSectionHeading heading={process.heading} />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          From kickoff to <span className="text-[var(--red)]">launch</span> in 4 steps
+        </h1>
         <div className="grid gap-6 md:grid-cols-4">
           {process.steps.map(({ week, num, title, body }) => (
             <div key={num} className="border-l-2 border-[var(--red)] pl-4">

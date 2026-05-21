@@ -37,9 +37,7 @@ export function GenAiHero() {
           <div className="grid items-center gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-8">
             <div className="min-w-0">
               <h1 className="mb-3.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] leading-tight text-[var(--text)] md:text-6xl">
-                {hero.heading.before}
-                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
-                {hero.heading.after}
+                AI that <span className="text-[var(--red)]">creates</span>, not just answers
               </h1>
 
               <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{hero.description}</p>

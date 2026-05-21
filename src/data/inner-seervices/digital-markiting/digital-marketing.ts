@@ -33,11 +33,6 @@ export const DIGITAL_MARKETING_PAGE = {
       parentHref: "/service",
       currentLabel: "Digital marketing",
     },
-    heading: {
-      before: "Get found, get clicks, ",
-      emphasis: "get customers",
-      after: "",
-    } satisfies DmHeading,
     description:
       "SEO, paid ads, content, and social built around your business goals, measured by what actually moves the needle.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -54,11 +49,6 @@ export const DIGITAL_MARKETING_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies DmHeading,
     bullets: [
       "You have a great product but nobody's finding it",
       "You're spending on ads but not seeing returns",
@@ -68,12 +58,6 @@ export const DIGITAL_MARKETING_PAGE = {
   },
 
   channels: {
-    sectionId: "channels",
-    heading: {
-      before: "Six channels, ",
-      emphasis: "one growth engine",
-      after: "",
-    } satisfies DmHeading,
     iconClass: "text-[var(--red)]",
     items: [
       {
@@ -110,11 +94,6 @@ export const DIGITAL_MARKETING_PAGE = {
   },
 
   included: {
-    heading: {
-      before: "Every engagement includes ",
-      emphasis: "everything",
-      after: "",
-    } satisfies DmHeading,
     description: "No vague reports. No vanity metrics. Just measurable growth.",
     items: [
       { title: "Growth audit", body: "Full review of your channels & gaps", icon: "clipboard-list" as const },
@@ -131,11 +110,6 @@ export const DIGITAL_MARKETING_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "A growth loop, not a ",
-      emphasis: "campaign",
-      after: "",
-    } satisfies DmHeading,
     description: "Marketing isn't one-and-done. We work in monthly cycles that compound over time.",
     steps: [
       { num: "01", title: "Audit", body: "Channels, gaps, baseline metrics" },
@@ -146,11 +120,6 @@ export const DIGITAL_MARKETING_PAGE = {
   },
 
   engagement: {
-    heading: {
-      before: "How we work with you ",
-      emphasis: "Engagement models",
-      after: "",
-    } satisfies DmHeading,
     description: "Marketing is ongoing. We work in monthly retainers choose the level that matches your stage.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote",
@@ -201,11 +170,6 @@ export const DIGITAL_MARKETING_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every business is different ",
-      emphasis: "So is every plan",
-      after: "",
-    } satisfies DmHeading,
     intro:
       "After a 30-minute discovery call, we send a detailed proposal within 3 business days channels, monthly retainer scope, KPIs, and pricing.",
     steps: [
@@ -215,17 +179,7 @@ export const DIGITAL_MARKETING_PAGE = {
     ] as const,
   },
 
-  results: {
-    sectionId: "results",
-    heading: "What growth looks like",
-  },
-
   faq: {
-    heading: {
-      before: "Before you reach out ",
-      emphasis: "Common questions",
-      after: "",
-    } satisfies DmHeading,
     items: [
       {
         q: "How long until I see results from SEO?",

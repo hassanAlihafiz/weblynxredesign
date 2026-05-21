@@ -2,7 +2,6 @@ import { IconCheck, IconInfoCircle } from "@tabler/icons-react";
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ANDROID_APP_DEV_PAGE } from "@/data/site";
-import { AndroidDevSectionHeading } from "./AndroidDevSectionHeading";
 
 const { whoFor } = ANDROID_APP_DEV_PAGE;
 
@@ -10,7 +9,9 @@ export function AndroidDevWhoFor() {
   return (
     <section className="w-full border-t border-[var(--border)] bg-[#141414] py-9 sm:py-10 md:py-[2.25rem]">
       <ContentContainer>
-        <AndroidDevSectionHeading heading={whoFor.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          You probably need <span className="text-[var(--red)]">native Android</span> if...
+        </h1>
 
         <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
           {whoFor.reasons.map((text) => (

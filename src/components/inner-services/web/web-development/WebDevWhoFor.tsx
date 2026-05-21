@@ -1,7 +1,6 @@
 import { IconCheck } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_DEVELOPMENT_PAGE } from "@/data/site";
-import { WebDevSectionHeading } from "./WebDevSectionHeading";
 
 const { whoFor } = WEB_DEVELOPMENT_PAGE;
 
@@ -9,7 +8,9 @@ export function WebDevWhoFor() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <WebDevSectionHeading heading={whoFor.heading} />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          You probably <span className="text-[var(--red)]">need this</span> if...
+        </h1>
         <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
           {whoFor.bullets.map((text) => (
             <div key={text} className="flex items-start gap-3">

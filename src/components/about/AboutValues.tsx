@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ABOUT_PAGE } from "@/data/site";
-import { AboutSectionHeading } from "./AboutSectionHeading";
 
 const { values } = ABOUT_PAGE;
 
@@ -11,7 +10,9 @@ export function AboutValues() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
       <ContentContainer>
-        <AboutSectionHeading heading={values.heading} />
+        <h1 className="mb-8 max-w-2xl font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+          Four things we <span className="text-[var(--red)]">never compromise</span> on
+        </h1>
 
         <p className="mb-12 max-w-md text-[var(--text-muted)]">{values.subtext}</p>
 

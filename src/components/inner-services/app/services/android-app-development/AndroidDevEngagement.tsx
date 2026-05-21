@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ANDROID_APP_DEV_PAGE } from "@/data/site";
-import { AndroidDevSectionHeading } from "./AndroidDevSectionHeading";
 
 const { engagement } = ANDROID_APP_DEV_PAGE;
 
@@ -9,7 +8,9 @@ export function AndroidDevEngagement() {
   return (
     <section id={engagement.sectionId} className="w-full border-t border-[var(--border)] py-11 sm:py-[2.75rem]">
       <ContentContainer>
-        <AndroidDevSectionHeading heading={engagement.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Find the <span className="text-[var(--red)]">engagement</span> that fits
+        </h1>
         <p className="mb-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{engagement.description}</p>
 
         <div className="grid gap-3 md:grid-cols-3">

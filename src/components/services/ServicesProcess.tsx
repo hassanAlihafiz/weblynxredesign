@@ -7,8 +7,8 @@ export function ServicesProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
       <ContentContainer>
-        <h2 className="mb-12 max-w-2xl text-balance font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-          {process.heading}
+        <h2 className="mb-12 max-w-2xl text-balance font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+          The same <span className="text-[var(--red)]">rhythm</span> every project
         </h2>
 
         <div className="grid gap-6 md:grid-cols-4">

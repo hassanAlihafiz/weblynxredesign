@@ -31,10 +31,8 @@ export function GenAiDeliverables() {
   return (
     <section className="w-full border-t border-[#252525] py-10 sm:py-11">
       <ContentContainer>
-        <h2 className="mb-1.5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">
-          {deliverables.heading.before}
-          <span className="text-[var(--red)]">{deliverables.heading.emphasis}</span>
-          {deliverables.heading.after}
+        <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Every <span className="text-[var(--red)]">GenAI project</span> includes
         </h2>
         <p className="mb-5 max-w-lg text-lg leading-tight text-[var(--text-muted)]">{deliverables.description}</p>
 

@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { APP_DEVELOPMENT_PAGE } from "@/data/site";
-import { AppDevSectionHeading } from "./AppDevSectionHeading";
 
 const { howWeQuote } = APP_DEVELOPMENT_PAGE;
 
@@ -10,7 +9,9 @@ export function AppDevHowWeQuote() {
       <ContentContainer>
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <div>
-            <AppDevSectionHeading heading={howWeQuote.heading} className="" />
+            <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+              Every app is different <span className="text-[var(--red)]">So is every quote</span>
+            </h1>
           </div>
           <div>
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{howWeQuote.intro}</p>

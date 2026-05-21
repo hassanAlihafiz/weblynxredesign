@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DESIGN_PAGE } from "@/data/site";
-import { DesignSectionHeading } from "./DesignSectionHeading";
 
 const { howWeQuote } = DESIGN_PAGE;
 
@@ -10,7 +9,9 @@ export function DesignHowWeQuote() {
       <ContentContainer>
         <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-10">
           <div>
-            <DesignSectionHeading heading={howWeQuote.heading} className="" />
+            <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+              Every project is different <span className="text-[var(--red)]">So is every quote</span>
+            </h1>
           </div>
           <div>
             <p className="mb-6 text-lg leading-relaxed text-[var(--text-muted)]">{howWeQuote.intro}</p>

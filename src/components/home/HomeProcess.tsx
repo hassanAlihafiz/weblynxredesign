@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HOME_PAGE } from "@/data/site";
-import { HomeSectionHeading } from "./HomeSectionHeading";
 
 const { process } = HOME_PAGE;
 
@@ -8,7 +7,9 @@ export function HomeProcess() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-14 md:py-20">
       <ContentContainer>
-        <HomeSectionHeading heading={process.heading} />
+        <h2 className="text-balance max-w-3xl font-sans text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-[var(--text)] mb-10 md:text-5xl">
+          The same <span className="text-[var(--red)]">rhythm</span> every project
+        </h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {process.steps.map(({ week, n, title, text }) => (

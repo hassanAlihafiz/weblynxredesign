@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
-import { WebPortalDevSectionHeading } from "./WebPortalDevSectionHeading";
 
 const { howWeQuote } = WEB_PORTAL_DEV_PAGE;
 
@@ -10,7 +9,9 @@ export function WebPortalDevHowWeQuote() {
       <ContentContainer>
         <div className="grid items-start gap-6 lg:grid-cols-[1fr_1.4fr] lg:gap-6">
           <header>
-            <WebPortalDevSectionHeading heading={howWeQuote.heading} className="max-w-3xl" />
+            <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+              Every portal is different <span className="text-[var(--red)]">so is every quote</span>
+            </h1>
           </header>
 
           <div>

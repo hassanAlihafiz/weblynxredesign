@@ -1,7 +1,6 @@
 import { IconBrandFlutter, IconBrandReact, type TablerIcon } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { CROSS_PLATFORM_APP_DEV_PAGE } from "@/data/site";
-import { CrossPlatformDevSectionHeading } from "./CrossPlatformDevSectionHeading";
 
 const frameworkIcons = {
   "brand-react": IconBrandReact,
@@ -16,7 +15,9 @@ export function CrossPlatformDevFrameworks() {
   return (
     <section className="w-full border-t border-[var(--border)] bg-[#141414] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <CrossPlatformDevSectionHeading heading={frameworks.heading} className="mb-1.5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          React Native or Flutter, <span className="text-[var(--red)]">we pick the right one</span>
+        </h1>
         <p className="mb-6 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {frameworks.description}
         </p>

@@ -12,13 +12,12 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
-import { WebPortalDevSectionHeading } from "./WebPortalDevSectionHeading";
 
 const deliverableIcons = {
   key: IconKey,
   "user-shield": IconUserShield,
   "layout-dashboard": IconLayoutDashboard,
-  database: IconDatabase,
+  database: IconDatabase, 
   "clipboard-list": IconClipboardList,
   mail: IconMail,
   "file-export": IconFileExport,
@@ -32,7 +31,9 @@ export function WebPortalDevDeliverables() {
   return (
     <section className="w-full border-t border-[var(--border)] bg-[var(--bg-elev)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12">
       <ContentContainer>
-        <WebPortalDevSectionHeading heading={deliverables.heading} className="mb-1.5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Every portal project <span className="text-[var(--red)]">includes</span>
+        </h1>
         <p className="mb-5 max-w-2xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {deliverables.description}
         </p>

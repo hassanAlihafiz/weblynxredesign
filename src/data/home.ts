@@ -14,11 +14,6 @@ export type HomeServiceIconId = "code" | "device-mobile" | "trending-up" | "brai
 export const HOME_PAGE = {
   hero: {
     badge: "Now accepting Q3 projects",
-    heading: {
-      before: "We build the ",
-      emphasis: "web",
-      after: " for ambitious founders",
-    },
     description:
       "From custom web apps and mobile builds to design and growth one team that links it all together.",
     primaryCta: { label: "Start a project", href: "/contact" },
@@ -36,11 +31,6 @@ export const HOME_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "The same rhythm ",
-      emphasis: "every project",
-      after: "",
-    } satisfies HomeProcessHeading,
     steps: [
       {
         week: "WEEK 1",
@@ -72,12 +62,6 @@ export const HOME_PAGE = {
   services: {
     sectionAriaLabel: "Services",
     carouselAriaLabel: "Service offerings",
-    heading: {
-      line1: "Five services",
-      line2Before: "One ",
-      line2Emphasis: "growth engine",
-      line2After: "",
-    },
     description:
       "Each service stands alone but together they form a connected system designed to help your business launch, grow, and scale.",
     learnMoreLabel: "Learn more",
@@ -133,7 +117,6 @@ export const HOME_PAGE = {
   },
 
   caseStudies: {
-    heading: "Projects",
     viewAllLabel: "View all work",
     viewAllHref: "/case-studies",
   },

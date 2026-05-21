@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ANDROID_APP_DEV_PAGE } from "@/data/site";
-import { AndroidDevSectionHeading } from "./AndroidDevSectionHeading";
 
 const { howWeQuote } = ANDROID_APP_DEV_PAGE;
 
@@ -10,7 +9,9 @@ export function AndroidDevHowWeQuote() {
       <ContentContainer>
         <div className="grid items-start gap-6 lg:grid-cols-[1fr_1.4fr] lg:gap-6">
           <div>
-            <AndroidDevSectionHeading heading={howWeQuote.heading} className="mb-5" />
+            <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+              Every Android project is different <span className="text-[var(--red)]">So is every quote</span>
+            </h1>
           </div>
 
           <div>

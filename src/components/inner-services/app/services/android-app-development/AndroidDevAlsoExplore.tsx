@@ -2,7 +2,6 @@ import { IconBrandApple, IconDevices, type TablerIcon } from "@tabler/icons-reac
 import Link from "next/link";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ANDROID_APP_DEV_PAGE } from "@/data/site";
-import { AndroidDevSectionHeading } from "./AndroidDevSectionHeading";
 
 const exploreIcons = {
   "brand-apple": IconBrandApple,
@@ -17,7 +16,9 @@ export function AndroidDevAlsoExplore() {
   return (
     <section className="w-full border-t border-[var(--border)] bg-[#141414] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <AndroidDevSectionHeading heading={alsoExplore.heading} className="mb-5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Also explore <span className="text-[var(--red)]">other services</span>
+        </h1>
 
         <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
           {alsoExplore.items.map(({ title, description, href, linkLabel, icon }) => {

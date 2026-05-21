@@ -25,11 +25,6 @@ export const WEB_DEVELOPMENT_PAGE = {
       parentHref: "/service",
       currentLabel: "Web development",
     },
-    heading: {
-      before: "Fast, modern ",
-      emphasis: "websites",
-      after: " that actually convert.",
-    } satisfies WebDevHeading,
     description:
       "From landing pages to full-scale web apps built on Next.js, designed to scale, shipped in weeks.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -38,11 +33,6 @@ export const WEB_DEVELOPMENT_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies WebDevHeading,
     bullets: [
       "Your current site is slow, outdated, or doesn't convert",
       "You're launching a startup and need an MVP fast",
@@ -102,11 +92,6 @@ export const WEB_DEVELOPMENT_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "From kickoff to ",
-      emphasis: "launch",
-      after: " in 4 steps",
-    } satisfies WebDevHeading,
     steps: [
       {
         week: "WEEK 1",

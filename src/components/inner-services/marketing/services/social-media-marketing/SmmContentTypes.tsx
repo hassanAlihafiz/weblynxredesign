@@ -26,9 +26,7 @@ export function SmmContentTypes() {
     <section className="w-full py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {contentTypes.heading.before}
-          <span className="text-[var(--red)]">{contentTypes.heading.emphasis}</span>
-          {contentTypes.heading.after}
+          A content mix <span className="text-[var(--red)]">not just one</span> format
         </h2>
         <p className="mb-5 max-w-md text-lg leading-relaxed text-text-muted">{contentTypes.description}</p>
 

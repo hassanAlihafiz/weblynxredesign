@@ -38,11 +38,6 @@ export const GENERATIVE_AI_PAGE = {
       { label: "AI Development", href: "/artificial-intelligence" },
       { label: "Generative AI" },
     ] as const,
-    heading: {
-      before: "AI that ",
-      emphasis: "creates",
-      after: ", not just answers",
-    } satisfies GenAiHeading,
     description:
       "Custom AI tools that generate text, images, videos, audio, and code built on the latest foundation models and wired into your real workflows.",
     primaryCta: { label: "Request a quote", href: "/contact" },
@@ -55,19 +50,14 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need GenAI",
-      after: " if...",
-    } satisfies GenAiHeading,
     bullets: [
-      "You produce content at scale — and the cost or time is killing you",
+      "You produce content at scale and the cost or time is killing you",
       'You want to add "AI-powered" features that actually deliver value',
       "You've used ChatGPT or Midjourney and want to build something custom",
       "You need creative output tuned to your brand voice and style",
     ] as const,
     callout: {
-      title: "GenAI is not magic — and not for every use case",
+      title: "GenAI is not magic and not for every use case",
       bodyBeforeRag:
         "If you need precise, fact-grounded answers (medical, legal, financial), see ",
       rag: { label: "RAG systems", href: "/artificial-intelligence#capabilities" },
@@ -80,21 +70,16 @@ export const GENERATIVE_AI_PAGE = {
 
   whatWeGenerate: {
     sectionId: "capabilities",
-    heading: {
-      before: "Six modalities ",
-      emphasis: "One pipeline",
-      after: "",
-    } satisfies GenAiHeading,
-    description: "Whatever you create today by hand, GenAI can produce 10× faster — and often better.",
+    description: "Whatever you create today by hand, GenAI can produce 10× faster and often better.",
     items: [
       {
         title: "Text & copywriting",
-        body: "Blog posts, ad copy, product descriptions, emails — tuned to your brand voice.",
+        body: "Blog posts, ad copy, product descriptions, emails tuned to your brand voice.",
         icon: "file-text" as const,
       },
       {
         title: "Image generation",
-        body: "Product visuals, ads, social posts, mockups, illustrations — in any style.",
+        body: "Product visuals, ads, social posts, mockups, illustrations in any style.",
         icon: "photo" as const,
       },
       {
@@ -121,12 +106,7 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   useCases: {
-    heading: {
-      before: "What founders actually build with GenAI ",
-      emphasis: "GenAI",
-      after: "",
-    } satisfies GenAiHeading,
-    description: "Not theoretical — these are the GenAI products we ship for real businesses.",
+    description: "Not theoretical these are the GenAI products we ship for real businesses.",
     items: [
       {
         title: "Branded image generation tool",
@@ -162,12 +142,7 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every ",
-      emphasis: "GenAI",
-      after: " build includes",
-    } satisfies GenAiHeading,
-    description: "Production-ready GenAI — not just a fancy ChatGPT wrapper.",
+    description: "Production-ready GenAI not just a fancy ChatGPT wrapper.",
     items: [
       { title: "Use-case workshop", body: "Define the right output, the right model, the right pipeline", icon: "target" as const },
       { title: "Prompt engineering", body: "Tuned, tested prompts that produce consistent quality", icon: "writing" as const },
@@ -182,12 +157,7 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   models: {
-    heading: {
-      before: "Best-in-class ",
-      emphasis: "foundation models",
-      after: ", per modality",
-    } satisfies GenAiHeading,
-    description: "We pick the right model for each job — no allegiance to one provider.",
+    description: "We pick the right model for each job no allegiance to one provider.",
     categories: [
       { label: "Text", models: ["GPT-5", "Claude Opus 4.7", "Gemini 2.5", "Llama 4"] as const },
       { label: "Image", models: ["Midjourney", "FLUX", "Stable Diffusion", "DALL·E 3"] as const },
@@ -197,11 +167,6 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Tools we build with ",
-      emphasis: "GenAI",
-      after: "",
-    } satisfies GenAiHeading,
     tools: [
       "Next.js",
       "Vercel AI SDK",
@@ -218,12 +183,7 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   howItWorks: {
-    heading: {
-      before: "From idea to live tool in ",
-      emphasis: "5 phases",
-      after: "",
-    } satisfies GenAiHeading,
-    description: "GenAI needs extra rigor — we prototype before we build, so you see results before committing big.",
+    description: "GenAI needs extra rigor we prototype before we build, so you see results before committing big.",
     steps: [
       { phaseLabel: "Week 1", num: "01", title: "Discovery", body: "Use case, outputs, success metrics" },
       { phaseLabel: "Week 2", num: "02", title: "Prototype", body: "Working demo, real outputs" },
@@ -234,11 +194,6 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   engagementModels: {
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement",
-      after: " that fits",
-    } satisfies GenAiHeading,
     description: "Every GenAI project is quoted by scope. Three engagement models cover most needs.",
     ctaLabel: "Request a quote →",
     ctaHref: "/contact",
@@ -289,20 +244,15 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every ",
-      emphasis: "GenAI project",
-      after: " is different so is every quote",
-    } satisfies GenAiHeading,
     introBefore:
-      "After a 30-minute scoping call, we send a detailed proposal within 3 business days — including scope, success metrics, and a fixed all-in price. ",
+      "After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope, success metrics, and a fixed all-in price. ",
     introEmphasis: "API costs (OpenAI, Midjourney, Runway, etc.) are estimated and paid separately",
-    introAfter: " — typically $50–$500/month for early stage, scaling with usage.",
+    introAfter: " typically $50–$500/month for early stage, scaling with usage.",
     steps: [
       {
         num: "01",
         title: "Scoping call",
-        body: "Free 30-min — viability & use case fit.",
+        body: "Free 30-min viability & use case fit.",
       },
       {
         num: "02",
@@ -318,15 +268,10 @@ export const GENERATIVE_AI_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things founders ask ",
-      emphasis: "before starting",
-      after: "",
-    } satisfies GenAiHeading,
     items: [
       {
         q: "Can I commercially use AI-generated content?",
-        a: "In most cases, yes — when you use licensed models, follow provider terms, and implement the guardrails we build (watermarking, disclosure, review flows). We document what you can sell, publish, and white-label for your specific outputs and jurisdictions before launch.",
+        a: "In most cases, yes when you use licensed models, follow provider terms, and implement the guardrails we build (watermarking, disclosure, review flows). We document what you can sell, publish, and white-label for your specific outputs and jurisdictions before launch.",
       },
       {
         q: "How much will the API costs be on top of your fee?",
@@ -334,11 +279,11 @@ export const GENERATIVE_AI_PAGE = {
       },
       {
         q: "Will the output match our brand voice and style?",
-        a: "That's a core deliverable — not an afterthought. We use brand style guides, few-shot examples, fine-tuning when needed, and human-in-the-loop review so outputs sound and look like you, not generic AI slop.",
+        a: "That's a core deliverable not an afterthought. We use brand style guides, few-shot examples, fine-tuning when needed, and human-in-the-loop review so outputs sound and look like you, not generic AI slop.",
       },
       {
         q: "What about copyright, hallucinations, and biased outputs?",
-        a: "We address each in the build: licensing clarity for training data and outputs, safety filters and human review for bad generations, and eval suites to catch bias and drift. GenAI is creative — we design systems that fail safely when the model is wrong.",
+        a: "We address each in the build: licensing clarity for training data and outputs, safety filters and human review for bad generations, and eval suites to catch bias and drift. GenAI is creative we design systems that fail safely when the model is wrong.",
       },
       {
         q: "Do you fine-tune custom models or just use APIs?",
@@ -346,7 +291,7 @@ export const GENERATIVE_AI_PAGE = {
       },
       {
         q: "Can I sell the tool you build as a SaaS product?",
-        a: "Yes — many clients do. We build multi-tenant-ready architectures with usage billing, auth, and admin dashboards when that's the goal. Ownership, licensing, and API pass-through terms are spelled out in your contract up front.",
+        a: "Yes many clients do. We build multi-tenant-ready architectures with usage billing, auth, and admin dashboards when that's the goal. Ownership, licensing, and API pass-through terms are spelled out in your contract up front.",
       },
     ] as const,
   },
@@ -355,7 +300,7 @@ export const GENERATIVE_AI_PAGE = {
     items: [
       {
         title: "RAG systems",
-        description: "AI grounded in your docs & data — perfect when accuracy matters.",
+        description: "AI grounded in your docs & data perfect when accuracy matters.",
         href: "/artificial-intelligence#capabilities",
         cta: "RAG systems →",
         icon: "database-search" as const,

@@ -10,10 +10,7 @@ export function ServicesHero() {
       <HeroGridBackground />
       <ContentContainer className="relative z-10">
         <h1 className="mb-8 max-w-2xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-7xl">
-          {hero.line1}
-          <br />
-          <span className="text-[var(--red)]">{hero.line2Emphasis}</span>
-          {hero.line2Rest}
+          Everything you need to <span className="text-[var(--red)]">build, launch, and grow</span>
         </h1>
 
         <p className="max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{hero.description}</p>

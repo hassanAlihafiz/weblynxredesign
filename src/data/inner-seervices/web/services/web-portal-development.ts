@@ -38,12 +38,7 @@ export const WEB_PORTAL_DEV_PAGE = {
       { label: "Services", href: "/service" },
       { label: "Web Development", href: "/web-development" },
       { label: "Web Portal Development" },
-    ] as const,
-    heading: {
-      before: "Custom portals that ",
-      emphasis: "work how your business works",
-      after: "",
-    } satisfies WebPortalHeading,
+    ] as const, 
     description:
       "Client portals, admin dashboards, internal tools, and B2B platforms, built on Next.js, secure by design, and made to scale with your team.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -56,11 +51,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably ",
-      emphasis: "need this",
-      after: " if...",
-    } satisfies WebPortalHeading,
     reasons: [
       "Your clients need a secure place to log in, view data, and self-serve",
       "Your team runs operations in spreadsheets that can't scale anymore",
@@ -71,11 +61,6 @@ export const WEB_PORTAL_DEV_PAGE = {
 
   portalTypes: {
     sectionId: "portal-types",
-    heading: {
-      before: "Six portal types ",
-      emphasis: "One technical foundation",
-      after: "",
-    } satisfies WebPortalHeading,
     description: "Different audiences, different workflows, same secure, scalable architecture.",
     iconDefaults: {
       iconClass: "text-[var(--red)]",
@@ -115,11 +100,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every portal project ",
-      emphasis: "includes",
-      after: "",
-    } satisfies WebPortalHeading,
     description: "Enterprise-grade foundations security, scale, and auditability built in.",
     items: [
       { title: "Secure authentication", body: "SSO, MFA, magic links, password policies", icon: "key" as const },
@@ -147,11 +127,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   userRoles: {
-    heading: {
-      before: "One portal ",
-      emphasis: "many users",
-      after: ", different views",
-    } satisfies WebPortalHeading,
     description:
       "We design role-aware portals where every user sees exactly what they should, nothing more, nothing less.",
     iconCardDefaults: {
@@ -183,11 +158,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Modern tools we ",
-      emphasis: "ship with",
-      after: "",
-    } satisfies WebPortalHeading,
     labels: [
       "Next.js",
       "TypeScript",
@@ -205,11 +175,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "From kickoff to launch in ",
-      emphasis: "6 phases",
-      after: "",
-    } satisfies WebPortalHeading,
     description:
       "Portals are bigger than typical sites, extra time on planning, security, and testing pays off.",
     steps: [
@@ -223,11 +188,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   engagement: {
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement model",
-      after: " that fits",
-    } satisfies WebPortalHeading,
     description: "Portals scale from focused tools to multi-role platforms. Three engagement models cover most.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote →",
@@ -280,11 +240,6 @@ export const WEB_PORTAL_DEV_PAGE = {
 
   howWeQuote: {
     sectionId: "quote",
-    heading: {
-      before: "Every portal is different ",
-      emphasis: "so is every quote",
-      after: "",
-    } satisfies WebPortalHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days including roles, workflows, integrations, security requirements, timeline, and a fixed all-in price. Hosting and third-party service costs (Supabase, Vercel, Clerk, etc.) are billed separately and transparently.",
     steps: [
@@ -295,11 +250,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   related: {
-    heading: {
-      before: "Also explore ",
-      emphasis: "other services",
-      after: "",
-    } satisfies WebPortalHeading,
     linkDefaults: {
       iconClass: "text-[var(--red)]",
       ctaClass: "text-[var(--red)]",
@@ -330,11 +280,6 @@ export const WEB_PORTAL_DEV_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things businesses ask before starting ",
-      emphasis: "Common questions",
-      after: "",
-    } satisfies WebPortalHeading,
     items: [
       {
         q: "Should I build a portal or just use an off-the-shelf SaaS?",

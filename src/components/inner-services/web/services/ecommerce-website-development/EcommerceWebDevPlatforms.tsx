@@ -7,7 +7,6 @@ import {
 } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { ECOMMERCE_WEB_DEV_PAGE } from "@/data/site";
-import { EcommerceWebDevSectionHeading } from "./EcommerceWebDevSectionHeading";
 
 const platformIcons = {
   "shopping-bag": IconShoppingBag,
@@ -24,7 +23,9 @@ export function EcommerceWebDevPlatforms() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <EcommerceWebDevSectionHeading heading={platforms.heading} className="mb-1.5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          We pick the <span className="text-[var(--red)]">right tool</span> for your stage
+        </h1>
         <p className="mb-5 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {platforms.description}
         </p>

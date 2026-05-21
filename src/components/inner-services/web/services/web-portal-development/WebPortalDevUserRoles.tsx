@@ -1,7 +1,6 @@
 import { IconCrown, IconEye, IconUser, IconUserCog, type TablerIcon } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { WEB_PORTAL_DEV_PAGE } from "@/data/site";
-import { WebPortalDevSectionHeading } from "./WebPortalDevSectionHeading";
 
 const roleIcons = {
   crown: IconCrown,
@@ -18,7 +17,9 @@ export function WebPortalDevUserRoles() {
   return (
     <section className="w-full border-t border-[var(--border)] py-10 sm:py-[2.5rem]">
       <ContentContainer>
-        <WebPortalDevSectionHeading heading={userRoles.heading} className="mb-1.5" />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          One portal, <span className="text-[var(--red)]">many users</span>, different views
+        </h1>
         <p className="mb-5 max-w-2xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">
           {userRoles.description}
         </p>

@@ -35,9 +35,7 @@ export function EcommerceWebDevHero() {
           <div className="grid items-center gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-8">
             <div className="min-w-0">
               <h1 className="mb-3.5 max-w-xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
-                {hero.heading.before}
-                <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
-                {hero.heading.after}
+                Online stores that load fast and <span className="text-[var(--red)]">actually convert</span>
               </h1>
 
               <p className="mb-5 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">

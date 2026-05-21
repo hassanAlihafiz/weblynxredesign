@@ -38,11 +38,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
       { label: "Digital Marketing", href: "/digital-marketing" },
       { label: "Search Engine Optimization" },
     ] as const,
-    heading: {
-      before: "Get found by buyers ",
-      emphasis: "already searching",
-      after: " for you.",
-    } satisfies SeoHeading,
     description:
       "Technical SEO, on-page optimization, and content strategy that compounds month over month. The traffic you don't have to keep paying for.",
     primaryCta: { label: "Request a quote", href: "/contact" },
@@ -55,11 +50,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably need ",
-      emphasis: "SEO if",
-      after: "...",
-    },
     bullets: [
       "Your business gets little or no traffic from Google today",
       "You're tired of paying for every click and want compounding traffic",
@@ -77,11 +67,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
 
   pillars: {
     sectionId: "approach",
-    heading: {
-      before: "Modern ",
-      emphasis: "SEO",
-      after: " more than keywords",
-    },
     description:
       "We work across all four pillars in parallel the only approach that actually moves rankings in 2026.",
     items: [
@@ -117,11 +102,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   specializations: {
-    heading: {
-      before: "",
-      emphasis: "SEO",
-      after: " isn't one-size-fits-all",
-    },
     description: "Different businesses need different SEO strategies. Pick what fits, or combine them.",
     items: [
       {
@@ -158,11 +138,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every ",
-      emphasis: "SEO",
-      after: " engagement includes",
-    },
     description: "A full operation audit, strategy, execution, content, and reporting.",
     items: [
       { title: "Full SEO audit", body: "Technical, on-page, content, backlink review", icon: "clipboard-search" as const },
@@ -178,11 +153,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   whatWeAudit: {
-    heading: {
-      before: "A ",
-      emphasis: "60-point baseline",
-      after: " before we touch anything.",
-    },
     description: "SEO without an audit is guessing. Every engagement starts with a complete diagnostic.",
     items: [
       "Core Web Vitals + page speed audit",
@@ -197,11 +167,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   toolkit: {
-    heading: {
-      before: "Tools we ",
-      emphasis: "work with",
-      after: "",
-    },
     tools: [
       "Ahrefs",
       "Semrush",
@@ -217,11 +182,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   howItWorks: {
-    heading: {
-      before: "From ",
-      emphasis: "audit",
-      after: " to compounding traffic",
-    },
     description: "SEO is ongoing. We work in monthly cycles but the first 90 days set the foundation.",
     steps: [
       { phaseLabel: "Weeks 1–2", num: "01", title: "Audit", body: "Technical, content, links, competitors" },
@@ -233,11 +193,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   engagementModels: {
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement",
-      after: " that fits",
-    },
     description: "SEO is monthly retainer work. Pick the level that matches your competition and ambition.",
     ctaLabel: "Request a quote →",
     ctaHref: "/contact",
@@ -288,11 +243,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   howWeQuote: {
-    heading: {
-      before: "Every ",
-      emphasis: "business is different",
-      after: " so is every quote",
-    },
     intro:
       "After a 30-minute discovery call, we send a detailed proposal within 3 business days including audit summary, target keywords, content roadmap, and pricing. Tooling costs (Ahrefs, Semrush, etc.) are included in our retainer no surprise bills.",
     steps: [
@@ -315,11 +265,6 @@ export const SEARCH_ENGINE_OPTIMIZATION_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things ",
-      emphasis: "SEO clients",
-      after: " ask before starting",
-    },
     items: [
       {
         q: "How long until I rank on page 1?",

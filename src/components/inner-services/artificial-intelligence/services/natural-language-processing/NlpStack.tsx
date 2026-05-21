@@ -7,9 +7,8 @@ export function NlpStack() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] py-9 shadow-[var(--shadow-inset-soft)] sm:py-10">
       <ContentContainer>
-        <h2 className="mb-4 max-w-3xl text-balance text-4xl font-semibold leading-tight text-[var(--text)]">{stack.heading.before}
-          <span className="text-[var(--red)]">{stack.heading.emphasis}</span>
-          {stack.heading.after}
+        <h2 className="mb-4 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          Tools we build with <span className="text-[var(--red)]">NLP</span>
         </h2>
         <div className="flex flex-wrap gap-2">
           {stack.tools.map((name) => (

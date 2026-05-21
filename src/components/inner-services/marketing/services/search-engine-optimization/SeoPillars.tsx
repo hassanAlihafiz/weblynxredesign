@@ -19,9 +19,7 @@ export function SeoPillars() {
     >
       <ContentContainer>
         <h2 className="mb-5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {pillars.heading.before}
-          <span className="text-[var(--red)]">{pillars.heading.emphasis}</span>
-          {pillars.heading.after}
+          Modern <span className="text-[var(--red)]">SEO</span> more than keywords
         </h2>
         <p className="mb-5 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">{pillars.description}</p>
 

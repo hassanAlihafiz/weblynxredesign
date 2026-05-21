@@ -33,11 +33,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
       { label: "App Development", href: "/app-development" },
       { label: "Cross-Platform" },
     ] as const,
-    heading: {
-      before: "One codebase Two stores ",
-      emphasis: "Half the cost",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     description:
       "Ship to iOS and Android from a single React Native or Flutter build. Faster, cheaper, and nearly indistinguishable from native, the way 80% of modern apps are built.",
     primaryCta: { label: "Request a quote", href: "#quote" },
@@ -50,11 +45,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
   },
 
   whoFor: {
-    heading: {
-      before: "You probably want ",
-      emphasis: "cross-platform",
-      after: " if...",
-    } satisfies CrossPlatformAppDevHeading,
     reasons: [
       "You need both iOS and Android and want to launch at the same time",
       "You're a startup or SaaS and need to ship an MVP fast",
@@ -74,11 +64,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
 
   comparison: {
     sectionId: "comparison",
-    heading: {
-      before: "The honest ",
-      emphasis: "comparison",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     description: "No spin here's exactly how the two approaches stack up.",
     columnLabels: {
       cross: "Cross-platform",
@@ -149,11 +134,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
   },
 
   frameworks: {
-    heading: {
-      before: "React Native or Flutter, ",
-      emphasis: "we pick the right one",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     description: "Both are excellent. The choice depends on your team, ecosystem, and product needs.",
     iconDefaults: {
       iconBg: "bg-transparent",
@@ -178,11 +158,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
   },
 
   deliverables: {
-    heading: {
-      before: "Every ",
-      emphasis: "cross-platform",
-      after: " build includes",
-    } satisfies CrossPlatformAppDevHeading,
     description: "Production-ready apps on both stores not just an APK and an IPA.",
     items: [
       { title: "iOS + Android builds", body: "Both stores from a single codebase", icon: "devices" as const },
@@ -214,11 +189,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
   },
 
   stack: {
-    heading: {
-      before: "Tools we ",
-      emphasis: "ship with",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     labels: [
       "React Native",
       "Flutter",
@@ -236,11 +206,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
   },
 
   process: {
-    heading: {
-      before: "From kickoff to both stores in ",
-      emphasis: "5 steps",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     description: "Slightly faster than native because one codebase, one team, one delivery.",
     steps: [
       { week: "Week 1", num: "01", title: "Discovery", detail: "Scope, features, framework choice" },
@@ -253,11 +218,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
 
   engagement: {
     sectionId: "engagement",
-    heading: {
-      before: "Find the ",
-      emphasis: "engagement ",
-      after: "that fits",
-    } satisfies CrossPlatformAppDevHeading,
     description: "Every project includes both iOS and Android. Three engagement models cover most cases.",
     featuredTierBadge: "Most common",
     ctaLabel: "Request a quote →",
@@ -311,11 +271,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
 
   howWeQuote: {
     sectionId: "quote",
-    heading: {
-      before: "Every project is different. ",
-      emphasis: "So is every quote",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     intro:
       "After a 30-minute scoping call, we send a detailed proposal within 3 business days including scope, milestones, framework recommendation, and a fixed all-in price. Apple ($99/year) and Google ($25 one-time) developer fees are separate.",
     steps: [
@@ -326,11 +281,6 @@ export const CROSS_PLATFORM_APP_DEV_PAGE = {
   },
 
   faq: {
-    heading: {
-      before: "Things cross-platform clients ",
-      emphasis: "ask",
-      after: "",
-    } satisfies CrossPlatformAppDevHeading,
     items: [
       {
         q: "Will users notice it's not native?",

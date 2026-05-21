@@ -2,7 +2,6 @@ import { IconBrandAndroid, IconBrandApple, IconDeviceLaptop } from "@tabler/icon
 import type { TablerIcon } from "@tabler/icons-react";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { APP_DEVELOPMENT_PAGE } from "@/data/site";
-import { AppDevSectionHeading } from "./AppDevSectionHeading";
 
 const platformIcons = {
   apple: IconBrandApple,
@@ -19,7 +18,9 @@ export function AppDevPlatforms() {
       className="border-t border-[var(--border-subtle)] py-10 shadow-[var(--shadow-inset-soft)] sm:py-11 md:py-12"
     >
       <ContentContainer>
-        <AppDevSectionHeading heading={platforms.heading} />
+        <h1 className="mb-3 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+          One build <span className="text-[var(--red)]">Three stores</span>
+        </h1>
         <div className="grid gap-4 md:grid-cols-3">
           {platforms.items.map(({ title, body, icon, iconClass }) => {
             const Icon = platformIcons[icon];

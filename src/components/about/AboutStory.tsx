@@ -13,8 +13,8 @@ export function AboutStory() {
           </p>
 
           <div className="min-w-0 max-w-2xl">
-            <h2 className="mb-8 font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-              {story.title}
+            <h2 className="mb-8 font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+              From a single project to a <span className="text-[var(--red)]">studio trusted by</span> founders worldwide
             </h2>
             <div className="space-y-5 text-lg leading-relaxed text-[var(--text-muted)]">
               {story.paragraphs.map((p) => (

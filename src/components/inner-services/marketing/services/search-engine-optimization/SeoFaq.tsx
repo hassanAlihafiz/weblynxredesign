@@ -15,9 +15,7 @@ export function SeoFaq() {
     <section className="w-full border-t border-[var(--border-subtle)] py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-3xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {faq.heading.before}
-          <span className="text-[var(--red)]">{faq.heading.emphasis}</span>
-          {faq.heading.after}
+          The <span className="text-[var(--red)]">SEO client</span> ask before starting
         </h2>
 
         <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)]">

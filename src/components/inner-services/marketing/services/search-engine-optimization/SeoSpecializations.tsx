@@ -26,9 +26,7 @@ export function SeoSpecializations() {
     <section className="w-full bg-[var(--bg-elev)] py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {specializations.heading.before}
-          <span className="text-[var(--red)]">{specializations.heading.emphasis}</span>
-          {specializations.heading.after}
+          <span className="text-[var(--red)]">SEO</span> isn't one-size-fits-all
         </h2>
         <p className="mb-5 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">{specializations.description}</p>
 

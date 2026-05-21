@@ -1,6 +1,5 @@
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { DIGITAL_MARKETING_PAGE } from "@/data/site";
-import { DmSectionHeading } from "./DmSectionHeading";
 
 const { howWeQuote } = DIGITAL_MARKETING_PAGE;
 
@@ -10,7 +9,9 @@ export function DmHowWeQuote() {
       <ContentContainer>
         <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
           <div>
-            <DmSectionHeading heading={howWeQuote.heading} className="" />
+            <h2 className="mb-1.5 max-w-3xl text-balance font-sans text-5xl font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text)] md:text-6xl">
+              Every business is different <span className="text-[var(--red)]">So is every plan</span>
+            </h2>
           </div>
           <div>
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">{howWeQuote.intro}</p>

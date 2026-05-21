@@ -17,8 +17,8 @@ export function HomeCaseStudies() {
       <ContentContainer>
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-              {caseStudies.heading}
+            <h2 className="text-balance font-sans text-4xl font-bold leading-[1.05] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+              Projects we're <span className="text-[var(--red)]">proud</span> of
             </h2>
           </div>
           <Link

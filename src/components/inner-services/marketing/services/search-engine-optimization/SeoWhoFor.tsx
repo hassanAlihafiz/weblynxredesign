@@ -10,9 +10,7 @@ export function SeoWhoFor() {
     <section className="w-full bg-[var(--bg-elev)] py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {whoFor.heading.before}
-          <span className="text-[var(--red)]">{whoFor.heading.emphasis}</span>
-          {whoFor.heading.after}
+          You probably need <span className="text-[var(--red)]">SEO</span> if...
         </h2>
 
         <div className="grid gap-2.5 sm:grid-cols-2">

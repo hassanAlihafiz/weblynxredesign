@@ -26,9 +26,7 @@ export function SemCampaignTypes() {
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-10 sm:py-11">
       <ContentContainer>
         <h2 className="mb-5 max-w-3xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-          {campaignTypes.heading.before}
-          <span className="text-[var(--red)]">{campaignTypes.heading.emphasis}</span>
-          {campaignTypes.heading.after}
+          The right <span className="text-[var(--red)]">campaign</span> for the right moment
         </h2>
         <p className="mb-5 max-w-3xl text-balance text-lg leading-relaxed text-[var(--text-muted)]">{campaignTypes.description}</p>
 

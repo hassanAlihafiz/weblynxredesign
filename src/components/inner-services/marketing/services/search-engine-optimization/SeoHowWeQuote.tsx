@@ -10,9 +10,7 @@ export function SeoHowWeQuote() {
         <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-6">
           <div>
             <h2 className="mb-5 max-w-3xl text-balance font-sans text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-text sm:text-4xl md:text-5xl md:font-bold">
-              {howWeQuote.heading.before}
-              <span className="text-[var(--red)]">{howWeQuote.heading.emphasis}</span>
-              {howWeQuote.heading.after}
+              Every business is different <span className="text-[var(--red)]">So is every quote</span>
             </h2>
           </div>
           <div>

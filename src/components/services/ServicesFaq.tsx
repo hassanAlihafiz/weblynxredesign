@@ -14,8 +14,8 @@ export function ServicesFaq() {
   return (
     <section className="w-full border-t border-[var(--border-subtle)] bg-[var(--bg-elev)] py-14 md:py-20">
       <ContentContainer className="max-w-3xl">
-        <h2 className="mb-10 max-w-2xl font-sans text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
-          {faq.heading}
+        <h2 className="mb-10 max-w-2xl font-sans text-4xl font-bold leading-[1.1] tracking-[-0.025em] text-[var(--text)] md:text-5xl">
+          Before you <span className="text-[var(--red)]">book a call</span>
         </h2>
 
         <div className="overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--color-background-primary)] p-0">

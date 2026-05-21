@@ -32,10 +32,8 @@ export function HomeHero() {
               {hero.badge}
             </div>
 
-            <h1 className="hero-lcp mb-4 text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2.5rem,5vw,3.5rem)] lg:text-[3.5rem]">
-              {hero.heading.before}
-              <span className="text-[var(--red)]">{hero.heading.emphasis}</span>
-              {hero.heading.after}
+            <h1 className="hero-lcp mb-4 text-balance text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-[#FAFAFA] sm:text-[clamp(2.5rem,5vw,3.5rem)] lg:text-[3.5rem]">
+              We build the <span className="text-[var(--red)]">web</span> for ambitious founders
             </h1>
 
             <p className="mb-6 max-w-[400px] text-base leading-relaxed text-[#A0A0A0] max-lg:mx-auto lg:mx-0">

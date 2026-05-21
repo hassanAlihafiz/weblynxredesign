@@ -10,11 +10,8 @@ export type ServicesWhyIconId = "bolt" | "puzzle" | "target";
 
 export const SERVICES_PAGE = {
   hero: {
-    line1: "Everything you need to",
-    line2Emphasis: "build,",
-    line2Rest: " launch, and grow",
     description:
-      "From your first landing page to a full product launch four services that work together, or stand alone.",
+      "We build the web for ambitious founders. From your first landing page to a full product launch, we have you covered.",
   },
 
   grid: {
@@ -69,7 +66,6 @@ export const SERVICES_PAGE = {
   },
 
   why: {
-    heading: "Four services - One team - Zero handoffs",
     items: [
       {
         title: "Ship in weeks",
@@ -90,7 +86,6 @@ export const SERVICES_PAGE = {
   },
 
   process: {
-    heading: "The same rhythm every project",
     steps: [
       { week: "WEEK 1", n: "01", title: "Discover", detail: "Strategy call & scope" },
       { week: "WEEK 2", n: "02", title: "Design", detail: "Concepts & prototype" },
@@ -100,13 +95,11 @@ export const SERVICES_PAGE = {
   },
 
   featuredWork: {
-    heading: "Work across all four services",
     viewAllLabel: "View all",
     viewAllHref: "/case-studies",
   },
 
   faq: {
-    heading: "Before you book a call",
     items: [
       {
         q: "Can I hire you for just one service?",
