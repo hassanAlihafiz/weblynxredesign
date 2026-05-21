@@ -82,13 +82,13 @@ export const aiDevelopmentMetadata = {
 } satisfies Metadata;
 
 export const generativeAiMetadata = {
-  title: "Generative AI Development Services | Custom AI Tools — Weblynx",
+  title: "Generative AI Development Services | Custom AI Tools - Weblynx",
   description:
     "Build custom GenAI tools for text, image, video, and audio creation. Production-grade tools tuned to your brand, integrated with your workflows, ready to scale.",
 } satisfies Metadata;
 
 export const naturalLanguageProcessingMetadata = {
-  title: "Natural Language Processing Services | Custom NLP Solutions — Weblynx",
+  title: "Natural Language Processing Services | Custom NLP Solutions - Weblynx",
   description:
     "Build custom NLP pipelines for text classification, entity extraction, sentiment analysis, and language understanding. Production-grade models trained on your data, integrated with your systems, ready to scale.",
 } satisfies Metadata;
@@ -109,6 +109,12 @@ export const brandIdentityDesignMetadata = {
   title: "Brand Identity Design Studio | Logo & Guidelines - Weblynx",
   description:
     "Complete brand identity systems with logo, color, typography, voice, and guidelines. Built for ambitious founders who want their brand to look like they mean it.",
+} satisfies Metadata;
+
+export const uiUxDesignMetadata = {
+  title: "UI/UX Design Services | SaaS & Product Studio - Weblynx",
+  description:
+    "Product UX, web app UI, and SaaS dashboards designed for clarity, speed, and conversion. User research, components, and developer-ready Figma built to ship.",
 } satisfies Metadata;
 
 export const androidAppDevelopmentMetadata = {
@@ -138,5 +144,17 @@ export const ecommerceWebsiteDevelopmentMetadata = {
 export const webPortalDevelopmentMetadata = {
   title: "Custom Web Portal Development Agency in USA - Weblynx",
   description:
-    "Webynx offers tailored web portal development services Build secure, scalable portals with advanced user management, data integration, custom workflows",
+    "Webynx offers tailored web portal development services Build secure, scalable portals with advanced user management, data integration, custom workflows.soci",
+} satisfies Metadata;
+
+export const cloudApplicationDevelopmentMetadata = {
+  title: "Cloud Application Development  | Scalable Cloud , Microservices & Azure - Weblynx",
+  description:
+    "Custom cloud application development services for AWS, Azure & GCP. Develop scalable, secure, and modern cloud-native software built for growth.",
+} satisfies Metadata;
+
+export const cloudConsultingServicesMetadata = {
+  title: "Cloud Consulting Services | AWS, GCP & Azure - Weblynx",
+  description:
+    "Cloud architecture, migration, and cost optimization for AWS, Google Cloud, and Azure. Provider-neutral expertise that cuts cloud bills by 45% on average.",
 } satisfies Metadata;
