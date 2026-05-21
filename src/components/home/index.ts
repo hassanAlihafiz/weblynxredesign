@@ -1,8 +1,8 @@
 export { HomeCaseStudies } from "./HomeCaseStudies";
 export { HomeFinalCta } from "./HomeFinalCta";
-export { HomeFooter as Footer } from "../Footer/Footer";
+export { DeferredFooter as Footer } from "../Footer/DeferredFooter";
 export { HomeHero } from "./HomeHero";
-export { HomeNav as Navbar } from "../Navbar/Navbar";
+export { DeferredHomeNav as Navbar } from "../Navbar/DeferredHomeNav";
 export { HomeProcess } from "./HomeProcess";
 export { HomeServices } from "./HomeServices";
 export { HomeTestimonials } from "./HomeTestimonials";

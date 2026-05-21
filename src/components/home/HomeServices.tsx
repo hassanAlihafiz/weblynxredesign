@@ -1,22 +1,15 @@
-"use client";
-
+import Link from "next/link";
+import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon";
 import {
-  IconArrowRight,
   IconBrain,
-  IconChevronLeft,
-  IconChevronRight,
   IconCode,
   IconDeviceMobile,
   IconPalette,
   IconTrendingUp,
-  type TablerIcon,
-} from "@tabler/icons-react";
-import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+} from "@/components/icons/HomeServiceIcons";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HOME_PAGE } from "@/data/site";
-
-const VISIBLE_DESKTOP = 3;
+import type { ComponentType } from "react";
 
 const serviceIcons = {
   code: IconCode,
@@ -24,70 +17,15 @@ const serviceIcons = {
   "trending-up": IconTrendingUp,
   brain: IconBrain,
   palette: IconPalette,
-} as const satisfies Record<(typeof HOME_PAGE.services.items)[number]["icon"], TablerIcon>;
+} as const satisfies Record<(typeof HOME_PAGE.services.items)[number]["icon"], ComponentType<IconProps>>;
 
-type ServiceCardData = (typeof HOME_PAGE.services.items)[number];
-
-type ServiceItem = Omit<ServiceCardData, "icon"> & { icon: TablerIcon };
+type IconProps = { className?: string; strokeWidth?: number };
 
 const cardClassName =
   "group/card block h-full rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev)] p-6 transition-[transform,border-color] duration-200 motion-safe:hover:-translate-y-0.5 hover:border-[var(--border)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]";
 
-const navButtonClass =
-  "flex size-10 shrink-0 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] text-[var(--text-muted)] transition-colors hover:border-[var(--border)] hover:text-[var(--text)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)] disabled:pointer-events-none disabled:opacity-35 sm:size-11";
-
-function ServiceCard({
-  href,
-  n,
-  title,
-  description,
-  stack,
-  duration,
-  icon: Icon,
-  learnMoreLabel,
-}: ServiceItem & { learnMoreLabel: string }) {
-  return (
-    <Link href={href} className={`${cardClassName} min-w-0`}>
-      <div
-        className="mb-5 flex size-11 items-center justify-center rounded-lg bg-[rgba(230,57,70,0.1)]"
-        aria-hidden
-      >
-        <Icon className="size-6 text-[var(--red-bright)]" stroke={1.5} />
-      </div>
-      <div className="mb-1 flex items-baseline justify-between gap-2">
-        <span className="font-medium text-[var(--text)]">{title}</span>
-        <span className="text-meta">{n}</span>
-      </div>
-      <p className="mb-4 text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
-      <div className="mb-4 font-mono text-sm text-[var(--text-dim)]">{stack}</div>
-      <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-3">
-        <span className="text-sm text-[var(--text-muted)]">{duration}</span>
-        <span className="text-accent inline-flex items-center gap-0.5 text-sm font-semibold transition-colors group-hover/card:text-[var(--text)]">
-          {learnMoreLabel}
-          <IconArrowRight className="size-3 shrink-0" stroke={1.5} aria-hidden />
-        </span>
-      </div>
-    </Link>
-  );
-}
-
 export function HomeServices() {
   const { services: copy } = HOME_PAGE;
-
-  const servicesWithIcons: ServiceItem[] = useMemo(
-    () =>
-      copy.items.map((item) => ({
-        ...item,
-        icon: serviceIcons[item.icon],
-      })),
-    [copy.items],
-  );
-
-  const maxOffset = Math.max(0, servicesWithIcons.length - VISIBLE_DESKTOP);
-  const [offset, setOffset] = useState(0);
-
-  const goPrev = useCallback(() => setOffset((o) => Math.max(0, o - 1)), []);
-  const goNext = useCallback(() => setOffset((o) => Math.min(maxOffset, o + 1)), [maxOffset]);
 
   return (
     <section
@@ -105,64 +43,68 @@ export function HomeServices() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
-          {servicesWithIcons.map((service) => (
-            <ServiceCard key={service.n} {...service} learnMoreLabel={copy.learnMoreLabel} />
-          ))}
+          {copy.items.map((service) => {
+            const Icon = serviceIcons[service.icon];
+            return (
+              <ServiceCard key={service.n} service={service} Icon={Icon} learnMoreLabel={copy.learnMoreLabel} />
+            );
+          })}
         </div>
 
-        <div className="hidden lg:block" aria-roledescription="carousel" aria-label={copy.carouselAriaLabel}>
-          <div className="flex items-stretch gap-4">
-            <button
-              type="button"
-              className={`${navButtonClass} self-center`}
-              onClick={goPrev}
-              disabled={offset === 0}
-              aria-label={copy.prevAriaLabel}
-            >
-              <IconChevronLeft className="size-5" stroke={1.5} aria-hidden />
-            </button>
-
-            <div className="min-w-0 flex-1 overflow-hidden">
-              <div
-                className="flex transition-transform duration-300 ease-out motion-reduce:transition-none"
-                style={{
-                  width: `${(servicesWithIcons.length / VISIBLE_DESKTOP) * 100}%`,
-                  transform: `translateX(-${(offset / servicesWithIcons.length) * 100}%)`,
-                }}
-              >
-                {servicesWithIcons.map((service) => (
-                  <div
-                    key={service.n}
-                    className="box-border shrink-0 px-2"
-                    style={{ width: `${100 / servicesWithIcons.length}%` }}
-                  >
-                    <ServiceCard {...service} learnMoreLabel={copy.learnMoreLabel} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <button
-              type="button"
-              className={`${navButtonClass} self-center`}
-              onClick={goNext}
-              disabled={offset >= maxOffset}
-              aria-label={copy.nextAriaLabel}
-            >
-              <IconChevronRight className="size-5" stroke={1.5} aria-hidden />
-            </button>
-          </div>
-
-          <div className="mt-6 flex justify-center gap-2" aria-hidden>
-            {Array.from({ length: maxOffset + 1 }, (_, i) => (
-              <span
-                key={i}
-                className={`size-1.5 rounded-full transition-colors ${i === offset ? "bg-[var(--surface-red)]" : "bg-[var(--border)]"}`}
-              />
-            ))}
+        <div
+          className="hidden lg:block"
+          aria-roledescription="carousel"
+          aria-label={copy.carouselAriaLabel}
+        >
+          <div className="-mx-2 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-2 pb-2 [scrollbar-width:thin]">
+            {copy.items.map((service) => {
+              const Icon = serviceIcons[service.icon];
+              return (
+                <div
+                  key={service.n}
+                  className="w-[calc((100%-2rem)/3)] min-w-[calc((100%-2rem)/3)] shrink-0 snap-start"
+                >
+                  <ServiceCard service={service} Icon={Icon} learnMoreLabel={copy.learnMoreLabel} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </ContentContainer>
     </section>
+  );
+}
+
+function ServiceCard({
+  service: { href, n, title, description, stack, duration },
+  Icon,
+  learnMoreLabel,
+}: {
+  service: (typeof HOME_PAGE.services.items)[number];
+  Icon: ComponentType<IconProps>;
+  learnMoreLabel: string;
+}) {
+  return (
+    <Link href={href} className={`${cardClassName} min-w-0`}>
+      <div
+        className="mb-5 flex size-11 items-center justify-center rounded-lg bg-[rgba(230,57,70,0.1)]"
+        aria-hidden
+      >
+        <Icon className="size-6 text-[var(--red-bright)]" strokeWidth={1.5} />
+      </div>
+      <div className="mb-1 flex items-baseline justify-between gap-2">
+        <span className="font-medium text-[var(--text)]">{title}</span>
+        <span className="text-meta">{n}</span>
+      </div>
+      <p className="mb-4 text-sm leading-relaxed text-[var(--text-muted)]">{description}</p>
+      <div className="mb-4 font-mono text-sm text-[var(--text-dim)]">{stack}</div>
+      <div className="flex items-center justify-between border-t border-[var(--border-subtle)] pt-3">
+        <span className="text-sm text-[var(--text-muted)]">{duration}</span>
+        <span className="text-accent inline-flex items-center gap-0.5 text-sm font-semibold transition-colors group-hover/card:text-[var(--text)]">
+          {learnMoreLabel}
+          <ArrowRightIcon className="size-3 shrink-0" />
+        </span>
+      </div>
+    </Link>
   );
 }

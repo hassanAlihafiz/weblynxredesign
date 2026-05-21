@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   experimental: {
     /** Inlines CSS in HTML to remove render-blocking stylesheet request (production builds). */
     inlineCss: true,
