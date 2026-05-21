@@ -1,10 +1,20 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import { SiteLogo } from "@/components/brand";
 import { ContentContainer } from "@/components/layout/ContentContainer";
-import { ServicesMegaMenuMobile, ServicesMegaMenuPanel } from "@/components/Navbar/ServicesMegaMenu";
 import Link from "next/link";
+
+const ServicesMegaMenuPanel = dynamic(
+  () => import("@/components/Navbar/ServicesMegaMenu").then((m) => ({ default: m.ServicesMegaMenuPanel })),
+  { ssr: false },
+);
+
+const ServicesMegaMenuMobile = dynamic(
+  () => import("@/components/Navbar/ServicesMegaMenu").then((m) => ({ default: m.ServicesMegaMenuMobile })),
+  { ssr: false },
+);
 import { Button } from "@/components/ui";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useState, useSyncExternalStore } from "react";
@@ -212,7 +222,7 @@ export function HomeNav() {
   return (
     <>
       <header
-        className="relative sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-xl backdrop-saturate-150"
+        className="relative sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-md backdrop-saturate-150"
         onMouseLeave={(e) => {
           const related = e.relatedTarget;
           if (!(related instanceof Node) || !e.currentTarget.contains(related)) {

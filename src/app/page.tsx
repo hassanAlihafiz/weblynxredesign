@@ -1,25 +1,9 @@
 import dynamic from "next/dynamic";
 import { homeMetadata } from "@/data/metadata";
-import { HomeHero, HomeTrustBar } from "@/components/home";
-import { HomeHeaderShell } from "@/components/Navbar/HomeHeaderShell";
+import { DeferredFooter } from "@/components/Footer/DeferredFooter";
+import { DeferredHomeNav } from "@/components/Navbar/DeferredHomeNav";
+import { HomeHero, HomeServices, HomeTestimonials, HomeTrustBar } from "@/components/home";
 import { PageContainer } from "@/components/layout/PageContainer";
-
-const Navbar = dynamic(
-  () => import("@/components/Navbar/Navbar").then((m) => ({ default: m.HomeNav })),
-  { loading: () => <HomeHeaderShell /> },
-);
-
-const Footer = dynamic(
-  () => import("@/components/Footer/Footer").then((m) => ({ default: m.HomeFooter })),
-);
-
-const HomeServices = dynamic(
-  () => import("@/components/home/HomeServices").then((m) => ({ default: m.HomeServices })),
-);
-
-const HomeTestimonials = dynamic(
-  () => import("@/components/home/HomeTestimonials").then((m) => ({ default: m.HomeTestimonials })),
-);
 
 const HomeCaseStudies = dynamic(
   () => import("@/components/home/HomeCaseStudies").then((m) => ({ default: m.HomeCaseStudies })),
@@ -39,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full bg-[var(--color-background-primary)] text-[var(--color-text-primary)]">
       <PageContainer className="flex min-h-screen flex-col">
-        <Navbar />
+        <DeferredHomeNav />
         <main className="w-full min-w-0 flex-1">
           <HomeHero />
           <HomeTrustBar />
@@ -49,7 +33,7 @@ export default function Home() {
           <HomeTestimonials />
           <HomeFinalCta />
         </main>
-        <Footer />
+        <DeferredFooter />
       </PageContainer>
     </div>
   );

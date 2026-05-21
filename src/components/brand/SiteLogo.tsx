@@ -17,6 +17,7 @@ export function SiteLogo({ priority = false, align = "left", className = "" }: S
       alt="Weblynx"
       width={560}
       height={154}
+      sizes="(max-width: 768px) 200px, 280px"
       className={`${SITE_LOGO_IMG_CLASS} ${align === "center" ? "object-center" : "object-left"} ${className}`}
       priority={priority}
     />

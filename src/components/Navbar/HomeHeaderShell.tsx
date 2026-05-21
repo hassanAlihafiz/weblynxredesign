@@ -6,7 +6,7 @@ import { NAV_ITEMS } from "@/data/site";
 /** Lightweight server header shown while the interactive navbar chunk loads (home LCP path). */
 export function HomeHeaderShell() {
   return (
-    <header className="relative sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-xl backdrop-saturate-150">
+    <header className="relative sticky top-0 z-30 w-full bg-[var(--color-header-bg)] shadow-[var(--shadow-header)] backdrop-blur-md backdrop-saturate-150">
       <ContentContainer>
         <div className="grid min-h-0 w-full grid-cols-[2.25rem_1fr_2.25rem] items-center gap-0.5 py-1 sm:grid-cols-[2.5rem_1fr_2.5rem] md:hidden">
           <div className="size-9 shrink-0" aria-hidden />
