@@ -81,11 +81,11 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
     },
     {
       label: "Cloud Services",
-      href: "/cloud-services",
+      href: "/cloud-application-development",
       items: [
-        { label: "Cloud application development", href: "/cloud-services" },
-        { label: "Cloud migration", href: "/cloud-services" },
-        { label: "Support & maintenance", href: "/cloud-services" },
+        { label: "Cloud consulting", href: "/cloud-consulting-services" },
+        { label: "Cloud migration", href: "/cloud-consulting-services" },
+        { label: "Support & maintenance", href: "/cloud-consulting-services" },
       ],
     },
   ],
@@ -104,7 +104,7 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
       href: "/design",
       items: [
         { label: "Brand identity", href: "/brand-identity-design" },
-        { label: "UI / UX design", href: "/design" },
+        { label: "UI / UX design", href: "/ui-ux-design" },
       ],
     },
   ],
@@ -392,3 +392,26 @@ export {
   type BrandIdentityLayerIconId,
   type BrandIdentityRelatedIconId,
 } from "./inner-seervices/designing/services/brand-identity-design";
+export {
+  UI_UX_DESIGN_PAGE,
+  type UiUxDeliverableIconId,
+  type UiUxPrincipleIconId,
+  type UiUxRelatedIconId,
+  type UiUxSurfaceIconId,
+} from "./inner-seervices/designing/services/ui-ux-design";
+export {
+  CLOUD_APPLICATION_DEVELOPMENT_PAGE,
+  type CloudAppArchitectureIconId,
+  type CloudAppDeliverableIconId,
+  type CloudAppPatternIconId,
+  type CloudAppProviderIconId,
+  type CloudAppRelatedIconId,
+} from "./inner-seervices/cloud/cloud-application-development";
+export {
+  CLOUD_CONSULTING_SERVICES_PAGE,
+  type CloudConsultingCapabilityIconId,
+  type CloudConsultingComplianceIconId,
+  type CloudConsultingDeliverableIconId,
+  type CloudConsultingProviderIconId,
+  type CloudConsultingRelatedIconId,
+} from "./inner-seervices/cloud/cloud-consulting-services";

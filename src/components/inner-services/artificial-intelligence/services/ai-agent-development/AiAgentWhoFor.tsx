@@ -34,7 +34,7 @@ export function AiAgentWhoFor() {
           {whoFor.bullets.map((bullet) => (
             <div
               key={bulletKey(bullet)}
-              className="flex items-start gap-2.5 rounded-[var(--border-radius-md)] border border-[var(--border)] bg-[var(--bg-elev)] px-4 py-3.5"
+              className="flex items-start gap-2.5 px-4 py-3.5"
             >
               <IconCheck className="mt-px size-4 shrink-0 text-[var(--red)]" stroke={2} aria-hidden />
               <BulletContent bullet={bullet} />

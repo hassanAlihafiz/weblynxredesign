@@ -1,0 +1,13 @@
+export { CloudConsultingCapabilities } from "./CloudConsultingCapabilities";
+export { CloudConsultingCompliance } from "./CloudConsultingCompliance";
+export { CloudConsultingDeliverables } from "./CloudConsultingDeliverables";
+export { CloudConsultingEngagement } from "./CloudConsultingEngagement";
+export { CloudConsultingFaq } from "./CloudConsultingFaq";
+export { CloudConsultingFinalCta } from "./CloudConsultingFinalCta";
+export { CloudConsultingHero } from "./CloudConsultingHero";
+export { CloudConsultingHowWeQuote } from "./CloudConsultingHowWeQuote";
+export { CloudConsultingProcess } from "./CloudConsultingProcess";
+export { CloudConsultingProviders } from "./CloudConsultingProviders";
+export { CloudConsultingRelated } from "./CloudConsultingRelated";
+export { CloudConsultingToolkit } from "./CloudConsultingToolkit";
+export { CloudConsultingWhoFor } from "./CloudConsultingWhoFor";

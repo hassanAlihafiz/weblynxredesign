@@ -17,7 +17,7 @@ export function SemWhoFor() {
           {whoFor.bullets.map((text) => (
             <div
               key={text}
-              className="flex items-start gap-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elev-2)] px-4 py-3.5"
+              className="flex items-start gap-2.5 px-4 py-3.5"
             >
               <IconCheck className="mt-px size-5 shrink-0 text-[var(--red)]" stroke={2} aria-hidden />
               <span className="text-base leading-relaxed text-text">{text}</span>

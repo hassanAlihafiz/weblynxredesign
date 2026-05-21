@@ -77,6 +77,41 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/ui-ux-design",
+        destination: "/ui-ux-design",
+        permanent: true,
+      },
+      {
+        source: "/inner-services/designing/services/ui-ux-design",
+        destination: "/ui-ux-design",
+        permanent: true,
+      },
+      {
+        source: "/services/cloud-application-development",
+        destination: "/cloud-application-development",
+        permanent: true,
+      },
+      {
+        source: "/inner-services/cloud/services/cloud-application-development",
+        destination: "/cloud-application-development",
+        permanent: true,
+      },
+      {
+        source: "/cloud-services",
+        destination: "/cloud-consulting-services",
+        permanent: true,
+      },
+      {
+        source: "/services/cloud-consulting-services",
+        destination: "/cloud-consulting-services",
+        permanent: true,
+      },
+      {
+        source: "/inner-services/cloud/cloud-consulting-services",
+        destination: "/cloud-consulting-services",
+        permanent: true,
+      },
+      {
         source: "/inner-services/artificial-intellignece/artificial-intelligence",
         destination: "/artificial-intelligence",
         permanent: true,
