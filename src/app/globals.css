@@ -163,7 +163,9 @@ body {
 }
 
 .dot-bg {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-color: var(--color-background-primary);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-position: 0 0;
   background-size: 24px 24px;
 }
 

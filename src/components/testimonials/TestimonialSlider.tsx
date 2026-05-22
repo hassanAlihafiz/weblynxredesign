@@ -90,33 +90,6 @@ export function TestimonialSlider({ sectionClassName }: TestimonialSliderProps =
               <IconChevronRight className="size-5" stroke={1.5} aria-hidden />
             </button>
           </div>
-
-          <div
-            className="mt-8 flex justify-center gap-3"
-            role="tablist"
-            aria-label="Testimonial slides"
-          >
-            {TESTIMONIALS.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                role="tab"
-                aria-selected={index === activeIndex}
-                aria-label={`Go to testimonial ${index + 1}`}
-                className="touch-target rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red-bright)]"
-                onClick={() => goTo(index)}
-              >
-                <span
-                  className={`block size-2.5 rounded-full transition-colors ${
-                    index === activeIndex
-                      ? "bg-[var(--red-bright)]"
-                      : "bg-[var(--border)]"
-                  }`}
-                  aria-hidden
-                />
-              </button>
-            ))}
-          </div>
         </div>
       </ContentContainer>
     </section>

@@ -31,8 +31,8 @@ export const CLOUD_CONSULTING_SERVICES_PAGE = {
   hero: {
     breadcrumb: [
       { label: "Services", href: "/service" },
-      { label: "Cloud Services", href: "/cloud-consulting-services" },
-      { label: "Cloud Consulting" },
+      { label: "Cloud Services", href: "/cloud-application-development" },
+      { label: "Cloud Consulting Services" },
     ] as const,
     description:
       "Architecture, migration, and optimization for AWS, Google Cloud, and Azure built around your business, not your provider's sales pitch.",

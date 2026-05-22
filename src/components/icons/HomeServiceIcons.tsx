@@ -39,6 +39,14 @@ export function IconTrendingUp({ className, strokeWidth = 1.5 }: IconProps) {
   );
 }
 
+export function IconCloud({ className, strokeWidth = 1.5 }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps(strokeWidth)}>
+      <path d="M6.5 18a4.5 4.5 0 0 1 0-9 5.5 5.5 0 0 1 10.8 1.5A4 4 0 0 1 18 18H7" />
+    </svg>
+  );
+}
+
 export function IconBrain({ className, strokeWidth = 1.5 }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps(strokeWidth)}>

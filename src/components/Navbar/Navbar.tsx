@@ -33,6 +33,8 @@ const SERVICE_PAGE_PREFIXES = [
   "/ui-ux-design",
   "/cloud-application-development",
   "/cloud-consulting-services",
+  "/cloud-support-and-maintenance",
+  "/cloud-migration",
   "/artificial-intelligence",
   "/generative-ai",
   "/natural-language-processing",

@@ -48,6 +48,11 @@ export function HomeFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/cloud-application-development" className={footerLinkClass}>
+                  Cloud services
+                </Link>
+              </li>
+              <li>
                 <Link href="/artificial-intelligence" className={footerLinkClass}>
                   AI development
                 </Link>
