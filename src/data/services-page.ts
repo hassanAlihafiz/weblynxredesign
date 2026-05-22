@@ -4,7 +4,13 @@
  * Featured tiles use `PROJECT_SHOWCASES.services` from `@/data/site` (see `case-studies-page.ts`).
  */
 
-export type ServicesGridIconId = "code" | "device-mobile" | "trending-up" | "brain" | "palette";
+export type ServicesGridIconId =
+  | "code"
+  | "device-mobile"
+  | "trending-up"
+  | "cloud"
+  | "brain"
+  | "palette";
 
 export type ServicesWhyIconId = "bolt" | "puzzle" | "target";
 
@@ -46,6 +52,15 @@ export const SERVICES_PAGE = {
       },
       {
         n: "04",
+        title: "Cloud services",
+        body: "Serverless, microservices, and cloud-native apps on AWS, GCP, and Azure built to scale.",
+        stack: "AWS · GCP · Azure",
+        delivery: "6–12 week delivery",
+        href: "/cloud-application-development",
+        icon: "cloud" as const,
+      },
+      {
+        n: "05",
         title: "AI development",
         body: "Chatbots, RAG, agents, and automation on the latest LLMs production AI, not demos.",
         stack: "GPT · Claude · LangChain · Pinecone",
@@ -54,7 +69,7 @@ export const SERVICES_PAGE = {
         icon: "brain" as const,
       },
       {
-        n: "05",
+        n: "06",
         title: "Design",
         body: "Brand identity, UI/UX, and product design. Beautiful work that's still functional and on-brand.",
         stack: "Figma · Brand systems · UI/UX",

@@ -32,7 +32,6 @@ export const CLOUD_APPLICATION_DEVELOPMENT_PAGE = {
     eyebrow: "Cloud Application Development",
     breadcrumb: [
       { label: "Services", href: "/service" },
-      { label: "Cloud Services", href: "/cloud-consulting-services" },
       { label: "Cloud Application Development" },
     ] as const,
     description:

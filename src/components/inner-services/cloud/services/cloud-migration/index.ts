@@ -1,0 +1,13 @@
+export { CloudMigrationDeliverables } from "./CloudMigrationDeliverables";
+export { CloudMigrationEngagement } from "./CloudMigrationEngagement";
+export { CloudMigrationFaq } from "./CloudMigrationFaq";
+export { CloudMigrationFinalCta } from "./CloudMigrationFinalCta";
+export { CloudMigrationHero } from "./CloudMigrationHero";
+export { CloudMigrationHowWeQuote } from "./CloudMigrationHowWeQuote";
+export { CloudMigrationProcess } from "./CloudMigrationProcess";
+export { CloudMigrationRelated } from "./CloudMigrationRelated";
+export { CloudMigrationStrategies } from "./CloudMigrationStrategies";
+export { CloudMigrationToolkit } from "./CloudMigrationToolkit";
+export { CloudMigrationZeroDowntime } from "./CloudMigrationZeroDowntime";
+export { CloudMigrationWhoFor } from "./CloudMigrationWhoFor";
+export { CloudMigrationWorkloads } from "./CloudMigrationWorkloads";

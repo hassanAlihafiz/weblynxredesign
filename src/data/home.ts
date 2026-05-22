@@ -9,7 +9,13 @@ export type HomeProcessHeading = {
   after: string;
 };
 
-export type HomeServiceIconId = "code" | "device-mobile" | "trending-up" | "brain" | "palette";
+export type HomeServiceIconId =
+  | "code"
+  | "device-mobile"
+  | "trending-up"
+  | "cloud"
+  | "brain"
+  | "palette";
 
 export const HOME_PAGE = {
   hero: {
@@ -96,8 +102,17 @@ export const HOME_PAGE = {
         icon: "trending-up" as const,
       },
       {
-        href: "/artificial-intelligence",
+        href: "/cloud-application-development",
         n: "04",
+        title: "Cloud services",
+        description: "Serverless, microservices, and cloud-native apps on AWS, GCP, and Azure.",
+        stack: "AWS · GCP · Azure",
+        duration: "6–12 weeks",
+        icon: "cloud" as const,
+      },
+      {
+        href: "/artificial-intelligence",
+        n: "05",
         title: "AI development",
         description: "Chatbots, RAG, agents, and workflow automation on modern LLMs.",
         stack: "GPT · Claude · LangChain",
@@ -106,7 +121,7 @@ export const HOME_PAGE = {
       },
       {
         href: "/design",
-        n: "05",
+        n: "06",
         title: "Design",
         description: "Brand identity, UI/UX, and product design that actually ships.",
         stack: "Brand · UI/UX · Identity",

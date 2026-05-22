@@ -25,11 +25,11 @@ export function FinalCtaSection({
   return (
     <section
       id={id}
-      className={`relative w-full overflow-hidden border-t border-[var(--border-subtle)] py-14 text-center md:py-20 ${className}`}
+      className={`relative isolate w-full overflow-hidden border-t border-[var(--border-subtle)] bg-[var(--color-background-primary)] py-14 text-center md:py-20 ${className}`}
     >
-      <div className="pointer-events-none absolute inset-0 dot-bg" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 z-0 dot-bg" aria-hidden />
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 size-[min(700px,140vw)] -translate-x-1/2 -translate-y-1/2 rounded-full red-glow"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-[1] size-[min(700px,140vw)] -translate-x-1/2 -translate-y-1/2 rounded-full red-glow"
         aria-hidden
       />
 

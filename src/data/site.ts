@@ -84,8 +84,8 @@ export const SERVICES_MEGA_MENU_COLUMNS: readonly (readonly ServiceMegaMenuGroup
       href: "/cloud-application-development",
       items: [
         { label: "Cloud consulting", href: "/cloud-consulting-services" },
-        { label: "Cloud migration", href: "/cloud-consulting-services" },
-        { label: "Support & maintenance", href: "/cloud-consulting-services" },
+        { label: "Cloud migration", href: "/cloud-migration" },
+        { label: "Support & maintenance", href: "/cloud-support-and-maintenance" },
       ],
     },
   ],
@@ -414,4 +414,20 @@ export {
   type CloudConsultingDeliverableIconId,
   type CloudConsultingProviderIconId,
   type CloudConsultingRelatedIconId,
-} from "./inner-seervices/cloud/cloud-consulting-services";
+} from "./inner-seervices/cloud/services/cloud-consulting-services";
+export {
+  CLOUD_MIGRATION_PAGE,
+  type CloudMigrationDeliverableIconId,
+  type CloudMigrationRelatedIconId,
+  type CloudMigrationSafeguardIconId,
+  type CloudMigrationStrategyIconId,
+  type CloudMigrationWorkloadIconId,
+} from "./inner-seervices/cloud/services/cloud-migration";
+export {
+  CLOUD_SUPPORT_AND_MAINTENANCE_PAGE,
+  CLOUD_SUPPORT_SLA_SEVERITY_COLORS,
+  type CloudSupportCoverageIconId,
+  type CloudSupportIncludedIconId,
+  type CloudSupportRelatedIconId,
+  type CloudSupportSlaSeverityId,
+} from "./inner-seervices/cloud/services/cloud-support-and-maintenance";

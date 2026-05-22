@@ -13,7 +13,7 @@ export function HomeProcess() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {process.steps.map(({ week, n, title, text }) => (
-            <div key={n} className="relative">
+            <div key={n} className="relative border-l-3 border-[var(--red)] pl-4">
               <div className="text-meta mb-2">
                 {week}
               </div>

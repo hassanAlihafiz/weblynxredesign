@@ -1,6 +1,7 @@
 import {
   IconArrowRight,
   IconBrain,
+  IconCloud,
   IconCode,
   IconDeviceMobile,
   IconPalette,
@@ -15,6 +16,7 @@ const gridIcons = {
   code: IconCode,
   "device-mobile": IconDeviceMobile,
   "trending-up": IconTrendingUp,
+  cloud: IconCloud,
   brain: IconBrain,
   palette: IconPalette,
 } as const satisfies Record<(typeof SERVICES_PAGE.grid.cards)[number]["icon"], TablerIcon>;
